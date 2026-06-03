@@ -1,0 +1,1399 @@
+{
+  "schema_version": "1.0",
+  "beschreibung": "Wissens-Datenbank der Liberating Structures für den LS-Matchmaker. Siehe data/schema.md für die Bedeutung jedes Feldes.",
+  "quelle": "https://liberatingstructures.de/",
+  "lizenz_hinweis": "Inhalte aus liberatingstructures.de: CC BY-NC 3.0, © Keith McCandless & Henri Lipmanowicz, deutsche Übersetzung © Holisticon AG. Details siehe NOTICE.md.",
+  "erlaubte_werte": {
+    "edition": [
+      "original",
+      "extended"
+    ],
+    "type": [
+      "official",
+      "variation",
+      "punctuation",
+      "in_development"
+    ],
+    "purpose_tags": [
+      "offenlegen",
+      "teilen",
+      "analysieren",
+      "strategie",
+      "helfen",
+      "planen",
+      "solo"
+    ],
+    "arc_role": [
+      "öffnen",
+      "divergieren",
+      "konvergieren",
+      "schließen"
+    ],
+    "difficulty": [
+      "leicht",
+      "mittel",
+      "fortgeschritten"
+    ]
+  },
+  "structures": [
+    {
+      "id": 1,
+      "name": "1-2-4-All",
+      "slug": "1-2-4-all",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Bindet in rund 12 Minuten alle ein: Ideen wachsen von stiller Einzelarbeit über Paare und Vierergruppen bis zur Gesamtgruppe. Vermeidet Groupthink und gibt auch zurückhaltenden Personen eine Stimme.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/1-2-4-all/",
+      "purpose_tags": [
+        "offenlegen"
+      ],
+      "arc_role": [
+        "öffnen",
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 6,
+      "group_size_max": null,
+      "duration_min": 12,
+      "duration_max": 15,
+      "online_capable": true,
+      "materials": "Genug Platz für Paare und Vierergruppen; nützlich: Stifte, Papier, Post-its; optional: Tische und Stühle; online: Breakout-Räume erforderlich.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "design-storyboards",
+        "improv-prototyping",
+        "ecocycle-planning"
+      ],
+      "scrum_use": "Universell in fast jeder Retrospektive und im Planning: gleichberechtigtes Sammeln und Verdichten von Ideen; oft als Baustein in andere Strukturen (z. B. TRIZ) verschachtelt.",
+      "design_elements": {
+        "einladung": "Stelle eine Frage zu einer Herausforderung, einem Problem oder einer gemeinsamen Aufgabe – z. B. „Welche Möglichkeiten siehst du, um Fortschritte zu machen?“ oder „Welche Ideen oder Handlungsempfehlungen hast du?“",
+        "raum_materialien": "Genug Platz für Paare und Vierergruppen. Nützlich: Stifte, Papier, Post-its. Optional: Tische und Stühle. Online: Breakout-Räume erforderlich.",
+        "einbindung": "Alle Teilnehmenden werden gleichberechtigt eingebunden (die moderierende Person üblicherweise nicht). Jede:r hat dieselbe Zeit und Gelegenheit, beizutragen.",
+        "gruppenkonfiguration": "Stufenweise: zuerst Einzelarbeit, dann Paare, dann Vierergruppen, dann die Gesamtgruppe.",
+        "ablauf_dauer": "1 Minute allein nachdenken; 2 Minuten zu zweit Ideen austauschen; 4 Minuten zu viert verfeinern und Gemeinsamkeiten suchen; 5 Minuten in der Gesamtgruppe ernten. Gesamt ca. 12 Minuten."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 2,
+      "name": "Impromptu Networking",
+      "slug": "impromptu-networking",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Schneller Auftakt: In wechselnden Paaren teilen alle ihre Herausforderung und Erwartung. Aktiviert alle, taut Zurückhaltende auf und schafft Verbindungen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/impromptu-networking/",
+      "purpose_tags": [
+        "teilen"
+      ],
+      "arc_role": [
+        "öffnen",
+        "divergieren"
+      ],
+      "group_size_min": 6,
+      "group_size_max": null,
+      "duration_min": 12,
+      "duration_max": 15,
+      "online_capable": true,
+      "materials": "Offener Raum ohne Hindernisse für Zweiergruppen; optional Glocke/Tingsha zur Zeitmessung; online: Breakout-Räume.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "15-solutions",
+        "social-network-webbing"
+      ],
+      "scrum_use": "Eröffnung von Retrospektive oder Workshop: Beziehungen und psychologische Sicherheit aufbauen, alle aktivieren.",
+      "design_elements": {
+        "einladung": "„Welche Herausforderung bringst du mit? Was erhoffst du dir von dieser Gruppe und was möchtest du geben?“",
+        "raum_materialien": "Offener Raum ohne Hindernisse für Zweiergruppen; optional Glocke/Tingsha zur Zeitmessung; online: Breakout-Räume nutzen.",
+        "einbindung": "Alle gleichzeitig, mit gleichem Zeitlimit; gleichberechtigte Beteiligung.",
+        "gruppenkonfiguration": "Paare; möglichst auf Fremde oder Kolleg:innen aus anderen Bereichen zugehen.",
+        "ablauf_dauer": "3 Runden zu je 4–5 Minuten (2 Minuten pro Person); insgesamt ca. 12–15 Minuten."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 3,
+      "name": "9 Whys",
+      "slug": "nine-whys",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Durch wiederholtes „Warum ist das wichtig für dich?“ legt die Gruppe den gemeinsamen Sinn und Zweck ihrer Arbeit frei – für Klarheit, Fokus und Motivation.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/nine-whys/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "öffnen",
+        "konvergieren"
+      ],
+      "group_size_min": 2,
+      "group_size_max": null,
+      "duration_min": 20,
+      "duration_max": 25,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte und Papier; nützlich: Glocke/Tingsha, bequeme Stühle, Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "purpose-to-practice",
+        "generative-relationships-star",
+        "wise-crowds",
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Purpose-/Fokus-Klärung für Team oder Produkt; gut bei Team-Start oder zu Beginn einer Retrospektive.",
+      "design_elements": {
+        "einladung": "„Was machst du, wenn du an [Aufgabe] arbeitest?“ – kurze Tätigkeitsliste; dann wiederholt „Warum ist das wichtig für dich?“ (bis zu neun Mal).",
+        "raum_materialien": "Wichtig: Stifte und Papier. Nützlich: Glocke/Tingsha, bequeme Stühle, Post-its. Online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Alle haben gleiche Beteiligungsmöglichkeiten.",
+        "gruppenkonfiguration": "Progressiv: zuerst zu zweit, dann zu viert, dann die ganze Gruppe (2-4-All).",
+        "ablauf_dauer": "Partnerinterviews 10 Min (je 5 Min); Austausch mit anderem Paar 5 Min; gemeinsamen Purpose formulieren 5 Min; optional Reflexion 5 Min. Gesamt 20–25 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 4,
+      "name": "Wicked Questions",
+      "slug": "wicked-questions",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Bringt gegensätzliche, sich ergänzende Herausforderungen auf den Punkt und entfacht kreative Spannung – Grundlage für Strategien, die widersprüchliche Anforderungen zugleich berücksichtigen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/wicked-questions/",
+      "purpose_tags": [
+        "offenlegen",
+        "strategie"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 2,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 30,
+      "online_capable": true,
+      "materials": "Stuhlgruppen (4–6 Personen), Stifte und Papier/Post-its; optional kleine Tische; online: Breakout-Räume.",
+      "difficulty": "mittel",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "15-solutions",
+        "1-2-4-all",
+        "improv-prototyping",
+        "ecocycle-planning",
+        "25-10-crowd-sourcing"
+      ],
+      "scrum_use": "Sprint-/Produktstrategie und Zielkonflikte (z. B. Tempo vs. Qualität); in Retrospektiven zu Spannungsfeldern.",
+      "design_elements": {
+        "einladung": "„Welche gegensätzlichen, sich aber ergänzenden Strategien sollten wir parallel verfolgen, um erfolgreich zu sein?“",
+        "raum_materialien": "Wichtig: Stuhlgruppen (4–6 Personen), Stifte und Papier/Post-its. Optional: kleine Tische, online Breakout-Räume.",
+        "einbindung": "Alle vom Thema Betroffenen werden mit gleichen Beteiligungsmöglichkeiten eingebunden.",
+        "gruppenkonfiguration": "Einzeln → kleine Gruppen (max. 6 Personen) → Gesamtgruppe.",
+        "ablauf_dauer": "Konzept/Paradoxon erklären 5 Min; Gegensatzpaare allein, dann in Gruppen 5 Min; einflussreichste Frage je Gruppe 5 Min; Gesamtgruppe wählt und verfeinert 10 Min. Gesamt ca. 25 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 5,
+      "name": "Appreciative Interviews",
+      "slug": "appreciative-interviews",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Über erzählte Erfolgsgeschichten deckt die Gruppe auf, was Erfolg möglich macht – erzeugt positive Energie und Erkenntnisse für aktuelle Herausforderungen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/appreciative-interviews-ai/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "öffnen",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 45,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Post-its; optional Flipchart; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "nine-whys"
+      ],
+      "typical_successors": [
+        "min-specs",
+        "1-2-4-all"
+      ],
+      "scrum_use": "Positive Retrospektive (was lief gut und warum) und Team-Start; stärkt die Zusammenarbeit.",
+      "design_elements": {
+        "einladung": "„Erzähle eine Geschichte, in der du mit anderen an einer Herausforderung gearbeitet hast und stolz auf das Ergebnis bist. Was hat den Erfolg möglich gemacht?“",
+        "raum_materialien": "Wichtig: Stifte, Papier, Platz für Paare und Vierergruppen. Nützlich: Post-its. Optional: Flipchart; online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Alle sind beteiligt; gleiche Zeit und Gelegenheit für jede:n.",
+        "gruppenkonfiguration": "Zuerst Paare, dann Vierergruppen (gemischt).",
+        "ablauf_dauer": "Prozess erklären 3 Min; Paar-Interviews 15–20 Min; Vierergruppen-Austausch mit Mustern 15 Min; Erfolgsbedingungen via 1-2-4-All 10 Min. Gesamt 45–60 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 6,
+      "name": "TRIZ",
+      "slug": "triz",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "„Kreative Zerstörung“: Die Gruppe sammelt, was ein schlechtes Ergebnis garantieren würde, erkennt, was davon sie bereits tut, und entscheidet, was sie stoppt – schafft Raum für Innovation.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/triz/",
+      "purpose_tags": [
+        "offenlegen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 30,
+      "duration_max": 40,
+      "online_capable": true,
+      "materials": "Stifte, Post-its, Flipchart mit 3 Spalten; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "troika-consulting",
+        "wise-crowds",
+        "open-space-technology",
+        "ecocycle-planning"
+      ],
+      "scrum_use": "Retrospektive: kontraproduktive Praktiken aufdecken und gezielt stoppen („Was sollten wir aufhören?“) – kathartisch und bindet alle ein.",
+      "design_elements": {
+        "einladung": "Drei Schritte: (1) Was würde ein schlechtes Ergebnis garantieren? (2) Welche dieser Dinge tun wir bereits? (3) Wie stoppen wir diese kontraproduktiven Aktivitäten?",
+        "raum_materialien": "Wichtig: Stifte, Post-its, Flipchart mit drei Spalten. Online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Alle werden gleichberechtigt einbezogen.",
+        "gruppenkonfiguration": "Gruppen von 4–7 Personen (bestehende Teams oder gemischt).",
+        "ablauf_dauer": "Konzept vorstellen 2–5 Min; drei Runden je 1-2-4-All (schlechte Ergebnisse / aktuelle Aktivitäten / Stopp-Strategien) à 10–12 Min. Gesamt 30–40 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 7,
+      "name": "15% Solutions",
+      "slug": "15-solutions",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Jede:r findet die kleinen Schritte, die im eigenen Handlungsspielraum sofort möglich sind – ohne mehr Ressourcen oder Erlaubnis. Macht die Kraft kleiner Taten erlebbar.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/15-solutions/",
+      "purpose_tags": [
+        "offenlegen",
+        "planen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 3,
+      "group_size_max": null,
+      "duration_min": 15,
+      "duration_max": 30,
+      "online_capable": true,
+      "materials": "Stifte, Papier, Stühle für Gruppen à 2–4 Personen; online: Breakout-Räume.",
+      "difficulty": "leicht",
+      "typical_predecessors": [
+        "impromptu-networking",
+        "wicked-questions"
+      ],
+      "typical_successors": [
+        "troika-consulting",
+        "wise-crowds",
+        "open-space-technology"
+      ],
+      "scrum_use": "Retrospektive/Planning: unmittelbar umsetzbare Verbesserungen im eigenen Einflussbereich als konkrete Action Items.",
+      "design_elements": {
+        "einladung": "„Was sind deine 15 %? Wo hast du die Freiheit, nach eigenem Ermessen zu handeln?“",
+        "raum_materialien": "Stifte, Papier, Stühle für Gruppen von 2–4 Personen; online: Breakout-Räume.",
+        "einbindung": "Alle werden eingebunden, gleiche Mitsprache für alle.",
+        "gruppenkonfiguration": "Zuerst einzeln, dann in Paaren oder Dreiergruppen.",
+        "ablauf_dauer": "Individuelle Liste 2–5 Min; Vorstellung und gegenseitige Beratung in Gruppen 3–10 Min pro Person. Gesamt ca. 15–30 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 8,
+      "name": "What, So What, Now What? (W³)",
+      "slug": "what-so-what-now-what",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Strukturiertes Debrief in drei Phasen – Fakten, Bedeutung, Maßnahmen –, das gemeinsames Verständnis schafft und vorschnelle Schlüsse verhindert.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/what-so-what-now-what/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 15,
+      "duration_max": 45,
+      "online_capable": true,
+      "materials": "Stühle für Kleingruppen (5–7); hilfreich: Stifte, Papier/Post-its, Flipchart für Großgruppen; online: Breakout-Räume.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "15-solutions"
+      ],
+      "scrum_use": "Retrospektive-Debrief in drei Phasen: Fakten → Bedeutung → konkrete Maßnahmen; auch nach Sprint Reviews.",
+      "design_elements": {
+        "einladung": "Drei aufeinanderfolgende Fragen: (a) „Was ist passiert?“ – Beobachtungen; (b) „Warum ist das wichtig?“ – Muster/Schlüsse; (c) „Was sind die nächsten Schritte?“ – Maßnahmen.",
+        "raum_materialien": "Stühle für Kleingruppen (5–7); hilfreich: Stifte, Papier/Post-its, Flipchart für Großgruppen; online: Breakout-Räume.",
+        "einbindung": "Alle gleichberechtigt; kleine Gruppen erhöhen die Chance, dass alle zu Wort kommen.",
+        "gruppenkonfiguration": "Einzelarbeit → Kleingruppen (5–7) → Großgruppe.",
+        "ablauf_dauer": "Sequenz erklären 2–5 Min; je Phase (What / So What / Now What) 1 Min einzeln + 2–7 Min Gruppe + 2–10 Min Austausch. Gesamt 15–45 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 9,
+      "name": "Min Specs",
+      "slug": "min-specs",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Reduziert Regeln auf das absolute Minimum, das den Zweck noch trägt – ermöglicht Innovation und Eigenverantwortung statt Mikromanagement.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/min-specs/",
+      "purpose_tags": [
+        "strategie"
+      ],
+      "arc_role": [
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 20,
+      "duration_max": 50,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Post-its, Flipchart; nützlich: Papier; optional: Stühle & Tische; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "nine-whys",
+        "simple-ethnography"
+      ],
+      "typical_successors": [
+        "open-space-technology"
+      ],
+      "scrum_use": "Working Agreements/Definition of Done aufs Minimum reduzieren; unnötige Regeln streichen; Eigenverantwortung im Team stärken.",
+      "design_elements": {
+        "einladung": "Erst alle erforderlichen und verbotenen Regeln sammeln (Max Specs), dann auf das absolut Notwendige reduzieren: „Können wir unser Ziel erreichen, wenn wir diese Regel brechen?“",
+        "raum_materialien": "Wichtig: Stifte, Post-its, Flipchart; nützlich: Papier; optional: Stühle & Tische; online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Alle Stakeholder/Betroffenen, gleiche Mitsprache.",
+        "gruppenkonfiguration": "Einzelarbeit → Kleingruppen (4–7) → Gesamtgruppe.",
+        "ablauf_dauer": "Max Specs sammeln 6 Min; gegen Ziel testen 5–15 Min; optionale zweite Runde 5–15 Min; Ergebnisse vergleichen 5–15 Min. Gesamt 20–50 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 10,
+      "name": "Heard, Seen, Respected (HSR)",
+      "slug": "heard-seen-respected",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "In Paaren erzählen und einander wirklich zuhören – baut gegenseitiges Vertrauen und Empathie auf und heilt Beziehungen nach Konflikten.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/heard-seen-respected/",
+      "purpose_tags": [
+        "helfen"
+      ],
+      "arc_role": [
+        "öffnen"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 30,
+      "duration_max": 35,
+      "online_capable": true,
+      "materials": "Stühle einander gegenüber (ca. 30 cm Knieabstand), keine Tische; optional Stifte, Papier/Post-its; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "troika-consulting",
+        "helping-heuristics",
+        "conversation-cafe"
+      ],
+      "scrum_use": "Vertrauen/psychologische Sicherheit stärken; Spannungen oder Konflikte in Retrospektiven aufarbeiten; Team-Start.",
+      "design_elements": {
+        "einladung": "Schildere eine Situation, in der du dich nicht gehört, gesehen oder respektiert gefühlt hast. Zuhörende unterbrechen nicht, außer mit „Was sonst noch?“",
+        "raum_materialien": "Stühle einander gegenüber (ca. 30 cm Knieabstand), keine Tische; optional Stifte, Papier/Post-its; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Jede Person hat gleich viel Zeit als Erzähler:in und als Zuhörer:in.",
+        "gruppenkonfiguration": "Paare zum Erzählen, danach Vierergruppen zur Reflexion.",
+        "ablauf_dauer": "Intention erklären 3 Min; je Person 4–7 Min Geschichte (8–15 Min); Austausch der Partner 3–5 Min; 1-2-4 in Vierergruppen 8–10 Min; Gesamtreflexion 5 Min. Gesamt 30–35 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 11,
+      "name": "What I Need From You (WINFY)",
+      "slug": "what-i-need-from-you-winfy",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Funktionsgruppen sagen einander klar, was sie voneinander brauchen, und antworten verbindlich – schafft Klarheit und Verantwortlichkeit zwischen Teams.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/what-i-need-from-you-winfy/",
+      "purpose_tags": [
+        "helfen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 9,
+      "group_size_max": null,
+      "duration_min": 35,
+      "duration_max": 65,
+      "online_capable": true,
+      "materials": "Platz für 3–7 funktionale Gruppen, Stühle, Stuhlkreis in der Mitte; nützlich: Tische; optional: Stifte, Papier/Post-its; online: Breakout-Räume.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "what-so-what-now-what",
+        "integrated-autonomy"
+      ],
+      "scrum_use": "Erwartungen zwischen Rollen/Teams klären (z. B. Dev–PO–Stakeholder), Abhängigkeiten und Zusammenarbeit verbessern.",
+      "design_elements": {
+        "einladung": "Formuliere unmissverständlich, was du von anderen Funktionen brauchst, und antworte auf Anfragen klar mit einer von vier Antworten.",
+        "raum_materialien": "Platz für 3–7 funktionale Gruppen, Stühle, Stuhlkreis in der Mitte; nützlich: Tische; optional: Stifte, Papier/Post-its; online: Breakout-Räume.",
+        "einbindung": "Jede:r ist in der eigenen Gruppe eingebunden und trägt gleichberechtigt bei.",
+        "gruppenkonfiguration": "3–7 funktionale Gruppen plus eine Sprechergruppe (3–7 Vertreter:innen).",
+        "ablauf_dauer": "Ablauf erklären 2 Min; 1-2-4-All für Bedürfnisse + Top 2 + Sprecher:in 5–15 Min; Sprecher tragen Bedürfnisse vor 5–15 Min; Antworten („Ja / Nein / Ich versuche es / Nicht verstanden“) 5–10 Min; Antworten präsentieren 5–10 Min; Abschluss mit What-So-What-Now-What 15 Min. Gesamt 35–65 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 12,
+      "name": "Discovery & Action Dialogue (DAD)",
+      "slug": "discovery-action-dialogue-dad",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Sieben Fragen decken lokale, bereits vorhandene Lösungen für chronische Probleme auf und führen zu selbstgetragenen Maßnahmen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/discovery-action-dialogue-dad/",
+      "purpose_tags": [
+        "offenlegen",
+        "planen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 5,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Stifte, Papier/Flipchart pro Gruppe, Tische und Stühle; optional Ausdrucke der Fragen; online: Breakout-Räume und virtuelle Whiteboards.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "simple-ethnography"
+      ],
+      "typical_successors": [
+        "improv-prototyping"
+      ],
+      "scrum_use": "Chronische Team-Probleme angehen und „positive Abweichungen“ (gut funktionierende Praktiken) entdecken und verbreiten; tiefergehende Retrospektive.",
+      "design_elements": {
+        "einladung": "Die moderierende Person stellt sieben aufeinander aufbauende Fragen (Problem, eigene Beiträge, Hindernisse, positive Abweichungen, weitere Ideen, nötige Maßnahmen, weitere Beteiligte).",
+        "raum_materialien": "Stifte, Papier/Flipchart pro Gruppe, Tische und Stühle; optional Ausdrucke der Fragen; online: Breakout-Räume und virtuelle Whiteboards.",
+        "einbindung": "Die moderierende Person fragt; alle Anwesenden beteiligen sich gleichberechtigt.",
+        "gruppenkonfiguration": "Moderation + Protokoll; Gruppengröße 5–15 Personen; gemischte Rollen vorteilhaft.",
+        "ablauf_dauer": "Zweck klären + Vorstellung 5 Min; sieben Fragen nacheinander, Einsichten dokumentieren 15–50 Min; Rekapitulation 5 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 13,
+      "name": "Improv Prototyping",
+      "slug": "improv-prototyping",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Lösungen werden in kurzen Theaterszenen durchgespielt und schrittweise verbessert – macht Verhalten erlebbar und durchbricht starre Muster.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/improv-prototyping/",
+      "purpose_tags": [
+        "offenlegen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 3,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Offener Bereich/Bühne; Requisiten für Szenen; Stühle für Beobachtende; online: Breakout-Räume für Diskussionen.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "discovery-action-dialogue-dad",
+        "simple-ethnography"
+      ],
+      "typical_successors": [
+        "design-storyboards",
+        "shift-share"
+      ],
+      "scrum_use": "Schwierige Interaktionen üben (z. B. Stakeholder- oder Konfliktgespräche); Lernen durch Ausprobieren statt Theorie.",
+      "design_elements": {
+        "einladung": "Identifiziert frustrierende Herausforderungen und stellt sie spielerisch dar, um durch Experimentieren Lösungswege zu finden.",
+        "raum_materialien": "Offener Bereich/Bühne; Requisiten für Szenen; Stühle für Beobachtende; online: Breakout-Räume für Diskussionen.",
+        "einbindung": "Alle beteiligt als Darstellende oder Beobachtende; zunächst wenige Freiwillige, später alle als Mitgestaltende.",
+        "gruppenkonfiguration": "Kleine Schauspielgruppe auf der „Bühne“; Beobachtende in kleinen Gruppen davor.",
+        "ablauf_dauer": "Erklärung 2 Min; Szenario vorbereiten 3 Min; erste Szene 3–5 Min; Bewertung via 1-2(-4)-All 5 Min; verbesserte Versionen 5 Min; optimierte Prototypen 3–5 Min; Wiederholung bis zufriedenstellend."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 14,
+      "name": "Conversation Café",
+      "slug": "conversation-cafe",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Ruhiges, zuhörendes Gespräch in kleinen Kreisen mit Redeobjekt – hilft, verwirrende oder aufwühlende Ereignisse gemeinsam zu verstehen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/conversation-cafe/",
+      "purpose_tags": [
+        "teilen",
+        "analysieren"
+      ],
+      "arc_role": [
+        "öffnen",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 30,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Stuhlkreise (4–7), Redeobjekt (Talking Stick); nützlich: 1–2 Seiten Flipchart-Papier und Stifte pro Kreis; online: Breakout-Räume.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "what-so-what-now-what",
+        "15-solutions",
+        "open-space-technology"
+      ],
+      "scrum_use": "Retrospektive zu emotionalen Themen: sicherer Raum, in dem alle Sorgen, Ängste oder positive Erfahrungen teilen – Zuhören vor Lösen.",
+      "design_elements": {
+        "einladung": "In kleinen Gruppen den Gedanken anderer zuhören und über eine gemeinsame Herausforderung nachdenken – nach sechs einfachen Gesprächsregeln.",
+        "raum_materialien": "Stuhlkreise (4–7), Redeobjekt (Talking Stick); nützlich: 1–2 Seiten Flipchart-Papier und Stifte pro Kreis; online: Breakout-Räume.",
+        "einbindung": "Alle werden einbezogen; gleiche Chancen, sich einzubringen.",
+        "gruppenkonfiguration": "Gemischte Gruppen von 4–7 möglichst unterschiedlichen Personen.",
+        "ablauf_dauer": "Vier Runden: Runde 1 Gedanken teilen (1 Min/Person, Talking Stick); Runde 2 reflektieren (1 Min/Person); Runde 3 offene Diskussion (10–30 Min); Runde 4 Mitnahme (1 Min/Person). Gesamt ca. 30–60 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 15,
+      "name": "Shift & Share",
+      "slug": "shift-share",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Innovationen werden an Stationen präsentiert, die kleine Gruppen reihum besuchen – schneller Überblick über viele Ideen und informelle Beziehungen statt großer Bühnenvorträge.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/shift-share/",
+      "purpose_tags": [
+        "teilen"
+      ],
+      "arc_role": [
+        "divergieren"
+      ],
+      "group_size_min": 12,
+      "group_size_max": null,
+      "duration_min": 50,
+      "duration_max": 90,
+      "online_capable": true,
+      "materials": "Großer Raum für 3–7 Stationen mit Abstand; Präsentationsmaterial (Flipcharts, Beamer); optional Stifte, Papier, Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "what-so-what-now-what",
+        "open-space-technology",
+        "improv-prototyping"
+      ],
+      "scrum_use": "Mehrere Teams präsentieren ihre Lösungen/Praktiken an Stationen – Wissensaustausch über Teamgrenzen.",
+      "design_elements": {
+        "einladung": "Besuche nacheinander mehrere Innovator:innen, die an Stationen neue oder innovative Inhalte präsentieren.",
+        "raum_materialien": "Großer Raum für 3–7 Stationen mit Abstand; Präsentationsmaterial (Flipcharts, Beamer); optional Stifte, Papier, Post-its; online: Breakout-Räume.",
+        "einbindung": "Präsentierende teilen ihre Arbeit; alle Besuchenden haben gleiche Mitwirkungsmöglichkeiten.",
+        "gruppenkonfiguration": "Stationen der Präsentierenden; Gesamtgruppe in so viele Kleingruppen wie Stationen.",
+        "ablauf_dauer": "Erklärung + Präsentierende benennen 5 Min; je Station 5–10 Min + Fragen 2–5 Min; Wechsel 1 Min; bis alle Stationen besucht. Bei 6 Stationen ca. 50–90 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 16,
+      "name": "Helping Heuristics",
+      "slug": "helping-heuristics",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Übt in Dreiergruppen vier Muster des Helfens und macht eigene Interaktionsgewohnheiten bewusst – bessere Zusammenarbeit durch wirksameres Geben und Annehmen von Hilfe.",
+      "source_url": "https://liberatingstructures.de/helping-heuristics/",
+      "purpose_tags": [
+        "helfen"
+      ],
+      "arc_role": [
+        "öffnen"
+      ],
+      "group_size_min": 3,
+      "group_size_max": null,
+      "duration_min": 15,
+      "duration_max": 20,
+      "online_capable": true,
+      "materials": "Stifte und Papier/Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "troika-consulting",
+        "wise-crowds",
+        "what-i-need-from-you-winfy"
+      ],
+      "scrum_use": "Hilfe-/Coaching-Verhalten im Team reflektieren (besser zuhören, weniger vorschnelle Ratschläge); gut vor Peer-Coaching-Formaten.",
+      "design_elements": {
+        "einladung": "Verstehe Interaktionen als Angebote, die angenommen oder abgelehnt werden können; übe vier Interaktionsmuster (agieren, reagieren, beobachten) und reflektiere das eigene Verhalten.",
+        "raum_materialien": "Stifte und Papier/Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Gleiche Lernchancen für alle; Rollen wechseln über die Runden.",
+        "gruppenkonfiguration": "Dreiergruppen (Klient:in, Coach, Beobachter:in); Gesamtgruppe zur Abschlussbesprechung.",
+        "ablauf_dauer": "Erklärung 2 Min; 5 Runden je 2 Min (Stille Präsenz, Geführte Entdeckung, Liebevolle Provokation, Gemeinsames Formen, Strukturelle Bewusstheit); Abschluss 5 Min. Gesamt ca. 15 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 17,
+      "name": "Troika Consulting",
+      "slug": "troika-consulting",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Kollegiale Beratung in Dreiergruppen: Reihum erhält jede Person zu einer eigenen Herausforderung frische Ideen von zwei Berater:innen.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/troika-consulting/",
+      "purpose_tags": [
+        "helfen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 3,
+      "group_size_max": null,
+      "duration_min": 30,
+      "duration_max": 40,
+      "online_capable": true,
+      "materials": "Dreiergruppen mit je 3 Stühlen (keine Tische); nützlich: Stifte, Papier/Post-its; online: Breakout-Räume.",
+      "difficulty": "leicht",
+      "typical_predecessors": [
+        "heard-seen-respected",
+        "helping-heuristics"
+      ],
+      "typical_successors": [
+        "15-solutions"
+      ],
+      "scrum_use": "Kollegiale Fallberatung im Team (jede:r bringt eine Herausforderung ein); gut zum Meeting-Start oder -Abschluss.",
+      "design_elements": {
+        "einladung": "Formuliere deine aktuelle Herausforderung und deinen Hilfebedarf.",
+        "raum_materialien": "Dreiergruppen mit je 3 Stühlen (keine Tische); nützlich: Stifte, Papier/Post-its; online: Breakout-Räume.",
+        "einbindung": "Pro Runde eine Person Klient:in, zwei beraten; alle bekommen beide Rollen.",
+        "gruppenkonfiguration": "Dreiergruppen mit gemischten Hintergründen.",
+        "ablauf_dauer": "Frage überlegen 1 Min; Klient:in stellt vor 2–3 Min; Verständnisfragen 1–3 Min; Klient:in dreht sich weg, Berater entwickeln Ideen 4–5 Min; Klient:in teilt Erkenntnisse 2 Min; Wechsel. Gesamt 30–40 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 18,
+      "name": "Wise Crowds",
+      "slug": "wise-crowds",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "In schnellen Zyklen zieht eine ratsuchende Person das Wissen einer Gruppe (4–5) heran – effiziente Hilfe und Vertrauen durch gegenseitige Beratung.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/wise-crowds/",
+      "purpose_tags": [
+        "helfen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 15,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Stühle für Ratsuchende; nützlich: Stifte, Papier, ggf. Mikrofone; optional kleine Tische, Gruppen von 4–5; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "leicht",
+      "typical_predecessors": [
+        "heard-seen-respected",
+        "helping-heuristics"
+      ],
+      "typical_successors": [
+        "15-solutions"
+      ],
+      "scrum_use": "Schwierige Herausforderungen einzelner mit der Gruppenintelligenz lösen; kann Status-Meetings ersetzen.",
+      "design_elements": {
+        "einladung": "Klient:innen beschreiben ihre Herausforderung kurz und bitten um Hilfe; die anderen beraten und helfen, sie zu klären.",
+        "raum_materialien": "Stühle für Ratsuchende; nützlich: Stifte, Papier, ggf. Mikrofone; optional kleine Tische, Gruppen von 4–5; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Alle beteiligt; gleiche Zeit als Ratsuchende und als Beratende.",
+        "gruppenkonfiguration": "Gruppen zu 4–5 Personen, funktionsübergreifend; Klient:in wendet sich nach der Problembeschreibung ab.",
+        "ablauf_dauer": "Pro Klient:in 15 Min: Herausforderung beschreiben 2 Min; Verständnisfragen 3 Min; Berater diskutieren/raten 8 Min; Klient:in gibt Feedback 2 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 19,
+      "name": "Open Space Technology",
+      "slug": "open-space-technology",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Die Teilnehmenden gestalten ihre Agenda selbst und organisieren parallele Sessions zu einem komplexen Thema – setzt Eigenverantwortung und Energie frei.",
+      "source_url": "https://liberatingstructures.de/open-space-technology/",
+      "purpose_tags": [
+        "offenlegen"
+      ],
+      "arc_role": [
+        "öffnen",
+        "divergieren"
+      ],
+      "group_size_min": 10,
+      "group_size_max": null,
+      "duration_min": 90,
+      "duration_max": 480,
+      "online_capable": true,
+      "materials": "Separate Räume für Gruppen; Stifte, Papier/Post-its; Tische und Stühle; große leere Agenda (Flipchart/Packpapier/Whiteboard); optional Mikrofon ab >40 Personen; online: Breakout-Räume, Whiteboard.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "celebrity-interview",
+        "appreciative-interviews",
+        "triz"
+      ],
+      "typical_successors": [
+        "25-10-crowd-sourcing",
+        "15-solutions"
+      ],
+      "scrum_use": "Große, teamübergreifende Themen selbstorganisiert bearbeiten (z. B. Open-Space-Retro, Transformationsthemen mehrerer Teams).",
+      "design_elements": {
+        "einladung": "Einladung zu einem komplexen gemeinsamen Thema; die Teilnehmenden gestalten die Agenda selbst durch eigene Themen und wählen frei ihre Sessions.",
+        "raum_materialien": "Separate Räume für Gruppen; Stifte, Papier/Post-its; Tische und Stühle; große leere Agenda (Flipchart/Packpapier/Whiteboard); optional Mikrofon ab >40 Personen; online: Breakout-Räume, Whiteboard.",
+        "einbindung": "Alle Interessierten einbezogen; „Gesetz der zwei Füße“ – man wechselt zu interessierenden Sessions; vier Prinzipien gelten.",
+        "gruppenkonfiguration": "Großer Kreis zu Beginn; danach selbstorganisierte Kleingruppen je Thema.",
+        "ablauf_dauer": "Kurzform ca. 90 Min (Einführung 20–45 Min, Marktplatz 15 Min, Sessions 60 Min, Debrief 10 Min); Langform bis zu mehreren Tagen."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 20,
+      "name": "Design StoryBoards",
+      "slug": "design-storyboards",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Ein Design-Team plant ein Meeting/Workshop bewusst: Zweck klären, Beteiligte bestimmen und gezielt passende Mikrostrukturen auswählen.",
+      "source_url": "https://liberatingstructures.de/design-storyboard/",
+      "purpose_tags": [
+        "planen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 2,
+      "group_size_max": null,
+      "duration_min": 20,
+      "duration_max": 65,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Papier, Purpose Matchmaker; nützlich: leeres Storyboard-Arbeitsblatt; optional LS-Design Cards; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "nine-whys"
+      ],
+      "typical_successors": [
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Workshops/Meetings (Retrospektiven, Plannings) bewusst gestalten – Zweck klären und passende Strukturen auswählen.",
+      "design_elements": {
+        "einladung": "Lade ein Design-Team (repräsentative Teilmenge) ein, das einen detaillierten, visuellen Plan der Interaktion erstellt.",
+        "raum_materialien": "Wichtig: Stifte, Papier, Purpose Matchmaker; nützlich: leeres Storyboard-Arbeitsblatt; optional LS-Design Cards; online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Alle im Design-Team haben gleiche Einbringungsmöglichkeiten.",
+        "gruppenkonfiguration": "1-2-All oder 1-All in schnellen Runden je Schritt.",
+        "ablauf_dauer": "Zweck klären 2–5 Min; Standard bewerten 5–10 Min; Beteiligte überdenken 2–5 Min; Mikrostrukturen brainstormen 5–10 Min; beste wählen 2–10 Min; Einladungen/Moderation 2–10 Min; Erfolgskriterien 5–15 Min. Gesamt 20–65 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 21,
+      "name": "25/10 Crowd Sourcing",
+      "slug": "25-10-crowd-sourcing",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "In maximal 30 Minuten werden in großen Gruppen die mutigsten Ideen gesammelt, durch Tausch und Punkten sortiert und die Top 10 für die Umsetzung sichtbar gemacht.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/2510-crowdsourcing/",
+      "purpose_tags": [
+        "offenlegen",
+        "planen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 20,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 30,
+      "online_capable": false,
+      "materials": "Offener Raum ohne Hindernisse, Stifte, Karteikarten, Glocke/Tingsha; optional Musik während der Tauschrunden; online kaum praktikabel.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "open-space-technology",
+        "wicked-questions"
+      ],
+      "typical_successors": [
+        "agreement-certainty-matrix",
+        "open-space-technology"
+      ],
+      "scrum_use": "Große oder teamübergreifende Gruppen: Verbesserungsideen schnell sammeln und priorisieren.",
+      "design_elements": {
+        "einladung": "„Wenn du zehnmal mutiger wärst, welche kühne Idee würdest du vorschlagen?“ – mutige Ideen einbringen.",
+        "raum_materialien": "Offener Raum ohne Hindernisse, Stifte, Karteikarten, Glocke/Tingsha; optional Musik während der Tauschrunden; online kaum praktikabel.",
+        "einbindung": "Alle gleichzeitig und gleichberechtigt.",
+        "gruppenkonfiguration": "Individuelle Ideen → Umhergehen und Karten tauschen → individuell bewerten → Gesamtschau.",
+        "ablauf_dauer": "Erklärung 3 Min; Demonstration 2 Min; Ideen entwickeln 3–5 Min; fünf Tausch-/Bewertungszyklen 5–10 Min; Punkte addieren 1 Min; Top-10 vorlesen 4 Min; Abschlussreflexion 3 Min. Gesamt ca. 25–30 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 22,
+      "name": "Drawing Together",
+      "slug": "drawing-together",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Mit fünf einfachen Symbolen erzählen alle ohne Worte eine Geschichte – macht verborgenes Wissen, Gefühle und Muster sichtbar, wenn Sprache nicht weiterhilft.",
+      "source_url": "https://liberatingstructures.de/drawing-together/",
+      "purpose_tags": [
+        "offenlegen"
+      ],
+      "arc_role": [
+        "öffnen",
+        "divergieren"
+      ],
+      "group_size_min": 2,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 55,
+      "online_capable": true,
+      "materials": "Stifte, Papier, Flipchart; nützlich: Buntstifte/Kreide, Tische und Stühle; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "1-2-4-all"
+      ],
+      "scrum_use": "Verborgene Gefühle/Muster im Team sichtbar machen (z. B. emotionale Retrospektive, Team-Bindung), wenn Worte nicht weiterhelfen.",
+      "design_elements": {
+        "einladung": "Erzähle eine Geschichte zu einer Herausforderung – ausschließlich mit fünf Symbolen, ohne Worte (Kreis = Ganzheit, Rechteck = Unterstützung, Dreieck = Ziel, Spirale = Veränderung, Sternenmensch = Beziehung).",
+        "raum_materialien": "Essentiell: Stifte, Papier, Flipchart; nützlich: Buntstifte/Kreide, Tische und Stühle; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Alle einbezogen – jede:r kann die fünf Symbole zeichnen; alle arbeiten gleichzeitig.",
+        "gruppenkonfiguration": "Einzeln (Symbole üben und zeichnen) → Kleingruppen (1–4) zur Deutung → Gesamtgruppe (bei großen Gruppen 1-2-4-All).",
+        "ablauf_dauer": "Symbole erklären 2 Min; üben 2–5 Min; erste Version still 5–10 Min; zweite Version 5–10 Min; andere deuten, Künstler:in schweigt 5–15 Min; Gesamtgruppe „Was offenbaren die Zeichnungen?“ 5–15 Min. Gesamt ca. 25–55 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 23,
+      "name": "Critical Uncertainties",
+      "slug": "critical-uncertainties",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Entwickelt robuste und absichernde Strategien für mehrere mögliche Zukunftsszenarien – macht die Gruppe widerstandsfähig gegen Unvorhersehbares.",
+      "source_url": "https://liberatingstructures.de/critical-uncertainties/",
+      "purpose_tags": [
+        "strategie"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 80,
+      "duration_max": 90,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Post-its, Flipcharts pro Vierergruppe; nützlich: Papier, Sektorendiagramm; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "wicked-questions"
+      ],
+      "typical_successors": [
+        "min-specs",
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Strategie unter Unsicherheit (z. B. Produkt-/Roadmap-Planung mit mehreren Zukunftsszenarien).",
+      "design_elements": {
+        "einladung": "Identifiziert kritische Unsicherheiten eures Umfelds und entwickelt dazu passende Strategien.",
+        "raum_materialien": "Wichtig: Stifte, Post-its, Flipcharts pro Vierergruppe; nützlich: Papier, Sektorendiagramm; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Alle für Planung/Durchführung Verantwortlichen, gleiche Beitragschancen.",
+        "gruppenkonfiguration": "Groß und divers genug für vier (alternativ zwei) Kleingruppen.",
+        "ablauf_dauer": "Erklären 2 Min; Unsicherheiten sammeln 5 Min; priorisieren 5–10 Min; zwei Faktoren wählen 5 Min; 2-Achsen-Raster 2–5 Min; Szenarien je Quadrant 5–10 Min; präsentieren 2 Min/Gruppe; je 3 Strategien 10 Min; teilen 2 Min/Gruppe; robuste vs. absichernde Strategien 10 Min; Debrief mit What-So-What-Now-What 10 Min. Gesamt 80–90 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 24,
+      "name": "Ecocycle Planning",
+      "slug": "ecocycle-planning",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Analysiert das Aktivitäten-Portfolio einer Gruppe entlang eines Lebenszyklus – deckt auf, wo Ressourcen gebunden oder verschwendet werden, und setzt Fokus.",
+      "source_url": "https://liberatingstructures.de/ecocycle-planning/",
+      "purpose_tags": [
+        "strategie",
+        "planen"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 90,
+      "duration_max": 120,
+      "online_capable": true,
+      "materials": "Stifte, Papier, Ecocycle-Arbeitsblatt pro Person; Post-its (farblich sortiert); freie Wand-/Bodenfläche; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "wicked-questions"
+      ],
+      "typical_successors": [
+        "panarchy",
+        "what-i-need-from-you-winfy",
+        "open-space-technology",
+        "triz"
+      ],
+      "scrum_use": "Product Backlog oder Aktivitäten-Portfolio entrümpeln: erkennen, was reif oder überfällig für „kreative Zerstörung“ ist.",
+      "design_elements": {
+        "einladung": "Sammelt eure laufenden Aktivitäten und bewertet sie nach vier Phasen (Keimzeit, Entstehung, Reife, kreative Zerstörung); formuliert Maßnahmen je Phase.",
+        "raum_materialien": "Stifte, Papier, Ecocycle-Arbeitsblatt pro Person; Post-its (farblich sortiert); freie Wand-/Bodenfläche; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Alle Beteiligten aus allen Ebenen/Funktionen, gleiche Beitragschancen.",
+        "gruppenkonfiguration": "1-2-4-All; Kleingruppen für Maßnahmen.",
+        "ablauf_dauer": "Idee vorstellen 5 Min; eigene Aktivitätenliste 5 Min; zu zweit platzieren 10 Min; zu viert finalisieren 15 Min; gemeinsam visualisieren 15 Min; Muster/kritische Aktivitäten 15 Min; Maßnahmen für „Starrheits-“ und „Armuts-Falle“ je 10+ Min; Dissens diskutieren 10 Min. Gesamt ca. 95 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 25,
+      "name": "Generative Relationships (STAR)",
+      "slug": "generative-relationships-star",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Bewertet eine Arbeitsgruppe entlang vier Faktoren (Unterschiedlichkeit, Zuhören, Aktion, Sinn) und macht hilfreiche wie schädliche Beziehungsmuster sichtbar.",
+      "source_url": "https://liberatingstructures.de/generative-relationships-star/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 30,
+      "online_capable": true,
+      "materials": "Stifte, Papier und STAR-Kompass-Grafik (Flipchart/Ausdruck); online: Breakout-Räume, virtuelles Whiteboard, farbige Post-its.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "nine-whys",
+        "heard-seen-respected"
+      ],
+      "typical_successors": [
+        "conversation-cafe",
+        "wise-crowds",
+        "25-10-crowd-sourcing"
+      ],
+      "scrum_use": "Teamdynamik bewerten und verbessern (Vielfalt, Zuhören, gemeinsame Aktion, Sinn); gut bei neuen Teamzusammensetzungen oder Spannungen.",
+      "design_elements": {
+        "einladung": "Bewertet eure Arbeitsgruppe anhand von vier Attributen: S (Separateness/Unterschiedlichkeit), T (Tuning/Zuhören), A (Action/innovative Zusammenarbeit), R (Reason/Nutzen der Zusammenarbeit).",
+        "raum_materialien": "Stifte, Papier und STAR-Kompass-Grafik (Flipchart/Ausdruck); online: Breakout-Räume, virtuelles Whiteboard, farbige Post-its.",
+        "einbindung": "Alle eingebunden, gleiche Mitgestaltung.",
+        "gruppenkonfiguration": "Einzeln → Kleingruppen → Gesamtgruppe.",
+        "ablauf_dauer": "Einzelne Einschätzung 5 Min; Kleingruppen-Diskussion + Punkte 5 Min; Muster analysieren 5 Min; Aktionspunkte brainstormen 5 Min; Gesamtgruppe entscheidet nächste Schritte 5 Min. Gesamt ca. 25 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 26,
+      "name": "Agreement-Certainty Matrix",
+      "slug": "agreement-certainty-matrix",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Ordnet Herausforderungen in einfach/kompliziert/komplex/chaotisch ein – hilft, den jeweils passenden Lösungsansatz zu wählen statt Methoden falsch einzusetzen.",
+      "source_url": "https://liberatingstructures.de/agreement-certainty-matrix/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "konvergieren"
+      ],
+      "group_size_min": 2,
+      "group_size_max": null,
+      "duration_min": 45,
+      "duration_max": 60,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Papier, ACM-Grafik auf Metaplanwand; nützlich: ausgedruckte ACM-Grafiken pro Person, farbige Post-its; optional Tische für Gruppen à 4–6; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "25-10-crowd-sourcing"
+      ],
+      "typical_successors": [
+        "critical-uncertainties",
+        "purpose-to-practice",
+        "ecocycle-planning",
+        "panarchy",
+        "integrated-autonomy",
+        "discovery-action-dialogue-dad"
+      ],
+      "scrum_use": "Herausforderungen nach Komplexität einordnen und den passenden Ansatz wählen; gut zu Beginn von Problemlösungs-Workshops.",
+      "design_elements": {
+        "einladung": "Ordnet Herausforderungen anhand zweier Fragen ein – Grad der Übereinstimmung und Grad der Sicherheit/Vorhersehbarkeit – und reflektiert die Passung von Ansatz und Herausforderung.",
+        "raum_materialien": "Wichtig: Stifte, Papier, ACM-Grafik auf Metaplanwand; nützlich: ausgedruckte ACM-Grafiken pro Person, farbige Post-its; optional Tische für Gruppen à 4–6; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Alle Beteiligten (nicht nur Führungskräfte), gleiche Beitragschancen.",
+        "gruppenkonfiguration": "Einzeln → Paare → Kleingruppen (4–6) → Gesamtgruppe.",
+        "ablauf_dauer": "Herausforderungsliste einzeln 5 Min; auf Matrix platzieren 5 Min; zu zweit diskutieren 5 Min; Kleingruppen Muster 10 Min; an Wand anbringen 5 Min; Kleingruppen reflektieren 5 Min; Plenum Einsichten + nächste Schritte 10 Min. Gesamt ca. 45 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 27,
+      "name": "Panarchy",
+      "slug": "panarchy",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Macht sichtbar, wie Systemebenen ineinander verschachtelt sind, und hilft großen Gruppen, Hindernisse und Chancen für die Verbreitung von Ideen zu erkennen.",
+      "source_url": "https://liberatingstructures.de/panarchy/",
+      "purpose_tags": [
+        "strategie"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 120,
+      "duration_max": 150,
+      "online_capable": true,
+      "materials": "Wichtig: freie Wand-/Bodenfläche, Tape/Kreide, Stifte, Papier; nützlich: leeres Panarchy-Chart (Handout + großformatig); optional Tische, Stühle; online: Breakout-Räume + virtuelles Whiteboard.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "ecocycle-planning"
+      ],
+      "typical_successors": [
+        "what-i-need-from-you-winfy",
+        "social-network-webbing",
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Verbreitung von Ideen/Veränderungen über Systemebenen verstehen (Team → Bereich → Organisation); für komplexe Transformationen.",
+      "design_elements": {
+        "einladung": "Erkundet, wodurch Herausforderungen auf darüber- und darunterliegenden Systemebenen genährt werden, und benennt Strategien für Veränderung.",
+        "raum_materialien": "Wichtig: freie Wand-/Bodenfläche, Tape/Kreide, Stifte, Papier; nützlich: leeres Panarchy-Chart (Handout + großformatig); optional Tische, Stühle; online: Breakout-Räume + virtuelles Whiteboard.",
+        "einbindung": "Alle am Transformations-/Innovationsprozess Beteiligten, gleiche Beitragschancen.",
+        "gruppenkonfiguration": "Einzeln → Paare → Vierergruppen → Gesamtgruppe (1-2-4-All).",
+        "ablauf_dauer": "Umfangreich (ca. 145 Min): Idee einführen, Faktoren erarbeiten, auf Ebenen übersetzen, Charts finalisieren und zusammenführen, Ecocycle-Analyse, Hindernisse/Chancen brainstormen und priorisieren, Maßnahmen mit 1-2-4-All, Debrief mit What-So-What-Now-What."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 28,
+      "name": "Integrated~Autonomy",
+      "slug": "integrated-autonomy",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Hilft, von „Entweder-oder“ zu „Beides-und“ zu kommen – etwa zwischen lokaler Autonomie und zentraler Standardisierung – und dafür konkrete Maßnahmen zu finden.",
+      "source_url": "https://liberatingstructures.de/integrated-autonomy/",
+      "purpose_tags": [
+        "strategie"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 4,
+      "group_size_max": null,
+      "duration_min": 65,
+      "duration_max": 80,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Arbeitsblatt pro Person, großer Wandarbeitsbereich; optional Tische/Stühle; online: Breakout-Räume.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "wicked-questions"
+      ],
+      "typical_successors": [
+        "min-specs",
+        "design-storyboards"
+      ],
+      "scrum_use": "Spannung „Standardisierung vs. lokale Freiheit“ auflösen (z. B. teamübergreifende Standards vs. Team-Autonomie) – „beides-und“ statt „entweder-oder“.",
+      "design_elements": {
+        "einladung": "„Wird unser Ziel besser durch mehr lokale Autonomie/Freiheit oder durch mehr Integration/Standardisierung/Kontrolle unterstützt – oder beides?“",
+        "raum_materialien": "Wichtig: Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Arbeitsblatt pro Person, großer Wandarbeitsbereich; optional Tische/Stühle; online: Breakout-Räume.",
+        "einbindung": "Leitende aller relevanten zentralen und lokalen Einheiten, gleiche Beitragschancen.",
+        "gruppenkonfiguration": "Einzelarbeit → Vierergruppen → Gesamtgruppe.",
+        "ablauf_dauer": "Konzept vorstellen 5 Min; Spannungen mit 1-2-4-All 10–15 Min; Gründe Standardisierung vs. Anpassung 10 Min; Maßnahmen mit 1-2-4 10–15 Min; beidseitige Maßnahmen 5 Min; kreative Ideen 15 Min; priorisieren mit 1-2-4-All 10–15 Min. Gesamt 65–80 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 29,
+      "name": "Celebrity Interview",
+      "slug": "celebrity-interview",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Verwandelt einen Expertenvortrag in ein lockeres Talk-Show-Interview – persönlich, einbindend und für große Gruppen geeignet.",
+      "source_url": "https://liberatingstructures.de/celebrity-interview/",
+      "purpose_tags": [
+        "teilen"
+      ],
+      "arc_role": [
+        "öffnen"
+      ],
+      "group_size_min": 5,
+      "group_size_max": null,
+      "duration_min": 25,
+      "duration_max": 50,
+      "online_capable": true,
+      "materials": "Interviewer:in und Gast sichtbar/hörbar positioniert; Stifte und Trennkarten (8×13 cm); optional Mikrofone, Glocke/Tingsha, Barhocker, Bühne; online: Breakout-Räume, virtuelles Whiteboard.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "user-experience-fishbowl",
+        "open-space-technology",
+        "discovery-action-dialogue-dad",
+        "what-i-need-from-you-winfy"
+      ],
+      "scrum_use": "Wissen/Erfahrung einer Schlüsselperson lebendig vermitteln (z. B. Stakeholder, neue Führungskraft, Expert:in) statt trockener Präsentation.",
+      "design_elements": {
+        "einladung": "Der/die Expert:in vermeidet eine formale Präsentation und beantwortet Fragen in lockerer „Talk-Show“-Atmosphäre; das Publikum hört zu und notiert Fragen.",
+        "raum_materialien": "Interviewer:in und Gast sichtbar/hörbar positioniert; Stifte und Trennkarten (8×13 cm); optional Mikrofone, Glocke/Tingsha, Barhocker, Bühne; online: Breakout-Räume, virtuelles Whiteboard.",
+        "einbindung": "Teil 1 (Interview): alle hören gleichberechtigt zu; Teil 2: alle formulieren via 1-2-4 Fragen.",
+        "gruppenkonfiguration": "Gesamtgruppe für das Interview; Einzelne/Paare/Kleingruppen für die Fragengenerierung.",
+        "ablauf_dauer": "Begrüßung 3 Min; Interview 7–27 Min; 1-2-4-Fragengenerierung 5–10 Min; weitere Fragen aus Karten 5–10 Min; Schlusswort 1 Min. Gesamt 25–50 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 30,
+      "name": "User Experience Fishbowl",
+      "slug": "user-experience-fishbowl",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Erfahrene Praktiker:innen teilen im inneren Kreis offen ihre Erfahrungen mit einer größeren Gruppe – gemeinsames Lernen aus Erfolgen und Fehlern.",
+      "source_url": "https://liberatingstructures.de/liberating-structures-menue/user-experience-fishbowl/",
+      "purpose_tags": [
+        "teilen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 6,
+      "group_size_max": null,
+      "duration_min": 35,
+      "duration_max": 70,
+      "online_capable": true,
+      "materials": "3–7 Stühle im inneren Kreis, umgeben von Stühlen in 3–4er-Grüppchen; optional Mikrofone ab 30–40 Zuhörenden, Bühne/Sessel; online: Breakout-Räume und virtuelles Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "celebrity-interview"
+      ],
+      "typical_successors": [
+        "improv-prototyping",
+        "25-10-crowd-sourcing",
+        "simple-ethnography",
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Erfahrene Praktiker:innen teilen Erkenntnisse mit einer größeren Gruppe (z. B. Team teilt Learnings, „aus Fehlern lernen“).",
+      "design_elements": {
+        "einladung": "Der innere Kreis beschreibt Erfahrungen zwanglos und konkret (die guten, schlechten und „hässlichen“) wie ein Lagerfeuergespräch; das Publikum hört zu und formuliert Fragen.",
+        "raum_materialien": "3–7 Stühle im inneren Kreis, umgeben von Stühlen in 3–4er-Grüppchen; optional Mikrofone ab 30–40 Zuhörenden, Bühne/Sessel; online: Breakout-Räume und virtuelles Whiteboard.",
+        "einbindung": "Innerer Kreis hat gleiche Sprechgelegenheit; äußerer Kreis stellt gleichberechtigt Fragen.",
+        "gruppenkonfiguration": "3–7 Personen im inneren Kreis; je 3–4 in Satellitengruppen außen; 1-2-4-All zum Debrief.",
+        "ablauf_dauer": "Erklärung 2 Min; Gespräch im inneren Kreis 10–25 Min; Satellitengruppen formulieren Fragen 4 Min; Fragen beantworten 10–25 Min; Debrief mit What-So-What-Now-What 10–15 Min. Gesamt 35–70 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 31,
+      "name": "Social Network Webbing",
+      "slug": "social-network-webbing",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Visualisiert informelle Verbindungen eines Netzwerks und entwickelt Strategien, um sie zu nutzen und auszubauen – über Silo-, Hierarchie- und Firmengrenzen hinweg.",
+      "source_url": "https://liberatingstructures.de/social-network-webbing/",
+      "purpose_tags": [
+        "helfen",
+        "planen"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 8,
+      "group_size_max": null,
+      "duration_min": 45,
+      "duration_max": 55,
+      "online_capable": true,
+      "materials": "Wichtig: Flipcharts/Packpapier, Post-its (51×51 mm) in 8+ Farben, Stifte; online: Breakout-Räume mit virtuellem Whiteboard.",
+      "difficulty": "mittel",
+      "typical_predecessors": [
+        "impromptu-networking"
+      ],
+      "typical_successors": [
+        "15-solutions",
+        "design-storyboards",
+        "1-2-4-all"
+      ],
+      "scrum_use": "Informelle Netzwerke sichtbar machen und gezielt nutzen, um Veränderungen/Wissen über Team- und Bereichsgrenzen zu verbreiten.",
+      "design_elements": {
+        "einladung": "Erstellt gemeinsam eine Netzwerkkarte: aktive Kooperationspartner und gewünschte zukünftige Beteiligte benennen und festlegen, wie das Netzwerk ausgebaut wird.",
+        "raum_materialien": "Wichtig: Flipcharts/Packpapier, Post-its (51×51 mm) in 8+ Farben, Stifte; online: Breakout-Räume mit virtuellem Whiteboard.",
+        "einbindung": "Alle Arbeitsgruppenmitglieder eingebunden, gleiche Einbringungsmöglichkeiten.",
+        "gruppenkonfiguration": "1-2-4-All für Schlüsselgruppen; gemeinsame Kartenerstellung.",
+        "ablauf_dauer": "Legende 5 Min; Namen auf Post-its 5 Min; aktuelle Kontakte 10 Min; zukünftige Beteiligte 10 Min; Verbindungen analysieren 5–15 Min; Strategien 10 Min. Gesamt 45–55 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 32,
+      "name": "Simple Ethnography",
+      "slug": "simple-ethnography",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Beobachtet das tatsächliche Verhalten echter Nutzer vor Ort und macht so verborgene Abläufe und Bedürfnisse sichtbar, die Befragungen verborgen bleiben.",
+      "source_url": "https://liberatingstructures.de/simple-ethnography/",
+      "purpose_tags": [
+        "analysieren"
+      ],
+      "arc_role": [
+        "divergieren",
+        "konvergieren"
+      ],
+      "group_size_min": 8,
+      "group_size_max": null,
+      "duration_min": 60,
+      "duration_max": 240,
+      "online_capable": false,
+      "materials": "Vor-Ort-Arbeitsplätze mit Raum zum Teilen; nützlich: Stifte, Papier/Notizbuch; optional Foto-/Videokamera (mit Erlaubnis).",
+      "difficulty": "mittel",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "improv-prototyping",
+        "design-storyboards",
+        "discovery-action-dialogue-dad",
+        "1-2-4-all"
+      ],
+      "scrum_use": "Tatsächliches Nutzer-/Arbeitsverhalten vor Ort beobachten (z. B. echte Produktnutzung), um verborgene Bedürfnisse zu erkennen.",
+      "design_elements": {
+        "einladung": "Beobachtet Expert:innen und Anwender:innen still vor Ort und führt anschließend Interviews zu beobachtetem Verhalten.",
+        "raum_materialien": "Vor-Ort-Arbeitsplätze mit Raum zum Teilen; nützlich: Stifte, Papier/Notizbuch; optional Foto-/Videokamera (mit Erlaubnis).",
+        "einbindung": "Alle Kerngruppenmitglieder als gleichberechtigte Ethnograf:innen.",
+        "gruppenkonfiguration": "Einzeln oder in Paaren vor Ort; Gesamtgruppe zur Abschlussbesprechung.",
+        "ablauf_dauer": "Fragestellung erläutern 5 Min; Orte/Personen identifizieren 5 Min; still beobachten 10–180 Min; Interviews 20–180 Min; Muster mit 1-2-4-All 15 Min; Erkenntnisse zusammenfassen 10–20 Min; Brainstorming/Prototyping 10 Min."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 33,
+      "name": "Purpose-To-Practice (P2P)",
+      "slug": "purpose-to-practice",
+      "type": "official",
+      "base_structure": null,
+      "edition": "original",
+      "short_desc": "Gestaltet gemeinsam die fünf essenziellen Bestandteile einer Initiative: Sinn/Zweck, Prinzipien, Beteiligte, Struktur und Praktiken.",
+      "source_url": "https://liberatingstructures.de/purpose-to-practice-p2p/",
+      "purpose_tags": [
+        "planen",
+        "strategie"
+      ],
+      "arc_role": [
+        "konvergieren",
+        "schließen"
+      ],
+      "group_size_min": 8,
+      "group_size_max": null,
+      "duration_min": 120,
+      "duration_max": 300,
+      "online_capable": true,
+      "materials": "Wichtig: Stifte, Papier/Post-its; große Wand mit Posterpapier; nützlich: Tische, Stühle, fünf Arbeitsblätter pro Person; online: Breakout-Räume und Whiteboard.",
+      "difficulty": "fortgeschritten",
+      "typical_predecessors": [
+        "nine-whys",
+        "appreciative-interviews"
+      ],
+      "typical_successors": [
+        "min-specs",
+        "what-so-what-now-what"
+      ],
+      "scrum_use": "Gemeinsamer Initiativ-/Projektstart: Zweck, Prinzipien, Beteiligte, Struktur und Praktiken zusammen gestalten (z. B. Team-/Produkt-Kickoff).",
+      "design_elements": {
+        "einladung": "Alle (oder nahezu alle) Beteiligten präzisieren gemeinsam die fünf wesentlichen Elemente ihrer Initiative: Sinn/Zweck, Prinzipien, Teilnehmende, Struktur und Praktiken.",
+        "raum_materialien": "Wichtig: Stifte, Papier/Post-its; große Wand mit Posterpapier; nützlich: Tische, Stühle, fünf Arbeitsblätter pro Person; online: Breakout-Räume und Whiteboard.",
+        "einbindung": "Alle Beteiligten einbezogen, gleiche Beitragsmöglichkeiten.",
+        "gruppenkonfiguration": "1-2-4-All je Element; Gesamtgruppe zur Finalisierung jedes Elements.",
+        "ablauf_dauer": "Einführung 5 Min; pro Element 1-2-4-All (einzeln 10 → vierer 10 → gesamt 10 Min) + Rückfrage 5 Min; Abschluss mit What-So-What-Now-What 15 Min. Gesamt 120 Min bis mehrere Tage."
+      },
+      "description_origin": "uebernommen",
+      "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    }
+  ]
+}
