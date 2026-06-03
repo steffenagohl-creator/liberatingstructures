@@ -1,0 +1,11 @@
+# Vom Docker-Build-Kontext ausschließen (kleinere Builds, keine privaten/sensiblen Dateien).
+.git
+.claude
+.gitignore
+gesammelte Pläne/
+Grossauftrag_LS-Matchmaker.md
+CLAUDE.md
+.env
+**/__pycache__/
+**/*.pyc
+*.sqlite3

@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "beschreibung": "Diagnoseschema des LS-Matchmaker: die strukturierten Merkmale, die aus der geschilderten Situation erhoben werden. Der Interview-Agent UND die deterministische Vorfilterung arbeiten gegen dieselbe Quelle. Siehe data/diagnosis_schema.md.",
+  "dimensions": [
+    {
+      "key": "zweck",
+      "label": "Was soll am Ende herauskommen – was ist das Ziel?",
+      "hint": "Eine oder mehrere Zweck-Kategorien wählen.",
+      "input_type": "multi_choice",
+      "maps_to": "purpose_tags",
+      "options": [
+        {"value": "offenlegen", "label": "Offenlegen / Ideen sammeln"},
+        {"value": "teilen", "label": "Teilen / Informationen verbreiten"},
+        {"value": "analysieren", "label": "Analysieren / verstehen"},
+        {"value": "strategie", "label": "Strategie entwickeln"},
+        {"value": "helfen", "label": "Gegenseitig helfen"},
+        {"value": "planen", "label": "Konkret planen / umsetzen"},
+        {"value": "solo", "label": "Einzelarbeit"}
+      ]
+    },
+    {
+      "key": "phase_bogen",
+      "label": "In welcher Phase der Session befinden wir uns?",
+      "hint": "Rolle im Spannungsbogen einer Session.",
+      "input_type": "multi_choice",
+      "maps_to": "arc_role",
+      "options": [
+        {"value": "öffnen", "label": "Öffnen / einsteigen"},
+        {"value": "divergieren", "label": "Divergieren / Ideen erzeugen"},
+        {"value": "konvergieren", "label": "Konvergieren / verdichten"},
+        {"value": "schließen", "label": "Schließen / abschließen"}
+      ]
+    },
+    {
+      "key": "gruppengroesse",
+      "label": "Wie viele Personen nehmen teil?",
+      "hint": "Anzahl der Teilnehmenden.",
+      "input_type": "number",
+      "maps_to": "group_size",
+      "unit": "personen"
+    },
+    {
+      "key": "zeitbudget",
+      "label": "Wie viel Zeit steht zur Verfügung?",
+      "hint": "Gesamtbudget in Minuten.",
+      "input_type": "number",
+      "maps_to": "duration",
+      "unit": "minuten"
+    },
+    {
+      "key": "setting",
+      "label": "Wo findet es statt?",
+      "hint": "Präsenz, Remote oder Hybrid.",
+      "input_type": "single_choice",
+      "maps_to": "online_capable",
+      "options": [
+        {"value": "praesenz", "label": "Präsenz (vor Ort)"},
+        {"value": "remote", "label": "Remote (online)"},
+        {"value": "hybrid", "label": "Hybrid"}
+      ]
+    },
+    {
+      "key": "psychologische_sicherheit",
+      "label": "Wie sicher fühlt sich die Gruppe, offen zu sprechen?",
+      "hint": "Auch Machtgefälle berücksichtigen.",
+      "input_type": "single_choice",
+      "maps_to": "-",
+      "options": [
+        {"value": "niedrig", "label": "Eher niedrig"},
+        {"value": "mittel", "label": "Mittel"},
+        {"value": "hoch", "label": "Hoch"}
+      ]
+    },
+    {
+      "key": "reife_ls_erfahrung",
+      "label": "Wie viel Erfahrung hat die Gruppe mit Liberating Structures?",
+      "hint": "Beeinflusst die Schwierigkeit der vorgeschlagenen Strukturen.",
+      "input_type": "single_choice",
+      "maps_to": "difficulty",
+      "options": [
+        {"value": "anfaenger", "label": "Wenig oder keine"},
+        {"value": "fortgeschritten", "label": "Erfahren"}
+      ]
+    },
+    {
+      "key": "scrum_kontext",
+      "label": "In welchem Scrum-Kontext sind wir?",
+      "hint": "Optionales Preset; leer = kein bestimmter.",
+      "input_type": "single_choice",
+      "maps_to": "scrum_context",
+      "options": [
+        {"value": "", "label": "Kein bestimmter"},
+        {"value": "retrospektive", "label": "Retrospektive"},
+        {"value": "planning", "label": "Sprint Planning"},
+        {"value": "review", "label": "Sprint Review"},
+        {"value": "daily", "label": "Daily"},
+        {"value": "refinement", "label": "Refinement"},
+        {"value": "team-start", "label": "Team-Start"}
+      ]
+    }
+  ]
+}
