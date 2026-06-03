@@ -28,7 +28,11 @@ services:
       - ./backend:/app/backend
       - ./data:/app/data
     working_dir: /app/backend
-    # In AP2 kein Host-Port nötig; in AP3/AP6 wird hier 8000 freigegeben.
+    # AP3: Entwicklungs-Server. Nur auf localhost gebunden (kein öffentlicher Zugang;
+    # der kommt erst in AP6). Host-Port über ENV (WEB_PORT) überschreibbar, falls 8000 belegt.
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8000}:8000"
 
 volumes:
   lsm_pgdata:

@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     "catalog",
+    "matchmaker",
 ]
 
 MIDDLEWARE = [
@@ -92,10 +93,22 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
-# OpenAPI-Doku (Leitprinzip: dokumentierte, maschinenlesbare Endpunkte – Endpunkte folgen in AP3)
+# OpenAPI-Doku (Leitprinzip: dokumentierte, maschinenlesbare Endpunkte)
 SPECTACULAR_SETTINGS = {
     "TITLE": "LS-Matchmaker API",
     "DESCRIPTION": "API des LS-Matchmaker: schlägt passende Liberating-Structures-Strings vor.",
-    "VERSION": "0.1.0",
+    "VERSION": "0.3.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }
+
+# --------------------------------------------------------------------------- #
+# LLM-Schicht (AP3) – provider-agnostisch, ausschließlich über ENV.
+# Ohne Schlüssel/Provider läuft alles über den Stub (LLM_PROVIDER=stub).
+# --------------------------------------------------------------------------- #
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "mistral")
+LLM_MODEL = os.environ.get("LLM_MODEL", "mistral-medium-latest")
+# Schlüssel: bevorzugt MISTRAL_API_KEY, ersatzweise das generische LLM_API_KEY.
+LLM_API_KEY = os.environ.get("MISTRAL_API_KEY") or os.environ.get("LLM_API_KEY", "")
+LLM_TIMEOUT = float(os.environ.get("LLM_TIMEOUT", "60"))
+# Wie oft die Sequenzierung nach einem Quality-Gate-Verstoß nachbessern darf.
+MATCHMAKER_MAX_ITERATIONS = int(os.environ.get("MATCHMAKER_MAX_ITERATIONS", "3"))
