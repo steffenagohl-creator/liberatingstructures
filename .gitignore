@@ -153,8 +153,3 @@ docker-compose.override.yml
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# ----------------------------------------------------------
-# Lokale, nicht zu committende Dateien (nur auf dem VPS)
-# ----------------------------------------------------------
-Grossauftrag_LS-Matchmaker.md
