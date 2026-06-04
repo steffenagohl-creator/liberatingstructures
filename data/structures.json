@@ -3107,63 +3107,247 @@
       "edition": "original",
       "short_desc": {
         "de": "Ruhiges, zuhörendes Gespräch in kleinen Kreisen mit Redeobjekt – hilft, verwirrende oder aufwühlende Ereignisse gemeinsam zu verstehen.",
-        "en": ""
+        "en": "Small groups hold a calm, deep dialogue using six simple agreements and a talking object — listening over debating. Together they make sense of a confusing or charged challenge and discover new ways forward."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/conversation-cafe/",
+      "source_url": "https://www.liberatingstructures.com/conversation-cafe",
       "purpose_tags": [
-        "teilen",
-        "analysieren"
+        "teilen"
       ],
       "arc_role": [
         "öffnen",
         "konvergieren"
       ],
-      "group_size_min": 4,
+      "group_size_min": 5,
       "group_size_max": null,
-      "duration_min": 30,
-      "duration_max": 60,
+      "duration_min": 45,
+      "duration_max": 75,
       "online_capable": true,
       "materials": {
         "de": "Stuhlkreise (4–7), Redeobjekt (Talking Stick); nützlich: 1–2 Seiten Flipchart-Papier und Stifte pro Kreis; online: Breakout-Räume.",
-        "en": ""
+        "en": "Groups of 5–7 chairs around small tables. A talking object for each group (talking stick, stone or art object). The six agreements displayed. Online: breakout rooms."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
-        "what-so-what-now-what",
-        "15-solutions",
-        "open-space-technology"
+        "spiral-journal",
+        "mad-tea"
       ],
       "scrum_use": {
         "de": "Retrospektive zu emotionalen Themen: sicherer Raum, in dem alle Sorgen, Ängste oder positive Erfahrungen teilen – Zuhören vor Lösen.",
-        "en": ""
+        "en": "When a team needs to make sense of something big, confusing or emotionally charged — a setback, a major change — rather than rushing to action: a structured, respectful dialogue that builds shared understanding."
       },
       "design_elements": {
         "einladung": {
           "de": "In kleinen Gruppen den Gedanken anderer zuhören und über eine gemeinsame Herausforderung nachdenken – nach sechs einfachen Gesprächsregeln.",
-          "en": ""
+          "en": "We're about to unlock the collective wisdom in this room with a Conversation Café! It's like hosting guests for dinner, only we're going deeper, listening more, and ditching the debate as we explore a shared challenge."
         },
         "raum_materialien": {
           "de": "Stuhlkreise (4–7), Redeobjekt (Talking Stick); nützlich: 1–2 Seiten Flipchart-Papier und Stifte pro Kreis; online: Breakout-Räume.",
-          "en": ""
+          "en": "Groups of 5–7 chairs around small tables. A talking object per group. The six agreements displayed. Optional: 1–2 sheets of flip-chart paper and pens per table. Online: breakout rooms."
         },
         "einbindung": {
           "de": "Alle werden einbezogen; gleiche Chancen, sich einzubringen.",
-          "en": ""
+          "en": "Roles: host, group hosts, participants. Minimum group size is five. Everyone is invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Gemischte Gruppen von 4–7 möglichst unterschiedlichen Personen.",
-          "en": ""
+          "en": "Mixed groups of 5–7 as diverse as possible; whole group."
         },
         "ablauf_dauer": {
           "de": "Vier Runden: Runde 1 Gedanken teilen (1 Min/Person, Talking Stick); Runde 2 reflektieren (1 Min/Person); Runde 3 offene Diskussion (10–30 Min); Runde 4 Mitnahme (1 Min/Person). Gesamt ca. 30–60 Min.",
-          "en": ""
+          "en": "Intro 1 min; instructions 3 min; then four rounds with the talking object: first impressions (1 min/person), reflections (1 min/person), open conversation (10–40 min), takeaways (1 min/person); plenary sharing 3 min. ~45–75 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); erkundet die Arbeit von Vicki Robin und Susan Partnow (Mitbegründer:innen der Conversation-Café-Bewegung); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); explores the work of Vicki Robin and Susan Partnow (codevelopers of the Conversation Café movement); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P3"
+      ],
+      "icon_alt": {
+        "de": "Eine kleine Gesprächsrunde mit einem Redeobjekt, das von Hand zu Hand geht.",
+        "en": "A small conversation circle with a talking object passed from hand to hand."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Man kann beliebig viele Menschen einbeziehen, um die Bedeutung verwirrender oder schockierender Ereignisse zu verstehen. Das Format hilft, ruhige und tiefgehende Gespräche zu führen, in denen Zuhören wichtiger ist als Debattieren oder Streiten. Im Kreis sitzend, mit einfachen Regeln und einem Redeobjekt, entstehen in kleinen Gruppen Dialoge ohne unproduktive Konflikte; ein gemeinsames Verständnis der Herausforderung wächst und hilft, ganz neue Lösungswege zu entdecken. Conversation Café verkörpert LS-Prinzip #3 — Vertrauen Schritt für Schritt aufbauen.",
+          "en": "You can involve any number of people in making sense of confusing or shocking events. The format supports calm, deep conversation in which listening matters more than debating or arguing. Sitting in a circle with simple agreements and a talking object, small groups hold dialogue without unproductive conflict; a shared understanding of the challenge grows and helps the group discover entirely new ways forward. Conversation Café enacts LS Principle #3 — Build Trust as You Go."
+        },
+        "einladung": {
+          "de": "„Wir lüften gleich die kollektive Weisheit in diesem Raum mit einem Conversation Café! Es ist wie ein Abendessen mit Gästen — nur gehen wir tiefer, hören mehr zu und lassen das Debattieren weg, während wir eine gemeinsame Herausforderung erkunden.“",
+          "en": "We're about to unlock the collective wisdom in this room with a Conversation Café! It's like hosting guests for dinner, only we're going deeper, listening more, and ditching the debate as we explore a shared challenge."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Das Thema wird meist als Frage formuliert.",
+            "Die sechs Vereinbarungen: (1) Gesagtes möglichst nicht bewerten; (2) einander respektieren; (3) verstehen statt überzeugen wollen; (4) verschiedene Meinungen begrüßen und wertschätzen; (5) über Dinge sprechen, die einen bewegen; (6) auf Ehrlichkeit und Tiefe achten, ohne in einen langen Redeschwall zu verfallen."
+          ],
+          "en": [
+            "The topic is usually phrased as a question.",
+            "The six agreements: (1) suspend judgment as best you can; (2) respect one another; (3) seek to understand rather than persuade; (4) invite and honor diverse opinions; (5) speak what has personal heart and meaning; (6) go for honesty and depth without going on, on, and on."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einladung teilen; die gemeinsame Herausforderung als Frage benennen.",
+              "en": "Share the invitation; name the shared challenge as a question."
+            }
+          },
+          {
+            "phase": {
+              "de": "Anleitung",
+              "en": "Instructions"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Das Redeobjekt-Prinzip und die vier Runden erklären; optional die sechs Vereinbarungen verlesen und je Tisch eine:n Gastgeber:in bestimmen.",
+              "en": "Explain the talking-object protocol and the four rounds; optionally read the six agreements and designate a host per table."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erste Runde",
+              "en": "First impressions"
+            },
+            "dauer_min": 6,
+            "beschreibung": {
+              "de": "Mit dem Redeobjekt: jede:r teilt erste Gedanken/Gefühle zur Herausforderung (~1 Min/Person).",
+              "en": "With the talking object: each person shares first impressions about the challenge (~1 min/person)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zweite Runde",
+              "en": "Reflections"
+            },
+            "dauer_min": 6,
+            "beschreibung": {
+              "de": "Nach dem Zuhören neue Gedanken teilen (~1 Min/Person).",
+              "en": "After listening, share new thoughts (~1 min/person)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Offenes Gespräch",
+              "en": "Open conversation"
+            },
+            "dauer_min": 30,
+            "beschreibung": {
+              "de": "Lebhaftes, offenes Gespräch; das Redeobjekt für die Reihenfolge nutzen (10–40 Min).",
+              "en": "Lively, open conversation; use the talking object for turn-taking (10–40 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Mitnahmen",
+              "en": "Takeaways"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Abschlussrunde: jede:r teilt die wichtigste Erkenntnis (~1 Min/Person).",
+              "en": "Closing round: each shares their key takeaway (~1 min/person)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Im Plenum teilen einige ihre Mitnahmen.",
+              "en": "In plenary, a few share takeaways."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "World-Café-Wechsel",
+              "en": "World Café rotation"
+            },
+            "beschreibung": {
+              "de": "Alle bis auf eine Person pro Tisch wandern alle ~20 Min an einen anderen Tisch.",
+              "en": "All but one per table move to another table every ~20 min."
+            }
+          },
+          {
+            "name": {
+              "de": "Grafisch festhalten",
+              "en": "Graphic capture"
+            },
+            "beschreibung": {
+              "de": "Flipchart-Papier als „Tischdecke“ für Notizen und Zeichnungen nutzen.",
+              "en": "Use flip-chart paper as a 'tablecloth' for notes and drawings."
+            }
+          },
+          {
+            "name": {
+              "de": "Zu Handlungen",
+              "en": "Toward action"
+            },
+            "beschreibung": {
+              "de": "Mit What, So What, Now What?, 15% Solutions, Design StoryBoards, User Experience Fishbowl oder Open Space kombinieren.",
+              "en": "Combine with What/So What/Now What, 15% Solutions, Design StoryBoards, User Experience Fishbowl or Open Space."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Persönliche Redeobjekte nutzen und spielerisch „weiterreichen“, indem man es in die Kamera hält und die nächste Person benennt.",
+              "en": "Use personal talking objects and playfully 'pass' by holding it up to the camera and naming the next speaker."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Immer ein Redeobjekt verwenden — das macht wirklich einen Unterschied (außer es ist kulturell unpassend).",
+            "Keine Aufgaben zuweisen: Dialog, nicht sofortige Maßnahme.",
+            "Das Gespräch wie eine Dinner Party gestalten; alle ermuntern, stille Personen einladen.",
+            "Bei Problemen erinnern: „Halten wir uns noch an unsere Vereinbarungen?“",
+            "Wicked Questions können das Gespräch weiter vertiefen."
+          ],
+          "en": [
+            "Always use a talking object — it really makes a difference (unless culturally inappropriate).",
+            "Don't assign tasks: dialogue, not immediate action.",
+            "Host it like a dinner party; encourage everyone, invite quiet people in.",
+            "If there's a problem, remind the group: 'Are we still keeping our agreements?'",
+            "Wicked Questions can deepen the conversation further."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Einen großen Rückschlag oder Schock verstehen und verarbeiten (erstmals nach dem 11. September genutzt).",
+            "Ein noch wenig verstandenes Thema oder einen Trend erkunden.",
+            "Ein emotional aufgeladenes Thema behandeln.",
+            "Einen großen Change reflektieren: Was bedeutet er? Welche Schlüsse ergeben Sinn?"
+          ],
+          "en": [
+            "Make sense of and recover from a major setback or shock (first used after 9/11).",
+            "Explore a poorly understood new topic or trend.",
+            "Handle an emotionally charged topic.",
+            "Reflect on a major change: what does it mean? Which conclusions make sense?"
+          ]
+        },
+        "material_setup": {
+          "de": "Stuhlkreise von 4–7 Personen an kleinen Tischen; je Gruppe ein Redeobjekt; die sechs Vereinbarungen sichtbar; optional Flipchart-Papier und Stifte je Tisch. Online: Breakout-Räume.",
+          "en": "Circles of 4–7 around small tables; a talking object per group; the six agreements visible; optional flip-chart paper and pens per table. Online: breakout rooms."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich über Breakout-Räume. Jede Person nutzt ein persönliches Redeobjekt und „reicht“ es spielerisch weiter, indem sie es in die Kamera hält und die nächste sprechende Person benennt. Ablauf: (1) Thema als Frage einblenden und die sechs Vereinbarungen zeigen. (2) Erste Runde (erste Eindrücke), zweite Runde (nach dem Zuhören), offenes Gespräch, Mitnahmen — je in Breakouts von 4–7. (3) Im Plenum einige Mitnahmen teilen.",
+          "en": "Works well online via breakout rooms. Each person uses a personal talking object and playfully 'passes' it by holding it up to the camera and naming the next speaker. Flow: (1) Show the topic as a question and the six agreements. (2) First round (first impressions), second round (after listening), open conversation, takeaways — each in breakouts of 4–7. (3) In plenary, share a few takeaways."
+        }
       }
     },
     {
@@ -3178,61 +3362,209 @@
       "edition": "original",
       "short_desc": {
         "de": "Innovationen werden an Stationen präsentiert, die kleine Gruppen reihum besuchen – schneller Überblick über viele Ideen und informelle Beziehungen statt großer Bühnenvorträge.",
-        "en": ""
+        "en": "Replaces long plenary presentations with a 'speed-dating' tour of 5–8 stations: small groups rotate, each presenter shares an innovation in a few minutes. Good ideas spread and informal connections with innovators form."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/shift-share/",
+      "source_url": "https://www.liberatingstructures.com/shift-and-share",
       "purpose_tags": [
         "teilen"
       ],
       "arc_role": [
         "divergieren"
       ],
-      "group_size_min": 12,
+      "group_size_min": 10,
       "group_size_max": null,
-      "duration_min": 50,
+      "duration_min": 70,
       "duration_max": 90,
       "online_capable": true,
       "materials": {
         "de": "Großer Raum für 3–7 Stationen mit Abstand; Präsentationsmaterial (Flipcharts, Beamer); optional Stifte, Papier, Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "A large space with 5–8 stations set well apart to minimize noise. Chairs for a small group at each station. Space for presenters to display visuals. Online: breakout rooms, a virtual whiteboard."
       },
       "difficulty": "mittel",
       "typical_predecessors": [],
       "typical_successors": [
-        "what-so-what-now-what",
-        "open-space-technology",
-        "improv-prototyping"
+        "troika-consulting",
+        "purpose-to-practice"
       ],
       "scrum_use": {
         "de": "Mehrere Teams präsentieren ihre Lösungen/Praktiken an Stationen – Wissensaustausch über Teamgrenzen.",
-        "en": ""
+        "en": "Spreading what works across teams: instead of one big presentation, several people show their practice at stations while small groups rotate — great after a merger, at a community of practice, or to surface hidden innovations."
       },
       "design_elements": {
         "einladung": {
           "de": "Besuche nacheinander mehrere Innovator:innen, die an Stationen neue oder innovative Inhalte präsentieren.",
-          "en": ""
+          "en": "Let's shake things up and uncover innovations within our group! Forget long, drawn-out presentations — we'll start a whirlwind tour of new options and projects, like speed dating, to learn about new ideas and practices."
         },
         "raum_materialien": {
           "de": "Großer Raum für 3–7 Stationen mit Abstand; Präsentationsmaterial (Flipcharts, Beamer); optional Stifte, Papier, Post-its; online: Breakout-Räume.",
-          "en": ""
+          "en": "A large room with space for 5–8 stations far enough apart that groups don't disturb each other. Presentation materials (flip charts, projector). Online: breakout rooms, a virtual whiteboard."
         },
         "einbindung": {
           "de": "Präsentierende teilen ihre Arbeit; alle Besuchenden haben gleiche Mitwirkungsmöglichkeiten.",
-          "en": ""
+          "en": "Roles: host, presenters, audience members. Minimum group size is ten. Everyone is invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Stationen der Präsentierenden; Gesamtgruppe in so viele Kleingruppen wie Stationen.",
-          "en": ""
+          "en": "Presenters set up stations; the whole group splits into as many small groups as there are presenters; groups stay together as they rotate. Online: small groups stay in breakout rooms; presenters rotate."
         },
         "ablauf_dauer": {
           "de": "Erklärung + Präsentierende benennen 5 Min; je Station 5–10 Min + Fragen 2–5 Min; Wechsel 1 Min; bis alle Stationen besucht. Bei 6 Stationen ca. 50–90 Min.",
-          "en": ""
+          "en": "Intro 1 min; instructions 1 min; sharing stations 9–12 min per round (5–7 min presentation, 3–4 min Q&A, 1 min rotation), up to 7 rounds; plenary reflection 2 min. ~70–90 min for ~6 stations."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P9"
+      ],
+      "icon_alt": {
+        "de": "Mehrere Stationen im Raum; kleine Gruppen wandern von Station zu Station.",
+        "en": "Several stations in a room; small groups moving from station to station."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Innovations- und Ideenschätze, die in einer Gruppe verborgen sind, werden schnell und effizient sichtbar. Lange Vorträge vor großen Gruppen werden durch mehrere prägnante Darstellungen an verschiedenen Stationen ersetzt. Presenter teilen in wenigen Minuten ihre Innovation, kleine Gruppen zirkulieren zwischen den Stationen — so entsteht direkter Kontakt zu den Innovator:innen, Presenter verfeinern durch wiederholtes Vortragen ihre Idee, und Teilnehmende erkennen kreative Verbindungen. Shift & Share verkörpert LS-Prinzip #9 — sich auf ernsthaft verspielte Neugier einlassen.",
+          "en": "Useful ideas hidden within a group are quickly made visible. Long plenary presentations are replaced by several concise showcases at stations. Presenters share their innovation in a few minutes while small groups circulate — creating direct contact with the innovators, letting presenters refine their idea through repetition, and helping participants spot creative connections. Shift & Share enacts LS Principle #9 — Engage in Seriously Playful Curiosity."
+        },
+        "einladung": {
+          "de": "„Lasst uns frischen Wind reinbringen und die Innovationen in unserer Gruppe aufdecken! Vergesst lange, ausschweifende Vorträge — wir starten eine Blitztour durch neue Optionen und Projekte, wie Speed-Dating, um neue Ideen und Praktiken kennenzulernen.“",
+          "en": "Let's shake things up and uncover innovations within our group! Forget long, drawn-out presentations — we'll start a whirlwind tour of new options and projects, like speed dating, to learn about new ideas and practices."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Presenter: Teile in 5–7 Minuten eine Innovation oder ein Projekt, das für andere nützlich sein könnte.",
+            "Besuchergruppen: Stellt Fragen und gebt Feedback (3–4 Min je Station)."
+          ],
+          "en": [
+            "Presenter: in 5–7 minutes, share an innovation or project that could be useful to others.",
+            "Visiting groups: ask questions and give feedback (3–4 min per station)."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Anleitung",
+              "en": "Instructions"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "3–8 Presenter benennen, das Publikum in ebenso viele Gruppen teilen; den Ablauf erklären (5–7 Min Präsentation, 3–4 Min Fragen, 1 Min Wechsel).",
+              "en": "Identify 3–8 presenters, divide the audience into as many groups; explain the process (5–7 min presentation, 3–4 min Q&A, 1 min rotation)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Stationsbesuche",
+              "en": "Sharing stations"
+            },
+            "dauer_min": 60,
+            "beschreibung": {
+              "de": "Die Gruppen rotieren durch die Stationen; Presenter präsentieren und beantworten Fragen (9–12 Min pro Runde, bis zu 7 Runden).",
+              "en": "Groups rotate through the stations; presenters present and answer questions (9–12 min per round, up to 7 rounds)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Im Plenum über inspirierende Ideen reflektieren.",
+              "en": "Plenary reflection on inspiring ideas."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Abschluss mit W³",
+              "en": "Close with W³"
+            },
+            "beschreibung": {
+              "de": "What, So What, Now What? als Abschluss, um Erkenntnisse zu vertiefen.",
+              "en": "Use What/So What/Now What to deepen insights."
+            }
+          },
+          {
+            "name": {
+              "de": "Kürzer / mehr Fragen",
+              "en": "Shorter / more Q&A"
+            },
+            "beschreibung": {
+              "de": "Präsentationen auf 5 Min kürzen, um Energie zu erhöhen; oder den Fragenteil verlängern.",
+              "en": "Shorten presentations to 5 min to raise energy; or lengthen Q&A for more feedback."
+            }
+          },
+          {
+            "name": {
+              "de": "Freie Wahl",
+              "en": "Free choice"
+            },
+            "beschreibung": {
+              "de": "In Präsenz Stationen nach Neugier wählen lassen; nicht alle müssen alle besuchen („FOMO umarmen“).",
+              "en": "In person, let people choose stations by curiosity; not everyone must visit every one ('embrace FOMO')."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Statt dass das Publikum wandert, rotieren die Presenter in neue Breakout-Räume; bei langen Sessions eine kurze Pause zur Hälfte.",
+              "en": "Instead of the audience moving, presenters rotate to new breakout rooms; a short break halfway through a long session."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Presenter über informelle Netzwerke finden — Inhalt zählt mehr als Charisma.",
+            "Genug Abstand zwischen den Stationen, damit man sich hört; streng im Zeitplan bleiben (lautes Signal/Zimbeln zum Wechsel).",
+            "Presenter vorbereiten: 10 Minuten sind deutlich kürzer als gewohnt.",
+            "Zu Storytelling und kleinen, anschaulichen Beispielen/Gegenständen ermutigen."
+          ],
+          "en": [
+            "Find presenters via informal networks — content matters more than charisma.",
+            "Leave enough space between stations so people can hear; keep tightly to the schedule (a loud signal/chime for rotation).",
+            "Prepare presenters: 10 minutes is much shorter than usual.",
+            "Encourage storytelling and small, tangible examples/objects."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Neuen Konsortiumsmitgliedern Tiefe und Breite von Innovationen zeigen.",
+            "Neue Technologien auf Konferenzen vorstellen.",
+            "Nach einer Fusion Programme und Personen beider Seiten vorstellen."
+          ],
+          "en": [
+            "Orient new consortium members to the depth and breadth of innovations.",
+            "Introduce new technologies at conferences.",
+            "After a merger, showcase the programs and people of both sides."
+          ]
+        },
+        "material_setup": {
+          "de": "Großer Raum mit 5–8 Stationen, weit genug auseinander; Präsentationsmaterial (Flipchart, Beamer) je Station; ein Signal zum Stationswechsel. Online: Breakout-Räume und ein virtuelles Whiteboard.",
+          "en": "A large room with 5–8 stations far enough apart; presentation materials (flip chart, projector) per station; a signal for rotation. Online: breakout rooms and a virtual whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich — mit einer Anpassung: Statt dass das Publikum wandert, rotieren die Presenter in neue Breakout-Räume. Die kleinen Gruppen bleiben in ihrem Breakout. Pro Runde 5–7 Min Präsentation + 3–4 Min Fragen, dann Presenter-Wechsel; bei langen Sessions eine kurze Pause zur Hälfte. Virtuelle Whiteboards je Station helfen beim Zeigen.",
+          "en": "Works well online with one adjustment: instead of the audience moving, the presenters rotate to new breakout rooms. The small groups stay in their breakout. Per round 5–7 min presentation + 3–4 min Q&A, then presenter rotation; a short break halfway through a long session. Virtual whiteboards per station help with showing."
+        }
       }
     },
     {
@@ -3247,9 +3579,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Übt in Dreiergruppen vier Muster des Helfens und macht eigene Interaktionsgewohnheiten bewusst – bessere Zusammenarbeit durch wirksameres Geben und Annehmen von Hilfe.",
-        "en": ""
+        "en": "In trios, people practice four ways of asking for, giving and receiving help — from quiet presence to generative shaping. Short role-plays reveal one's habitual patterns of accepting or blocking and expand the repertoire."
       },
-      "source_url": "https://liberatingstructures.de/helping-heuristics/",
+      "source_url": "https://www.liberatingstructures.com/helping-heuristics",
       "purpose_tags": [
         "helfen"
       ],
@@ -3263,7 +3595,7 @@
       "online_capable": true,
       "materials": {
         "de": "Stifte und Papier/Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "Space for groups of three to stand or sit (breakouts). No tables. The Helping Heuristics patterns and prompts displayed. Online: breakout rooms and a virtual whiteboard for notes."
       },
       "difficulty": "mittel",
       "typical_predecessors": [],
@@ -3274,34 +3606,214 @@
       ],
       "scrum_use": {
         "de": "Hilfe-/Coaching-Verhalten im Team reflektieren (besser zuhören, weniger vorschnelle Ratschläge); gut vor Peer-Coaching-Formaten.",
-        "en": ""
+        "en": "Leveling up how a team helps each other: by rehearsing different helping patterns, people notice when they block versus accept offers — useful when collaboration keeps getting stuck on unhelpful habits."
       },
       "design_elements": {
         "einladung": {
           "de": "Verstehe Interaktionen als Angebote, die angenommen oder abgelehnt werden können; übe vier Interaktionsmuster (agieren, reagieren, beobachten) und reflektiere das eigene Verhalten.",
-          "en": ""
+          "en": "Every human interaction is an offer we can either accept or block, just as improv artists say yes to every suggestion. We'll use heuristics — mental shortcuts — to practice different ways of accepting or blocking offers when we ask for, give, and receive help."
         },
         "raum_materialien": {
           "de": "Stifte und Papier/Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "Space for groups of three to stand or sit (breakouts). No tables. Display the Helping Heuristics patterns and prompts. Online: breakout rooms and a virtual whiteboard for notes."
         },
         "einbindung": {
           "de": "Gleiche Lernchancen für alle; Rollen wechseln über die Runden.",
-          "en": ""
+          "en": "Roles: host, client, coach, observer. Minimum group size is three. Everyone has an equal opportunity to learn and contribute; roles rotate."
         },
         "gruppenkonfiguration": {
           "de": "Dreiergruppen (Klient:in, Coach, Beobachter:in); Gesamtgruppe zur Abschlussbesprechung.",
-          "en": ""
+          "en": "Trios, whole group. Encourage diverse roles within groups."
         },
         "ablauf_dauer": {
           "de": "Erklärung 2 Min; 5 Runden je 2 Min (Stille Präsenz, Geführte Entdeckung, Liebevolle Provokation, Gemeinsames Formen, Strukturelle Bewusstheit); Abschluss 5 Min. Gesamt ca. 15 Min.",
-          "en": ""
+          "en": "Intro 3 min; four rounds of 1–2 min improvised interactions (quiet presence, guided discovery, loving provocation, generative shaping); debrief 5 min; plenary 1 min. ~15 min in person, ~18–20 min online."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); verweist auf Edgar Scheins Theorie der Hilfe-Muster; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Helfen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); references Edgar Schein's theory of helping patterns; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Help’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P5"
+      ],
+      "icon_alt": {
+        "de": "Drei Personen üben in verschiedenen Mustern, Hilfe zu geben und anzunehmen.",
+        "en": "Three people practising different patterns of giving and receiving help."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Teilnehmenden gewinnen Klarheit über ihre Interaktionsmuster und -gewohnheiten. In kurzen Austauschen üben sie verschiedene Arten, um Hilfe zu bitten, Hilfe zu geben und Hilfe anzunehmen — und erweitern so ihr Repertoire an Strategien. Heuristiken sind Abkürzungen, die helfen, in neuen Situationen das Wesentliche zu erkennen. Helping Heuristics verkörpert LS-Prinzip #5 — Selbst-Entdeckung in der Gruppe ermöglichen.",
+          "en": "Participants gain clarity about their patterns and habits of interaction. In short exchanges they practice different ways of asking for, giving and receiving help — expanding their repertoire of strategies. Heuristics are shortcuts that help spot the essentials in new situations. Helping Heuristics enacts LS Principle #5 — Practice Self-Discovery Within a Group."
+        },
+        "einladung": {
+          "de": "„Jede menschliche Interaktion ist ein Angebot, das wir annehmen oder blockieren können — so wie Improvisationskünstler:innen zu jedem Vorschlag „ja“ sagen. Wir nutzen Heuristiken — mentale Abkürzungen —, um verschiedene Arten zu üben, Angebote anzunehmen oder zu blockieren, wenn wir um Hilfe bitten, Hilfe geben und annehmen.“",
+          "en": "Every human interaction is an offer we can either accept or block, just as improv artists say yes to every suggestion. We'll use heuristics — mental shortcuts — to practice different ways of accepting or blocking offers when we ask for, give, and receive help."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Vier Muster: (1) Stille Präsenz — mitfühlend zuhören, nur „Was sonst noch?“ fragen; (2) Geführte Entdeckung — fragen: „Hast du eine Geschichte von einem Fortschritt oder einer Blockade? Was hat sie beeinflusst?“; (3) Liebevolle Provokation — Rat anbieten: „Wäre es möglich, … zu versuchen?“; (4) Gemeinsames Formen — alle Angebote annehmen mit „Ja, und …“ und „Wenn …, dann …“."
+          ],
+          "en": [
+            "Four patterns: (1) Quiet Presence — listen compassionately, only ask 'What else?'; (2) Guided Discovery — ask: 'Do you have a story about a time you made progress or were stopped? What influenced it?'; (3) Loving Provocation — offer advice: 'Would it be possible to try …?'; (4) Generative Shaping — accept all offers with 'Yes, and …' and 'If …, then …'."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Einladung erklären und die vier Muster zeigen; in Trios Rollen wählen (Klient:in, Coach, Beobachter:in).",
+              "en": "Explain the invitation and display the four patterns; in trios pick roles (client, coach, observer)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 1 — Stille Präsenz",
+              "en": "Round 1 — Quiet presence"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die Klient:in schildert eine Herausforderung; der Coach hört mitfühlend zu und fragt nur „Was sonst noch?“; der/die Beobachter:in notiert Annehmen und Blockieren.",
+              "en": "The client shares a challenge; the coach listens compassionately, only asking 'What else?'; the observer notes accepting and blocking."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 2 — Geführte Entdeckung",
+              "en": "Round 2 — Guided discovery"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Der Coach fragt nach einer Geschichte von Fortschritt/Blockade und deren Einfluss; Beobachter:in notiert.",
+              "en": "The coach asks about a story of progress/blockage and what influenced it; the observer notes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 3 — Liebevolle Provokation",
+              "en": "Round 3 — Loving provocation"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Der Coach bietet Rat an („Wäre es möglich, … zu versuchen?“); die Klient:in nimmt an und blockiert; Beobachter:in notiert.",
+              "en": "The coach offers advice ('Would it be possible to try …?'); the client accepts and blocks; the observer notes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 4 — Gemeinsames Formen",
+              "en": "Round 4 — Generative shaping"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Coach und Klient:in nehmen alle Angebote an („Ja, und …“, „Wenn …, dann …“); Beobachter:in notiert.",
+              "en": "Coach and client accept all offers ('Yes, and …', 'If … then …'); the observer notes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief",
+              "en": "Debrief"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Klient:in und Coach reflektieren je ~1 Min; der/die Beobachter:in teilt ~3 Min die beobachteten Muster von Annehmen/Blockieren.",
+              "en": "Client and coach debrief ~1 min each; the observer shares ~3 min on the accepting/blocking patterns observed."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einige teilen ihre Mitnahmen.",
+              "en": "A few share takeaways."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Eigenes Profil",
+              "en": "Self-identify patterns"
+            },
+            "beschreibung": {
+              "de": "Die eigenen Standard-Muster benennen und andere üben.",
+              "en": "Name your default patterns and practice others."
+            }
+          },
+          {
+            "name": {
+              "de": "Extreme Muster",
+              "en": "Extreme patterns"
+            },
+            "beschreibung": {
+              "de": "Auch „neutral“ (keine Reaktion) und Blockieren (Ignorieren/Unterbrechen) ausprobieren.",
+              "en": "Also try neutral (no reaction) and blocking (ignoring/interrupting)."
+            }
+          },
+          {
+            "name": {
+              "de": "Vertiefen",
+              "en": "Deepen"
+            },
+            "beschreibung": {
+              "de": "Nach dem ersten Zyklus lassen die Trios Rollen und ein Muster zum Vertiefen wählen.",
+              "en": "After the first cycle, let trios choose roles and a pattern to focus on."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Nach Runde 1 kurz ins Plenum zurückkehren, um den Fortschritt zu prüfen; nach Runde 2 bei Bedarf erneut.",
+              "en": "After Round 1, briefly return to plenary to check progress; return after Round 2 if needed."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Ein Klima verspielter, gegenseitiger Entdeckung und Vertrauens schaffen.",
+            "Auf Muster fokussieren, die dem Klienten helfen, eigene Lösungen zu finden.",
+            "Status-, Körpersprache- und subtile Blockier-Signale nicht ignorieren.",
+            "Zum Rollenwechsel in jeder Runde ermutigen."
+          ],
+          "en": [
+            "Create a climate of playful mutual discovery and trust.",
+            "Focus on patterns that help the client find their own solutions.",
+            "Don't ignore status, body language and subtle blocking signals.",
+            "Encourage rotating roles each round."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Wenn andere Strukturen an unerwünschten Mustern scheitern.",
+            "Helfende Berufe (Pflege, Coaching, Lehre) ihre Beziehungsskills auffrischen lassen.",
+            "Mehr Optionen schaffen, wenn man beim Helfen frustriert ist."
+          ],
+          "en": [
+            "When other structures fail due to unwanted patterns.",
+            "Help helping professionals (nurses, coaches, teachers) refresh their relational skills.",
+            "Expand options when you're frustrated trying to help someone."
+          ]
+        },
+        "material_setup": {
+          "de": "Platz für Dreiergruppen (stehend/sitzend), keine Tische; die Muster und Impulse sichtbar; Stifte/Papier für Notizen. Online: Breakout-Räume und ein virtuelles Whiteboard.",
+          "en": "Space for trios (standing/sitting), no tables; the patterns and prompts displayed; pens/paper for notes. Online: breakout rooms and a virtual whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich (~18–20 Min). Breakout-Räume für die Dreiergruppen, ein virtuelles Whiteboard für Notizen. Ablauf: (1) Einladung erklären, die vier Muster zeigen. (2) In Trios Rollen wählen (Klient:in, Coach, Beobachter:in). (3) Vier Runden (stille Präsenz, geführte Entdeckung, liebevolle Provokation, gemeinsames Formen), je 3–4 Min online. (4) Debrief im Trio; einige Mitnahmen im Plenum. Tipp: nach Runde 1 kurz ins Plenum zurückkehren, um den Fortschritt zu prüfen.",
+          "en": "Works well online (~18–20 min). Breakout rooms for the trios, a virtual whiteboard for notes. Flow: (1) Explain the invitation, show the four patterns. (2) In trios choose roles (client, coach, observer). (3) Four rounds (quiet presence, guided discovery, loving provocation, generative shaping), 3–4 min each online. (4) Debrief in the trio; a few takeaways in plenary. Tip: after Round 1, briefly return to plenary to check progress."
+        }
       }
     },
     {
@@ -3316,11 +3828,12 @@
       "edition": "original",
       "short_desc": {
         "de": "Kollegiale Beratung in Dreiergruppen: Reihum erhält jede Person zu einer eigenen Herausforderung frische Ideen von zwei Berater:innen.",
-        "en": ""
+        "en": "In trios, each person takes a turn as 'client' and gets immediate, practical and imaginative help from two 'consultants'. Turning their back during the consultation deepens listening — fast peer coaching that taps local wisdom."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/troika-consulting/",
+      "source_url": "https://www.liberatingstructures.com/troika-consulting",
       "purpose_tags": [
-        "helfen"
+        "helfen",
+        "offenlegen"
       ],
       "arc_role": [
         "konvergieren",
@@ -3329,50 +3842,235 @@
       "group_size_min": 3,
       "group_size_max": null,
       "duration_min": 30,
-      "duration_max": 40,
+      "duration_max": 35,
       "online_capable": true,
       "materials": {
         "de": "Dreiergruppen mit je 3 Stühlen (keine Tische); nützlich: Stifte, Papier/Post-its; online: Breakout-Räume.",
-        "en": ""
+        "en": "Small groups of three chairs and no tables (breakouts of three). Pens and paper for notes. Online: breakout rooms."
       },
       "difficulty": "leicht",
-      "typical_predecessors": [
-        "heard-seen-respected",
-        "helping-heuristics"
-      ],
+      "typical_predecessors": [],
       "typical_successors": [
-        "15-solutions"
+        "helping-heuristics",
+        "heard-seen-respected",
+        "nine-whys"
       ],
       "scrum_use": {
         "de": "Kollegiale Fallberatung im Team (jede:r bringt eine Herausforderung ein); gut zum Meeting-Start oder -Abschluss.",
-        "en": ""
+        "en": "Instant peer coaching: anyone stuck on a challenge gets focused help from two colleagues. A great team habit — at the start/close of meetings or as a standing practice for peer-to-peer learning."
       },
       "design_elements": {
         "einladung": {
           "de": "Formuliere deine aktuelle Herausforderung und deinen Hilfebedarf.",
-          "en": ""
+          "en": "Often we feel like we're facing our challenges alone. Let's experience the power of sharing them with others. What is your challenge? What next steps do you have in mind and what kind of help do you need?"
         },
         "raum_materialien": {
           "de": "Dreiergruppen mit je 3 Stühlen (keine Tische); nützlich: Stifte, Papier/Post-its; online: Breakout-Räume.",
-          "en": ""
+          "en": "Small groups of three chairs and no tables (breakouts of three). Pens and paper for notes. Online: breakout rooms."
         },
         "einbindung": {
           "de": "Pro Runde eine Person Klient:in, zwei beraten; alle bekommen beide Rollen.",
-          "en": ""
+          "en": "Roles: host and, in each group, a client and two consultants. Roles change each round. Minimum group size is three. Everyone gets an equal chance to receive and give coaching."
         },
         "gruppenkonfiguration": {
           "de": "Dreiergruppen mit gemischten Hintergründen.",
-          "en": ""
+          "en": "Trios, whole group. Diverse trios hear different perspectives."
         },
         "ablauf_dauer": {
           "de": "Frage überlegen 1 Min; Klient:in stellt vor 2–3 Min; Verständnisfragen 1–3 Min; Klient:in dreht sich weg, Berater entwickeln Ideen 4–5 Min; Klient:in teilt Erkenntnisse 2 Min; Wechsel. Gesamt 30–40 Min.",
-          "en": ""
+          "en": "Intro and reflection on two questions 5 min; per round: present challenge 1–2 min, clarifying questions 1–2 min, consultation while the client turns away 4–5 min, key takeaways 1–2 min; three rounds (7–10 min each) so everyone is the client; plenary sharing 2 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Helfen & Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Help & Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P3"
+      ],
+      "icon_alt": {
+        "de": "Drei Personen; eine bittet um Rat und wendet sich beim Beraten ab, um nur zuzuhören.",
+        "en": "Three people; one asks for advice and turns away during the consultation to just listen."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Teilnehmenden gewinnen Einblick in ihre Themen und setzen ihre eigene Weisheit frei, um sie anzugehen. Reihum bittet jede Person in schnellen Beratungsrunden um Hilfe und erhält sofort Rat von zwei anderen. Dieses Peer-to-Peer-Coaching hilft, alltägliche Lösungen, aufschlussreiche Muster und frische Ansätze zu entdecken, und erweitert Unterstützung über formelle Wege hinaus. Troika Consulting verkörpert LS-Prinzip #3 — Vertrauen Schritt für Schritt aufbauen.",
+          "en": "Participants gain insight into their issues and unlock their own wisdom to tackle them. In turn, each person asks for help in quick rounds and immediately receives advice from two others. This peer-to-peer coaching helps discover everyday solutions, revealing patterns and fresh approaches, and extends support beyond formal channels. Troika Consulting enacts LS Principle #3 — Build Trust as You Go."
+        },
+        "einladung": {
+          "de": "„Oft fühlen wir uns, als stünden wir mit unseren Herausforderungen allein. Lasst uns die Kraft erleben, sie mit anderen zu teilen. Was ist deine Herausforderung? Welche nächsten Schritte hast du im Sinn und welche Art von Hilfe brauchst du?“",
+          "en": "Often we feel like we're facing our challenges alone. Let's experience the power of sharing them with others. What is your challenge? What next steps do you have in mind and what kind of help do you need?"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Was ist gerade deine Herausforderung?",
+            "Welche nächsten Schritte hast du im Sinn — und welche Art von Hilfe brauchst du?"
+          ],
+          "en": [
+            "What is your challenge right now?",
+            "What next steps do you have in mind — and what kind of help do you need?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro & Reflexion",
+              "en": "Intro & reflection"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einladung teilen; alle überlegen: Was ist meine Herausforderung? Welche Hilfe brauche ich?",
+              "en": "Share the invitation; everyone reflects: what is my challenge? What help do I need?"
+            }
+          },
+          {
+            "phase": {
+              "de": "Herausforderung vorstellen",
+              "en": "Present the challenge"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die Klient:in schildert Herausforderung und mögliche nächste Schritte.",
+              "en": "The client describes their challenge and possible next steps."
+            }
+          },
+          {
+            "phase": {
+              "de": "Verständnisfragen",
+              "en": "Clarifying questions"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die zwei Berater:innen stellen Verständnisfragen — ohne zu werten oder Lösungen anzubieten.",
+              "en": "The two consultants ask clarifying questions — without judging or offering solutions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Beratung / stilles Zuhören",
+              "en": "Consultation / silent listening"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Klient:in dreht sich weg (online: Video/Mikro aus) und hört still zu, während die Berater:innen ihre Ideen besprechen.",
+              "en": "The client turns away (online: video/mic off) and listens silently while the consultants discuss their ideas."
+            }
+          },
+          {
+            "phase": {
+              "de": "Mitnahmen",
+              "en": "Key takeaways"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die Klient:in dreht sich zurück und teilt das Wertvollste.",
+              "en": "The client turns back and shares what was most valuable."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runden 2 & 3",
+              "en": "Rounds 2 & 3"
+            },
+            "dauer_min": 16,
+            "beschreibung": {
+              "de": "Die Schritte wiederholen, sodass jede Person einmal Klient:in ist (7–10 Min pro Runde).",
+              "en": "Repeat the steps so each person becomes the client (7–10 min per round)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Einige teilen ihre Erfahrungen.",
+              "en": "A few share their experiences."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Mit 15% Solutions",
+              "en": "Nest with 15% Solutions"
+            },
+            "beschreibung": {
+              "de": "Jede Klient:in teilt eine 15%-Lösung und bittet um Coaching dazu.",
+              "en": "Each client shares a 15% Solution and asks for coaching on it."
+            }
+          },
+          {
+            "name": {
+              "de": "Q-Storming",
+              "en": "Q-storming"
+            },
+            "beschreibung": {
+              "de": "Die Berater:innen dürfen ausschließlich Fragen stellen.",
+              "en": "Consultants may only ask questions."
+            }
+          },
+          {
+            "name": {
+              "de": "Speed Troika",
+              "en": "Speed Troika"
+            },
+            "beschreibung": {
+              "de": "Die Zeit pro Schritt verkürzen.",
+              "en": "Shorten the time for each step."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Die Klient:in schaltet Kamera und Mikro aus, um das Wegdrehen zu simulieren.",
+              "en": "The client turns off camera and mic to simulate turning their back."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Das „Wegdrehen“ kurz vorführen und versichern, dass es nicht unhöflich ist.",
+            "Durchmischte Gruppen bilden, um verschiedene Perspektiven zu hören.",
+            "Respektvolle Provokation: dem Klienten mitteilen, „was man sieht, von dem man nicht denkt, dass er es sieht“.",
+            "Selbsterkenntnis-Fragen sind oft hilfreicher als Ratschläge.",
+            "Zwei Runden à 10 Min pro Klient:in wirken besser als eine à 20 Min."
+          ],
+          "en": [
+            "Demonstrate the 'back turning' briefly and assure people it isn't rude.",
+            "Form diverse groups to hear different perspectives.",
+            "Respectful provocation: tell the client 'what you see that you don't think they see'.",
+            "Self-discovery questions are often more helpful than advice.",
+            "Two rounds of 10 min per client work better than one of 20 min."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Zu Beginn oder am Ende eines Meetings Hilfe geben und bekommen.",
+            "Nach Präsentationen Raum für nächste Schritte schaffen.",
+            "Eine Kultur des Peer-to-Peer-Lernens aufbauen (z. B. im Klassenzimmer).",
+            "Mitten in Konferenzen und Großgruppen."
+          ],
+          "en": [
+            "Give and get help at the start or end of a meeting.",
+            "Create space for next steps after presentations.",
+            "Build a culture of peer-to-peer learning (e.g. in a classroom).",
+            "In the middle of conferences and large-group meetings."
+          ]
+        },
+        "material_setup": {
+          "de": "Je nach Teilnehmerzahl entsprechend viele Dreiergruppen mit je 3 Stühlen, keine Tische; Stifte/Papier für Beobachtungen. Online: Breakout-Räume.",
+          "en": "As many trios as needed, three chairs each, no tables; pens/paper for observations. Online: breakout rooms."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume für die Dreiergruppen. Ablauf je Runde: (1) Die Klient:in schildert ihre Herausforderung. (2) Die Berater:innen stellen Verständnisfragen. (3) Die Klient:in schaltet Kamera und Mikro aus (simuliert das Wegdrehen) und hört zu, während die Berater:innen Ideen besprechen. (4) Die Klient:in schaltet wieder ein und teilt die wertvollsten Erkenntnisse. Drei Runden, damit jede Person einmal Klient:in ist; danach kurz im Plenum teilen.",
+          "en": "Works well online. Breakout rooms for the trios. Each round: (1) the client describes their challenge. (2) The consultants ask clarifying questions. (3) The client turns off camera and mic (simulating turning their back) and listens while the consultants discuss ideas. (4) The client turns back on and shares the most valuable takeaways. Three rounds so each person is the client once; then briefly share in plenary."
+        }
       }
     },
     {
@@ -3387,63 +4085,258 @@
       "edition": "original",
       "short_desc": {
         "de": "In schnellen Zyklen zieht eine ratsuchende Person das Wissen einer Gruppe (4–5) heran – effiziente Hilfe und Vertrauen durch gegenseitige Beratung.",
-        "en": ""
+        "en": "A 'client' gets rapid help from a small crowd of 'consultants' while everyone else listens in, then satellite groups add their observations. Taps the whole group's expertise at once — together the crowd is wiser than the expert."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/wise-crowds/",
+      "source_url": "https://www.liberatingstructures.com/wise-crowds",
       "purpose_tags": [
+        "offenlegen",
         "helfen"
       ],
       "arc_role": [
         "konvergieren",
         "schließen"
       ],
-      "group_size_min": 4,
+      "group_size_min": 10,
       "group_size_max": null,
-      "duration_min": 15,
-      "duration_max": 60,
+      "duration_min": 25,
+      "duration_max": 55,
       "online_capable": true,
       "materials": {
         "de": "Stühle für Ratsuchende; nützlich: Stifte, Papier, ggf. Mikrofone; optional kleine Tische, Gruppen von 4–5; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "A central group of three to four chairs with many satellite groups of three to four around them. No tables. Paper for each participant; display the steps. Online: video spotlight for the central group, breakouts for satellite groups."
       },
       "difficulty": "leicht",
-      "typical_predecessors": [
-        "heard-seen-respected",
-        "helping-heuristics"
-      ],
+      "typical_predecessors": [],
       "typical_successors": [
-        "15-solutions"
+        "helping-heuristics",
+        "nine-whys",
+        "talking-with-pixies"
       ],
       "scrum_use": {
         "de": "Schwierige Herausforderungen einzelner mit der Gruppenintelligenz lösen; kann Status-Meetings ersetzen.",
-        "en": ""
+        "en": "Group-scale peer consulting: one person's challenge gets the whole room's wisdom in a tight cycle. Good to replace status meetings, support a merger, or help individuals with knotty challenges."
       },
       "design_elements": {
         "einladung": {
           "de": "Klient:innen beschreiben ihre Herausforderung kurz und bitten um Hilfe; die anderen beraten und helfen, sie zu klären.",
-          "en": ""
+          "en": "Each of you will have a chance to be a client sharing your current challenge with your own personal crowd of consultants! Your consultants will have your back for a few delightful minutes."
         },
         "raum_materialien": {
           "de": "Stühle für Ratsuchende; nützlich: Stifte, Papier, ggf. Mikrofone; optional kleine Tische, Gruppen von 4–5; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "A central group of three to four chairs with many satellite groups of three to four around them. No tables. Paper for each participant; the steps displayed. Online: a video spotlight for the central group and breakouts of two to three for satellite groups."
         },
         "einbindung": {
           "de": "Alle beteiligt; gleiche Zeit als Ratsuchende und als Beratende.",
-          "en": ""
+          "en": "Roles: host, client, consultants, participants. Minimum group size is ten. Everyone is invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Gruppen zu 4–5 Personen, funktionsübergreifend; Klient:in wendet sich nach der Problembeschreibung ab.",
-          "en": ""
+          "en": "Small groups, whole group."
         },
         "ablauf_dauer": {
           "de": "Pro Klient:in 15 Min: Herausforderung beschreiben 2 Min; Verständnisfragen 3 Min; Berater diskutieren/raten 8 Min; Klient:in gibt Feedback 2 Min.",
-          "en": ""
+          "en": "Intro 1 min; individual reflection 1 min; per client (~20 min): client shares + clarifying Q&A 4 min, consultation while the client turns away 7 min, satellite-group observations 4 min, plenary sharing 4 min, client takeaways 1 min; up to three clients."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); angelehnt an „Clearness Committees“; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen & Helfen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); drawing on Quaker 'clearness committees'; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal & Help’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P3"
+      ],
+      "icon_alt": {
+        "de": "Eine Person in der Mitte erhält Rat von einem kleinen Kreis von Berater:innen, während andere zuhören.",
+        "en": "A person in the center receiving advice from a small circle of consultants while others listen in."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Wise Crowds ermöglicht es Gruppen, sich gegenseitig schnell zu helfen. Eine Person („Klient:in“) bittet um Hilfe und erhält sie kurzfristig von den anderen. Die Struktur nutzt die Expertise aller gleichzeitig und fördert Klarheit, Selbstreflexion und gegenseitiges Verständnis; dabei entwickeln sich hilfreiche Beziehungen — „zusammen ist die Gruppe schlauer als der Experte“. Wise Crowds verkörpert LS-Prinzip #3 — Vertrauen Schritt für Schritt aufbauen.",
+          "en": "Wise Crowds lets groups help each other quickly. One person (the 'client') asks for help and receives it from the others on the spot. The structure taps everyone's expertise at once and fosters clarity, self-reflection and mutual understanding; supportive relationships form — 'together the crowd is wiser than the expert'. Wise Crowds enacts LS Principle #3 — Build Trust as You Go."
+        },
+        "einladung": {
+          "de": "„Jede:r von euch darf einmal Klient:in sein und seine aktuelle Herausforderung mit der eigenen kleinen Menge von Berater:innen teilen! Eure Berater:innen halten euch für ein paar schöne Minuten den Rücken frei.“",
+          "en": "Each of you will have a chance to be a client sharing your current challenge with your own personal crowd of consultants! Your consultants will have your back for a few delightful minutes."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Klient:in: Beschreibe kurz deine Herausforderung und bitte um Hilfe.",
+            "Berater:innen: Helft, die Herausforderung klarer zu fassen, und gebt dann eure besten Ratschläge."
+          ],
+          "en": [
+            "Client: briefly describe your challenge and ask for help.",
+            "Consultants: help make the challenge clearer, then give your best advice."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen und die Wise-Crowds-Schritte zeigen.",
+              "en": "Share the invitation and display the Wise Crowds steps."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einzelreflexion",
+              "en": "Individual reflection"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Alle notieren eine Herausforderung, vor der sie stehen.",
+              "en": "Everyone jots down a challenge they are facing."
+            }
+          },
+          {
+            "phase": {
+              "de": "Klient:innen wählen",
+              "en": "Select clients"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "2–3 Klient:innen wählen; die erste kommt nach vorn und wählt drei Berater:innen.",
+              "en": "Pick 2–3 clients; the first comes to the front and chooses three consultants."
+            }
+          },
+          {
+            "phase": {
+              "de": "Teilen & Verständnisfragen",
+              "en": "Share & clarifying Q&A"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Die Klient:in beschreibt die Herausforderung (2 Min); die Berater:innen stellen Verständnisfragen (2 Min); alle anderen beobachten.",
+              "en": "The client describes the challenge (2 min); consultants ask clarifying questions (2 min); everyone else observes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Beratung",
+              "en": "Consultation"
+            },
+            "dauer_min": 7,
+            "beschreibung": {
+              "de": "Die Klient:in dreht sich weg (online: Video aus) und macht Notizen; die Berater:innen geben ihre besten Ratschläge und bauen aufeinander auf.",
+              "en": "The client turns away (online: video off) and takes notes; the consultants offer their best advice, building on each other."
+            }
+          },
+          {
+            "phase": {
+              "de": "Satelliten-Beobachtungen",
+              "en": "Satellite observations"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Alle anderen teilen in Gruppen von 2–3 (Breakouts) ihre Beobachtungen.",
+              "en": "Everyone else divides into groups of 2–3 (breakouts) and shares observations."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum & Mitnahmen",
+              "en": "Plenary & takeaways"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einige teilen Einsichten (optional „Chatterfall“); die Klient:in dreht sich zurück und nennt ihre Mitnahmen (und dankt den Berater:innen).",
+              "en": "A few share insights (optional 'Chatterfall'); the client faces forward and names their takeaways (and thanks the consultants)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Weitere Runden",
+              "en": "Additional rounds"
+            },
+            "dauer_min": 20,
+            "beschreibung": {
+              "de": "Die Schritte für die nächste:n Klient:in wiederholen (bis zu zwei weitere, ~20 Min pro Klient:in); streng auf die Zeit achten.",
+              "en": "Repeat for the next client(s), up to two more (~20 min per client); be firm with timing."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Kleine Gruppen",
+              "en": "Small groups"
+            },
+            "beschreibung": {
+              "de": "Wie Troika in Gruppen von 5–6 aufteilen; jede Person ist einmal Klient:in und Berater:in.",
+              "en": "Like Troika, split into groups of 5–6; everyone is both client and consultant once."
+            }
+          },
+          {
+            "name": {
+              "de": "Nur Fragen",
+              "en": "Questions only"
+            },
+            "beschreibung": {
+              "de": "Die Berater:innen dürfen nur Fragen stellen (Q-Storming, wie ein Quaker-Clearness-Committee).",
+              "en": "Consultants may only ask questions (Q-storming, like a Quaker clearness committee)."
+            }
+          },
+          {
+            "name": {
+              "de": "Großgruppe",
+              "en": "Whole room"
+            },
+            "beschreibung": {
+              "de": "Eine Person fragt den ganzen Raum.",
+              "en": "One person asks the entire room."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Den Chat für die Antworten der Satelliten-Gruppen nutzen; die Klient:in schaltet das Video aus, um das Wegdrehen zu simulieren.",
+              "en": "Use the chat for satellite groups' answers; the client turns off video to simulate turning their back."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Eine gemischte „Crowd“ einladen, nicht nur Expert:innen und Führungskräfte.",
+            "Zu komplexen Herausforderungen ohne einfache Antworten ermutigen.",
+            "Berater:innen zur Selbstkritik einladen, wenn sie in Fallen tappen (z. B. zu früh Rat geben).",
+            "Bei schwacher erster Runde kreative Anpassungen in späteren Runden einladen."
+          ],
+          "en": [
+            "Invite a diverse 'crowd', not just experts and leaders.",
+            "Encourage complex challenges that have no easy answers.",
+            "Invite consultants to critique themselves if they fall into traps (e.g. advising too early).",
+            "If the first round is weak, invite creative adaptations in later rounds."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Verteilte Forschungs-/Lerngruppen unterstützen und Fortschritt teilen.",
+            "Fortschritts- und Statusmeetings ersetzen.",
+            "Manager:innen bei Herausforderungen einer Fusion helfen.",
+            "Einzelnen Rat zur Verbesserung einer Beziehung geben."
+          ],
+          "en": [
+            "Support distributed research/learning groups and share progress.",
+            "Replace progress and status meetings.",
+            "Help managers with the challenges of a merger.",
+            "Give individuals advice on improving a relationship."
+          ]
+        },
+        "material_setup": {
+          "de": "Eine zentrale Gruppe aus 3–4 Stühlen, darum viele Satelliten-Gruppen aus 3–4 Stühlen; keine Tische; Papier je Person; Mikrofone für große Gruppen. Online: Video-Spotlight für die zentrale Gruppe, Breakouts für die Satelliten.",
+          "en": "A central group of 3–4 chairs surrounded by many satellite groups of 3–4 chairs; no tables; paper per person; microphones for large groups. Online: a video spotlight for the central group, breakouts for the satellites."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich mit kleinen Anpassungen. Die zentrale Gruppe (Klient:in + drei Berater:innen) per Spotlight; alle anderen hören zu und gehen dann in Satelliten-Breakouts (2–3 Personen). Ablauf: (1) Klient:in beschreibt die Herausforderung (2 Min); Berater:innen fragen nach (2 Min). (2) Klient:in schaltet das Video aus (simuliert das Wegdrehen) und macht Notizen; die Berater:innen beraten (7 Min). (3) Satelliten-Gruppen teilen Beobachtungen (4 Min). (4) Im Plenum einige Einsichten teilen (optional „Chatterfall“). (5) Klient:in nennt die Mitnahmen. Pro Klient:in ~20 Min, bis zu drei Klient:innen.",
+          "en": "Works well online with small adjustments. Spotlight the central group (client + three consultants); everyone else listens, then moves to satellite breakouts (2–3 people). Flow: (1) The client describes the challenge (2 min); consultants ask clarifying questions (2 min). (2) The client turns off video (simulating turning their back) and takes notes; the consultants advise (7 min). (3) Satellite groups share observations (4 min). (4) In plenary, share a few insights (optional 'Chatterfall'). (5) The client names their takeaways. ~20 min per client, up to three clients."
+        }
       }
     },
     {
