@@ -7017,23 +7017,23 @@
       "edition": "original",
       "short_desc": {
         "de": "Verwandelt einen Expertenvortrag in ein lockeres Talk-Show-Interview – persönlich, einbindend und für große Gruppen geeignet.",
-        "en": ""
+        "en": "A host interviews a leader or expert ('the celebrity') talk-show style about a shared challenge, drawing out stories, emotions and real examples while the audience listens and feeds in questions. A passive presentation becomes an engaging, trust-building conversation."
       },
-      "source_url": "https://liberatingstructures.de/celebrity-interview/",
+      "source_url": "https://www.liberatingstructures.com/celebrity-interview",
       "purpose_tags": [
         "teilen"
       ],
       "arc_role": [
         "öffnen"
       ],
-      "group_size_min": 5,
+      "group_size_min": 12,
       "group_size_max": null,
       "duration_min": 25,
       "duration_max": 50,
       "online_capable": true,
       "materials": {
         "de": "Interviewer:in und Gast sichtbar/hörbar positioniert; Stifte und Trennkarten (8×13 cm); optional Mikrofone, Glocke/Tingsha, Barhocker, Bühne; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "A front-of-room spotlight where everyone can see and hear the celebrity and interviewer; breakout pairs or trios; interview questions prepared in advance; index cards for audience questions (or the chat online); microphones if needed."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
@@ -7045,34 +7045,189 @@
       ],
       "scrum_use": {
         "de": "Wissen/Erfahrung einer Schlüsselperson lebendig vermitteln (z. B. Stakeholder, neue Führungskraft, Expert:in) statt trockener Präsentation.",
-        "en": ""
+        "en": "Bringing a leader, expert or experienced practitioner close to the team without a dull slide deck — e.g. a sponsor or senior engineer interviewed about how they really handled a challenge, with the audience steering the questions."
       },
       "design_elements": {
         "einladung": {
           "de": "Der/die Expert:in vermeidet eine formale Präsentation und beantwortet Fragen in lockerer „Talk-Show“-Atmosphäre; das Publikum hört zu und notiert Fragen.",
-          "en": ""
+          "en": "Let's have a real conversation about the things that matter, the experiences that shape us. We have an opportunity to ask a celebrity the tough questions and get straight answers."
         },
         "raum_materialien": {
           "de": "Interviewer:in und Gast sichtbar/hörbar positioniert; Stifte und Trennkarten (8×13 cm); optional Mikrofone, Glocke/Tingsha, Barhocker, Bühne; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "A front-of-room spotlight so everyone can see and hear the celebrity and interviewer. Breakout pairs or small groups of two to three. Interview questions prepared in advance. Index cards to collect audience questions (or the chat online). Microphones if needed."
         },
         "einbindung": {
           "de": "Teil 1 (Interview): alle hören gleichberechtigt zu; Teil 2: alle formulieren via 1-2-4 Fragen.",
-          "en": ""
+          "en": "Roles: interviewer/host, celebrity, and audience. Minimum group size is twelve. Everyone has an equal opportunity to listen and generate questions."
         },
         "gruppenkonfiguration": {
           "de": "Gesamtgruppe für das Interview; Einzelne/Paare/Kleingruppen für die Fragengenerierung.",
-          "en": ""
+          "en": "Pairs or small groups, then the whole group."
         },
         "ablauf_dauer": {
           "de": "Begrüßung 3 Min; Interview 7–27 Min; 1-2-4-Fragengenerierung 5–10 Min; weitere Fragen aus Karten 5–10 Min; Schlusswort 1 Min. Gesamt 25–50 Min.",
-          "en": ""
+          "en": "Intro 1 min; welcome the celebrity and frame the topic talk-show style 3 min; interview with prepared questions 15-30 min; generate new questions in 1-2-4-All (breakouts of 2-3) 5-10 min; ask several of the new questions 5-10 min; closing thanks 1 min. ~30-55 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P3"
+      ],
+      "icon_alt": {
+        "de": "Eine Talk-Show-Szene: Moderator:in interviewt eine Person im Scheinwerferlicht, das Publikum hört zu.",
+        "en": "A talk-show scene: a host interviews a person in the spotlight while the audience listens."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Celebrity Interview verwandelt einen passiven Vortrag in eine packende persönliche Erzählung: Ein:e Moderator:in interviewt eine Führungsperson oder Expert:in zu einer gemeinsamen Herausforderung, während das Publikum mitwirkt. Die Struktur zeigt, wie die „Berühmtheit“ an Herausforderungen herangeht — sie lockt Beispiele, Gefühle und Erfahrungen hervor, beflügelt die Vorstellungskraft und inspiriert zu gemeinsamem Handeln. Celebrity Interview verkörpert LS-Prinzip #3 — Vertrauen Schritt für Schritt aufbauen.",
+          "en": "Celebrity Interview turns a passive presentation into an engaging personal narrative: a host interviews a leader or expert about a shared challenge while the audience participates. It reveals how the 'celebrity' approaches challenges — drawing out examples, emotions and experiences, sparking imagination and inspiring collective action. Celebrity Interview enacts LS Principle #3 — Build Trust as You Go."
+        },
+        "einladung": {
+          "de": "„Lasst uns ein echtes Gespräch über die Dinge führen, die zählen — über die Erfahrungen, die uns prägen. Wir haben die Gelegenheit, einer Berühmtheit die unbequemen Fragen zu stellen und ehrliche Antworten zu bekommen.“",
+          "en": "Let's have a real conversation about the things that matter, the experiences that shape us. We have an opportunity to ask a celebrity the tough questions and get straight answers."
+        },
+        "beispielsaetze": {
+          "de": [
+            "„Erzähl uns von einem konkreten Moment, in dem das richtig schwierig war — was hast du getan?“",
+            "„Was hat dich an dieser Situation überrascht?“",
+            "Publikumsfragen (auf Karten/Chat): „Was würden wir gern wissen, trauen uns aber nicht zu fragen?“"
+          ],
+          "en": [
+            "'Tell us about a concrete moment when this got really hard — what did you do?'",
+            "'What surprised you about that situation?'",
+            "Audience questions (on cards/chat): 'What would we love to know but wouldn't dare ask?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen und den Ablauf zeigen.",
+              "en": "Share the invitation and display the flow."
+            }
+          },
+          {
+            "phase": {
+              "de": "Begrüßung",
+              "en": "Introduction"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Berühmtheit im lockeren Talk-Show-Stil begrüßen, Thema benennen; Spotlight auf den Gast, Publikum schaltet (online) Kameras aus.",
+              "en": "Welcome the celebrity talk-show style and name the topic; spotlight the guest, audience turns cameras off (online)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Interview",
+              "en": "Interview"
+            },
+            "dauer_min": 22,
+            "beschreibung": {
+              "de": "Die Berühmtheit mit vorbereiteten Fragen interviewen; nach Geschichten und konkreten Details fragen (15-30 Min).",
+              "en": "Interview the celebrity with prepared questions; ask for stories and concrete details (15-30 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Neue Fragen",
+              "en": "Generate new questions"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Teilnehmende entwickeln in 1-2-4-All (Breakouts zu 2-3) Fragen und schreiben sie auf Karten/in den Chat.",
+              "en": "Participants develop questions in 1-2-4-All (breakouts of 2-3) and write them on cards/in chat."
+            }
+          },
+          {
+            "phase": {
+              "de": "Fragen stellen",
+              "en": "Ask new questions"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Mehrere der neuen Fragen auswählen und stellen.",
+              "en": "Sift through and ask several of the new questions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Abschluss",
+              "en": "Conclusion"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Schlusswort und Dank an die Berühmtheit.",
+              "en": "Closing comment and thanks to the celebrity."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Vorab-Recherche",
+              "en": "Advance research"
+            },
+            "beschreibung": {
+              "de": "Vorher sammeln, was die Teilnehmenden wirklich wissen wollen, sich aber nicht zu fragen trauen.",
+              "en": "Gather in advance what participants really want to know but wouldn't dare ask."
+            }
+          },
+          {
+            "name": {
+              "de": "Mehrere Berühmtheiten",
+              "en": "Multiple celebrities"
+            },
+            "beschreibung": {
+              "de": "Mehrere Gäste einladen, um unterschiedliche Perspektiven hervorzuheben.",
+              "en": "Invite multiple celebrities to highlight different perspectives."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Die Begrüßung kurz halten — schnell ins Gespräch kommen.",
+            "Substanzielle, keine belanglosen Fragen stellen.",
+            "Die Fragen vorab mit der Berühmtheit teilen, damit sie sich vorbereiten kann.",
+            "Im Interview gezielt nach Geschichten und konkreten Details fragen."
+          ],
+          "en": [
+            "Keep the introduction brief — get into the conversation quickly.",
+            "Ask substantive, not trivial, questions.",
+            "Share the questions with the celebrity in advance so they can prepare.",
+            "During the interview, deliberately request stories and concrete details."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Eine Führungsperson oder Expert:in zugänglich und persönlich erlebbar machen.",
+            "Einen drögen Vortrag durch ein lebendiges Interview ersetzen.",
+            "Vertrauen zwischen Leitung und Team aufbauen.",
+            "Ein Thema einführen und Neugier fürs Weitere wecken."
+          ],
+          "en": [
+            "Make a leader or expert accessible and personable.",
+            "Replace a dull presentation with a lively interview.",
+            "Build trust between leadership and the team.",
+            "Introduce a topic and spark curiosity for what follows."
+          ]
+        },
+        "material_setup": {
+          "de": "Ein Spotlight vorne, damit alle Gast und Moderation sehen und hören; Breakout-Paare/Trios; vorbereitete Fragen; Karten oder Chat für Publikumsfragen; bei Bedarf Mikrofone.",
+          "en": "A front-of-room spotlight so all can see and hear the guest and host; breakout pairs/trios; prepared questions; cards or chat for audience questions; microphones if needed."
+        },
+        "online_durchfuehrung": {
+          "de": "Online sehr gut umsetzbar. Ablauf: (1) Den Gast „spotlighten“ (in der Konferenzsoftware anpinnen), das Publikum bittet man, die Kameras auszuschalten — das schärft Fokus und Zuhören. (2) Die Moderation interviewt mit vorbereiteten Fragen. (3) Für neue Fragen kurze 1-2-4-All-Breakouts (zu 2-3) nutzen; Fragen kommen in den Chat. (4) Die Moderation sichtet den Chat und stellt mehrere Fragen. Tipp: Fragen vorab mit dem Gast teilen.",
+          "en": "Works very well online. Flow: (1) Spotlight the guest (pin them in the conferencing tool), ask the audience to turn cameras off — this sharpens focus and listening. (2) The host interviews with prepared questions. (3) For new questions, use short 1-2-4-All breakouts (of 2-3); questions go into the chat. (4) The host sifts the chat and asks several. Tip: share the questions with the guest in advance."
+        }
       }
     },
     {
@@ -7087,9 +7242,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Erfahrene Praktiker:innen teilen im inneren Kreis offen ihre Erfahrungen mit einer größeren Gruppe – gemeinsames Lernen aus Erfolgen und Fehlern.",
-        "en": ""
+        "en": "People who have made progress on a shared challenge (the 'fish') sit in an inner circle and talk candidly about their real experiences — successes and failures — while a larger outer circle listens, then questions them. Peers learn directly from field experience and adopt practices grounded in reality."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/user-experience-fishbowl/",
+      "source_url": "https://www.liberatingstructures.com/user-experience-fishbowl",
       "purpose_tags": [
         "teilen"
       ],
@@ -7097,14 +7252,14 @@
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 6,
+      "group_size_min": 15,
       "group_size_max": null,
       "duration_min": 35,
       "duration_max": 70,
       "online_capable": true,
       "materials": {
         "de": "3–7 Stühle im inneren Kreis, umgeben von Stühlen in 3–4er-Grüppchen; optional Mikrofone ab 30–40 Zuhörenden, Bühne/Sessel; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "An inner circle of 3-7 chairs (the spotlight) surrounded by an outer circle seated in small groups of 3-4 (breakouts); microphones for the inner circle and select outer-circle questions if needed. Online: spotlight the inner circle, outer cameras off, questions via chat."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
@@ -7118,34 +7273,188 @@
       ],
       "scrum_use": {
         "de": "Erfahrene Praktiker:innen teilen Erkenntnisse mit einer größeren Gruppe (z. B. Team teilt Learnings, „aus Fehlern lernen“).",
-        "en": ""
+        "en": "Transferring hard-won, hands-on knowledge between people — experienced teams to newcomers, one team's practice to others, early adopters of a tool to the rest — by letting practitioners talk to each other while everyone else listens in and then asks."
       },
       "design_elements": {
         "einladung": {
           "de": "Der innere Kreis beschreibt Erfahrungen zwanglos und konkret (die guten, schlechten und „hässlichen“) wie ein Lagerfeuergespräch; das Publikum hört zu und formuliert Fragen.",
-          "en": ""
+          "en": "We are going to put people who are tackling our shared challenge in a fishbowl and listen as they share their experiences."
         },
         "raum_materialien": {
           "de": "3–7 Stühle im inneren Kreis, umgeben von Stühlen in 3–4er-Grüppchen; optional Mikrofone ab 30–40 Zuhörenden, Bühne/Sessel; online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "An inner circle of 3-7 chairs (spotlight) surrounded by an outer circle in small groups of 3-4 (breakouts). Microphones for the inner circle and select outer-circle questions if needed. Online: spotlight the inner circle, outer cameras off."
         },
         "einbindung": {
           "de": "Innerer Kreis hat gleiche Sprechgelegenheit; äußerer Kreis stellt gleichberechtigt Fragen.",
-          "en": ""
+          "en": "Roles: host (tech host), inner circle, outer circle. Minimum 15 people. Everyone is invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "3–7 Personen im inneren Kreis; je 3–4 in Satellitengruppen außen; 1-2-4-All zum Debrief.",
-          "en": ""
+          "en": "3-7 inner-circle members (any rank or position) with many small outer-circle groups of 3-4."
         },
         "ablauf_dauer": {
           "de": "Erklärung 2 Min; Gespräch im inneren Kreis 10–25 Min; Satellitengruppen formulieren Fragen 4 Min; Fragen beantworten 10–25 Min; Debrief mit What-So-What-Now-What 10–15 Min. Gesamt 35–70 Min.",
-          "en": ""
+          "en": "Intro and seat the 'fish' 2 min; inner circle shares stories naturally — successes, failures, challenges (two rules: no speeches; talk to each other, not the outer circle) 10-25 min; outer-circle breakouts reflect and formulate questions 4 min; Q&A — outer circle questions the inner circle 10-25 min; debrief with What/So What/Now What, asking 'What seems possible now?' 10-15 min. ~35-70 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P2"
+      ],
+      "icon_alt": {
+        "de": "Ein innerer Stuhlkreis im Gespräch, umringt von einem äußeren Kreis, der zuhört (Goldfischglas).",
+        "en": "An inner circle of chairs in conversation, surrounded by an outer listening circle (a fishbowl)."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine kleine Gruppe, die bei einer gemeinsamen Herausforderung schon vorangekommen ist (die „Fische“), bespricht ihre Erfahrungen, während eine größere Gruppe zuhört — es entsteht ein informeller, lebendiger Dialog. Die Teilnehmenden lernen von Kolleg:innen mit direkter Praxiserfahrung und übernehmen neue, realitätsnahe Praktiken. User Experience Fishbowl verkörpert LS-Prinzip #2 — tiefen Respekt für Menschen und lokale Lösungen üben.",
+          "en": "A small group that has made progress on a shared challenge (the 'fish') discusses its experiences while a larger group observes — creating informal, lively dialogue. Participants learn from peers with direct field experience and adopt new, reality-grounded practices. User Experience Fishbowl enacts LS Principle #2 — Practice Deep Respect for People and Local Solutions."
+        },
+        "einladung": {
+          "de": "„Wir setzen die Menschen, die unsere gemeinsame Herausforderung bereits angehen, ins Goldfischglas und hören zu, wie sie ihre Erfahrungen teilen.“",
+          "en": "We are going to put people who are tackling our shared challenge in a fishbowl and listen as they share their experiences."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Zwei Regeln für den inneren Kreis: „Keine Vorträge“ und „Sprecht miteinander, nicht zum äußeren Kreis“.",
+            "Innerer Kreis: „Was hat bei euch funktioniert — und was ist schiefgegangen?“",
+            "Debrief-Frage (What, So What, Now What?): „Was scheint jetzt möglich?“"
+          ],
+          "en": [
+            "Two rules for the inner circle: 'no speeches' and 'talk to each other, not the outer circle'.",
+            "Inner circle: 'What worked for you — and what went wrong?'",
+            "Debrief question (What/So What/Now What): 'What seems possible now?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Einladung teilen, gemeinsame Herausforderung benennen, die „Fische“ setzen; Beobachtende notieren, ohne einzugreifen.",
+              "en": "Share the invitation, name the shared challenge, seat the 'fish'; observers note without interacting."
+            }
+          },
+          {
+            "phase": {
+              "de": "Geschichten teilen",
+              "en": "Story sharing"
+            },
+            "dauer_min": 18,
+            "beschreibung": {
+              "de": "Der innere Kreis spricht natürlich über die Arbeit — Erfolge, Misserfolge, Herausforderungen (zwei Regeln gelten) (10-25 Min).",
+              "en": "The inner circle talks naturally about the work — successes, failures, challenges (two rules apply) (10-25 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion & Fragen",
+              "en": "Reflect & formulate questions"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Der äußere Kreis entwickelt in Breakouts Beobachtungen und Fragen.",
+              "en": "Outer-circle breakouts develop observations and questions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Fragerunde",
+              "en": "Q&A time"
+            },
+            "dauer_min": 18,
+            "beschreibung": {
+              "de": "Die ganze Gruppe kommt zusammen; der äußere Kreis befragt den inneren (10-25 Min).",
+              "en": "The full group reconvenes; the outer circle questions the inner circle (10-25 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief",
+              "en": "Debrief & discover"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Mit What, So What, Now What? auswerten: „Was scheint jetzt möglich?“",
+              "en": "Debrief with What/So What/Now What: 'What seems possible now?'"
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Was hat überrascht?",
+              "en": "What surprised you?"
+            },
+            "beschreibung": {
+              "de": "Die Fische einladen zu teilen, was sie selbst überrascht hat.",
+              "en": "Invite the fish to share what surprised them."
+            }
+          },
+          {
+            "name": {
+              "de": "Online-Chat",
+              "en": "Online chat"
+            },
+            "beschreibung": {
+              "de": "Der äußere Kreis stellt während des inneren Gesprächs Fragen im Chat.",
+              "en": "The outer circle posts questions in chat during the inner-circle conversation."
+            }
+          },
+          {
+            "name": {
+              "de": "Action-Research-String",
+              "en": "Action-research string"
+            },
+            "beschreibung": {
+              "de": "Mit Improv Prototyping, Simple Ethnography und Shift & Share kombinieren: Belege sammeln, lokale Beobachtungen sammeln, Daten deuten.",
+              "en": "Combine with Improv Prototyping, Simple Ethnography and Shift & Share: gather evidence, collect local observations, make sense of data."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "„Fische“ wählen, die Rollen/Funktionen vertreten, die für den Erfolg zusammenarbeiten müssen.",
+            "Konkrete Beispiele statt Meinungen fördern; sowohl Erfolge als auch Misserfolge teilen.",
+            "Die zwei Regeln konsequent einhalten — kein Vortrag, Gespräch unter den Fischen.",
+            "Online: Fische spotlighten und Publikumskameras ausschalten, um Fokus und Zuhören zu stärken."
+          ],
+          "en": [
+            "Choose 'fish' representing roles/functions that must coordinate to succeed.",
+            "Encourage concrete examples over opinions; share both successes and failures.",
+            "Enforce the two rules consistently — no speeches, conversation among the fish.",
+            "Online: spotlight the fish and turn off audience cameras to boost focus and listening."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Wissen von erfahrenen auf neue Personen übertragen (z. B. Einsatzkräfte an Nachfolger:innen).",
+            "Austausch zwischen unterschiedlichen Erfahrungsstufen ermöglichen.",
+            "Nutzer:innen eines neuen Werkzeugs ihre Erkenntnisse organisationsweit teilen lassen.",
+            "Erfahrene Praktiker:innen erzählen Neulingen im Workshop ihre Geschichten."
+          ],
+          "en": [
+            "Transfer knowledge from experienced to new people (e.g. responders to their replacements).",
+            "Enable exchange across different experience levels.",
+            "Let users of a new tool share their insights organization-wide.",
+            "Have experienced practitioners tell their stories to newcomers in a workshop."
+          ]
+        },
+        "material_setup": {
+          "de": "Innerer Kreis aus 3-7 Stühlen (Spotlight), umringt von einem äußeren Kreis in Kleingruppen zu 3-4; bei Bedarf Mikrofone. Online: inneren Kreis spotlighten, äußere Kameras aus, Fragen per Chat.",
+          "en": "An inner circle of 3-7 chairs (spotlight) surrounded by an outer circle in small groups of 3-4; microphones if needed. Online: spotlight the inner circle, outer cameras off, questions via chat."
+        },
+        "online_durchfuehrung": {
+          "de": "Funktioniert online mit minimalen Anpassungen. Ablauf: (1) Die „Fische“ (3-7) in der Konferenzsoftware spotlighten/anpinnen; das übrige Publikum schaltet die Kameras aus, um Fokus und Zuhören zu stärken. (2) Der innere Kreis spricht natürlich über Erfolge und Misserfolge — zwei Regeln: keine Vorträge, miteinander reden. (3) Der äußere Kreis sammelt in kurzen Breakouts (oder direkt im Chat) Beobachtungen und Fragen. (4) Fragerunde: ausgewählte Fragen aus dem Chat an die Fische. (5) Debrief mit What, So What, Now What?: „Was scheint jetzt möglich?“",
+          "en": "Works online with minimal adjustment. Flow: (1) Spotlight/pin the 'fish' (3-7) in the conferencing tool; the rest of the audience turns cameras off to boost focus and listening. (2) The inner circle talks naturally about successes and failures — two rules: no speeches, talk to each other. (3) The outer circle gathers observations and questions in short breakouts (or directly in chat). (4) Q&A: selected chat questions go to the fish. (5) Debrief with What/So What/Now What: 'What seems possible now?'"
+        }
       }
     },
     {
@@ -7160,12 +7469,12 @@
       "edition": "original",
       "short_desc": {
         "de": "Visualisiert informelle Verbindungen eines Netzwerks und entwickelt Strategien, um sie zu nutzen und auszubauen – über Silo-, Hierarchie- und Firmengrenzen hinweg.",
-        "en": ""
+        "en": "Using a template, a group maps the web of relationships from its core out to potential supporters on the periphery, naming roles, influence and expertise. Hidden resources inside existing relationships surface, and the group plans how to engage 'closing triangles' — connecting people who aren't yet connected."
       },
-      "source_url": "https://liberatingstructures.de/social-network-webbing/",
+      "source_url": "https://www.liberatingstructures.com/social-network-webbing",
       "purpose_tags": [
         "helfen",
-        "planen"
+        "teilen"
       ],
       "arc_role": [
         "divergieren",
@@ -7178,7 +7487,7 @@
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Flipcharts/Packpapier, Post-its (51×51 mm) in 8+ Farben, Stifte; online: Breakout-Räume mit virtuellem Whiteboard.",
-        "en": ""
+        "en": "An open wall with room to move; large paper; sticky notes in up to eight colors; bold markers; a visual collaboration space. Online: a shared whiteboard with the network template."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
@@ -7191,34 +7500,221 @@
       ],
       "scrum_use": {
         "de": "Informelle Netzwerke sichtbar machen und gezielt nutzen, um Veränderungen/Wissen über Team- und Bereichsgrenzen zu verbreiten.",
-        "en": ""
+        "en": "Mapping who-knows-whom to get something adopted or unblocked — finding the informal connectors, influencers and missing people who can move a change forward without a big plan or budget, e.g. spreading a new practice across teams."
       },
       "design_elements": {
         "einladung": {
           "de": "Erstellt gemeinsam eine Netzwerkkarte: aktive Kooperationspartner und gewünschte zukünftige Beteiligte benennen und festlegen, wie das Netzwerk ausgebaut wird.",
-          "en": ""
+          "en": "Let's get ready to expand our circle of influence and build our superpowered dream team. We'll use a template to identify roles, name key players who can contribute to our success, and create a plan to engage them."
         },
         "raum_materialien": {
           "de": "Wichtig: Flipcharts/Packpapier, Post-its (51×51 mm) in 8+ Farben, Stifte; online: Breakout-Räume mit virtuellem Whiteboard.",
-          "en": ""
+          "en": "An open wall with room to move; large paper; sticky notes in eight colors; bold markers; a visual collaboration space. Online: a shared whiteboard with the network template."
         },
         "einbindung": {
           "de": "Alle Arbeitsgruppenmitglieder eingebunden, gleiche Einbringungsmöglichkeiten.",
-          "en": ""
+          "en": "Roles: host and participants, with no minimum group size. All core-group members are invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "1-2-4-All für Schlüsselgruppen; gemeinsame Kartenerstellung.",
-          "en": ""
+          "en": "1-2-4-All (1-3-All online)."
         },
         "ablauf_dauer": {
           "de": "Legende 5 Min; Namen auf Post-its 5 Min; aktuelle Kontakte 10 Min; zukünftige Beteiligte 10 Min; Verbindungen analysieren 5–15 Min; Strategien 10 Min. Gesamt 45–55 Min.",
-          "en": ""
+          "en": "Intro 1 min; identify roles via 1-2-4-All 10 min; create a color legend for role types 3 min; map the core network (names in the center) 2 min; expand with immediate connections 10 min; extend to the periphery and missing resources 10 min; annotate connections with symbols and lines 5 min; identify 'closing triangles' and new connections, commit to weaving people in and around blockages 15 min. ~55 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); verweist auf June Holleys Netzwerk-Weaving-Praxis; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Helfen, Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); references June Holley's network-weaving practice; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Help, Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P1"
+      ],
+      "icon_alt": {
+        "de": "Eine Netzwerkkarte aus konzentrischen Kreisen mit Namen, Verbindungslinien und farbigen Symbolen.",
+        "en": "A network map of concentric circles with names, connecting lines and colored symbols."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Social Network Webbing kartiert die Beziehungen von der Kern-Arbeitsgruppe bis zu möglichen Unterstützer:innen am Rand und deckt verborgene Ressourcen in bestehenden Beziehungen auf. So lässt sich über informelle Verbindungen vorankommen — ohne komplizierte Pläne oder große Investitionen — und Eigeninitiative wird gefördert, weil Rollen und Lücken im Netzwerk sichtbar werden. Social Network Webbing verkörpert LS-Prinzip #1 — alle einbeziehen und entfalten.",
+          "en": "Social Network Webbing maps relationships from the core working group out to potential supporters on the periphery, uncovering hidden resources inside existing relationships. This lets the group make progress through informal connections — without complicated plans or major investment — and encourages individual initiative as roles and gaps become visible. Social Network Webbing enacts LS Principle #1 — Include and Unleash Everyone."
+        },
+        "einladung": {
+          "de": "„Machen wir uns bereit, unseren Einflusskreis zu erweitern und unser schlagkräftiges Dream-Team zu bauen. Mit einer Vorlage benennen wir Rollen und Schlüsselpersonen, die zu unserem Erfolg beitragen können, und planen, wie wir sie gewinnen.“",
+          "en": "Let's get ready to expand our circle of influence and build our superpowered dream team. We'll use a template to identify roles, name key players who can contribute to our success, and create a plan to engage them."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Drei Ringe: Kern (wir selbst), unmittelbares Netzwerk (bekannte Kontakte), Peripherie (fehlende Personen/Ressourcen).",
+            "Verbindungen markieren: Wer kennt wen? Wer hat Einfluss/Expertise? Wer könnte einen Unterschied machen?",
+            "„Schließende Dreiecke“: Welche bisher unverbundenen Personen können wir miteinander verbinden?"
+          ],
+          "en": [
+            "Three rings: core (ourselves), immediate network (known contacts), periphery (missing people/resources).",
+            "Mark connections: who knows whom? Who has influence/expertise? Who could make a difference?",
+            "'Closing triangles': which previously unconnected people can we connect?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Rollen finden",
+              "en": "Identify roles"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All eine konsolidierte Liste der benötigten Rollen erstellen.",
+              "en": "Use 1-2-4-All to generate a consolidated list of needed roles."
+            }
+          },
+          {
+            "phase": {
+              "de": "Legende",
+              "en": "Create legend"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Sticky-Farben den Rollentypen zuordnen (max. 8).",
+              "en": "Assign sticky-note colors to role types (max 8)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Kern kartieren",
+              "en": "Map core network"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Namen schreiben und in die Mitte setzen.",
+              "en": "Write names and place them in the center."
+            }
+          },
+          {
+            "phase": {
+              "de": "Netzwerk erweitern",
+              "en": "Expand network"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Unmittelbare Verbindungen ergänzen.",
+              "en": "Add immediate connections."
+            }
+          },
+          {
+            "phase": {
+              "de": "Netzwerk ausdehnen",
+              "en": "Extend network"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Personen am Rand und fehlende Ressourcen hinzufügen.",
+              "en": "Add periphery people and missing resources."
+            }
+          },
+          {
+            "phase": {
+              "de": "Verbindungen markieren",
+              "en": "Annotate connections"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Mit Symbolen/Emojis und Linien Beziehungen, Einfluss und Expertise kennzeichnen.",
+              "en": "Use symbols/emojis and lines to mark relationships, influence and expertise."
+            }
+          },
+          {
+            "phase": {
+              "de": "Neue Verbindungen",
+              "en": "Identify new connections"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "„Schließende Dreiecke“ und neue Verbindungschancen finden; sich verpflichten, Menschen einzubinden und Blockaden zu umgehen.",
+              "en": "Find 'closing triangles' and new connection opportunities; commit to weaving people in and working around blockages."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Persönliche Netze zuerst",
+              "en": "Personal webs first"
+            },
+            "beschreibung": {
+              "de": "Einzelne erstellen vor der Gruppenkarte ihr persönliches Netzwerk.",
+              "en": "Individuals create their personal network web before the group map."
+            }
+          },
+          {
+            "name": {
+              "de": "Tiefere Fragen",
+              "en": "Deeper questions"
+            },
+            "beschreibung": {
+              "de": "Fragen, wie sich Ideen über Hierarchieebenen hinweg verbreiten.",
+              "en": "Ask deeper questions about how ideas propagate across hierarchies."
+            }
+          },
+          {
+            "name": {
+              "de": "Karte fortschreiben",
+              "en": "Revisit the map"
+            },
+            "beschreibung": {
+              "de": "Die Karte regelmäßig aktualisieren, um Zuwächse und Wachstumsmuster zu verfolgen.",
+              "en": "Revisit the map frequently to track new additions and growth patterns."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Sowohl informelle Beziehungen als auch die formale Organisationsstruktur im Blick behalten.",
+            "Die Legende auf maximal 8 Funktionen begrenzen.",
+            "Betonen: Ein Platz in der Peripherie bedeutet wichtige Fähigkeiten, kein Ausschluss.",
+            "Konkrete Namen statt nur Rollen verwenden, damit das Netz handlungsleitend wird."
+          ],
+          "en": [
+            "Keep both informal relationships and the formal org structure in view.",
+            "Limit the legend to a maximum of 8 functions.",
+            "Emphasize that a periphery placement means vital skills, not exclusion.",
+            "Use concrete names, not just roles, so the web becomes actionable."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Eine Veränderung verbreiten, ohne großen Plan oder Budget — über informelle Verbindungen.",
+            "Verborgene Unterstützer:innen und Brückenbauer:innen sichtbar machen.",
+            "Eine neue Technologie über Netzwerke früher Anwender:innen ausweiten.",
+            "Ein „Dream-Team“ für eine Initiative zusammenstellen und gezielt ansprechen."
+          ],
+          "en": [
+            "Spread a change without a big plan or budget — through informal connections.",
+            "Make hidden supporters and bridge-builders visible.",
+            "Expand a new technology through early-adopter networks.",
+            "Assemble and deliberately engage a 'dream team' for an initiative."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit Bewegungsraum; großes Papier; Post-its in bis zu acht Farben; kräftige Marker; visuelle Kollaborationsfläche. Online: geteiltes Whiteboard mit Netzwerk-Vorlage.",
+          "en": "An open wall with room to move; large paper; sticky notes in up to eight colors; bold markers; a visual collaboration space. Online: a shared whiteboard with the network template."
+        },
+        "online_durchfuehrung": {
+          "de": "Online auf einem geteilten Whiteboard mit konzentrischen Kreisen (Kern, unmittelbares Netzwerk, Peripherie). Ablauf: (1) Rollen per 1-2-4-All sammeln und eine Farb-Legende (max. 8) anlegen. (2) Namen als farbige Stickies in die Mitte und nach außen setzen. (3) Verbindungslinien und Symbole für Einfluss/Expertise ergänzen. (4) Gemeinsam „schließende Dreiecke“ markieren und festlegen, wer wen verbindet bzw. wie Blockaden umgangen werden. Die Karte als lebendes Dokument behalten und später fortschreiben.",
+          "en": "Online on a shared whiteboard with concentric circles (core, immediate network, periphery). Flow: (1) Gather roles via 1-2-4-All and create a color legend (max 8). (2) Place names as colored stickies in the center and outward. (3) Add connecting lines and symbols for influence/expertise. (4) Together mark 'closing triangles' and decide who connects whom or how to work around blockages. Keep the map as a living document and revisit it later."
+        }
       }
     },
     {
@@ -7233,24 +7729,25 @@
       "edition": "original",
       "short_desc": {
         "de": "Beobachtet das tatsächliche Verhalten echter Nutzer vor Ort und macht so verborgene Abläufe und Bedürfnisse sichtbar, die Befragungen verborgen bleiben.",
-        "en": ""
+        "en": "A team immerses itself where the work really happens and observes actual behavior — recording only observable facts, low on the ladder of inference. Watching real people in real settings surfaces hidden routines, needs and pain points, builds empathy and fuels grounded prototypes."
       },
-      "source_url": "https://liberatingstructures.de/simple-ethnography/",
+      "source_url": "https://www.liberatingstructures.com/simple-ethnography",
       "purpose_tags": [
+        "offenlegen",
         "analysieren"
       ],
       "arc_role": [
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 8,
+      "group_size_min": 2,
       "group_size_max": null,
       "duration_min": 60,
       "duration_max": 240,
-      "online_capable": false,
+      "online_capable": true,
       "materials": {
         "de": "Vor-Ort-Arbeitsplätze mit Raum zum Teilen; nützlich: Stifte, Papier/Notizbuch; optional Foto-/Videokamera (mit Erlaubnis).",
-        "en": ""
+        "en": "A convenient space to share findings and artifacts; observation sites (physical or virtual); notebooks, pens and cameras (or participants' own); the Simple Ethnography Guide distributed digitally."
       },
       "difficulty": "mittel",
       "typical_predecessors": [],
@@ -7262,34 +7759,210 @@
       ],
       "scrum_use": {
         "de": "Tatsächliches Nutzer-/Arbeitsverhalten vor Ort beobachten (z. B. echte Produktnutzung), um verborgene Bedürfnisse zu erkennen.",
-        "en": ""
+        "en": "Understanding what users or colleagues actually do — not what they say in a meeting — before building or changing something: field observation that grounds backlog and prototypes in real behavior rather than assumptions."
       },
       "design_elements": {
         "einladung": {
           "de": "Beobachtet Expert:innen und Anwender:innen still vor Ort und führt anschließend Interviews zu beobachtetem Verhalten.",
-          "en": ""
+          "en": "We are going to immerse ourselves with the people who work closest to our challenges in our local settings. Our aim is to learn from their direct experience and discover new approaches to our shared challenge."
         },
         "raum_materialien": {
           "de": "Vor-Ort-Arbeitsplätze mit Raum zum Teilen; nützlich: Stifte, Papier/Notizbuch; optional Foto-/Videokamera (mit Erlaubnis).",
-          "en": ""
+          "en": "A convenient space for sharing findings and artifacts. Observation sites in physical or virtual spaces. Notebooks, pens and cameras (or participants bring their own). The Simple Ethnography Guide distributed digitally."
         },
         "einbindung": {
           "de": "Alle Kerngruppenmitglieder als gleichberechtigte Ethnograf:innen.",
-          "en": ""
+          "en": "Roles: host and ethnographers. Minimum group size is two. Everyone working on the challenge serves as an ethnographer with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln oder in Paaren vor Ort; Gesamtgruppe zur Abschlussbesprechung.",
-          "en": ""
+          "en": "Ethnographers observe alone or in pairs, then debrief via 1-2-4-All."
         },
         "ablauf_dauer": {
           "de": "Fragestellung erläutern 5 Min; Orte/Personen identifizieren 5 Min; still beobachten 10–180 Min; Interviews 20–180 Min; Muster mit 1-2-4-All 15 Min; Erkenntnisse zusammenfassen 10–20 Min; Brainstorming/Prototyping 10 Min.",
-          "en": ""
+          "en": "Intro 5 min; plan observations (sites, people, permission, safety; review What/So What/Now What and the Ladder of Inference — stay low, record facts) 5 min; site visits, observe and collect artifacts 10-180 min; share artifacts 5-10 min; debrief in small groups on observable facts 15 min; all-together sharing with What/So What/Now What, name follow-up experiments 10-15 min; repeat cycles 40-60 min each until powerful insights emerge."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen, Analysieren“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal, Analyze’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P2"
+      ],
+      "icon_alt": {
+        "de": "Eine beobachtende Person mit Notizbuch und Kamera mitten im echten Arbeitsumfeld.",
+        "en": "An observer with a notebook and camera in a real work setting."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Bei Simple Ethnography beobachten Teams ihren eigenen Kontext, um tiefe Einblicke in Erfahrungen, Bedürfnisse und Schmerzpunkte der Menschen zu gewinnen. Statt sich auf externe Expert:innen zu verlassen, lernt die Gruppe direkt von denen, denen sie dient — im lokalen Umfeld. Diese Nähe weckt Empathie und führt zu sinnvollen Lösungen; das Verstehen des tatsächlichen Verhaltens ermöglicht schnelle Verbesserungen und Prototypen und macht Veränderungen möglich, die zuvor unmöglich schienen. Simple Ethnography verkörpert LS-Prinzip #2 — tiefen Respekt für Menschen und lokale Lösungen üben.",
+          "en": "In Simple Ethnography, teams observe their own context to gain deep insight into people's experiences, needs and pain points. Rather than relying on external experts, the group learns directly from those it serves — in local settings. This closeness fosters empathy and leads to meaningful solutions; understanding actual behavior enables rapid improvements and prototypes and makes change possible that once seemed impossible. Simple Ethnography enacts LS Principle #2 — Practice Deep Respect for People and Local Solutions."
+        },
+        "einladung": {
+          "de": "„Wir tauchen ein bei den Menschen, die unseren Herausforderungen am nächsten arbeiten, in ihrem lokalen Umfeld. Unser Ziel: aus ihrer direkten Erfahrung lernen und neue Ansätze für unsere gemeinsame Herausforderung entdecken.“",
+          "en": "We are going to immerse ourselves with the people who work closest to our challenges in our local settings. Our aim is to learn from their direct experience and discover new approaches to our shared challenge."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Mit allen Sinnen beobachten: Ort (Aufbau, Objekte), Aktivitäten (Mimik, Gestik, Übergänge), Kommunikation (wer spricht, wer hört zu), Geräusche, Tempo (schnell/langsam).",
+            "Niedrig auf der „Leiter der Schlussfolgerungen“ bleiben: nur beobachtbare Fakten festhalten, nicht deuten.",
+            "Vorläufige Deutung erst später: „Wie könnte der Ort/die Aktivität zur Herausforderung beitragen?“"
+          ],
+          "en": [
+            "Observe with all senses: site (layout, objects), activities (expressions, gestures, transitions), communication (who speaks, who listens), sound, pacing (fast/slow).",
+            "Stay low on the 'ladder of inference': record only observable facts, don't interpret.",
+            "Preliminary interpretation comes later: 'How might the site/activity contribute to the challenge?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einladung teilen, gemeinsame Herausforderung benennen, den Simple-Ethnography-Leitfaden verteilen.",
+              "en": "Share the invitation, name the shared challenge, distribute the Simple Ethnography Guide."
+            }
+          },
+          {
+            "phase": {
+              "de": "Beobachtung planen",
+              "en": "Plan observations"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Orte und Personen festlegen; Erlaubnis, Sicherheit und Vertraulichkeit klären; What, So What, Now What? und die Leiter der Schlussfolgerungen auffrischen — nur Fakten festhalten.",
+              "en": "Identify sites and people; secure permission, safety and confidentiality; review What/So What/Now What and the Ladder of Inference — record facts only."
+            }
+          },
+          {
+            "phase": {
+              "de": "Vor-Ort-Besuche",
+              "en": "Site visits"
+            },
+            "dauer_min": 60,
+            "beschreibung": {
+              "de": "Interaktionen und Aktivitäten beobachten; Notizen machen; Artefakte sammeln (10-180 Min).",
+              "en": "Observe interactions and activities; take notes; collect artifacts (10-180 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Artefakte teilen",
+              "en": "Share artifacts"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Gesammelte Artefakte im gemeinsamen Raum aushängen.",
+              "en": "Post collected artifacts in the shared space."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief in Kleingruppen",
+              "en": "Debrief in small groups"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Notizen durchgehen; Muster und Geschichten teilen; auf beobachtbare Fakten konzentrieren.",
+              "en": "Review notes; share patterns and stories; focus on observable facts."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Mit What, So What, Now What? auswerten; Folge-Experimente/Action Research benennen.",
+              "en": "Debrief with What/So What/Now What; name follow-up experiments/action research."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zyklen wiederholen",
+              "en": "Repeat cycles"
+            },
+            "dauer_min": 50,
+            "beschreibung": {
+              "de": "Weitere Runden (je 40-60 Min), bis kraftvolle Erkenntnisse für Prototypen entstehen.",
+              "en": "Further rounds (40-60 min each) until powerful insights for prototyping emerge."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Storytelling-Vorlage",
+              "en": "Storytelling template"
+            },
+            "beschreibung": {
+              "de": "Beobachtungen narrativ strukturieren (Protagonist:in verlässt die gewohnte Welt, besteht Prüfungen, kehrt verwandelt mit einer Einsicht zurück).",
+              "en": "Structure observations narratively (protagonist leaves the ordinary world, faces trials, returns transformed with insight)."
+            }
+          },
+          {
+            "name": {
+              "de": "Runden nach Umsetzung",
+              "en": "Rounds after implementation"
+            },
+            "beschreibung": {
+              "de": "Weitere Beobachtungsrunden durchführen, nachdem neue Ansätze umgesetzt wurden.",
+              "en": "Conduct additional observation rounds after implementing new approaches."
+            }
+          },
+          {
+            "name": {
+              "de": "Mit Drawing Together",
+              "en": "With Drawing Together"
+            },
+            "beschreibung": {
+              "de": "Mit Drawing Together ein visuelles Modell der Herausforderung erstellen.",
+              "en": "String with Drawing Together to create a visual model of the challenge."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "An Orten beobachten, wo die Bedingungen hart sind und Probleme unlösbar scheinen.",
+            "Auf Übersehenes, Unauffälliges, Unregelmäßiges, Intimes und Grobes achten — Einsicht steckt oft im Detail.",
+            "Niedrig auf der Leiter der Schlussfolgerungen bleiben: erst beobachten, dann deuten.",
+            "Bereit sein, Zyklen zu wiederholen, falls nach einer Runde noch kein starker neuer Ansatz da ist."
+          ],
+          "en": [
+            "Observe at sites where conditions are tough and problems seem intractable.",
+            "Look for the overlooked, inconspicuous, irregular, intimate and crude — insight often hides in small details.",
+            "Stay low on the ladder of inference: observe first, interpret later.",
+            "Be ready to repeat cycles if there's no powerful new approach after one round."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Verstehen, wie manche Kolleg:innen ohne mehr Ressourcen bessere Ergebnisse erzielen.",
+            "Verstehen, warum manche eine Aufgabe anders bewältigen als andere.",
+            "Tatsächliches Nutzerverhalten erfassen, bevor etwas gebaut oder geändert wird.",
+            "Unfälle oder Reibungsverluste am Arbeitsplatz verstehen und vermeiden."
+          ],
+          "en": [
+            "Understand how some colleagues get better results without more resources.",
+            "Understand why some handle a task differently than others.",
+            "Capture actual user behavior before building or changing something.",
+            "Understand and prevent workplace accidents or friction."
+          ]
+        },
+        "material_setup": {
+          "de": "Ein praktischer Raum zum Teilen von Funden und Artefakten; Beobachtungsorte (physisch oder virtuell); Notizbücher, Stifte, Kameras (oder eigene); der Simple-Ethnography-Leitfaden digital verteilt.",
+          "en": "A convenient space for sharing findings and artifacts; observation sites (physical or virtual); notebooks, pens, cameras (or own); the Simple Ethnography Guide distributed digitally."
+        },
+        "online_durchfuehrung": {
+          "de": "Simple Ethnography lässt sich auch in virtuellen Umgebungen durchführen: Beobachtungsorte sind dann z. B. Online-Meetings, geteilte Bildschirme, digitale Arbeitsabläufe oder aufgezeichnete Sitzungen. Ablauf: (1) Den Leitfaden digital verteilen und gemeinsam die Herausforderung sowie die Leiter der Schlussfolgerungen besprechen — nur Fakten festhalten. (2) Ethnograf:innen beobachten allein oder zu zweit ihre virtuellen „Orte“, machen Screenshots/Notizen, sammeln Artefakte. (3) Artefakte auf einem geteilten Board posten. (4) In Breakouts (1-2-4-All) Muster auf Basis beobachtbarer Fakten besprechen. (5) Im Plenum mit What, So What, Now What? auswerten und Experimente benennen. Hinweis: Einverständnis und Vertraulichkeit beim Beobachten echter Menschen sicherstellen.",
+          "en": "Simple Ethnography can also be done in virtual settings: observation sites become e.g. online meetings, screen-shares, digital workflows or recorded sessions. Flow: (1) Distribute the guide digitally and review the challenge and the ladder of inference together — record facts only. (2) Ethnographers observe their virtual 'sites' alone or in pairs, take screenshots/notes, collect artifacts. (3) Post artifacts on a shared board. (4) In breakouts (1-2-4-All) discuss patterns based on observable facts. (5) In plenary, debrief with What/So What/Now What and name experiments. Note: ensure consent and confidentiality when observing real people."
+        }
       }
     },
     {
@@ -7304,12 +7977,11 @@
       "edition": "original",
       "short_desc": {
         "de": "Gestaltet gemeinsam die fünf essenziellen Bestandteile einer Initiative: Sinn/Zweck, Prinzipien, Beteiligte, Struktur und Praktiken.",
-        "en": ""
+        "en": "A group co-designs the five essential elements that make an initiative resilient: Purpose, Principles, Participants, Structure and Practices. Starting from a shared purpose, the design becomes flexible, adaptable and owned by everyone — ready to implement fast."
       },
-      "source_url": "https://liberatingstructures.de/purpose-to-practice-p2p/",
+      "source_url": "https://www.liberatingstructures.com/purpose-to-practice",
       "purpose_tags": [
-        "planen",
-        "strategie"
+        "planen"
       ],
       "arc_role": [
         "konvergieren",
@@ -7322,7 +7994,7 @@
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Papier/Post-its; große Wand mit Posterpapier; nützlich: Tische, Stühle, fünf Arbeitsblätter pro Person; online: Breakout-Räume und Whiteboard.",
-        "en": ""
+        "en": "An open wall with the P2P template (digital version in visual collaboration spaces); small tables with four chairs per group; printed P2P templates and sticky notes for in-person participants."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -7331,38 +8003,229 @@
       ],
       "typical_successors": [
         "min-specs",
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "social-network-webbing"
       ],
       "scrum_use": {
         "de": "Gemeinsamer Initiativ-/Projektstart: Zweck, Prinzipien, Beteiligte, Struktur und Praktiken zusammen gestalten (z. B. Team-/Produkt-Kickoff).",
-        "en": ""
+        "en": "Founding or relaunching an initiative, team or movement on solid ground — agreeing purpose, principles, who's involved, how control is distributed and the actual practices — so the work is resilient and self-directed rather than dependent on one leader."
       },
       "design_elements": {
         "einladung": {
           "de": "Alle (oder nahezu alle) Beteiligten präzisieren gemeinsam die fünf wesentlichen Elemente ihrer Initiative: Sinn/Zweck, Prinzipien, Teilnehmende, Struktur und Praktiken.",
-          "en": ""
+          "en": "Imagine we are a group of explorers mapping out steps for our big adventure. We start with a compass for setting a clear direction and correcting course when we lose our way — based on our shared purpose and the principles we agree to follow."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Papier/Post-its; große Wand mit Posterpapier; nützlich: Tische, Stühle, fünf Arbeitsblätter pro Person; online: Breakout-Räume und Whiteboard.",
-          "en": ""
+          "en": "An open wall with the P2P template (digital version available in visual collaboration spaces); small tables with four chairs per group; printed P2P templates and sticky notes for in-person participants."
         },
         "einbindung": {
           "de": "Alle Beteiligten einbezogen, gleiche Beitragsmöglichkeiten.",
-          "en": ""
+          "en": "Roles: host (tech host online) and participants. No minimum group size. Everyone with a stake in the initiative has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "1-2-4-All je Element; Gesamtgruppe zur Finalisierung jedes Elements.",
-          "en": ""
+          "en": "1-2-4-All (or 1-3-All)."
         },
         "ablauf_dauer": {
           "de": "Einführung 5 Min; pro Element 1-2-4-All (einzeln 10 → vierer 10 → gesamt 10 Min) + Rückfrage 5 Min; Abschluss mit What-So-What-Now-What 15 Min. Gesamt 120 Min bis mehrere Tage.",
-          "en": ""
+          "en": "Intro 2 min; instructions and the five guiding questions 5 min; clarify purpose in quartets via 1-2-4-All 10 min; finalize and consolidate one purpose 10 min; complete the remaining elements in four rounds of 20 min each (revising earlier elements as needed); reflection in new quartets with What/So What/Now What to prioritize next steps 15 min; plan follow-up 3 min. ~125 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); baut auf der wegweisenden Arbeit von Dee Hock und dem Chaordic Commons auf; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Planen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); builds on the pioneering work of Dee Hock and the Chaordic Commons; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Plan’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P10"
+      ],
+      "icon_alt": {
+        "de": "Ein Kompass mit fünf Elementen: Zweck, Prinzipien, Beteiligte, Struktur und Praktiken.",
+        "en": "A compass with five elements: purpose, principles, participants, structure and practices."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Purpose-to-Practice (P2P) lässt eine Gruppe gemeinsam die fünf wesentlichen Elemente ihrer Zusammenarbeit festlegen: Zweck, Prinzipien, Beteiligte, Struktur und Praktiken. Dieses Fundament macht Gruppen flexibel, anpassungsfähig und widerstandsfähig gegenüber Herausforderungen. Es unterstützt die Entwicklung übergeordneter Ziele und innovativer Strategien, die sich dank geteilter Verantwortung schnell umsetzen lassen. P2P verkörpert LS-Prinzip #10 — nie ohne klaren Zweck starten.",
+          "en": "Purpose-to-Practice (P2P) lets a group collectively define the five essential elements of their collaboration: Purpose, Principles, Participants, Structure and Practices. This foundation makes groups flexible, adaptable and resilient to challenges. It supports higher-order goals and innovative strategies that — thanks to shared ownership — can be implemented quickly. P2P enacts LS Principle #10 — Never Start Without a Clear Purpose."
+        },
+        "einladung": {
+          "de": "„Stell dir vor, wir sind eine Gruppe von Entdecker:innen, die die Schritte für ihr großes Abenteuer plant. Wir beginnen mit einem Kompass, der die Richtung vorgibt und uns Kurs korrigieren lässt, wenn wir abkommen — auf Basis unseres gemeinsamen Zwecks und der Prinzipien, denen wir folgen.“",
+          "en": "Imagine we are a group of explorers mapping out steps for our big adventure. We start with a compass for setting a clear direction and correcting course when we lose our way — based on our shared purpose and the principles we agree to follow."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Zweck: „Warum ist diese Aktivität wichtig für uns und unsere größere Gemeinschaft?“",
+            "Prinzipien: „Welche Regeln müssen wir unbedingt befolgen, um dem Zweck näherzukommen?“",
+            "Beteiligte: „Wer muss einbezogen und eingebunden sein, um den Zweck zu erreichen?“",
+            "Struktur: „Wie organisieren wir uns und verteilen Kontrolle, um den Zweck zu erreichen?“",
+            "Praktiken: „Was tun oder bieten wir? Wie werden wir es tun?“"
+          ],
+          "en": [
+            "Purpose: 'Why is this activity important to us and our larger community?'",
+            "Principles: 'What rules must we absolutely obey to progress toward purpose?'",
+            "Participants: 'Who must be included and engaged to achieve our purpose?'",
+            "Structure: 'How must we organize and distribute control to achieve purpose?'",
+            "Practices: 'What are we doing or offering? How will we do it?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Einladung teilen, Vorlagen verteilen.",
+              "en": "Share the invitation, distribute templates."
+            }
+          },
+          {
+            "phase": {
+              "de": "Anleitung",
+              "en": "Instructions"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die fünf Elemente und ihre Leitfragen vorstellen.",
+              "en": "Introduce the five elements and their guiding questions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zweck klären",
+              "en": "Clarify purpose"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Vierergruppen erzeugen mit 1-2-4-All Ideen und Geschichten zum Zweck.",
+              "en": "Quartets use 1-2-4-All to generate ideas and stories about purpose."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zweck festlegen",
+              "en": "Finalize purpose"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Gruppen teilen und konsolidieren zu einem Zweck auf der geteilten Vorlage.",
+              "en": "Groups share and consolidate into one purpose on the shared template."
+            }
+          },
+          {
+            "phase": {
+              "de": "Übrige Elemente",
+              "en": "Complete remaining elements"
+            },
+            "dauer_min": 80,
+            "beschreibung": {
+              "de": "Vier Runden á 20 Min: Klären und Festlegen für Prinzipien, Beteiligte, Struktur, Praktiken; frühere Elemente bei Bedarf überarbeiten.",
+              "en": "Four rounds of 20 min each: clarify and finalize Principles, Participants, Structure, Practices; revise earlier elements as needed."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion",
+              "en": "Reflection"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Neue Vierergruppen prüfen den Entwurf und priorisieren mit What, So What, Now What? die nächsten Schritte.",
+              "en": "New quartets examine the draft and prioritize next steps with What/So What/Now What."
+            }
+          },
+          {
+            "phase": {
+              "de": "Follow-up",
+              "en": "Plan follow-up"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Einen Termin zum Wiederbesuch des P2P-Charts festlegen.",
+              "en": "Schedule revisiting the P2P chart."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "30-Minuten-Schnelllauf",
+              "en": "30-minute rapid cycle"
+            },
+            "beschreibung": {
+              "de": "Mit einem kurzen Durchlauf starten, um den Bedarf an klarem Zweck zu veranschaulichen.",
+              "en": "Start with a thirty-minute rapid cycle to illustrate the need for clear purpose."
+            }
+          },
+          {
+            "name": {
+              "de": "Visuelle Symbole",
+              "en": "Visual symbols"
+            },
+            "beschreibung": {
+              "de": "Für jedes der fünf Elemente ein Symbol nutzen, um den Fokus zu halten.",
+              "en": "Use a visual symbol for each of the five elements to maintain focus."
+            }
+          },
+          {
+            "name": {
+              "de": "Pro Element eine Struktur",
+              "en": "One structure per element"
+            },
+            "beschreibung": {
+              "de": "9 Whys (Zweck), Appreciative Interviews (Prinzipien), Social Network Webbing (Beteiligte), Network Relationship Patterns (Struktur), Options Place (Praktiken).",
+              "en": "9 Whys (Purpose), Appreciative Interviews (Principles), Social Network Webbing (Participants), Network Relationship Patterns (Structure), Options Place (Practices)."
+            }
+          },
+          {
+            "name": {
+              "de": "Praktiken vertiefen",
+              "en": "Deepen Practices"
+            },
+            "beschreibung": {
+              "de": "Zusatzfragen: „Welche Chance liegt um uns herum? Was steht auf dem Spiel, wenn wir nicht handeln? Wo starten wir ehrlich?“",
+              "en": "Extra questions: 'What opportunity exists around us? What's at stake if we don't act? Where are we honestly starting?'"
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Das Wichtigste ist ein kraftvoller, attraktiver Zweck — hier Zeit investieren.",
+            "Beim Element „Beteiligte“ über die offensichtlichen Kandidat:innen hinausdenken.",
+            "Bei „Struktur“ Muster und Technologien erkunden, die Kontrolle zu den Menschen nah an der Arbeit verteilen.",
+            "Sich bei „Struktur“ nicht in Details verlieren — die brauchen oft weitere Erkundung."
+          ],
+          "en": [
+            "The most important thing is a powerful, attractive purpose — invest time here.",
+            "For 'Participants', think beyond the obvious candidates.",
+            "For 'Structure', explore patterns and technologies that distribute control to those closest to the work.",
+            "Don't get bogged down in 'Structure' details — they often need further exploration."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Eine Bewegung oder Initiative starten und Beteiligte auf ein gemeinsames Ziel ausrichten.",
+            "Ein Team oder Vorhaben auf ein tragfähiges Fundament stellen.",
+            "Als erster Schritt bei der Entwicklung von Förderanträgen.",
+            "Eine festgefahrene Zusammenarbeit grundlegend neu ausrichten."
+          ],
+          "en": [
+            "Launch a movement or initiative and align stakeholders on a common aim.",
+            "Put a team or undertaking on a solid foundation.",
+            "As a first step in developing grant proposals.",
+            "Fundamentally realign a stuck collaboration."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit P2P-Vorlage (digital in visuellen Kollaborationsräumen); kleine Tische mit vier Stühlen je Gruppe; gedruckte Vorlagen und Post-its für Präsenz-Teilnehmende.",
+          "en": "An open wall with the P2P template (digital in visual collaboration spaces); small tables with four chairs per group; printed templates and sticky notes for in-person participants."
+        },
+        "online_durchfuehrung": {
+          "de": "P2P funktioniert online gut, erfordert aber konsequente Moderation. Ablauf: (1) Die P2P-Vorlage als geteiltes Whiteboard zeigen und die fünf Leitfragen erklären. (2) In stabilen Breakout-Vierergruppen den Zweck per 1-2-4-All klären, dann im Plenum zu einem Zweck konsolidieren. (3) Prinzipien, Beteiligte, Struktur und Praktiken in vier Runden á 20 Min nacheinander bearbeiten; die Gruppen bleiben konstant. (4) Zusammenfassungen im geteilten Raum festhalten; per Broadcast-Nachricht oder Sprach-Reminder den Takt halten. (5) Reflexion mit What, So What, Now What?, dann Folgetermin festlegen. Wichtig: Teilnehmende mehrfach zwischen Haupt- und Breakout-Raum bewegen, Gruppen konstant halten.",
+          "en": "P2P works well online but needs disciplined facilitation. Flow: (1) Show the P2P template as a shared whiteboard and explain the five guiding questions. (2) In stable breakout quartets, clarify purpose via 1-2-4-All, then consolidate into one purpose in plenary. (3) Work through Principles, Participants, Structure and Practices in four rounds of 20 min; keep groups consistent. (4) Capture summaries in the shared space; keep the rhythm with broadcast messages or voice reminders. (5) Reflect with What/So What/Now What, then schedule a follow-up. Key: move participants between main room and breakouts multiple times, keeping groups consistent."
+        }
       }
     },
     {
