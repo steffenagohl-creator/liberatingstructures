@@ -257,6 +257,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich. Vorbereitung: Breakout-Räume für die Paar- und Vierer-Phasen. Ablauf: (1) Die Frage stellen und alle still für sich Ideen notieren lassen (1 Min). (2) In Zweier-Breakouts teilen und weiterentwickeln (2 Min). (3) Zwei Paare in einem Vierer-Breakout zusammenführen, verfeinern und das Wichtigste auswählen (4 Min). (4) Zurück im Plenum ernten — bei großen Gruppen die Zahl der geteilten Beiträge begrenzen und Übriges im Chat sammeln. Tipp: klare Zeitsignale geben, da der Wechsel zwischen Haupt- und Breakout-Räumen Zeit kostet.",
           "en": "Works well online. Setup: breakout rooms for the pair and quartet phases. Flow: (1) Ask the question and have everyone note ideas silently (1 min). (2) Share and build in breakouts of two (2 min). (3) Merge two pairs into a breakout of four, refine and select what matters most (4 min). (4) Back in plenary, harvest — for large groups limit the number of shared contributions and collect the rest in the chat. Tip: give clear time signals, as switching between main room and breakouts takes time."
+        },
+        "optional_string": {
+          "de": "Nutze Spiral Journal, um aufkommende Ideen zu vertiefen, oder Mad Tea/Calm Tea, um die Bandbreite der Ideen zu erweitern.",
+          "en": "Use Spiral Journal to deepen emergent ideas, or Mad Tea/Calm Tea to expand the range of ideas."
         }
       }
     },
@@ -470,6 +474,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich. Breakout-Räume für die Paargespräche nutzen; online Trios statt Paare, damit niemand allein sitzt. Ablauf: (1) Die zwei Fragen einblenden und alle kurz still überlegen lassen. (2) Drei Runden à 4–5 Min in neu gemischten Breakouts, ca. 2 Min pro Person; per Broadcast den Rundenwechsel signalisieren. (3) Zurück im Plenum einige zentrale Ideen teilen (laut oder im Chat).",
           "en": "Works well online. Use breakout rooms for the pair conversations; online, use trios instead of pairs so no one is alone. Flow: (1) Show the two questions and let everyone reflect briefly. (2) Three rounds of 4–5 min in freshly remixed breakouts, about 2 min per person; broadcast the round switch. (3) Back in plenary, share a few key ideas (aloud or in the chat)."
+        },
+        "optional_string": {
+          "de": "Nutze 15% Solutions, um neue Ideen weiterzuverfolgen. Stärke Netzwerkverbindungen mit Social Network Webbing und Network Relationship Patterns.",
+          "en": "Use 15% Solutions to follow up on new ideas. Strengthen network connections with Social Network Webbing and Network Relationship Patterns."
         }
       }
     },
@@ -713,6 +721,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich (~25–30 Min). Statt Vierergruppen ggf. 1-3-All nutzen. Ablauf: (1) Alle notieren kurz ihre Tätigkeiten. (2) In Zweier-Breakouts interviewt eine Person die andere und fragt bis zu neunmal „Warum ist das wichtig für dich?“, dann Rollentausch. (3) Optional in Trios die Zwecke teilen. (4) Im Plenum Muster ernten und einen gemeinsamen Zweck formulieren. Den Chat für Likes/Emojis und gegenseitige Reaktionen nutzen.",
           "en": "Works well online (~25–30 min). Use 1-3-All instead of quartets if needed. Flow: (1) Everyone briefly notes their activities. (2) In breakouts of two, one interviews the other, asking ‘Why is that important to you?’ up to nine times, then switch roles. (3) Optionally share purposes in trios. (4) In plenary, harvest patterns and formulate a shared purpose. Use the chat for likes/emojis and peer responses."
+        },
+        "optional_string": {
+          "de": "Verkette es mit Purpose-to-Practice, Generative Relationships STAR und What, So What, Now What, um Ideen zu priorisieren und zum Leben zu erwecken.",
+          "en": "String together with Purpose-to-Practice, Generative Relationships STAR, and What, So What, Now What to prioritize ideas and bring them to life."
         }
       }
     },
@@ -978,6 +990,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich — sogar im Vorteil, weil sich Fragen leicht digital im Chat oder auf einem geteilten Whiteboard festhalten lassen, was den Prozess beschleunigt. Ablauf: (1) Konzept und Schablone erklären. (2) Jede:r notiert Wahrheiten über die Herausforderung und kreist zwei scheinbar gegensätzliche ein. (3) In Breakouts von 4–6 Personen Wicked Questions formulieren und verfeinern, bis ein „Arrrgh“ entsteht. (4) Im Plenum die stärksten Fragen im Chat sammeln und über die Top drei abstimmen (Reaktionen/Applaus).",
           "en": "Works well online — even at an advantage, since questions are easy to capture digitally in the chat or on a shared whiteboard, which speeds up the process. Flow: (1) Explain the concept and template. (2) Each person notes truths about the challenge and circles two seemingly opposed ones. (3) In breakouts of 4–6, draft and refine wicked questions until an ‘arrrgh’ emerges. (4) In plenary, collect the strongest questions in the chat and vote on the top three (reactions/applause)."
+        },
+        "optional_string": {
+          "de": "Mach weiter mit 1-2-4-All, 25/10 Crowd Sourcing und Critical Uncertainties, um fantasievolle Optionen zu erzeugen und zu sichten.",
+          "en": "Follow up with 1-2-4-All, 25/10 Crowdsourcing, and Critical Uncertainties to generate and sift imaginative options."
         }
       }
     },
@@ -1211,6 +1227,10 @@
         "online_durchfuehrung": {
           "de": "Online im 1-2-4-All-Format, um Zeit zu sparen und das Zusammenführen von Gruppen zu vermeiden. Ablauf: (1) In Zweier-Breakouts gegenseitig interviewen und Erfolgsgeschichten erzählen (je 7–10 Min), Bedingungen/Stärken notieren. (2) In Vierer-Breakouts Muster sammeln. (3) Im Plenum Erkenntnisse teilen (Chat/visuelle Fläche). (4) Vertiefen: Wie investieren wir in diese Erfolgsbedingungen?",
           "en": "Online, use the 1-2-4-All format to save time and avoid combining groups. Flow: (1) In breakouts of two, interview each other and tell success stories (7–10 min each), noting conditions/assets. (2) In breakouts of four, gather patterns. (3) In plenary, share insights (chat/visual space). (4) Dig deeper: how do we invest in these success conditions?"
+        },
+        "optional_string": {
+          "de": "Vertiefe die Wertschätzung mit Positive Gossip. Unterstütze Veränderungen, die auf Bedingungen und Stärken aufbauen, mit What I Need From You (WINFY) und Purpose-to-Practice.",
+          "en": "Dive deeper into appreciation with Positive Gossip. Support making changes that build on conditions and assets with What I Need from You (WINFY) and Purpose-to-Practice."
         }
       }
     },
@@ -1447,6 +1467,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich. Breakout-Räume für die Gruppenarbeit und ein virtuelles Whiteboard für die drei Listen nutzen. Ablauf: (1) Konzept vorstellen und ein sehr unerwünschtes Ergebnis benennen. (2) Liste 1: alles, was das schlechteste Ergebnis garantiert (je Gruppe via 1-2-4-All). (3) Liste 2: was wir aktuell tun, das dem ähnelt — schonungslos ehrlich. (4) Liste 3: erste Schritte, um diese Aktivitäten zu stoppen. (5) Im Plenum echte Entscheidungen treffen („Wir werden aufhören …“). Ohne Breakouts notfalls in der Gesamtgruppe (1-All), Listen im Chat.",
           "en": "Works well online. Use breakout rooms for group work and a virtual whiteboard for the three lists. Flow: (1) Introduce the concept and name a very undesirable result. (2) List 1: everything that would guarantee the worst result (each group via 1-2-4-All). (3) List 2: what we currently do that resembles it — ruthlessly honest. (4) List 3: first steps to stop those activities. (5) In plenary, make real decisions (‘We will stop …’). Without breakouts, use the whole group (1-All) and capture lists in the chat."
+        },
+        "optional_string": {
+          "de": "Nachdem Handlungsschritte geteilt wurden, geh mit Troika Consulting, Wise Crowds oder Options Place tiefer. Verknüpfe die Erkenntnisse mit Ecocycle Planning.",
+          "en": "After sharing action steps, dig deeper with Troika Consulting, Wise Crowds, or Options Place. Link findings to Ecocycle Planning."
         }
       }
     },
@@ -1675,6 +1699,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich, ohne größere Anpassungen. Breakout-Räume für die Gruppenphase nutzen. Ablauf: (1) Die Einladung einblenden. (2) Alle schreiben für sich ihre 15%-Lösungen (2–5 Min). (3) In Dreier-Breakouts stellt jede:r die eigenen Ideen vor; die anderen beraten mit klärenden Fragen und Ratschlägen (3–10 Min pro Person). (4) Zurück im Plenum teilen einige inspirierende Lösungen (laut oder im Chat).",
           "en": "Works well online with no major adjustments. Use breakout rooms for the group phase. Flow: (1) Show the invitation. (2) Everyone writes their own 15% solutions (2–5 min). (3) In breakouts of three, each presents their ideas; the others coach with clarifying questions and advice (3–10 min per person). (4) Back in plenary, a few share inspiring solutions (aloud or in the chat)."
+        },
+        "optional_string": {
+          "de": "Erweitere die Vielfalt der Lösungen mit Troika Consulting oder Wise Crowds.",
+          "en": "Expand the variety of solutions with Troika Consulting or Wise Crowds."
         }
       }
     },
@@ -1888,6 +1916,10 @@
         "online_durchfuehrung": {
           "de": "Online ohne größere Anpassungen; digitale Werkzeuge wie der Chat erleichtern das Festhalten. Ablauf: drei Runden (Was? / Na und? / Was jetzt?). Pro Runde: alle reflektieren still und notieren (1 Min), teilen in Breakouts (3–8 Min) und halten im Plenum die Kernpunkte fest (2–3 Min). Die W³-Leiter als Bild teilen und die Antworten je Stufe sammeln.",
           "en": "Works online with no major adjustments; digital tools like the chat ease capture. Flow: three rounds (What? / So what? / Now what?). Each round: everyone reflects silently and writes (1 min), shares in breakouts (3–8 min), and captures key points in plenary (2–3 min). Share the W³ ladder as an image and collect answers per rung."
+        },
+        "optional_string": {
+          "de": "Erkunde Zukunftsambitionen mit Future~Present, Wicked Questions und 25/10 Crowd Sourcing.",
+          "en": "Explore ambitions for the future with Future~Present, Wicked Questions, and 25/10 Crowdsourcing."
         }
       }
     },
@@ -2142,6 +2174,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich. Breakout-Räume und ein virtuelles Whiteboard nutzen. Ablauf: (1) Zweck klären („Wir wollen …“). (2) Max Specs: alle „muss/darf nie“-Regeln sammeln und in Kleingruppen konsolidieren. (3) Bewerten: jeden Punkt testen — „Kannst du diese Regel brechen und trotzdem das Ziel erreichen?“; wenn ja, streichen (zunächst im Chat, dann auf Sprachdiskussion umstellen, wenn die Liste kürzer wird). (4) Auf die unverzichtbaren Min Specs reduzieren und veröffentlichen.",
           "en": "Works well online. Use breakout rooms and a virtual whiteboard. Flow: (1) Clarify the purpose (‘We want …’). (2) Max specs: list all ‘must/must-not’ rules and consolidate in small groups. (3) Evaluate: test each item — ‘Can you break this rule and still achieve the purpose?’; if yes, cross it off (start in the chat, switch to voice discussion as the list shrinks). (4) Reduce to the inviolable min specs and publish them."
+        },
+        "optional_string": {
+          "de": "Mach weiter mit Creative Destruction (TRIZ), wenn Menschen sich schwertun, von Max Specs loszulassen.",
+          "en": "Follow up with Creative Destruction if people are reluctant to let go of max specs."
         }
       }
     },
@@ -2364,6 +2400,10 @@
         "online_durchfuehrung": {
           "de": "Online gut möglich. Breakout-Räume für die Paargespräche und ein virtuelles Whiteboard für die Reflexion in Vierergruppen nutzen. Ablauf: (1) Absicht vorstellen. (2) Alle denken an eine sichere Geschichte. (3) In Zweier-Breakouts erzählt jede Person ~4–7 Min; die zuhörende Person fragt nur „Was geschah dann?“. (4) Kurze Reflexion zu zweit. (5) In Vierer-Breakouts per 1-2-4-All Muster erkennen. (6) Im Plenum reflektieren, wo tiefes Zuhören zählt. Sind Vierergruppen schwierig, das 1-3-All-Format nutzen.",
           "en": "Works well online. Use breakout rooms for the pair conversations and a virtual whiteboard for the quartet reflection. Flow: (1) Introduce the intention. (2) Everyone thinks of a safe story. (3) In breakouts of two, each person shares ~4–7 min; the listener only asks ‘What happened next?’. (4) A short reflection in pairs. (5) In breakouts of four, identify patterns via 1-2-4-All. (6) In plenary, reflect on where deep listening matters. If quartets are difficult, use the 1-3-All format."
+        },
+        "optional_string": {
+          "de": "Verkette es mit einer anderen LS, die hilft, Beziehungen zu kitten, etwa Helping Heuristics, Generative Relationships STAR oder Appreciative Interviews.",
+          "en": "String together with another LS that helps to mend relationships, such as Helping Heuristics, Generative Relationships STAR, or Appreciative Interviews."
         }
       }
     },
