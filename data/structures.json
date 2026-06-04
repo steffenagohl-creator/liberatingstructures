@@ -4351,7 +4351,7 @@
       "edition": "original",
       "short_desc": {
         "de": "Die Teilnehmenden gestalten ihre Agenda selbst und organisieren parallele Sessions zu einem komplexen Thema – setzt Eigenverantwortung und Energie frei.",
-        "en": ""
+        "en": "Participants create and run their own agenda of parallel breakout sessions around a complex shared challenge. Guided by four principles and the Law of Two Feet, the group self-organizes, follows its energy and takes ownership of the issues that matter most."
       },
       "source_url": "https://liberatingstructures.de/open-space-technology/",
       "purpose_tags": [
@@ -4368,7 +4368,7 @@
       "online_capable": true,
       "materials": {
         "de": "Separate Räume für Gruppen; Stifte, Papier/Post-its; Tische und Stühle; große leere Agenda (Flipchart/Packpapier/Whiteboard); optional Mikrofon ab >40 Personen; online: Breakout-Räume, Whiteboard.",
-        "en": ""
+        "en": "Enough space or separate rooms for many groups; a large empty agenda wall (flip charts, kraft paper or whiteboards); pens and paper/sticky notes; tables and chairs; a microphone for groups over 40; online: breakout rooms and a shared whiteboard."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -4382,34 +4382,179 @@
       ],
       "scrum_use": {
         "de": "Große, teamübergreifende Themen selbstorganisiert bearbeiten (z. B. Open-Space-Retro, Transformationsthemen mehrerer Teams).",
-        "en": ""
+        "en": "For large, cross-team or transformation topics that no single agenda can plan in advance — e.g. an Open Space retrospective across several teams, a community-of-practice day, or kicking off a big change: people set their own sessions and self-organize toward action."
       },
       "design_elements": {
         "einladung": {
           "de": "Einladung zu einem komplexen gemeinsamen Thema; die Teilnehmenden gestalten die Agenda selbst durch eigene Themen und wählen frei ihre Sessions.",
-          "en": ""
+          "en": "Invite people to address a complex shared challenge together. Invite participants to co-create the agenda by offering sessions on the topics they care about most. Invite everyone to join whichever session interests them."
         },
         "raum_materialien": {
           "de": "Separate Räume für Gruppen; Stifte, Papier/Post-its; Tische und Stühle; große leere Agenda (Flipchart/Packpapier/Whiteboard); optional Mikrofon ab >40 Personen; online: Breakout-Räume, Whiteboard.",
-          "en": ""
+          "en": "Enough space or separate rooms for the groups; a large empty agenda on flip charts/kraft paper/whiteboards. Useful: pens and paper/sticky notes, tables and chairs. Optional: a microphone for groups over 40; online: breakout rooms and a whiteboard."
         },
         "einbindung": {
           "de": "Alle Interessierten einbezogen; „Gesetz der zwei Füße“ – man wechselt zu interessierenden Sessions; vier Prinzipien gelten.",
-          "en": ""
+          "en": "Everyone interested is included with an equal opportunity to contribute. Participation is governed by the Law of Two Feet; the four principles should be known to all."
         },
         "gruppenkonfiguration": {
           "de": "Großer Kreis zu Beginn; danach selbstorganisierte Kleingruppen je Thema.",
-          "en": ""
+          "en": "Start in a large circle (or concentric circles); continue in self-organized groups of varying size that form around the proposed topics."
         },
         "ablauf_dauer": {
           "de": "Kurzform ca. 90 Min (Einführung 20–45 Min, Marktplatz 15 Min, Sessions 60 Min, Debrief 10 Min); Langform bis zu mehreren Tagen.",
-          "en": ""
+          "en": "Short form ~90 min: facilitator introduces the concept, the Law of Two Feet and the four principles (20-45 min); open the marketplace, participants propose topics (15 min); sessions — topic hosts lead, the group develops proposals and takes notes, two rounds of ~30 min; debrief and closing (10 min). Long form: up to several days."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White; Open Space Technology entwickelt von Harrison Owen; lizenziert unter CC BY-SA 4.0; deutsche Fassung eigen formuliert auf Basis von liberatingstructures.de (Holisticon AG). Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White; Open Space Technology developed by Harrison Owen; licensed under CC BY-SA 4.0; source: liberatingstructures.de. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P6"
+      ],
+      "icon_alt": {
+        "de": "Ein großer Stuhlkreis, aus dem heraus sich kleine, selbstorganisierte Gruppen rund um eigene Themen bilden.",
+        "en": "A large circle of chairs from which small, self-organized groups form around their own topics."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Wenn Menschen sich einer gemeinsamen, komplexen Herausforderung stellen, lassen sich ihre natürliche Kreativität, ihr Führungspotenzial und ihre Fähigkeit zur Selbstorganisation freisetzen. Open Space bezieht alle in die Gestaltung der Agenda ein und lässt sie die Themen bearbeiten, die ihnen wirklich wichtig sind. Weil die Teilnehmenden die Agenda selbst erstellt haben und ihrer Leidenschaft folgen dürfen, übernehmen sie schnell Verantwortung, um Probleme zu lösen und ins Handeln zu kommen. Open Space verkörpert besonders LS-Prinzip #6 — Freiheit UND Verantwortung stärken: Das „Gesetz der zwei Füße“ macht jede:n Einzelne:n verantwortlich für den eigenen Beitrag und das eigene Lernen.",
+          "en": "When people take on a complex shared challenge, you can unleash their natural creativity, leadership and capacity to self-organize. Open Space includes everyone in shaping the agenda and lets them work on the issues that truly matter to them. Because participants built the agenda themselves and may follow their passion, they quickly take ownership to solve problems and move into action. Open Space especially enacts LS Principle #6 — Amplify Freedom AND Responsibility: the Law of Two Feet makes each person responsible for their own contribution and learning."
+        },
+        "einladung": {
+          "de": "„Wir stellen uns gemeinsam einer komplexen Herausforderung. Ihr gestaltet die Agenda selbst: Bietet Sessions zu den Themen an, die euch am Herzen liegen — und besucht jede Session, die euch interessiert. Folgt eurer Energie.“",
+          "en": "We're taking on a complex challenge together. You will create the agenda yourselves: offer sessions on the topics you care about — and join whichever session interests you. Follow your energy."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Das Gesetz der zwei Füße: „Geh und nimm an jeder Session teil, die dich interessiert. Wenn du in einer Session nichts lernst oder beitragen kannst, nutze deine zwei Füße und geh weiter.“",
+            "Die vier Prinzipien: (1) Wer auch immer kommt, es sind die richtigen Leute. (2) Was auch immer geschieht, es ist das Einzige, was geschehen konnte. (3) Es beginnt, wenn die Zeit reif ist. (4) Vorbei ist vorbei — nicht vorbei ist nicht vorbei.",
+            "Sessionvorschlag: „Mein Thema ist … — wer mitdiskutieren will, kommt zu Ort/Zeit X.“"
+          ],
+          "en": [
+            "The Law of Two Feet: 'Go and join any session that interests you. If you find yourself somewhere you're neither learning nor contributing, use your two feet and move on.'",
+            "The four principles: (1) Whoever comes are the right people. (2) Whatever happens is the only thing that could have. (3) It starts when the time is right. (4) When it's over, it's over — when it's not, it's not.",
+            "Session proposal: 'My topic is … — whoever wants to join, come to place/time X.'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Einführung",
+              "en": "Introduction"
+            },
+            "dauer_min": 30,
+            "beschreibung": {
+              "de": "Den Facilitator stellt die Herausforderung, das Konzept, das Gesetz der zwei Füße und die vier Prinzipien unterhaltsam vor (20-45 Min).",
+              "en": "The facilitator engagingly introduces the challenge, the concept, the Law of Two Feet and the four principles (20-45 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Marktplatz",
+              "en": "Marketplace"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Teilnehmende schlagen Themen vor, schreiben sie auf die leere Agenda und ordnen Ort und Zeit zu.",
+              "en": "Participants propose topics, write them on the empty agenda wall, and assign place and time."
+            }
+          },
+          {
+            "phase": {
+              "de": "Sessions",
+              "en": "Sessions"
+            },
+            "dauer_min": 60,
+            "beschreibung": {
+              "de": "Themenhosts leiten ihre Sessions; die Gruppen erarbeiten Vorschläge und machen Notizen. Meist zwei Runden á ~30 Min (Langform 60-90 Min).",
+              "en": "Topic hosts lead their sessions; groups develop proposals and take notes. Usually two rounds of ~30 min (long form 60-90 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief",
+              "en": "Debrief"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Ergebnisse vorstellen, Muster ernten, nächste Schritte und Abschluss.",
+              "en": "Present results, harvest patterns, next steps and closing."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Mehrtägiger Open Space",
+              "en": "Multi-day Open Space"
+            },
+            "beschreibung": {
+              "de": "Den Marktplatz jeden Morgen neu eröffnen; Sessions á 60-90 Min, täglicher Debrief von ~60 Min.",
+              "en": "Reopen the marketplace each morning; sessions of 60-90 min, a daily debrief of ~60 min."
+            }
+          },
+          {
+            "name": {
+              "de": "In einen String einbetten",
+              "en": "Embed in a string"
+            },
+            "beschreibung": {
+              "de": "Davor Celebrity Interview, Appreciative Interviews und/oder TRIZ; danach 25/10 Crowd Sourcing zum Priorisieren.",
+              "en": "Precede with Celebrity Interview, Appreciative Interviews and/or TRIZ; follow with 25/10 Crowd Sourcing to prioritize."
+            }
+          },
+          {
+            "name": {
+              "de": "Unkonferenz / BarCamp",
+              "en": "Unconference / BarCamp"
+            },
+            "beschreibung": {
+              "de": "Verwandte Formate, die nach demselben selbstorganisierten Prinzip funktionieren.",
+              "en": "Related formats that run on the same self-organizing principle."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Eine überzeugende Herausforderung und eine ansprechende Einladung sind entscheidend.",
+            "Das gesamte Vorgehen in einem Dokument zusammenfassen, sofort vervollständigen und teilen.",
+            "Als Facilitator wahrnehmen, wann sich Energie und Ideen bilden — dann loslassen und weniger tun.",
+            "Ein Meeting OHNE das Gesetz der zwei Füße, bei dem die Teilnehmenden ihre Sessions nicht frei wählen können, ist KEIN Open Space.",
+            "Lesetipp: Harrison Owen, „Open Space Technology: Ein Leitfaden für die Praxis“."
+          ],
+          "en": [
+            "A compelling challenge and an inviting invitation are decisive.",
+            "Summarize the whole proceedings in one document; complete and share it immediately.",
+            "As facilitator, notice when energy and ideas form — then let go and do less.",
+            "A meeting WITHOUT the Law of Two Feet, where participants can't freely choose their sessions, is NOT Open Space.",
+            "Recommended reading: Harrison Owen, 'Open Space Technology: A User's Guide'."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Schwer lösbare Probleme oder Konflikte über die Kraft der Selbstorganisation angehen.",
+            "Sicherstellen, dass ALLE wichtigen Punkte auf den Tisch und in die Agenda kommen.",
+            "Energie, Einsatz und gemeinsame Führung aufbauen und Teilnehmende ins Handeln bringen.",
+            "Große, team- oder bereichsübergreifende Transformationsthemen selbstorganisiert bearbeiten."
+          ],
+          "en": [
+            "Tackle hard-to-solve problems or conflicts through the power of self-organization.",
+            "Ensure ALL important points get on the table and into the agenda.",
+            "Build energy, commitment and shared leadership and move people into action.",
+            "Work on large, cross-team or cross-department transformation topics in a self-organized way."
+          ]
+        },
+        "material_setup": {
+          "de": "Genügend Platz bzw. separate Räume für viele Gruppen; eine große leere Agenda (Flipchart/Packpapier/Whiteboard); Stifte und Papier/Post-its; Tische und Stühle; ab >40 Personen ein Mikrofon. Online: Breakout-Räume und ein gemeinsames Whiteboard.",
+          "en": "Enough space or separate rooms for many groups; a large empty agenda (flip chart/kraft paper/whiteboard); pens and paper/sticky notes; tables and chairs; a microphone for groups over 40. Online: breakout rooms and a shared whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Open Space gelingt online über Breakout-Räume und ein gemeinsames Whiteboard als Marktplatz. Ablauf: (1) Im Plenum die Herausforderung, das Gesetz der zwei Füße und die vier Prinzipien vorstellen. (2) Teilnehmende tragen ihre Themen samt Zeitfenster in ein geteiltes Online-Board ein (jede Zeile = ein Breakout-Raum). (3) Alle wählen frei und wechseln per Link eigenständig zwischen den Breakout-Räumen — das „Gesetz der zwei Füße“ wird zum „Gesetz der zwei Klicks“. (4) Jede Session hält Ergebnisse direkt im Board fest. (5) Zurück im Plenum: Muster ernten, nächste Schritte. Wichtig: Selbstständiges Wechseln zwischen Breakouts in der Konferenzsoftware aktivieren.",
+          "en": "Open Space works online via breakout rooms and a shared whiteboard as the marketplace. Flow: (1) In plenary, introduce the challenge, the Law of Two Feet and the four principles. (2) Participants enter their topics and time slots into a shared online board (each row = one breakout room). (3) Everyone chooses freely and moves between breakout rooms via link on their own — the 'Law of Two Feet' becomes the 'Law of Two Clicks'. (4) Each session records results directly in the board. (5) Back in plenary: harvest patterns, next steps. Key: enable self-service movement between breakouts in your conferencing tool."
+        }
       }
     },
     {
@@ -4424,9 +4569,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Ein Design-Team plant ein Meeting/Workshop bewusst: Zweck klären, Beteiligte bestimmen und gezielt passende Mikrostrukturen auswählen.",
-        "en": ""
+        "en": "A design team deliberately plans a meeting or workshop: clarify a precise purpose, identify the essential participants, and storyboard a sequence of Liberating Structures that achieve it — eliminating the usual causes of dysfunctional meetings."
       },
-      "source_url": "https://liberatingstructures.de/design-storyboard/",
+      "source_url": "https://www.liberatingstructures.com/design-storyboards",
       "purpose_tags": [
         "planen"
       ],
@@ -4436,50 +4581,248 @@
       ],
       "group_size_min": 2,
       "group_size_max": null,
-      "duration_min": 20,
-      "duration_max": 65,
+      "duration_min": 40,
+      "duration_max": 75,
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Papier, Purpose Matchmaker; nützlich: leeres Storyboard-Arbeitsblatt; optional LS-Design Cards; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "An open wall with room to move; copies of the Storyboard template and the LS Selection Matchmaker for each participant; sticky notes and pens. Online: a shared whiteboard with a storyboard template."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
         "nine-whys"
       ],
       "typical_successors": [
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "1-2-4-all"
       ],
       "scrum_use": {
         "de": "Workshops/Meetings (Retrospektiven, Plannings) bewusst gestalten – Zweck klären und passende Strukturen auswählen.",
-        "en": ""
+        "en": "Designing a genuinely productive meeting, workshop or event from scratch — a Sprint Review, a workshop, a kickoff — by choosing and sequencing the right micro-structures around a clear purpose instead of defaulting to slides and open discussion."
       },
       "design_elements": {
         "einladung": {
           "de": "Lade ein Design-Team (repräsentative Teilmenge) ein, das einen detaillierten, visuellen Plan der Interaktion erstellt.",
-          "en": ""
+          "en": "We've all sat through a meeting and then wondered: why did that even happen? Let's design a new, wildly successful kind of meeting built from Liberating Structures."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Papier, Purpose Matchmaker; nützlich: leeres Storyboard-Arbeitsblatt; optional LS-Design Cards; online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "An open wall with space to move. Copies of the Storyboard template, sticky notes, and an LS Selection Matchmaker for each participant. Online: a shared whiteboard."
         },
         "einbindung": {
           "de": "Alle im Design-Team haben gleiche Einbringungsmöglichkeiten.",
-          "en": ""
+          "en": "Roles: host and members of the meeting-design team. Minimum group size is one. Everyone involved in planning has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "1-2-All oder 1-All in schnellen Runden je Schritt.",
-          "en": ""
+          "en": "1-2-All — work alone, in pairs, then as the whole design team."
         },
         "ablauf_dauer": {
           "de": "Zweck klären 2–5 Min; Standard bewerten 5–10 Min; Beteiligte überdenken 2–5 Min; Mikrostrukturen brainstormen 5–10 Min; beste wählen 2–10 Min; Einladungen/Moderation 2–10 Min; Erfolgskriterien 5–15 Min. Gesamt 20–65 Min.",
-          "en": ""
+          "en": "Intro 1 min. Part 1 — Design the storyboard: identify the purpose with 9 Whys (2-10 min); list stakeholders (2-5 min); list first steps alone, share with a partner (3-5 min); share standout steps in plenary, pick one (3-5 min); choose the first LS via 1-2-All (10 min); complete the agenda by choosing an LS for each step (5-10 min). Part 2 — Logistics: finalize stakeholders and assign hosts (2-10 min); draft a structuring invitation per LS (5 min); plan evaluation (2-5 min); plan next steps (5-10 min). ~40-75 min total."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz, Nancy White & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Planen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz, Nancy White & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Plan’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P1"
+      ],
+      "icon_alt": {
+        "de": "Ein Storyboard an der Wand: aneinandergereihte Karten, die eine Abfolge von Mikrostrukturen für ein Meeting zeigen.",
+        "en": "A storyboard on the wall: a row of cards showing a sequence of micro-structures for a meeting."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine Gruppe erfindet ihre Meetings neu, indem sie ein Set von Liberating Structures auswählt, das einen klaren, gemeinsamen Zweck erfüllt. Design StoryBoards hilft, den Meeting-Zweck präzise zu definieren, die wesentlichen Beteiligten zu bestimmen und die Schlüsselelemente zu kartieren. Wer Meetings rund um Liberating Structures organisiert, beseitigt typische Ursachen von Dysfunktion — fehlender gemeinsamer Zweck und überkontrollierte Beteiligung. Design StoryBoards verkörpert LS-Prinzip #1 — alle einbeziehen und entfalten.",
+          "en": "A group reinvents its meetings by selecting a set of Liberating Structures that achieve a clear, shared purpose. Design StoryBoards helps the group define a precise meeting purpose, identify the essential participants, and map out the key elements. Organizing meetings around Liberating Structures eliminates common causes of dysfunction — lack of shared purpose and overcontrolled participation. Design StoryBoards enacts LS Principle #1 — Include and Unleash Everyone."
+        },
+        "einladung": {
+          "de": "„Wir alle saßen schon in einem Meeting und haben uns danach gefragt: Warum ist das gerade passiert? Lass uns eine neue, überwältigend erfolgreiche Art von Meeting entwerfen — gebaut aus Liberating Structures.“",
+          "en": "We've all sat through a meeting and then wondered: why did that even happen? Let's design a new, wildly successful kind of meeting built from Liberating Structures."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Zweck-Frage: „Wofür genau treffen wir uns — was muss am Ende anders sein?“",
+            "Beteiligte: „Wer hat ein echtes Interesse an diesem Thema und sollte dabei sein?“",
+            "Erster Schritt: „Was ist der allererste Schritt, der nötig ist, um voranzukommen?“"
+          ],
+          "en": [
+            "Purpose question: 'What exactly are we meeting for — what must be different by the end?'",
+            "Stakeholders: 'Who has a genuine stake in this topic and should be in the room?'",
+            "First step: 'What is the very first step needed to make progress?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zweck klären",
+              "en": "Identify purpose"
+            },
+            "dauer_min": 6,
+            "beschreibung": {
+              "de": "Mit 9 Whys (oder ähnlich) den präzisen Zweck des Meetings herausarbeiten (2-10 Min).",
+              "en": "Use 9 Whys (or similar) to work out the meeting's precise purpose (2-10 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Beteiligte bestimmen",
+              "en": "Identify stakeholders"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Eine vielfältige Liste der Menschen mit Interesse am Thema erstellen (2-5 Min).",
+              "en": "Build a diverse list of people with a stake in the topic (2-5 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erste Schritte sammeln",
+              "en": "List first steps"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Jede:r listet allein nötige erste Schritte und teilt sie mit einer Partnerperson (3-5 Min).",
+              "en": "Each person lists needed first steps alone and shares with a partner (3-5 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Schritte teilen",
+              "en": "Share first steps"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Im Plenum herausragende Schritte teilen und einen ersten Schritt auswählen (3-5 Min).",
+              "en": "Share standout steps in plenary and choose one first step (3-5 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erste LS wählen",
+              "en": "Choose first LS"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Mit 1-2-All die Mikrostruktur auswählen, die den ersten Schritt unterstützt.",
+              "en": "Use 1-2-All to select the micro-structure that supports the first step."
+            }
+          },
+          {
+            "phase": {
+              "de": "Agenda vervollständigen",
+              "en": "Complete the agenda"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Für jeden weiteren Schritt eine passende LS wählen und zum Storyboard aneinanderreihen (5-10 Min).",
+              "en": "Choose a fitting LS for each remaining step and string them onto the storyboard (5-10 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Logistik",
+              "en": "Logistics"
+            },
+            "dauer_min": 20,
+            "beschreibung": {
+              "de": "Beteiligte finalisieren und Hosts zuweisen; je LS eine Einladung formulieren; Evaluation und nächste Schritte planen (insg. ~15-30 Min).",
+              "en": "Finalize stakeholders and assign hosts; draft a structuring invitation per LS; plan evaluation and next steps (~15-30 min total)."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Aktuelle Praxis kartieren",
+              "en": "Map current practice"
+            },
+            "beschreibung": {
+              "de": "Bestehende Meetings per ethnografischer Beobachtung erfassen und dann neu gestalten.",
+              "en": "Capture existing meetings via ethnographic observation, then redesign them."
+            }
+          },
+          {
+            "name": {
+              "de": "Große Initiative",
+              "en": "Larger initiative"
+            },
+            "beschreibung": {
+              "de": "Eine umfangreichere Initiative über einen längeren Zeitraum als Storyboard planen.",
+              "en": "Storyboard a larger initiative over an extended period."
+            }
+          },
+          {
+            "name": {
+              "de": "Persönliches Storyboard",
+              "en": "Personal storyboard"
+            },
+            "beschreibung": {
+              "de": "Einzelne planen ihr eigenes Vorhaben als Storyboard und holen Peer-Input ein.",
+              "en": "Individuals plan their own undertaking as a storyboard with peer input."
+            }
+          },
+          {
+            "name": {
+              "de": "Statt Fokusgruppe",
+              "en": "Instead of a focus group"
+            },
+            "beschreibung": {
+              "de": "Design StoryBoards als Ersatz für klassische Fokusgruppen zur Produkt-/Service-Verbesserung.",
+              "en": "Use Design StoryBoards in place of a traditional focus group to improve a product/service."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Schnelle Iterationen mit einer ernsthaft-verspielten Haltung fördern.",
+            "LS-Design-Karten zum Sequenzieren der Strukturen nutzen.",
+            "Steckt ihr beim ersten Schritt fest, ihn in kleinere Teilschritte zerlegen.",
+            "Die Designphase nicht abkürzen — gut investierte Zeit spart später ein Vielfaches."
+          ],
+          "en": [
+            "Encourage fast iterations with a seriously playful attitude.",
+            "Use LS design cards to sequence the structures.",
+            "If you get stuck on the first step, break it into smaller components.",
+            "Don't rush the design phase — time well spent here saves much more later."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Ein wichtiges Meeting, einen Workshop oder ein Event von Grund auf produktiv gestalten.",
+            "Eine wiederkehrende, schlecht funktionierende Besprechung neu erfinden.",
+            "Eine größere Veränderungs- oder Planungsinitiative durchdacht aufsetzen.",
+            "Eine Fokusgruppe oder einen Beteiligungsprozess wirkungsvoller machen."
+          ],
+          "en": [
+            "Make an important meeting, workshop or event productive from scratch.",
+            "Reinvent a recurring, poorly functioning meeting.",
+            "Thoughtfully set up a larger change or planning initiative.",
+            "Make a focus group or participation process more effective."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit Bewegungsraum; je Person eine Kopie der Storyboard-Vorlage und des LS-Auswahl-Matchmakers; Post-its und Stifte. Online: ein geteiltes Whiteboard mit Storyboard-Vorlage.",
+          "en": "An open wall with room to move; a copy of the storyboard template and the LS Selection Matchmaker per person; sticky notes and pens. Online: a shared whiteboard with a storyboard template."
+        },
+        "online_durchfuehrung": {
+          "de": "Design StoryBoards funktioniert online gut auf einem geteilten Whiteboard mit einer Storyboard-Vorlage (eine Spalte je Meeting-Schritt). Ablauf: (1) Zweck per 9 Whys in Breakouts klären. (2) Beteiligte gemeinsam auf Stickies sammeln. (3) Erste Schritte allein notieren, in Paar-Breakouts teilen. (4) Pro Schritt mit 1-2-All eine LS auswählen und als Karte ins Storyboard ziehen. (5) Hosts, Einladungen, Evaluation und nächste Schritte direkt am Board festhalten. Die LS-Auswahl-Hilfe als verlinktes Dokument bereitstellen.",
+          "en": "Design StoryBoards works well online on a shared whiteboard with a storyboard template (one column per meeting step). Flow: (1) Clarify purpose with 9 Whys in breakouts. (2) Collect stakeholders together on stickies. (3) Note first steps alone, share in pair breakouts. (4) For each step, select an LS via 1-2-All and drag it onto the storyboard as a card. (5) Capture hosts, invitations, evaluation and next steps directly on the board. Provide the LS selection helper as a linked document."
+        }
       }
     },
     {
@@ -4494,25 +4837,24 @@
       "edition": "original",
       "short_desc": {
         "de": "In maximal 30 Minuten werden in großen Gruppen die mutigsten Ideen gesammelt, durch Tausch und Punkten sortiert und die Top 10 für die Umsetzung sichtbar gemacht.",
-        "en": ""
+        "en": "In under thirty minutes a large group generates its boldest ideas and quickly sorts out the top ten. People write a daring idea plus a first step on a card, then pass and score cards anonymously over five rounds — innovations surface as everyone notices the patterns."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/2510-crowdsourcing/",
+      "source_url": "https://www.liberatingstructures.com/25-10-crowdsourcing",
       "purpose_tags": [
-        "offenlegen",
-        "planen"
+        "offenlegen"
       ],
       "arc_role": [
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 20,
+      "group_size_min": 15,
       "group_size_max": null,
       "duration_min": 25,
       "duration_max": 30,
       "online_capable": false,
       "materials": {
         "de": "Offener Raum ohne Hindernisse, Stifte, Karteikarten, Glocke/Tingsha; optional Musik während der Tauschrunden; online kaum praktikabel.",
-        "en": ""
+        "en": "Open space allowing free movement, no furniture in the way; an index card and pen for every participant; a bell or chime for the rounds. Online: a tool for distributing and scoring cards (or a shared spreadsheet/board)."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
@@ -4521,38 +4863,203 @@
       ],
       "typical_successors": [
         "agreement-certainty-matrix",
-        "open-space-technology"
+        "15-solutions"
       ],
       "scrum_use": {
         "de": "Große oder teamübergreifende Gruppen: Verbesserungsideen schnell sammeln und priorisieren.",
-        "en": ""
+        "en": "Surfacing and prioritizing bold next steps fast with a big group — closing a large retro, a community day or an all-hands with concrete, group-owned recommendations rather than a few loud voices setting direction."
       },
       "design_elements": {
         "einladung": {
           "de": "„Wenn du zehnmal mutiger wärst, welche kühne Idee würdest du vorschlagen?“ – mutige Ideen einbringen.",
-          "en": ""
+          "en": "If you were ten times bolder, what big idea would you recommend? What first step would you take to get started? Let's generate and sort your bold ideas for action and spread innovations as everyone notices the patterns."
         },
         "raum_materialien": {
           "de": "Offener Raum ohne Hindernisse, Stifte, Karteikarten, Glocke/Tingsha; optional Musik während der Tauschrunden; online kaum praktikabel.",
-          "en": ""
+          "en": "Open space allowing free movement, no furniture in the way. An index card and pen for every participant. A bell or chime to mark rounds. Online: a tool for distributing and scoring cards."
         },
         "einbindung": {
           "de": "Alle gleichzeitig und gleichberechtigt.",
-          "en": ""
+          "en": "Roles: host and participants. Minimum group size is fifteen. Everyone contributes equally and anonymously."
         },
         "gruppenkonfiguration": {
           "de": "Individuelle Ideen → Umhergehen und Karten tauschen → individuell bewerten → Gesamtschau.",
-          "en": ""
+          "en": "Individuals working alone, then the whole group circulating and exchanging cards."
         },
         "ablauf_dauer": {
           "de": "Erklärung 3 Min; Demonstration 2 Min; Ideen entwickeln 3–5 Min; fünf Tausch-/Bewertungszyklen 5–10 Min; Punkte addieren 1 Min; Top-10 vorlesen 4 Min; Abschlussreflexion 3 Min. Gesamt ca. 25–30 Min.",
-          "en": ""
+          "en": "Intro and shared challenge (3 min); generate bold ideas on cards (5 min); move and pass cards, scoring 1-5 anonymously over five rounds (5 min); add up the scores (2 min); count down from 25 to find the top ten (3-5 min); wrap-up with two reflective questions (2 min). Under 30 min total."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P1"
+      ],
+      "icon_alt": {
+        "de": "Menschen reichen im Raum Karteikarten weiter und vergeben Punkte — die besten Ideen steigen nach oben.",
+        "en": "People passing index cards around a room and scoring them — the best ideas rise to the top."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine Gruppe erzeugt mutige Ideen und ermittelt in unter 30 Minuten die zehn besten. 25/10 nutzt die kollektive Weisheit: Innovationen treten hervor, weil alle die Muster im Entstehenden bemerken. Das Format ist schnell, mitreißend und liefert konkrete, umsetzbare Empfehlungen — getragen von der ganzen Gruppe statt von wenigen lauten Stimmen. 25/10 Crowd Sourcing verkörpert LS-Prinzip #1 — alle einbeziehen und entfalten.",
+          "en": "A group generates bold ideas and identifies the top ten in under thirty minutes. 25/10 harnesses collective wisdom: innovations emerge because everyone notices the patterns in what's surfacing. It is fast, engaging and delivers concrete, actionable recommendations — owned by the whole group rather than a few loud voices. 25/10 Crowd Sourcing enacts LS Principle #1 — Include and Unleash Everyone."
+        },
+        "einladung": {
+          "de": "„Wenn du zehnmal mutiger wärst — welche große Idee würdest du empfehlen? Welchen ersten Schritt würdest du gehen, um loszulegen? Lasst uns eure mutigen Ideen erzeugen, sortieren und Innovationen verbreiten, während alle die Muster bemerken.“",
+          "en": "If you were ten times bolder, what big idea would you recommend? What first step would you take to get started? Let's generate and sort your bold ideas for action and spread innovations as everyone notices the patterns."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Auf die Karte (Vorderseite): die mutigste Idee + der erste Schritt, um zu starten.",
+            "Bewertung (Rückseite): 1 = gefällt mir gar nicht … 5 = begeistert mich total.",
+            "Riff: „1 = nicht mein Fall“ bis „5 = schickt mich auf den Mond.“"
+          ],
+          "en": [
+            "On the card (front): your boldest idea + the first step to get started.",
+            "Scoring (back): 1 = not for me … 5 = thrills me completely.",
+            "Riff: '1 = not my cup of tea' to '5 = sends me over the moon.'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Einladung und gemeinsame Herausforderung vorstellen.",
+              "en": "Present the invitation and the shared challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Mutige Ideen",
+              "en": "Generate bold ideas"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Jede:r schreibt die mutigste Idee und den ersten Umsetzungsschritt auf eine Karteikarte.",
+              "en": "Each person writes their boldest idea and first implementation step on an index card."
+            }
+          },
+          {
+            "phase": {
+              "de": "Karten tauschen & punkten",
+              "en": "Pass & score cards"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Karten im Umhergehen blind tauschen; auf Signal lesen, mit 1-5 bewerten und die Zahl auf die Rückseite schreiben, ohne vorherige Scores anzusehen. Fünf Runden.",
+              "en": "Circulate and swap cards blindly; on the signal read, rate 1-5 and write the number on the back without looking at prior scores. Five rounds."
+            }
+          },
+          {
+            "phase": {
+              "de": "Punkte addieren",
+              "en": "Add scores"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die fünf Bewertungen auf jeder Karte zusammenzählen (max. 25).",
+              "en": "Add up the five ratings on each card (max 25)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Countdown",
+              "en": "Countdown"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Von 25 herunterzählen und die zehn bestbewerteten Ideen identifizieren.",
+              "en": "Count down from 25 and identify the ten top-scoring ideas."
+            }
+          },
+          {
+            "phase": {
+              "de": "Abschluss",
+              "en": "Wrap-up"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Zwei Reflexionsfragen: Welche Wildcard-Idee überrascht? Wo entsteht Schwung?",
+              "en": "Two reflective questions: which wild-card idea surprises? Where is momentum building?"
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Skala umformulieren",
+              "en": "Reframe the scale"
+            },
+            "beschreibung": {
+              "de": "Die Bewertungssprache spielerisch anpassen (z. B. „1 = nicht mein Fall“ … „5 = schickt mich auf den Mond“).",
+              "en": "Playfully reword the rating language (e.g. '1 = not my cup of tea' … '5 = sends me over the moon')."
+            }
+          },
+          {
+            "name": {
+              "de": "Frage umdrehen",
+              "en": "Flip the prompt"
+            },
+            "beschreibung": {
+              "de": "Statt mutiger Ideen fragen: Welche Entscheidung würdest du rückgängig machen? Welches mutige Gespräch vermeidest du?",
+              "en": "Instead of bold ideas, ask: which decision would you unmake? Which courageous conversation are you avoiding?"
+            }
+          },
+          {
+            "name": {
+              "de": "Vorher/Nachher",
+              "en": "Before/after"
+            },
+            "beschreibung": {
+              "de": "25/10 zu Beginn und am Ende eines Meetings laufen lassen und beobachten, wie die Ideen mutiger und konkreter werden.",
+              "en": "Run 25/10 at the start and end of a meeting and watch the ideas grow bolder and more actionable."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Strikt durchsetzen: während des Tauschens nicht lesen und vor der eigenen Wertung keine fremden Scores ansehen.",
+            "Hat eine Karte mehr oder weniger als fünf Wertungen, den Durchschnitt bilden und mit fünf multiplizieren.",
+            "Ein klares Signal (Glocke) gibt den Runden-Takt vor — Tempo hoch halten.",
+            "Gut als Abschluss, der wichtige Meetings mit konkreten, umsetzbaren Schlüssen beendet."
+          ],
+          "en": [
+            "Strictly enforce: don't read while swapping, and don't look at others' scores before giving your own.",
+            "If a card ends up with more or fewer than five ratings, average them and multiply by five.",
+            "A clear signal (bell) sets the round rhythm — keep the pace high.",
+            "Great as a closer that ends important meetings with concrete, actionable conclusions."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Eine Konferenz oder Task-Force eröffnen und sofort mutige Vorschläge sammeln.",
+            "Ein wichtiges Meeting mit klaren, umsetzbaren Empfehlungen abschließen.",
+            "Nach Open Space die entstandenen Ideen priorisieren.",
+            "Mit Purpose-to-Practice und Principles Walk-Around nächste Schritte bestimmen."
+          ],
+          "en": [
+            "Open a conference or task force and immediately gather bold proposals.",
+            "Close an important meeting with clear, actionable recommendations.",
+            "Prioritize the ideas that emerged after an Open Space.",
+            "Identify next steps together with Purpose-to-Practice and Principles Walk-Around."
+          ]
+        },
+        "material_setup": {
+          "de": "Offener Raum ohne Hindernisse zum freien Bewegen; je Person eine Karteikarte und ein Stift; eine Glocke/Tingsha für die Runden. Online: ein Werkzeug zum Verteilen und Bewerten der Karten.",
+          "en": "Open, obstacle-free space to move around; an index card and pen per person; a bell/chime for the rounds. Online: a tool to distribute and score the cards."
+        },
+        "online_durchfuehrung": {
+          "de": "Online braucht 25/10 ein Werkzeug, das Karten anonym verteilt und bewerten lässt. Ablauf: (1) Jede:r schreibt Idee + ersten Schritt in ein eigenes Kärtchen (z. B. eine Zeile in einem geteilten Sheet oder ein Online-Tool, das Karten zufällig zuteilt). (2) Über fünf Runden bekommt jede Person zufällig fremde Karten zugespielt und vergibt verdeckt 1-5 Punkte — vorige Wertungen bleiben unsichtbar. (3) Das Tool (oder eine Formel) addiert die Punkte. (4) Die Top-10 per Countdown von 25 anzeigen. Alternativ mit einem Tabellenblatt: Karten durchnummerieren, Wertungen in versteckten Spalten sammeln. Zwei Reflexionsfragen zum Schluss.",
+          "en": "Online, 25/10 needs a tool that distributes cards anonymously and lets people score them. Flow: (1) Everyone writes idea + first step on their own card (e.g. a row in a shared sheet, or a tool that randomly deals out cards). (2) Over five rounds each person is dealt random cards and scores 1-5 hidden — prior ratings stay invisible. (3) The tool (or a formula) sums the scores. (4) Reveal the top ten by counting down from 25. Alternatively with a spreadsheet: number the cards, collect ratings in hidden columns. Two reflective questions to close."
+        }
       }
     },
     {
@@ -4567,9 +5074,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Mit fünf einfachen Symbolen erzählen alle ohne Worte eine Geschichte – macht verborgenes Wissen, Gefühle und Muster sichtbar, wenn Sprache nicht weiterhilft.",
-        "en": ""
+        "en": "Using just five simple symbols and no words, everyone draws a story about a shared challenge or transition. Drawing surfaces hidden knowledge — feelings, attitudes and patterns hard to put into words — and reveals new possibilities when logical, linear thinking has reached its limits."
       },
-      "source_url": "https://liberatingstructures.de/drawing-together/",
+      "source_url": "https://www.liberatingstructures.com/drawing-together",
       "purpose_tags": [
         "offenlegen"
       ],
@@ -4584,43 +5091,243 @@
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier, Flipchart; nützlich: Buntstifte/Kreide, Tische und Stühle; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "A chair with a writing surface for each participant; paper and markers for everyone (or a shared digital drawing space); a handout of the five symbols; optional colored pencils. Online: a whiteboard or drawing app."
       },
       "difficulty": "mittel",
       "typical_predecessors": [],
       "typical_successors": [
-        "1-2-4-all"
+        "1-2-4-all",
+        "what-so-what-now-what"
       ],
       "scrum_use": {
         "de": "Verborgene Gefühle/Muster im Team sichtbar machen (z. B. emotionale Retrospektive, Team-Bindung), wenn Worte nicht weiterhelfen.",
-        "en": ""
+        "en": "When a team is stuck talking in circles about a tough transition or relationship, switching to drawing with five symbols surfaces feelings and patterns that words miss — opening a stalled retrospective or a charged team topic in a fresh, non-verbal way."
       },
       "design_elements": {
         "einladung": {
           "de": "Erzähle eine Geschichte zu einer Herausforderung – ausschließlich mit fünf Symbolen, ohne Worte (Kreis = Ganzheit, Rechteck = Unterstützung, Dreieck = Ziel, Spirale = Veränderung, Sternenmensch = Beziehung).",
-          "en": ""
+          "en": "Who needs words when we have symbols? Let's ditch the dictionary and use five symbols to tell a story about a transition or challenge we are experiencing."
         },
         "raum_materialien": {
           "de": "Essentiell: Stifte, Papier, Flipchart; nützlich: Buntstifte/Kreide, Tische und Stühle; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "A chair with access to a writing surface for each participant. Paper and markers for everyone (or a shared digital drawing space). A handout of the symbols. Breakouts of two."
         },
         "einbindung": {
           "de": "Alle einbezogen – jede:r kann die fünf Symbole zeichnen; alle arbeiten gleichzeitig.",
-          "en": ""
+          "en": "Roles: host, artists and viewers. Minimum group size is two. Everyone creates and shares drawings."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln (Symbole üben und zeichnen) → Kleingruppen (1–4) zur Deutung → Gesamtgruppe (bei großen Gruppen 1-2-4-All).",
-          "en": ""
+          "en": "Alone, in pairs, then the whole group."
         },
         "ablauf_dauer": {
           "de": "Symbole erklären 2 Min; üben 2–5 Min; erste Version still 5–10 Min; zweite Version 5–10 Min; andere deuten, Künstler:in schweigt 5–15 Min; Gesamtgruppe „Was offenbaren die Zeichnungen?“ 5–15 Min. Gesamt ca. 25–55 Min.",
-          "en": ""
+          "en": "Intro 1 min; introduce the five symbols and their meaning 5 min; practice drawing them 3 min; first draft weaving symbols into a wordless visual story 10 min; second draft refining size, placement, color 10 min; silent interpretation in pairs — artist stays silent while the viewer interprets 5 min; remix and repeat with two new partners 10 min; all-together sharing and reflection 5 min. ~25-55 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); inspiriert von der Arbeit von Brian Tarallo und der „Drawing on Walls“-Tradition; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P7"
+      ],
+      "icon_alt": {
+        "de": "Fünf einfache Symbole — Kreis, Rechteck, Dreieck, Spirale und Sternmensch — zu einer Bildgeschichte verwoben.",
+        "en": "Five simple symbols — circle, rectangle, triangle, spiral and star person — woven into a visual story."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Verborgenes Wissen — Gefühle, Einstellungen und Muster, die sich schwer in Worte fassen lassen — wird zugänglich. Mit fünf einfachen Symbolen erzählen die Teilnehmenden ohne Worte eine Geschichte über eine Herausforderung oder einen Übergang. Wenn logische, lineare Prozesse an ihre Grenzen stoßen, eröffnet das Zeichnen neue Möglichkeiten, schafft ein gemeinsames Verständnis und engere Verbindungen in der Gruppe. Drawing Together verkörpert LS-Prinzip #7 — Möglichkeiten betonen: glauben, bevor man sieht.",
+          "en": "Hidden knowledge — feelings, attitudes and patterns hard to express in words — becomes accessible. With five simple symbols, participants tell a wordless story about a challenge or transition. When logical, linear processes reach their limits, drawing reveals new possibilities, builds shared understanding and forges closer connections in the group. Drawing Together enacts LS Principle #7 — Emphasize Possibilities: Believe Before You See."
+        },
+        "einladung": {
+          "de": "„Wer braucht Worte, wenn wir Symbole haben? Lassen wir das Wörterbuch beiseite und erzählen mit fünf Symbolen eine Geschichte über einen Übergang oder eine Herausforderung, die wir gerade erleben.“",
+          "en": "Who needs words when we have symbols? Let's ditch the dictionary and use five symbols to tell a story about a transition or challenge we are experiencing."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Die fünf Symbole: Kreis = Ganzheit, das Selbst; Rechteck = Fundament, Halt und Stabilität; Dreieck = Ziel, Streben, Erfolg; Spirale = Veränderung, Wandel; Sternmensch (gleichseitiges Kreuz) = Beziehung und Verbindung.",
+            "„Keine Worte — verwebt die Symbole zu eurer Geschichte.“",
+            "Stille Deutung: „Erzähl mir, was du in diesem Bild siehst.“"
+          ],
+          "en": [
+            "The five symbols: circle = wholeness, the self; rectangle = a foundation, support and stability; triangle = goal, aspiration, achievement; spiral = change and transformation; star person (equidistant cross) = relationship and connection.",
+            "'No words — weave the symbols into your story.'",
+            "Silent interpretation: 'Tell me what you see in this drawing.'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Symbole einführen",
+              "en": "Introduce symbols"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die fünf Symbole und ihre Bedeutung vorstellen.",
+              "en": "Introduce the five symbols and their meanings."
+            }
+          },
+          {
+            "phase": {
+              "de": "Üben",
+              "en": "Practice"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Symbole kurz zum Aufwärmen zeichnen.",
+              "en": "Practice drawing the symbols to warm up."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erste Version",
+              "en": "First draft"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Die Symbole ohne Worte zu einer Bildgeschichte über die Herausforderung verweben.",
+              "en": "Weave the symbols into a wordless visual story about the challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zweite Version",
+              "en": "Second draft"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Die Zeichnung verfeinern — mit Größe, Anordnung und Farbe experimentieren.",
+              "en": "Refine the drawing — experiment with size, placement and color."
+            }
+          },
+          {
+            "phase": {
+              "de": "Stille Deutung",
+              "en": "Silent interpretation"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "In Paaren: die zeichnende Person schweigt, während die andere das Bild deutet.",
+              "en": "In pairs: the artist stays silent while the partner interprets the drawing."
+            }
+          },
+          {
+            "phase": {
+              "de": "Wechseln & wiederholen",
+              "en": "Remix & repeat"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Zweimal die Partnerperson wechseln und die stille Deutung wiederholen.",
+              "en": "Switch partners twice and repeat the silent interpretation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Zurück im Plenum Bilder teilen und über gemeinsame Themen reflektieren.",
+              "en": "Back in plenary, share drawings and reflect on common themes."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Meetings visuell mitschreiben",
+              "en": "Graphic meeting capture"
+            },
+            "beschreibung": {
+              "de": "Eine Person hält Gespräche während eines Meetings mit den Symbolen visuell fest.",
+              "en": "One person visually maps conversations during a meeting using the symbols."
+            }
+          },
+          {
+            "name": {
+              "de": "Galerie",
+              "en": "Gallery"
+            },
+            "beschreibung": {
+              "de": "Die Bilder aller als Galerie aufhängen — ein kaleidoskopischer Blick auf die Herausforderung.",
+              "en": "Display everyone's images as a gallery — a kaleidoscopic view of the challenge."
+            }
+          },
+          {
+            "name": {
+              "de": "Wieder aufgreifen",
+              "en": "Reconvene"
+            },
+            "beschreibung": {
+              "de": "Beim Wiedertreffen an die Zeichnungen anknüpfen, um den Übergang aus der vorherigen Arbeit zu erleichtern.",
+              "en": "Return to the drawings when reconvening to ease the transition from previous work."
+            }
+          },
+          {
+            "name": {
+              "de": "Hero's Journey / Status-Quo-Reise",
+              "en": "Hero's Journey / status-quo journey"
+            },
+            "beschreibung": {
+              "de": "Eine Reise-Vorlage (Heldenreise oder Status-quo-Reise) als Struktur fürs Bild nutzen.",
+              "en": "Use a journey template (Hero's Journey or status-quo journey) as the structure for the drawing."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Betonen, dass es nicht aufs Zeichentalent ankommt — kindliche Zeichnungen wirken spielerisch und passen perfekt.",
+            "Perfektionismus aktiv entmutigen; annehmen, was entsteht — auch Emotionen.",
+            "Nicht zu viel beim Zeichnen „helfen“; jeden eigene Bilder finden lassen.",
+            "Beispiele zeigen; Zeichnungen per Video/Foto dokumentieren.",
+            "Auf emotionale Momente vorbereitet sein — Zeichnen kann therapeutisch wirken."
+          ],
+          "en": [
+            "Emphasize that drawing skill is not the point — childlike drawings look playful and fit perfectly.",
+            "Actively discourage perfectionism; accept whatever emerges — including emotions.",
+            "Don't 'help' too much with the drawing; let everyone find their own images.",
+            "Show examples; document drawings via video/photo.",
+            "Be ready for emotional moments — drawing can be therapeutic."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Ein emotional aufgeladenes oder festgefahrenes Thema neu eröffnen, das in Worten im Kreis dreht.",
+            "Erkenntnisse sichtbar machen, die verbale Methoden nicht hervorbringen würden.",
+            "Einen Aufbruch zu neuen Wegen markieren und ein gemeinsames Verständnis entwickeln.",
+            "Engere Verbindungen zwischen Gruppenmitgliedern schaffen."
+          ],
+          "en": [
+            "Reopen an emotionally charged or stuck topic that keeps going in verbal circles.",
+            "Surface insights that verbal methods would not produce.",
+            "Mark a move toward new paths and develop shared understanding.",
+            "Build closer connections between group members."
+          ]
+        },
+        "material_setup": {
+          "de": "Je Person ein Stuhl mit Schreibunterlage; Papier und Stifte/Marker (oder ein geteilter digitaler Zeichenraum); ein Handout der fünf Symbole; optional Buntstifte/Kreide. Online: Whiteboard oder Zeichen-App.",
+          "en": "A chair with a writing surface per person; paper and markers (or a shared digital drawing space); a handout of the five symbols; optional colored pencils. Online: a whiteboard or drawing app."
+        },
+        "online_durchfuehrung": {
+          "de": "Drawing Together gelingt online mit einem geteilten Whiteboard oder einer Zeichen-App, in der jede:r eine eigene Fläche hat. Ablauf: (1) Die fünf Symbole einblenden und ihre Bedeutung erklären — wenn möglich vormachen, wie man sie zeichnet. (2) Alle zeichnen ihre erste und zweite Version auf ihrer eigenen Board-Fläche. (3) Für die stille Deutung in Paar-Breakouts gehen: die zeichnende Person teilt nur das Bild (Kamera/Bildschirm) und schweigt, die andere deutet. (4) Zweimal die Paare wechseln. (5) Im Plenum eine Galerie aller Bilder zeigen und gemeinsame Themen ernten. Wer lieber auf Papier zeichnet, hält die Zeichnung in die Kamera.",
+          "en": "Drawing Together works online with a shared whiteboard or drawing app where each person has their own area. Flow: (1) Show the five symbols and explain their meaning — if possible, demonstrate drawing them. (2) Everyone draws their first and second draft on their own board area. (3) For silent interpretation, go into pair breakouts: the artist only shares the image (camera/screen) and stays silent while the partner interprets. (4) Switch pairs twice. (5) In plenary, show a gallery of all drawings and harvest common themes. Those who prefer paper hold their drawing up to the camera."
+        }
       }
     },
     {
@@ -4635,9 +5342,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Entwickelt robuste und absichernde Strategien für mehrere mögliche Zukunftsszenarien – macht die Gruppe widerstandsfähig gegen Unvorhersehbares.",
-        "en": ""
+        "en": "A group develops four plausible future scenarios from its two most critical, most uncertain factors, then crafts strategies for each. By sorting robust strategies (work across scenarios) from hedging ones (prepare for a specific disruption), the group makes its current strategy far more adaptable."
       },
-      "source_url": "https://liberatingstructures.de/critical-uncertainties/",
+      "source_url": "https://www.liberatingstructures.com/critical-uncertainties",
       "purpose_tags": [
         "strategie"
       ],
@@ -4645,14 +5352,14 @@
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 4,
+      "group_size_min": 8,
       "group_size_max": null,
       "duration_min": 80,
       "duration_max": 90,
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Post-its, Flipcharts pro Vierergruppe; nützlich: Papier, Sektorendiagramm; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "An open wall to draw the Critical Uncertainties grid; groups of four chairs around small tables; sticky notes, flip charts or large paper per group. Online: a whiteboard with a prepared 2x2 grid and breakout rooms."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -4660,38 +5367,292 @@
       ],
       "typical_successors": [
         "min-specs",
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "15-solutions"
       ],
       "scrum_use": {
         "de": "Strategie unter Unsicherheit (z. B. Produkt-/Roadmap-Planung mit mehreren Zukunftsszenarien).",
-        "en": ""
+        "en": "Pressure-testing a product, team or organizational strategy against an unpredictable future — building adaptability and disruption-resistance instead of one fixed plan, e.g. in roadmap or release planning under high uncertainty."
       },
       "design_elements": {
         "einladung": {
           "de": "Identifiziert kritische Unsicherheiten eures Umfelds und entwickelt dazu passende Strategien.",
-          "en": ""
+          "en": "Let's develop four plausible future scenarios and identify strategies that would help us succeed in each. Then we'll review options to make our current strategies more adaptable. The future is uncertain, but we can prepare for it."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Post-its, Flipcharts pro Vierergruppe; nützlich: Papier, Sektorendiagramm; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "An open wall with space to draw a Critical Uncertainties template. Groups of four chairs around small tables. Sticky notes, flip charts or large paper for each group."
         },
         "einbindung": {
           "de": "Alle für Planung/Durchführung Verantwortlichen, gleiche Beitragschancen.",
-          "en": ""
+          "en": "Roles: host and participants. Minimum group size is eight. Everyone responsible for planning and executing strategy is included with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Groß und divers genug für vier (alternativ zwei) Kleingruppen.",
-          "en": ""
+          "en": "Ideally four groups of four to five. With fewer than twelve, two groups each take two to four quadrants; with more than twenty, several groups per quadrant."
         },
         "ablauf_dauer": {
           "de": "Erklären 2 Min; Unsicherheiten sammeln 5 Min; priorisieren 5–10 Min; zwei Faktoren wählen 5 Min; 2-Achsen-Raster 2–5 Min; Szenarien je Quadrant 5–10 Min; präsentieren 2 Min/Gruppe; je 3 Strategien 10 Min; teilen 2 Min/Gruppe; robuste vs. absichernde Strategien 10 Min; Debrief mit What-So-What-Now-What 10 Min. Gesamt 80–90 Min.",
-          "en": ""
+          "en": "Intro 1 min; list uncertainties 5 min; identify the critical ones in pairs 10 min; select the top two (X and Y) in plenary 5 min; label the axes 5 min; invent and name quadrant scenarios in small groups 10 min; share scenarios 8 min; brainstorm three strategies per scenario 10 min; share strategies 8 min; sort robust vs hedging strategies 10 min; debrief in new groups 10 min; all-together sharing of first steps 10 min. ~80-90 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Strategie“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Strategy’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P7"
+      ],
+      "icon_alt": {
+        "de": "Ein 2x2-Raster aus zwei kritischen Unsicherheiten, das vier mögliche Zukunftsszenarien aufspannt.",
+        "en": "A 2x2 grid of two critical uncertainties spanning four possible future scenarios."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine bunt gemischte Gruppe kann die Lebensfähigkeit ihrer aktuellen Strategien testen und ihre Fähigkeit stärken, auf zukünftige Herausforderungen zu reagieren. Statt fixer Pläne entsteht kreative Anpassungsfähigkeit: Die Gruppe stellt sich mehrere plausible Zukünfte vor, formuliert übergeordnete Ziele und handelt flexibel. Indem sie robuste Strategien (die in mehreren Szenarien funktionieren) von absichernden (die auf eine bestimmte Störung vorbereiten) unterscheidet, wird die Gruppe widerstandsfähig und kann dezentral handeln. Critical Uncertainties verkörpert LS-Prinzip #7 — Möglichkeiten betonen: glauben, bevor man sieht.",
+          "en": "A diverse group can test the viability of its current strategies and strengthen its ability to respond to future challenges. Instead of fixed plans, creative adaptability emerges: the group imagines multiple plausible futures, articulates higher-order goals and acts flexibly. By separating robust strategies (that work across several scenarios) from hedging ones (that prepare for a specific disruption), the group becomes resilient and able to act in a decentralized way. Critical Uncertainties enacts LS Principle #7 — Emphasize Possibilities: Believe Before You See."
+        },
+        "einladung": {
+          "de": "„Lasst uns vier plausible Zukunftsszenarien entwickeln und Strategien finden, mit denen wir in jedem erfolgreich wären. Danach prüfen wir Optionen, um unsere aktuellen Strategien anpassungsfähiger zu machen. Die Zukunft ist ungewiss — aber wir können uns auf sie vorbereiten.“",
+          "en": "Let's develop four plausible future scenarios and identify strategies that would help us succeed in each. Then we'll review options to make our current strategies more adaptable. The future is uncertain, but we can prepare for it."
+        },
+        "beispielsaetze": {
+          "de": [
+            "„Welche Faktoren in unserem Umfeld sind unmöglich vorherzusagen oder zu kontrollieren?“",
+            "„Welche zwei davon bedrohen unsere Handlungsfähigkeit am stärksten?“ → das werden die Achsen X und Y.",
+            "„Gib diesem Quadranten einen kreativen Namen und ein Zwei-Satz-Szenario.“",
+            "Robust vs. absichernd: „Funktioniert diese Strategie in mehreren Quadranten — oder nur in einem?“"
+          ],
+          "en": [
+            "'Which factors in our environment are impossible to predict or control?'",
+            "'Which two of them most threaten our ability to operate?' → these become axes X and Y.",
+            "'Give this quadrant a creative name and a two-sentence scenario.'",
+            "Robust vs hedging: 'Does this strategy work across several quadrants — or only one?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Unsicherheiten sammeln",
+              "en": "List uncertainties"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Faktoren auflisten, die unmöglich vorherzusagen oder zu kontrollieren sind.",
+              "en": "List factors impossible to predict or control."
+            }
+          },
+          {
+            "phase": {
+              "de": "Kritische identifizieren",
+              "en": "Identify critical ones"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In Paaren bestimmen, welche Faktoren die Handlungsfähigkeit am stärksten bedrohen.",
+              "en": "In pairs, identify which factors most threaten the ability to operate."
+            }
+          },
+          {
+            "phase": {
+              "de": "Top zwei wählen",
+              "en": "Select top two"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Im Plenum die zwei kritischsten und unsichersten Faktoren X und Y wählen.",
+              "en": "In plenary, select the two most critical and uncertain factors X and Y."
+            }
+          },
+          {
+            "phase": {
+              "de": "Achsen beschriften",
+              "en": "Label axes"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Ein Raster zeichnen; die Achsenenden als Kontinuum (viel ↔ wenig) beschriften.",
+              "en": "Draw a grid; label the axis ends as a continuum (high ↔ low)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Quadranten erfinden",
+              "en": "Invent quadrants"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Kleingruppen geben je einem Quadranten einen kreativen Namen und ein Zwei-Satz-Szenario.",
+              "en": "Small groups give each quadrant a creative name and a two-sentence scenario."
+            }
+          },
+          {
+            "phase": {
+              "de": "Szenarien teilen",
+              "en": "Share scenarios"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Jede Gruppe stellt Titel und Szenario vor.",
+              "en": "Each group presents its title and scenario."
+            }
+          },
+          {
+            "phase": {
+              "de": "Strategien entwickeln",
+              "en": "Strategize"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Pro Szenario drei Strategien für erfolgreiches Handeln brainstormen.",
+              "en": "Brainstorm three strategies for operating successfully in each scenario."
+            }
+          },
+          {
+            "phase": {
+              "de": "Strategien teilen",
+              "en": "Share strategies"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Jede Gruppe stellt ihre Strategien kurz vor.",
+              "en": "Each group briefly shares its strategies."
+            }
+          },
+          {
+            "phase": {
+              "de": "Sortieren",
+              "en": "Sort strategies"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Gemeinsam robuste (mehrere Quadranten) von absichernden (ein Quadrant) Strategien trennen.",
+              "en": "Together, separate robust (multiple quadrants) from hedging (single quadrant) strategies."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief",
+              "en": "Debrief"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In neuen Gruppen besprechen, wie die aktuelle Strategie im Vergleich abschneidet (z. B. mit What, So What, Now What?).",
+              "en": "In new groups, discuss how the current strategy compares (e.g. with What/So What/Now What)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Einige teilen erste Schritte / „Now What“-Maßnahmen.",
+              "en": "A few share first steps / 'Now What' actions."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Kurzform",
+              "en": "Short form"
+            },
+            "beschreibung": {
+              "de": "Die zwei kritischen Unsicherheiten vorab festlegen und die ersten drei Schritte überspringen — spart 15-20 Min.",
+              "en": "Prepare the two critical uncertainties in advance and skip the first three steps — saves 15-20 min."
+            }
+          },
+          {
+            "name": {
+              "de": "1-2-4-All-Takt",
+              "en": "1-2-4-All rhythm"
+            },
+            "beschreibung": {
+              "de": "Jeden Schritt in kurzen 1-2-4-All-Zyklen laufen lassen.",
+              "en": "Run each step in short 1-2-4-All cycles."
+            }
+          },
+          {
+            "name": {
+              "de": "Kreativ ausspielen",
+              "en": "Express creatively"
+            },
+            "beschreibung": {
+              "de": "Szenarien als Rollenspiel oder erfundene Zukunftsprodukte darstellen; Talente würdigen.",
+              "en": "Act scenarios out as role-play or invented future products; honor people's talents."
+            }
+          },
+          {
+            "name": {
+              "de": "Mit KI",
+              "en": "With AI"
+            },
+            "beschreibung": {
+              "de": "Generative KI nutzen, um Szenarien und Strategien zu vorgegebenen kritischen Unsicherheiten zu erzeugen.",
+              "en": "Use generative AI to create scenarios and strategies for pre-established critical uncertainties."
+            }
+          },
+          {
+            "name": {
+              "de": "Solo",
+              "en": "Solo"
+            },
+            "beschreibung": {
+              "de": "Als Einzelperson für die eigene Strategie nutzbar.",
+              "en": "Usable solo for your own strategy."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Beim Sammeln an falsche Vorhersagen und überraschende Ereignisse erinnern, die die Gruppe kalt erwischt haben.",
+            "Wunschdenken und Schönfärberei über die Vergangenheit aktiv hinterfragen.",
+            "Beim Benennen der Quadranten Spaß haben — Lied- und Buchtitel funktionieren wunderbar.",
+            "In der Mitte eine Pause einlegen, um kognitive Überlastung zu vermeiden."
+          ],
+          "en": [
+            "When listing, recall wrong predictions and surprising events that caught the group off guard.",
+            "Actively challenge wishful thinking and rosy misrepresentation of the past.",
+            "Have fun naming the quadrants — song and book titles work wonderfully.",
+            "Take a break in the middle to prevent cognitive overload."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Die Tragfähigkeit der aktuellen Strategie unter hoher Unsicherheit prüfen.",
+            "Anpassungsfähigkeit und Störungsresistenz einer Organisation erhöhen.",
+            "Roadmap- oder Release-Planung, wenn die Zukunft schwer vorhersehbar ist.",
+            "Organisationsübergreifendes Vertrauen im Umgang mit Unvorhersehbarem aufbauen."
+          ],
+          "en": [
+            "Test the viability of the current strategy under high uncertainty.",
+            "Increase an organization's adaptability and disruption-resistance.",
+            "Roadmap or release planning when the future is hard to predict.",
+            "Build cross-organizational trust in dealing with the unpredictable."
+          ]
+        },
+        "material_setup": {
+          "de": "Eine offene Wand für das Critical-Uncertainties-Raster; Vierergruppen an kleinen Tischen; Post-its, Flipcharts oder großes Papier je Gruppe. Online: ein Whiteboard mit vorbereitetem 2x2-Raster und Breakout-Räume.",
+          "en": "An open wall for the Critical Uncertainties grid; groups of four at small tables; sticky notes, flip charts or large paper per group. Online: a whiteboard with a prepared 2x2 grid and breakout rooms."
+        },
+        "online_durchfuehrung": {
+          "de": "Online auf einem geteilten Whiteboard mit vorbereitetem 2x2-Raster und Breakout-Räumen. Ablauf: (1) Im Plenum Unsicherheiten auf Stickies sammeln. (2) In Paar-Breakouts die kritischsten herausarbeiten, dann gemeinsam X und Y wählen und die Achsen beschriften. (3) Je eine Kleingruppe in einen Breakout-Raum pro Quadrant: kreativen Namen und Zwei-Satz-Szenario sowie drei Strategien auf dem Board festhalten. (4) Im Plenum Szenarien und Strategien teilen, dann robuste von absichernden trennen (z. B. zwei Farbpunkte). (5) Debrief in neuen Breakouts mit What, So What, Now What?, anschließend erste Schritte teilen. Tipp: Das Raster vorab anlegen, eine Pause in der Mitte einplanen.",
+          "en": "Online on a shared whiteboard with a prepared 2x2 grid and breakout rooms. Flow: (1) In plenary, gather uncertainties on stickies. (2) In pair breakouts, distill the most critical ones, then together choose X and Y and label the axes. (3) One small group per quadrant in its own breakout: capture a creative name, a two-sentence scenario and three strategies on the board. (4) In plenary, share scenarios and strategies, then separate robust from hedging (e.g. two colored dots). (5) Debrief in new breakouts with What/So What/Now What, then share first steps. Tip: prepare the grid in advance and plan a break in the middle."
+        }
       }
     },
     {
