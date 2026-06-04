@@ -1226,9 +1226,9 @@
       "edition": "original",
       "short_desc": {
         "de": "„Kreative Zerstörung“: Die Gruppe sammelt, was ein schlechtes Ergebnis garantieren würde, erkennt, was davon sie bereits tut, und entscheidet, was sie stoppt – schafft Raum für Innovation.",
-        "en": ""
+        "en": "Invites ‘creative destruction’: the group asks what to STOP doing to make space for innovation. By first imagining how to guarantee the worst result, taboo and counterproductive habits surface — and can be safely named and stopped, often with laughter."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/triz/",
+      "source_url": "https://www.liberatingstructures.com/creative-destruction",
       "purpose_tags": [
         "offenlegen"
       ],
@@ -1238,51 +1238,216 @@
       ],
       "group_size_min": 4,
       "group_size_max": null,
-      "duration_min": 30,
-      "duration_max": 40,
+      "duration_min": 35,
+      "duration_max": 55,
       "online_capable": true,
       "materials": {
         "de": "Stifte, Post-its, Flipchart mit 3 Spalten; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "Groups of four to seven chairs, with or without small tables. Paper for everyone and flip charts or whiteboards for each group (online: breakout rooms + a virtual whiteboard)."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
         "troika-consulting",
         "wise-crowds",
-        "open-space-technology",
         "ecocycle-planning"
       ],
       "scrum_use": {
         "de": "Retrospektive: kontraproduktive Praktiken aufdecken und gezielt stoppen („Was sollten wir aufhören?“) – kathartisch und bindet alle ein.",
-        "en": ""
+        "en": "Clearing the deck before improving: a team surfaces and decides to stop counterproductive activities/rules — powerful in retrospectives or before a change, freeing energy for new ideas."
       },
       "design_elements": {
         "einladung": {
           "de": "Drei Schritte: (1) Was würde ein schlechtes Ergebnis garantieren? (2) Welche dieser Dinge tun wir bereits? (3) Wie stoppen wir diese kontraproduktiven Aktivitäten?",
-          "en": ""
+          "en": "What if we create more room for existing ideas to breathe and evolve (rather than chasing the next big thing)? Let's make space for innovation by identifying the worst possible result of our work."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Post-its, Flipchart mit drei Spalten. Online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "Groups of four to seven chairs, with or without small tables. Pens and sticky notes; a flip chart with three columns. Online: breakout rooms and a virtual whiteboard."
         },
         "einbindung": {
           "de": "Alle werden gleichberechtigt einbezogen.",
-          "en": ""
+          "en": "Everyone is included and contributes on an equal footing. No minimum group size."
         },
         "gruppenkonfiguration": {
           "de": "Gruppen von 4–7 Personen (bestehende Teams oder gemischt).",
-          "en": ""
+          "en": "Alone, groups of four to seven, whole group."
         },
         "ablauf_dauer": {
           "de": "Konzept vorstellen 2–5 Min; drei Runden je 1-2-4-All (schlechte Ergebnisse / aktuelle Aktivitäten / Stopp-Strategien) à 10–12 Min. Gesamt 30–40 Min.",
-          "en": ""
+          "en": "Intro 5 min; list how to achieve the worst result (alone) 3 min; combine lists in groups 10 min; reckoning — what we currently do that resembles it 10 min; destruction — decide what to stop + first steps 10 min; all-together sharing 10–15 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); basierend auf TRIZ (russischer Ingenieursansatz); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); based on TRIZ (a Russian engineering approach); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P8"
+      ],
+      "icon_alt": {
+        "de": "Eine durchgestrichene Aktivität — Platz für Neues entsteht durch bewusstes Aufhören.",
+        "en": "A crossed-out activity — space for the new is created by deliberately stopping."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Lade zur kreativen Zerstörung ein! Schaffe Raum für Innovation, indem du einer Gruppe hilfst, das loszulassen, was sie zwar weiß, aber selten zugibt. TRIZ ermöglicht auf ungefährliche Art das „Schlachten heiliger Kühe“. Die Frage „Was müssen wir stoppen, um bei unserem wichtigsten Ziel voranzukommen?“ sorgt für ernsthafte, aber unterhaltsame und mutige Gespräche; weil dabei oft gelacht wird, lassen sich Tabuthemen in lockerer Atmosphäre aufdecken. So entsteht durch bewusstes Aufhören Raum für Erneuerung — lokale Initiative und Innovation füllen das Vakuum. TRIZ verkörpert LS-Prinzip #8 — kreative Zerstörung einladen, um Innovation zu ermöglichen.",
+          "en": "Invite creative destruction! Make space for innovation by helping a group let go of what it knows but rarely admits. TRIZ makes it safe to ‘slaughter sacred cows’. The question ‘What must we stop in order to make progress on our most important goal?’ sparks serious yet fun and courageous conversations; because there's often laughter, taboo topics can be surfaced in a relaxed atmosphere. Deliberately stopping creates room for renewal — local initiative and innovation fill the vacuum. TRIZ enacts LS Principle #8 — Invite Creative Destruction to Enable Innovation."
+        },
+        "einladung": {
+          "de": "Dreischritt: (1) „Macht eine Liste mit allem, was garantiert das schlechteste Ergebnis für unser wichtigstes Ziel erreicht.“ (2) „Geht die Liste durch: Gibt es etwas, das wir aktuell tun, das dem entspricht? Seid schonungslos ehrlich.“ (3) „Wie können wir diese kontraproduktive Aktivität stoppen?“",
+          "en": "What if we create more room for existing ideas to breathe and evolve (rather than chasing the next big thing)? Let's make space for innovation by identifying the worst possible result of our work."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Macht eine Liste mit allem, was garantiert das schlechteste Ergebnis für unser wichtigstes Ziel erreicht.",
+            "Beispiel (Medizin): „Wie stellen wir sicher, dass wir immer die falsche Seite operieren?“",
+            "Beispiel (Vielfalt): „Wie schaffen wir Richtlinien, die nur für wenige Auserwählte passen?“",
+            "Beispiel (IT): „Wie bauen wir ein IT-System, das niemand nutzen will?“"
+          ],
+          "en": [
+            "List everything that would guarantee the worst possible result for our most important goal.",
+            "Example (medical): ‘How can we make sure we always operate on the wrong side?’",
+            "Example (diversity): ‘How can we devise policies that only work for a select few?’",
+            "Example (IT): ‘How can we build an IT system no one will want to use?’"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "TRIZ vorstellen und ein sehr unerwünschtes Ergebnis benennen; bei Bedarf gemeinsam das schlechteste Ergebnis brainstormen.",
+              "en": "Introduce TRIZ and name a very undesirable result; if needed, brainstorm the worst result together."
+            }
+          },
+          {
+            "phase": {
+              "de": "Liste 1 — schlechtestes Ergebnis",
+              "en": "List 1 — worst result"
+            },
+            "dauer_min": 11,
+            "beschreibung": {
+              "de": "Jede Gruppe erstellt mit 1-2-4-All eine Liste mit allem, was das unerwünschte Ergebnis garantiert.",
+              "en": "Each group uses 1-2-4-All to list everything that would guarantee the undesirable result."
+            }
+          },
+          {
+            "phase": {
+              "de": "Liste 2 — Ähnlichkeiten",
+              "en": "List 2 — resemblances"
+            },
+            "dauer_min": 11,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All eine zweite Liste erstellen: Was tun wir aktuell, das den Einträgen ähnelt? Schonungslos ehrlich.",
+              "en": "Use 1-2-4-All to make a second list: what do we currently do that resembles those items? Ruthlessly honest."
+            }
+          },
+          {
+            "phase": {
+              "de": "Liste 3 — Stoppen",
+              "en": "List 3 — stop"
+            },
+            "dauer_min": 11,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All für jeden Eintrag erste Schritte festlegen, um die kontraproduktive Aktivität zu stoppen.",
+              "en": "Use 1-2-4-All to decide first steps to stop each counterproductive activity."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Listen teilen und echte Entscheidungen treffen, was gestoppt wird („Wir werden aufhören …“).",
+              "en": "Share lists and make real decisions about what to stop (‘We will stop …’)."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Mehr Tiefe",
+              "en": "More depth"
+            },
+            "beschreibung": {
+              "de": "Eine zweite oder dritte Runde, um das Verständnis unerwünschter Ergebnisse zu schärfen.",
+              "en": "A second or third round to sharpen understanding of undesirable results."
+            }
+          },
+          {
+            "name": {
+              "de": "Mit Ecocycle verbinden",
+              "en": "Link to Ecocycle"
+            },
+            "beschreibung": {
+              "de": "Die Ergebnisse der kreativen Zerstörung in einen Gesamtüberblick mit Ecocycle Planning überführen.",
+              "en": "Bring the creative-destruction results into a portfolio view with Ecocycle Planning."
+            }
+          },
+          {
+            "name": {
+              "de": "Nächste Schritte vertiefen",
+              "en": "Deepen next steps"
+            },
+            "beschreibung": {
+              "de": "Nächste Schritte teilen und danach mit Troika Consulting, Wise Crowds oder Open Space vertiefen.",
+              "en": "Share next steps, then go deeper with Troika Consulting, Wise Crowds or Open Space."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Ohne Breakouts notfalls in der Gesamtgruppe (1-All); Listen im Chat festhalten.",
+              "en": "Without breakouts, use the whole group (1-All); capture lists in the chat."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Mit ernsthaftem Spaß herangehen — es wird oft gelacht.",
+            "Keine Ideen für Neues/Zusätzliches zulassen: Vorschläge sollen Aktivitäten stoppen, nicht starten.",
+            "Mit einem SEHR unerwünschten Ergebnis starten und es von der Gruppe bestätigen lassen.",
+            "Bei Gruppen vorbeischauen, die laut lachen oder verwirrt wirken.",
+            "Auf echte Entscheidungen achten („Wir werden aufhören …“); die Beteiligten einbeziehen („Wer muss noch involviert werden?“)."
+          ],
+          "en": [
+            "Approach with serious fun — there's usually laughter.",
+            "Don't allow ideas for new/additional things: suggestions should stop activities, not start them.",
+            "Start with a VERY undesirable result and have the group confirm it.",
+            "Check in on groups laughing loudly or looking confused.",
+            "Watch for real decisions about what to stop (‘We will stop …’); involve those affected (‘Who else needs to be involved?’)."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Schaden durch Pannen mindern (z. B. im Gesundheitswesen).",
+            "Erkennen, wie man unbeabsichtigt abweichende Meinungen ausschließt.",
+            "Eingefahrene, widersprüchliche Routinen aufdecken („gleiche Leute, gleiche Dinge, andere Resultate erwarten“)."
+          ],
+          "en": [
+            "Reduce harm from mishaps (e.g. in healthcare).",
+            "Notice how you unintentionally exclude differing views.",
+            "Surface entrenched, self-defeating routines (‘same people, same things, expecting different results’)."
+          ]
+        },
+        "material_setup": {
+          "de": "Gruppen von 4–7 Personen; Stifte, Post-its, ein Flipchart mit drei Spalten für die drei Listen. Online: Breakout-Räume und ein virtuelles Whiteboard.",
+          "en": "Groups of four to seven; pens, sticky notes, a flip chart with three columns for the three lists. Online: breakout rooms and a virtual whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume für die Gruppenarbeit und ein virtuelles Whiteboard für die drei Listen nutzen. Ablauf: (1) Konzept vorstellen und ein sehr unerwünschtes Ergebnis benennen. (2) Liste 1: alles, was das schlechteste Ergebnis garantiert (je Gruppe via 1-2-4-All). (3) Liste 2: was wir aktuell tun, das dem ähnelt — schonungslos ehrlich. (4) Liste 3: erste Schritte, um diese Aktivitäten zu stoppen. (5) Im Plenum echte Entscheidungen treffen („Wir werden aufhören …“). Ohne Breakouts notfalls in der Gesamtgruppe (1-All), Listen im Chat.",
+          "en": "Works well online. Use breakout rooms for group work and a virtual whiteboard for the three lists. Flow: (1) Introduce the concept and name a very undesirable result. (2) List 1: everything that would guarantee the worst result (each group via 1-2-4-All). (3) List 2: what we currently do that resembles it — ruthlessly honest. (4) List 3: first steps to stop those activities. (5) In plenary, make real decisions (‘We will stop …’). Without breakouts, use the whole group (1-All) and capture lists in the chat."
+        }
       }
     },
     {
@@ -1297,12 +1462,11 @@
       "edition": "original",
       "short_desc": {
         "de": "Jede:r findet die kleinen Schritte, die im eigenen Handlungsspielraum sofort möglich sind – ohne mehr Ressourcen oder Erlaubnis. Macht die Kraft kleiner Taten erlebbar.",
-        "en": ""
+        "en": "Surfaces actions each person can take immediately — without extra resources or permission. By focusing on what's within your own discretion, people shift from powerlessness to initiative and create momentum; small shifts can trigger larger change."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/15-solutions/",
+      "source_url": "https://www.liberatingstructures.com/15-percent-solutions",
       "purpose_tags": [
-        "offenlegen",
-        "planen"
+        "offenlegen"
       ],
       "arc_role": [
         "konvergieren",
@@ -1315,48 +1479,203 @@
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier, Stühle für Gruppen à 2–4 Personen; online: Breakout-Räume.",
-        "en": ""
+        "en": "Chairs for groups of two to three, no tables (breakouts of three). Paper for each participant."
       },
       "difficulty": "leicht",
-      "typical_predecessors": [
-        "impromptu-networking",
-        "wicked-questions"
-      ],
+      "typical_predecessors": [],
       "typical_successors": [
         "troika-consulting",
         "wise-crowds",
+        "helping-heuristics",
         "open-space-technology"
       ],
       "scrum_use": {
         "de": "Retrospektive/Planning: unmittelbar umsetzbare Verbesserungen im eigenen Einflussbereich als konkrete Action Items.",
-        "en": ""
+        "en": "Turning insight into action: each person names concrete steps within their own 15% of freedom — great at the end of a retro/planning to ensure movement, not just talk."
       },
       "design_elements": {
         "einladung": {
           "de": "„Was sind deine 15 %? Wo hast du die Freiheit, nach eigenem Ermessen zu handeln?“",
-          "en": ""
+          "en": "Think about a big challenge. Imagine 85% of the solution is out of our control, but the other 15% we can act on without permission or additional resources. Where do you have discretion and freedom to act? What can you do right now without more resources or authority?"
         },
         "raum_materialien": {
           "de": "Stifte, Papier, Stühle für Gruppen von 2–4 Personen; online: Breakout-Räume.",
-          "en": ""
+          "en": "Pens and paper. Chairs for groups of two to four; tables not needed. Online: breakout rooms."
         },
         "einbindung": {
           "de": "Alle werden eingebunden, gleiche Mitsprache für alle.",
-          "en": ""
+          "en": "Everyone is included (the facilitator usually not). Everyone has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Zuerst einzeln, dann in Paaren oder Dreiergruppen.",
-          "en": ""
+          "en": "First alone, then in pairs or small groups."
         },
         "ablauf_dauer": {
           "de": "Individuelle Liste 2–5 Min; Vorstellung und gegenseitige Beratung in Gruppen 3–10 Min pro Person. Gesamt ca. 15–30 Min.",
-          "en": ""
+          "en": "Write your own list of 15% solutions (2–5 min); share in trios while others coach with clarifying questions and advice (3–10 min per person)."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); verweist auf Gareth Morgans Popularisierung des 15-%-Konzepts; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); references Gareth Morgan's popularization of the 15% concept; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P6"
+      ],
+      "icon_alt": {
+        "de": "Ein kleiner, sofort umsetzbarer Schritt im eigenen Handlungsspielraum.",
+        "en": "A small, immediately actionable step within your own scope of action."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "15% Solutions zeigen Aktionen auf, die jede Person sofort selbst durchführen kann — ohne zusätzliche Ressourcen oder Erlaubnis. Selbst wenn sie das große Problem nicht lösen, sorgen sie für Bewegung und richten den Fokus auf das, was im eigenen Einflussbereich liegt, statt auf Unveränderbares. „Durch das Graben kleiner Löcher können wir einen Erdrutsch auslösen und die ganze Landschaft verändern.“ 15% Solutions verkörpert LS-Prinzip #6 — Freiheit und Verantwortung stärken.",
+          "en": "15% Solutions surface actions each person can take immediately — without extra resources or permission. Even if they don't solve the big problem, they create movement and focus attention on what's within one's own control rather than the unchangeable. ‘By digging small holes we can trigger a landslide and change the whole landscape.’ 15% Solutions enacts LS Principle #6 — Amplify Freedom and Responsibility."
+        },
+        "einladung": {
+          "de": "„Was sind deine 15 %? Wo hast du die Freiheit, nach eigenem Ermessen zu handeln? Was kannst du tun, ohne zusätzliche Ressourcen oder Erlaubnis fragen zu müssen?“",
+          "en": "Where do you have discretion and freedom to act? What can you do right now without more resources or authority?"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Was sind deine 15 %?",
+            "Wo hast du Freiheit, nach eigenem Ermessen zu handeln?",
+            "Was kannst du sofort tun — ohne Erlaubnis oder zusätzliche Mittel?",
+            "Variante: Wo hast du indirekten Einfluss auf Menschen oder Gruppen?"
+          ],
+          "en": [
+            "What are your 15%?",
+            "Where do you have freedom to act at your own discretion?",
+            "What can you do right now — without permission or extra resources?",
+            "Variation: Where might you have indirect influence on people or groups?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen.",
+              "en": "Share the structuring invitation."
+            }
+          },
+          {
+            "phase": {
+              "de": "Eigene Liste",
+              "en": "List ideas"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Jede:r schreibt die eigene Liste mit 15%-Lösungen.",
+              "en": "Each person writes their own list of 15% solutions."
+            }
+          },
+          {
+            "phase": {
+              "de": "In Trios teilen & beraten",
+              "en": "Share & coach in trios"
+            },
+            "dauer_min": 9,
+            "beschreibung": {
+              "de": "In Dreiergruppen stellt jede:r die Ideen vor; die anderen beraten mit klärenden Fragen und Ratschlägen (3–10 Min pro Person).",
+              "en": "In trios, each presents their ideas; the others coach with clarifying questions and advice (3–10 min per person)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Einige teilen inspirierende Lösungen.",
+              "en": "A few share inspiring solutions."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Weitere Optionen",
+              "en": "Wider options"
+            },
+            "beschreibung": {
+              "de": "Fragen: „Wo hast du indirekten Einfluss auf Menschen oder Gruppen?“",
+              "en": "Ask: ‘Where might you have indirect influence on people or groups?’"
+            }
+          },
+          {
+            "name": {
+              "de": "Wiederkehrend",
+              "en": "Repeat groups"
+            },
+            "beschreibung": {
+              "de": "Bei Rückkehr zur Gruppe: „Was habt ihr in letzter Zeit mit euren 15 % gemacht?“",
+              "en": "For repeat groups: ‘What have you done with your 15% lately?’"
+            }
+          },
+          {
+            "name": {
+              "de": "Solo",
+              "en": "Solo"
+            },
+            "beschreibung": {
+              "de": "Eigene Liste schreiben (5 Min); optional durchlesen und sich vorstellen, was man tut (5 Min).",
+              "en": "Write your list (5 min); optionally read it and imagine doing it (5 min)."
+            }
+          },
+          {
+            "name": {
+              "de": "Kombinieren",
+              "en": "Combine"
+            },
+            "beschreibung": {
+              "de": "Passt hervorragend zu Troika Consulting, Wise Crowds, Open Space, Helping Heuristics und Integrated~Autonomy.",
+              "en": "Pairs well with Troika Consulting, Wise Crowds, Open Space, Helping Heuristics and Integrated~Autonomy."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Sicherstellen, dass jede Idee von der jeweiligen Person selbst umsetzbar ist.",
+            "Auf große Wirkung kleiner Schritte vorbereitet sein (Schmetterlingseffekt).",
+            "Das Rad neu zu erfinden ist völlig in Ordnung — jede Lösung erweitert das Verständnis des Möglichen.",
+            "Es zur Routine machen, in Meetings nach 15%-Lösungen zu fragen.",
+            "Das Konzept mit der Geschichte einer kleinen Veränderung mit großer Wirkung einführen."
+          ],
+          "en": [
+            "Make sure each idea is something the person can implement themselves.",
+            "Be prepared for small steps to have big effects (butterfly effect).",
+            "Reinventing the wheel is fine — every solution expands the sense of what's possible.",
+            "Make it a routine to ask for 15% solutions in meetings.",
+            "Introduce the concept with a story of a small change that had a big result."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Bei jeder Problemlöse- oder Planungs-Aktivität, bei der die Teilnehmenden aktiv werden sollen.",
+            "Als Teil der Zusammenfassung einer Open-Space-Session.",
+            "Bei Herausforderungen, bei denen viele zur Veränderung beitragen müssen.",
+            "Um mehrere kleine Erfolge zu einem einfachen, günstigen Prototyp zu bündeln."
+          ],
+          "en": [
+            "For any problem-solving or planning activity where participants should take action.",
+            "As part of summarizing an Open Space session.",
+            "For challenges where many people need to contribute to change.",
+            "To bundle several small wins into a simple, low-cost prototype."
+          ]
+        },
+        "material_setup": {
+          "de": "Stifte und Papier; Stühle für Gruppen von 2–4 Personen, Tische nicht nötig. Online: Breakout-Räume für die Gruppenphase.",
+          "en": "Pens and paper; chairs for groups of two to four, no tables needed. Online: breakout rooms for the group phase."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich, ohne größere Anpassungen. Breakout-Räume für die Gruppenphase nutzen. Ablauf: (1) Die Einladung einblenden. (2) Alle schreiben für sich ihre 15%-Lösungen (2–5 Min). (3) In Dreier-Breakouts stellt jede:r die eigenen Ideen vor; die anderen beraten mit klärenden Fragen und Ratschlägen (3–10 Min pro Person). (4) Zurück im Plenum teilen einige inspirierende Lösungen (laut oder im Chat).",
+          "en": "Works well online with no major adjustments. Use breakout rooms for the group phase. Flow: (1) Show the invitation. (2) Everyone writes their own 15% solutions (2–5 min). (3) In breakouts of three, each presents their ideas; the others coach with clarifying questions and advice (3–10 min per person). (4) Back in plenary, a few share inspiring solutions (aloud or in the chat)."
+        }
       }
     },
     {
@@ -1371,9 +1690,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Strukturiertes Debrief in drei Phasen – Fakten, Bedeutung, Maßnahmen –, das gemeinsames Verständnis schafft und vorschnelle Schlüsse verhindert.",
-        "en": ""
+        "en": "Guides a group through three questions — What happened (facts), So What (meaning), Now What (next steps) — to build shared understanding, reduce bias, and move from observation to coordinated action."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/what-so-what-now-what/",
+      "source_url": "https://www.liberatingstructures.com/what-so-what-now-what",
       "purpose_tags": [
         "analysieren"
       ],
@@ -1388,43 +1707,188 @@
       "online_capable": true,
       "materials": {
         "de": "Stühle für Kleingruppen (5–7); hilfreich: Stifte, Papier/Post-its, Flipchart für Großgruppen; online: Breakout-Räume.",
-        "en": ""
+        "en": "Chairs for small groups of five to seven. Paper for everyone and a flip chart for the whole group."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
-        "15-solutions"
+        "future-present",
+        "wicked-questions",
+        "25-10-crowd-sourcing"
       ],
       "scrum_use": {
         "de": "Retrospektive-Debrief in drei Phasen: Fakten → Bedeutung → konkrete Maßnahmen; auch nach Sprint Reviews.",
-        "en": ""
+        "en": "The classic debrief/retro engine: separate facts from interpretation from action so the team learns together and decides clear next steps — ideal for sprint reviews and retrospectives."
       },
       "design_elements": {
         "einladung": {
           "de": "Drei aufeinanderfolgende Fragen: (a) „Was ist passiert?“ – Beobachtungen; (b) „Warum ist das wichtig?“ – Muster/Schlüsse; (c) „Was sind die nächsten Schritte?“ – Maßnahmen.",
-          "en": ""
+          "en": "Let's look back on our progress and make adjustments as we move forward. In three phases, we'll start with facts by asking what happened, then explore why it's important, and finally what happens next."
         },
         "raum_materialien": {
           "de": "Stühle für Kleingruppen (5–7); hilfreich: Stifte, Papier/Post-its, Flipchart für Großgruppen; online: Breakout-Räume.",
-          "en": ""
+          "en": "Chairs for small groups of five to seven. Paper for everyone and a flip chart for the whole group. Online: breakouts + chat."
         },
         "einbindung": {
           "de": "Alle gleichberechtigt; kleine Gruppen erhöhen die Chance, dass alle zu Wort kommen.",
-          "en": ""
+          "en": "Roles: host and participants. Minimum group size is four. Everyone is invited with equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzelarbeit → Kleingruppen (5–7) → Großgruppe.",
-          "en": ""
+          "en": "Alone, groups of five to seven, whole group."
         },
         "ablauf_dauer": {
           "de": "Sequenz erklären 2–5 Min; je Phase (What / So What / Now What) 1 Min einzeln + 2–7 Min Gruppe + 2–10 Min Austausch. Gesamt 15–45 Min.",
-          "en": ""
+          "en": "Each of the three rounds: individuals reflect and write (1 min); small groups share (3–8 min); plenary captures key points (2–3 min). About 20–40 min total."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); verweist auf Chris Argyris' „Ladder of Inference“; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); references Chris Argyris's ‘Ladder of Inference’; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P4"
+      ],
+      "icon_alt": {
+        "de": "Eine dreistufige Leiter: Was? → Na und? → Was jetzt?",
+        "en": "A three-rung ladder: What? → So what? → Now what?"
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "What, So What, Now What? führt eine Gruppe durch drei reflektierende Fragen — Was ist passiert (Fakten), Na und (Bedeutung) und Was jetzt (nächste Schritte). So entstehen gemeinsames Verständnis, weniger Verzerrungen und der Übergang von der Beobachtung zum koordinierten Handeln. W³ verkörpert LS-Prinzip #4 — durch Vorwärtsscheitern lernen.",
+          "en": "What, So What, Now What? guides a group through three reflective questions — What happened (facts), So What (meaning), and Now What (next steps). This builds shared understanding, reduces biases, and moves from observation to coordinated action. W³ enacts LS Principle #4 — Learn by Failing Forward."
+        },
+        "einladung": {
+          "de": "„Lasst uns auf unseren Fortschritt zurückblicken und Anpassungen vornehmen. In drei Phasen beginnen wir mit Fakten und Beobachtungen („Was ist passiert?“), dann erkunden wir die Bedeutung („Na und?“) und schließlich die nächsten Schritte („Was jetzt?“).“",
+          "en": "Let's look back on our progress and make adjustments as we move forward. In three phases, we'll start with facts by asking what happened, then explore why it's important, and finally what happens next."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Was? — Was ist passiert? Was hast du bemerkt? Welche Fakten/Beobachtungen stachen heraus?",
+            "Na und? — Was bedeuten die Daten? Warum ist es wichtig? Welche Muster zeigen sich?",
+            "Was jetzt? — Welche Handlungen oder ersten Schritte ergeben Sinn?"
+          ],
+          "en": [
+            "What? — What happened? What did you notice? What facts or observations stood out?",
+            "So what? — What do the data mean? Why is it important? What patterns are emerging?",
+            "Now what? — What actions or first steps make sense?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Einladung teilen; die W³-Leiter zeigen und die drei Fragen vorab erklären.",
+              "en": "Share the invitation; show the W³ ladder and preview the three questions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 1 — Was?",
+              "en": "Round 1 — What?"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Einzeln reflektieren und notieren (1 Min); in Kleingruppen (5–7) teilen (3–8 Min); im Plenum zentrale Fakten festhalten (2–3 Min).",
+              "en": "Individuals reflect and write (1 min); small groups (5–7) share (3–8 min); plenary captures key facts (2–3 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 2 — Na und?",
+              "en": "Round 2 — So what?"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Gleiche Schritte mit der Bedeutungsfrage.",
+              "en": "Repeat the steps with the meaning question."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 3 — Was jetzt?",
+              "en": "Round 3 — Now what?"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Gleiche Schritte mit der Handlungsfrage.",
+              "en": "Repeat the steps with the actions/next-steps question."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "„Was wäre, wenn?“",
+              "en": "‘What if?’"
+            },
+            "beschreibung": {
+              "de": "Zwischen „Na und?“ und „Was jetzt?“ eine „Was wäre, wenn?“-Frage einfügen, um Experimente zu entwickeln.",
+              "en": "Insert a ‘What if?’ question between So What and Now What to develop experiments."
+            }
+          },
+          {
+            "name": {
+              "de": "W³-Vorlage",
+              "en": "W³ template"
+            },
+            "beschreibung": {
+              "de": "Die visuelle W³-Vorlage nutzen, um Antworten festzuhalten und Zusammenhänge zu erkennen.",
+              "en": "Use the visual W³ template to record answers and identify relationships."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Ohne größere Anpassungen; digitale Werkzeuge wie der Chat erleichtern das Festhalten.",
+              "en": "No major adjustments; digital tools like the chat ease capture."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "W³ häufig üben.",
+            "Bei „Was?“ Beobachtungen neben Fakten zulassen.",
+            "Kleingruppen beobachten, damit Antworten zur jeweiligen Rundenfrage passen.",
+            "Eingreifen, wenn Teilnehmende zu früh die „Schlussfolgerungsleiter“ hochspringen.",
+            "Artefakte schaffen, um Kontinuität über Meetings hinweg zu sichern."
+          ],
+          "en": [
+            "Practice W³ frequently.",
+            "For ‘What?’, allow observations alongside facts.",
+            "Monitor small groups so answers fit each round's question.",
+            "Intervene if people jump prematurely up the Ladder of Inference.",
+            "Create artifacts to enable continuity across meetings."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Den Verlauf eines Ereignisses zu Meeting-Beginn herausarbeiten.",
+            "Komplexe Themen gemeinsam nachbesprechen (Debrief).",
+            "Erschütternde Ereignisse gemeinsam einordnen."
+          ],
+          "en": [
+            "Draw out the history of an event at the start of a meeting.",
+            "Debrief complex topics together.",
+            "Make sense of shocking events together."
+          ]
+        },
+        "material_setup": {
+          "de": "Stühle für Kleingruppen von 5–7; Papier für alle und ein Flipchart für die Gesamtgruppe. Online: Breakout-Räume und Chat zum Festhalten.",
+          "en": "Chairs for small groups of five to seven; paper for everyone and a flip chart for the whole group. Online: breakout rooms and chat to capture."
+        },
+        "online_durchfuehrung": {
+          "de": "Online ohne größere Anpassungen; digitale Werkzeuge wie der Chat erleichtern das Festhalten. Ablauf: drei Runden (Was? / Na und? / Was jetzt?). Pro Runde: alle reflektieren still und notieren (1 Min), teilen in Breakouts (3–8 Min) und halten im Plenum die Kernpunkte fest (2–3 Min). Die W³-Leiter als Bild teilen und die Antworten je Stufe sammeln.",
+          "en": "Works online with no major adjustments; digital tools like the chat ease capture. Flow: three rounds (What? / So what? / Now what?). Each round: everyone reflects silently and writes (1 min), shares in breakouts (3–8 min), and captures key points in plenary (2–3 min). Share the W³ ladder as an image and collect answers per rung."
+        }
       }
     },
     {
@@ -1439,9 +1903,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Reduziert Regeln auf das absolute Minimum, das den Zweck noch trägt – ermöglicht Innovation und Eigenverantwortung statt Mikromanagement.",
-        "en": ""
+        "en": "By defining the minimum set of simple rules — only the absolute must-dos and must-not-dos — Min Specs frees a group to innovate while staying responsible. Often two to five rules are enough; ‘constraints that make things possible’."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/min-specs/",
+      "source_url": "https://www.liberatingstructures.com/min-specs",
       "purpose_tags": [
         "strategie"
       ],
@@ -1450,51 +1914,235 @@
       ],
       "group_size_min": 4,
       "group_size_max": null,
-      "duration_min": 20,
+      "duration_min": 40,
       "duration_max": 50,
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Post-its, Flipchart; nützlich: Papier; optional: Stühle & Tische; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "Groups of four to seven chairs around small tables. Paper for each participant (optional: visual collaboration space)."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
-        "nine-whys",
-        "simple-ethnography"
+        "nine-whys"
       ],
       "typical_successors": [
-        "open-space-technology"
+        "triz"
       ],
       "scrum_use": {
         "de": "Working Agreements/Definition of Done aufs Minimum reduzieren; unnötige Regeln streichen; Eigenverantwortung im Team stärken.",
-        "en": ""
+        "en": "Cutting working agreements/process rules down to the essential few: the team keeps only the truly necessary must-dos/must-not-dos, gaining freedom and clarity — great for team charters and simplifying process."
       },
       "design_elements": {
         "einladung": {
           "de": "Erst alle erforderlichen und verbotenen Regeln sammeln (Max Specs), dann auf das absolut Notwendige reduzieren: „Können wir unser Ziel erreichen, wenn wir diese Regel brechen?“",
-          "en": ""
+          "en": "Based on our direct experience in the field, we will eliminate the clutter of nonessential rules and requirements and determine which rules are truly necessary to achieve our purpose."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Post-its, Flipchart; nützlich: Papier; optional: Stühle & Tische; online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "Groups of four to seven chairs around small tables. Pens, sticky notes and a flip chart. Online: breakout rooms and a virtual whiteboard."
         },
         "einbindung": {
           "de": "Alle Stakeholder/Betroffenen, gleiche Mitsprache.",
-          "en": ""
+          "en": "Roles: host/tech host and participants. Minimum group size is four. Everyone affected is invited, with equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzelarbeit → Kleingruppen (4–7) → Gesamtgruppe.",
-          "en": ""
+          "en": "Alone, small groups of four to seven, whole group."
         },
         "ablauf_dauer": {
           "de": "Max Specs sammeln 6 Min; gegen Ziel testen 5–15 Min; optionale zweite Runde 5–15 Min; Ergebnisse vergleichen 5–15 Min. Gesamt 20–50 Min.",
-          "en": ""
+          "en": "Generate max specs (alone 1 min); combine lists in groups 6 min; evaluate and cross off nonessential specs 15 min; optional reevaluation 10 min; reduce to final inviolable min specs 15 min; reflect on first steps 2 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); angelehnt an Paul Plsek, Brenda Zimmerman und das Plexus Institute; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Strategien entwickeln“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); drawing on Paul Plsek, Brenda Zimmerman and the Plexus Institute; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Strategize’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P6"
+      ],
+      "icon_alt": {
+        "de": "Wenige unverzichtbare Regeln, die Freiraum schaffen.",
+        "en": "A few indispensable rules that create freedom."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Durch die Definition einer minimalen Anzahl einfacher Regeln ermöglichen Min Specs einer Gruppe, frei zu innovieren — und sichern zugleich, dass Innovationen sinnvoll und verantwortungsvoll bleiben. Ähnlich den zehn Geboten sind Min Specs „Einschränkungen, die Dinge möglich machen“: Sie definieren nur, was unbedingt getan werden muss und was auf keinen Fall passieren darf. Oft reichen zwei bis fünf Min Specs, um die Leistung zu steigern, weil sie der Gruppe mehr Freiheit und zugleich mehr Verantwortung geben. Min Specs verkörpert LS-Prinzip #6 — Freiheit und Verantwortung stärken.",
+          "en": "By defining a minimal number of simple rules, Min Specs frees a group to innovate while ensuring innovation stays meaningful and responsible. Like the ten commandments, min specs are ‘constraints that make things possible’: they define only what absolutely must be done and what must never happen. Often two to five min specs are enough to boost performance, giving the group more freedom and more responsibility at once. Min Specs enacts LS Principle #6 — Amplify Freedom and Responsibility."
+        },
+        "einladung": {
+          "de": "„Auf Basis unserer direkten Erfahrung aus der Praxis räumen wir den Wust nicht-essenzieller Regeln und Anforderungen beiseite und bestimmen, welche Regeln wirklich nötig sind, um unser Ziel zu erreichen.“",
+          "en": "Based on our direct experience in the field, we will eliminate the clutter of nonessential rules and requirements and determine which rules are truly necessary to achieve our purpose."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Max Specs: Liste alle „muss man tun“ und „darf man nie tun“-Regeln für ein erfolgreiches Ergebnis.",
+            "Reduktion: „Wenn wir diese Regel brechen oder missachten, könnten wir unser Ziel trotzdem erreichen?“ (Wenn ja: streichen.)",
+            "Test: „Wenn wir alle Min Specs außer dieser befolgen, würden wir das Ziel trotzdem erreichen?“"
+          ],
+          "en": [
+            "Max specs: list every ‘must do’ and ‘must not do’ rule for a successful result.",
+            "Reduction: ‘If we break or ignore this rule, could we still achieve our purpose?’ (If yes: drop it.)",
+            "Test: ‘If we followed all min specs except this one, could we still achieve our purpose?’"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen und den gemeinsamen Zweck benennen („Wir wollen …“).",
+              "en": "Share the invitation and identify the shared purpose (‘We want …’)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Max Specs erstellen",
+              "en": "Generate max specs"
+            },
+            "dauer_min": 6,
+            "beschreibung": {
+              "de": "Einzeln alle „muss/darf nie“-Aktivitäten auflisten (1 Min); in Kleingruppen (4–5) die Listen zusammenführen (5 Min).",
+              "en": "Individually list all must/must-not-do activities (1 min); in small groups (4–5) combine the lists (5 min)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Bewerten & Streichen",
+              "en": "Evaluate max specs"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Im Plenum die Anleitung geben, dann streichen die Gruppen nicht-essenzielle Specs.",
+              "en": "Give instructions in plenary, then groups cross off nonessential specs."
+            }
+          },
+          {
+            "phase": {
+              "de": "Optionale zweite Runde",
+              "en": "Reevaluation (optional)"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Die Listen erneut prüfen und weiter ausdünnen.",
+              "en": "Review the lists for additional eliminations."
+            }
+          },
+          {
+            "phase": {
+              "de": "Auf Min Specs reduzieren",
+              "en": "Reduce to min specs"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Die Gruppenlisten teilen und zu den endgültigen, unverhandelbaren Min Specs verdichten.",
+              "en": "Share the group lists and consolidate into the final inviolable min specs."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erste Schritte",
+              "en": "Reflection on first steps"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Ideen für erste Schritte bei der Umsetzung der Min Specs teilen.",
+              "en": "Share ideas on first steps while implementing the min specs."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Zweite Test-Runde",
+              "en": "Second-round test"
+            },
+            "beschreibung": {
+              "de": "„Wenn wir alle Min Specs außer dieser befolgen, würden wir unser Ziel trotzdem erreichen?“ Wenn ja, streichen.",
+              "en": "‘If we followed all min specs except this one, could we achieve our purpose?’ If yes, drop it."
+            }
+          },
+          {
+            "name": {
+              "de": "Zukunfts-Min-Specs",
+              "en": "Min specs for the future"
+            },
+            "beschreibung": {
+              "de": "Spekulieren, welche Min Specs die Handlungen der Zukunft gestalten sollten.",
+              "en": "Speculate which min specs should shape future action."
+            }
+          },
+          {
+            "name": {
+              "de": "Offiziell machen",
+              "en": "Make official"
+            },
+            "beschreibung": {
+              "de": "Die Min Specs veröffentlichen und als unverhandelbare Regeln leben.",
+              "en": "Publish the min specs and live by them as inviolable rules."
+            }
+          },
+          {
+            "name": {
+              "de": "Vertiefen",
+              "en": "Dig deeper"
+            },
+            "beschreibung": {
+              "de": "Simple Ethnography oder Nine Whys können implizite/unausgesprochene Min Specs ans Licht bringen.",
+              "en": "Simple Ethnography or Nine Whys can surface implicit/unspoken min specs."
+            }
+          },
+          {
+            "name": {
+              "de": "Solo",
+              "en": "Solo"
+            },
+            "beschreibung": {
+              "de": "Alle „muss/darf nie“ auflisten (2 Min); jeden Punkt gegen das Ziel testen und Unnötiges streichen (2 Min); ggf. zweite Runde (4 Min).",
+              "en": "List all must/must-not (2 min); test each against the purpose and cross off the unnecessary (2 min); second round if needed (4 min)."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Die Aufmerksamkeit auf eine konkrete Herausforderung fokussieren; mit einem klaren Zweck starten.",
+            "Schonungslos „dos“ streichen — keine Max Specs wieder einschleichen lassen; Gruppen loben, die viel streichen.",
+            "So viele Stakeholder wie möglich einbeziehen; Praxiserfahrung höher gewichten als konzeptionelles Wissen.",
+            "Die Min Specs veröffentlichen und leben (kein „ja, aber …“).",
+            "Wenn Gruppen feststecken: zur Klärung des Zwecks zurückkehren (z. B. mit Nine Whys)."
+          ],
+          "en": [
+            "Focus on a concrete challenge; start with a clear purpose.",
+            "Be ruthless about dropping ‘dos’ — don't let max specs creep back; praise groups that eliminate many.",
+            "Include as many stakeholders as possible; weight field experience over conceptual knowledge.",
+            "Publish the min specs and live by them (no ‘yes, but …’).",
+            "If groups get stuck: return to clarify the purpose (e.g. with Nine Whys)."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Stakeholder rund um ein komplexes Problem ausrichten.",
+            "Eine größere Transition unterstützen.",
+            "Designteams helfen, die wirklich nötigen Features zu bestimmen und zu prototypen."
+          ],
+          "en": [
+            "Align stakeholders around a complex problem.",
+            "Support a major transition.",
+            "Help design teams identify the features that truly need to be developed and prototyped."
+          ]
+        },
+        "material_setup": {
+          "de": "Gruppen von 4–7 an kleinen Tischen; Stifte, Post-its, ein Flipchart; Papier zum Notieren der Specs. Online: Breakout-Räume und ein virtuelles Whiteboard.",
+          "en": "Groups of four to seven at small tables; pens, sticky notes, a flip chart; paper to note the specs. Online: breakout rooms and a virtual whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume und ein virtuelles Whiteboard nutzen. Ablauf: (1) Zweck klären („Wir wollen …“). (2) Max Specs: alle „muss/darf nie“-Regeln sammeln und in Kleingruppen konsolidieren. (3) Bewerten: jeden Punkt testen — „Kannst du diese Regel brechen und trotzdem das Ziel erreichen?“; wenn ja, streichen (zunächst im Chat, dann auf Sprachdiskussion umstellen, wenn die Liste kürzer wird). (4) Auf die unverzichtbaren Min Specs reduzieren und veröffentlichen.",
+          "en": "Works well online. Use breakout rooms and a virtual whiteboard. Flow: (1) Clarify the purpose (‘We want …’). (2) Max specs: list all ‘must/must-not’ rules and consolidate in small groups. (3) Evaluate: test each item — ‘Can you break this rule and still achieve the purpose?’; if yes, cross it off (start in the chat, switch to voice discussion as the list shrinks). (4) Reduce to the inviolable min specs and publish them."
+        }
       }
     },
     {
