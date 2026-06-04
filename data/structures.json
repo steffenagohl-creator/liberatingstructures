@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "beschreibung": "Wissens-Datenbank der Liberating Structures für den LS-Matchmaker. Siehe data/schema.md für die Bedeutung jedes Feldes.",
-  "quelle": "https://liberatingstructures.de/",
-  "lizenz_hinweis": "Inhalte aus liberatingstructures.de: CC BY-NC 3.0, © Keith McCandless & Henri Lipmanowicz, deutsche Übersetzung © Holisticon AG. Details siehe NOTICE.md.",
+  "quelle": "https://www.liberatingstructures.com/ (Fieldbook 2026, Original); klassische 33 in deutscher Übersetzung: https://liberatingstructures.de/ (Holisticon AG).",
+  "lizenz_hinweis": "Liberating Structures Fieldbook (2026), © Keith McCandless & Nancy White (urspr. Henri Lipmanowicz & Keith McCandless), CC BY-SA 4.0. Übergang: die deutschen Beschreibungen der klassischen 33 stammen aus der Holisticon-Übersetzung (CC BY-NC 3.0) und werden auf BY-SA 4.0 überführt. Details siehe NOTICE.md.",
   "erlaubte_werte": {
     "edition": [
       "original",
