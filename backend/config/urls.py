@@ -12,6 +12,8 @@ urlpatterns = [
     # OpenAPI-Schema + interaktive Doku
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
+    # Read-only Katalog: /api/structures/ und /api/structures/<slug>/ (mit ?lang=de|en)
+    path("api/", include("catalog.urls")),
     # Fachliche Endpunkte (AP3): /api/interview/, /api/match/
     path("api/", include("matchmaker.urls")),
 ]

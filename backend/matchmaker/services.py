@@ -18,8 +18,16 @@ import json
 
 from django.conf import settings
 
+from catalog.i18n import localize
+
 from . import prompts, tools
 from .llm import LLMError, get_llm_client
+
+
+def _name(structure) -> str:
+    """Deutscher Anzeigename einer Struktur (für Quality-Gate-Meldungen)."""
+    return localize(structure.name, "de")
+
 
 # Mindest-Dimensionen, ohne die kein sinnvolles Matchmaking möglich ist.
 REQUIRED_DIMENSIONS = ["zweck", "gruppengroesse", "zeitbudget", "setting"]
@@ -150,7 +158,7 @@ def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]
             too_big = structure.group_size_max is not None and group > structure.group_size_max
             if too_small or too_big:
                 violations.append(
-                    f"Gruppengröße {group} passt nicht zu „{structure.name}“ "
+                    f"Gruppengröße {group} passt nicht zu „{_name(structure)}“ "
                     f"(empfohlen {structure.group_size_min}–"
                     f"{structure.group_size_max or '∞'})."
                 )
@@ -159,7 +167,7 @@ def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]
     if diagnose["setting"] == "remote":
         for structure in valid:
             if not structure.online_capable:
-                violations.append(f"„{structure.name}“ ist nicht online-tauglich (Remote).")
+                violations.append(f"„{_name(structure)}“ ist nicht online-tauglich (Remote).")
 
     return len(violations) == 0, violations
 

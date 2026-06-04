@@ -32,6 +32,9 @@ class Command(BaseCommand):
         neu = aktualisiert = 0
         for s in strukturen:
             self._pruefe(s)
+            # objective steht nicht in structures.json, sondern kommt zweisprachig {de,en}
+            # aus ls_objectives.json (per Slug gemergt). Fallback: leeres Sprachobjekt.
+            objective = s.get("objective") or objectives.get(s["slug"]) or {"de": "", "en": ""}
             _, created = Structure.objects.update_or_create(
                 structure_id=s["id"],
                 defaults={
@@ -41,7 +44,7 @@ class Command(BaseCommand):
                     "base_structure": s.get("base_structure") or "",
                     "edition": s["edition"],
                     "short_desc": s["short_desc"],
-                    "objective": s.get("objective") or objectives.get(s["slug"], {}).get("de", ""),
+                    "objective": objective,
                     "source_url": s["source_url"],
                     "purpose_tags": s["purpose_tags"],
                     "arc_role": s["arc_role"],
@@ -50,14 +53,15 @@ class Command(BaseCommand):
                     "duration_min": s["duration_min"],
                     "duration_max": s["duration_max"],
                     "online_capable": s["online_capable"],
-                    "materials": s.get("materials", ""),
+                    "materials": s.get("materials") or {},
                     "difficulty": s["difficulty"],
                     "typical_predecessors": s["typical_predecessors"],
                     "typical_successors": s["typical_successors"],
-                    "scrum_use": s.get("scrum_use", ""),
+                    "scrum_use": s.get("scrum_use") or {},
                     "design_elements": s["design_elements"],
                     "description_origin": s.get("description_origin", "uebernommen"),
-                    "attribution": s.get("attribution", ""),
+                    "attribution": s.get("attribution") or {},
+                    "icon_alt": s.get("icon_alt") or {},
                     "embodied_principles": s.get("embodied_principles", []),
                     "guide": s.get("guide", {}),
                 },
@@ -88,6 +92,11 @@ class Command(BaseCommand):
         for p in s.get("embodied_principles", []):
             if p not in constants.PRINCIPLE_IDS:
                 raise CommandError(f"{slug}: ungültiges Prinzip {p!r}")
+        # Zweisprachige Pflichtfelder: deutsche Fassung muss vorhanden sein.
+        for feld in ("name", "short_desc"):
+            if not (isinstance(s.get(feld), dict) and s[feld].get("de")):
+                raise CommandError(f"{slug}: {feld} fehlt deutsche Fassung (erwartet {{de, en}})")
         for k in PFLICHT_DESIGNELEMENTE:
-            if not s.get("design_elements", {}).get(k):
-                raise CommandError(f"{slug}: Designelement {k!r} fehlt oder ist leer")
+            element = s.get("design_elements", {}).get(k)
+            if not (isinstance(element, dict) and element.get("de")):
+                raise CommandError(f"{slug}: Designelement {k!r} fehlt oder hat keine deutsche Fassung")

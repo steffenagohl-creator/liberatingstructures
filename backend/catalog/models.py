@@ -18,7 +18,10 @@ class Structure(models.Model):
     structure_id = models.PositiveIntegerField(
         unique=True, help_text="Stabile Nummer der Methode aus dem Seed-Datensatz."
     )
-    name = models.CharField(max_length=120, help_text="Anzeigename, zum Beispiel 1-2-4-All.")
+    name = models.JSONField(
+        default=dict,
+        help_text="Zweisprachiger Anzeigename als Objekt {\"de\": …, \"en\": …}, z. B. 1-2-4-All.",
+    )
     slug = models.SlugField(
         max_length=80, unique=True,
         help_text="Kurzkennung für Verknüpfungen, zum Beispiel 1-2-4-all.",
@@ -35,11 +38,14 @@ class Structure(models.Model):
         max_length=20, choices=constants.as_choices(constants.EDITIONS), default="original",
         help_text="original = die 33 Kern-LS; extended = später ergänzte.",
     )
-    short_desc = models.TextField(help_text="Verständliche Kurzbeschreibung (1–3 Sätze).")
-    objective = models.CharField(
-        max_length=300, blank=True, default="",
-        help_text="Kanonisches Ziel (LS Selection Matchmaker): das eine Ziel, das die Struktur "
-                  "erfüllt – Matching-Schlüssel. Quelle: data/ls_objectives.json.",
+    short_desc = models.JSONField(
+        default=dict,
+        help_text="Zweisprachige Kurzbeschreibung {\"de\": …, \"en\": …} (je 1–3 Sätze).",
+    )
+    objective = models.JSONField(
+        default=dict, blank=True,
+        help_text="Kanonisches Ziel (LS Selection Matchmaker) zweisprachig {\"de\": …, \"en\": …}: "
+                  "das eine Ziel, das die Struktur erfüllt – Matching-Schlüssel. Quelle: data/ls_objectives.json.",
     )
     source_url = models.URLField(max_length=300, help_text="Link zur Original-Detailseite (Quelle).")
 
@@ -59,7 +65,10 @@ class Structure(models.Model):
     duration_min = models.PositiveIntegerField(help_text="Mindestdauer in Minuten.")
     duration_max = models.PositiveIntegerField(help_text="Übliche Höchstdauer in Minuten.")
     online_capable = models.BooleanField(help_text="True, wenn online (Remote) gut durchführbar.")
-    materials = models.TextField(blank=True, default="", help_text="Materialien und Raumhinweise.")
+    materials = models.JSONField(
+        default=dict, blank=True,
+        help_text="Materialien und Raumhinweise, zweisprachig {\"de\": …, \"en\": …}.",
+    )
     difficulty = models.CharField(
         max_length=20, choices=constants.as_choices(constants.DIFFICULTIES),
         help_text="leicht | mittel | fortgeschritten.",
@@ -74,22 +83,29 @@ class Structure(models.Model):
         help_text="Slugs von Strukturen, die typischerweise danach stehen.",
     )
 
-    scrum_use = models.TextField(
-        blank=True, default="", help_text="Einsatz im Scrum-Kontext (Retro, Planning, …).",
+    scrum_use = models.JSONField(
+        default=dict, blank=True,
+        help_text="Einsatz im Scrum-Kontext (Retro, Planning, …), zweisprachig {\"de\": …, \"en\": …}.",
     )
     design_elements = models.JSONField(
         default=dict,
-        help_text="Die 5 Designelemente: einladung, raum_materialien, einbindung, "
-                  "gruppenkonfiguration, ablauf_dauer.",
+        help_text="Die 5 Designelemente, je zweisprachig {\"de\": …, \"en\": …}: einladung, "
+                  "raum_materialien, einbindung, gruppenkonfiguration, ablauf_dauer.",
     )
     description_origin = models.CharField(
         max_length=20, choices=constants.as_choices(constants.DESCRIPTION_ORIGINS),
         default="uebernommen", help_text="uebernommen (mit Attribution) oder eigen.",
     )
-    attribution = models.TextField(
-        blank=True, default="", help_text="Namensnennung + Lizenz bei übernommenen Inhalten.",
+    attribution = models.JSONField(
+        default=dict, blank=True,
+        help_text="Namensnennung + Lizenz, zweisprachig {\"de\": …, \"en\": …}.",
     )
 
+    icon_alt = models.JSONField(
+        default=dict, blank=True,
+        help_text="Alt-Text für das LS-Icon, zweisprachig {\"de\": …, \"en\": …} "
+                  "(Barrierefreiheit: Screenreader, KI/MCP, Crawler).",
+    )
     embodied_principles = ArrayField(
         models.CharField(max_length=4), default=list, blank=True,
         help_text="IDs der besonders verkörperten LS-Prinzipien (P1–P10), "
@@ -97,9 +113,10 @@ class Structure(models.Model):
     )
     guide = models.JSONField(
         default=dict, blank=True,
-        help_text="Ausführlicher Detailguide (Ebene 2, spiegelt die Quellseite): "
-                  "was_wird_moeglich, einladung, beispielsaetze[], schritte[], "
-                  "varianten[], tipps[], anlaesse[], material_setup.",
+        help_text="Ausführlicher Detailguide (Ebene 2, spiegelt die Quellseite), je Feld "
+                  "zweisprachig {\"de\": …, \"en\": …}: was_wird_moeglich, einladung, "
+                  "beispielsaetze[], schritte[], varianten[], tipps[], anlaesse[], "
+                  "material_setup, online_durchfuehrung.",
     )
 
     class Meta:

@@ -22,9 +22,16 @@ class Command(BaseCommand):
             probleme.append(f"Erwartet 33 originale Strukturen, gefunden {len(original)}.")
 
         for s in strukturen:
+            # Pflicht: jedes Designelement hat (mindestens) eine deutsche Fassung.
             for k in PFLICHT_DESIGNELEMENTE:
-                if not s.design_elements.get(k):
-                    probleme.append(f"{s.slug}: Designelement {k!r} fehlt/leer.")
+                element = s.design_elements.get(k)
+                if not (isinstance(element, dict) and element.get("de")):
+                    probleme.append(f"{s.slug}: Designelement {k!r} fehlt/ohne deutsche Fassung.")
+            # Pflicht: zweisprachige Kernfelder mit deutscher Fassung.
+            for feld in ("name", "short_desc"):
+                wert = getattr(s, feld)
+                if not (isinstance(wert, dict) and wert.get("de")):
+                    probleme.append(f"{s.slug}: {feld} ohne deutsche Fassung.")
             for a in s.arc_role:
                 if a not in constants.ARC_ROLES:
                     probleme.append(f"{s.slug}: ungültige arc_role {a!r}.")

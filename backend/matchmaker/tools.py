@@ -13,7 +13,16 @@ import json
 from django.conf import settings
 from django.db.models import Q
 
+from catalog.i18n import localize
 from catalog.models import Structure, StringTemplate
+
+# Sprache des LLM-Kontexts. Die Prompts sind deutsch (App-Sprache laut Großauftrag),
+# daher werden zweisprachige Felder hier auf Deutsch aufgelöst (spart Tokens, vermeidet
+# Mehrdeutigkeit). EN bleibt über die API (?lang=) verfügbar.
+_LLM_LANG = "de"
+
+# Zweisprachige Felder, die für den LLM-Kontext auf eine Sprache reduziert werden.
+_BILINGUAL_CANDIDATE_FIELDS = ("name", "objective", "short_desc")
 
 # Felder, die der LLM-Teil pro Kandidat braucht (kompakt halten – spart Tokens).
 _CANDIDATE_FIELDS = (
@@ -148,8 +157,18 @@ def get_string_templates(
 
 
 def serialize_candidate(structure: Structure) -> dict:
-    """Wandelt eine Struktur in das kompakte Kandidaten-Dict für den LLM-Kontext."""
-    return {field: getattr(structure, field) for field in _CANDIDATE_FIELDS}
+    """Wandelt eine Struktur in das kompakte Kandidaten-Dict für den LLM-Kontext.
+
+    Zweisprachige Felder (name, objective, short_desc) werden auf die LLM-Sprache
+    (Deutsch) reduziert, damit der Prompt eindeutig und tokensparsam bleibt.
+    """
+    candidate = {}
+    for field in _CANDIDATE_FIELDS:
+        value = getattr(structure, field)
+        if field in _BILINGUAL_CANDIDATE_FIELDS:
+            value = localize(value, _LLM_LANG)
+        candidate[field] = value
+    return candidate
 
 
 def serialize_template(template: StringTemplate) -> dict:

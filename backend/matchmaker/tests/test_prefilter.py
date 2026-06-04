@@ -31,8 +31,9 @@ class VorfilterungTests(TestCase):
         for s in candidates:
             self.assertTrue(s.online_capable, f"{s.slug} ist nicht online-tauglich")
         slugs = {s.slug for s in candidates}
+        # 25/10 Crowd Sourcing ist physisch (Umhergehen, Karten weiterreichen) -> nicht remote.
+        # (simple-ethnography ist laut Quelle auch virtuell beobachtbar und damit online_capable.)
         self.assertNotIn("25-10-crowd-sourcing", slugs)
-        self.assertNotIn("simple-ethnography", slugs)
 
     def test_kleines_zeitbudget_schliesst_lange_strukturen_aus(self):
         candidates = vorfilterung({"gruppengroesse": 8, "zeitbudget": 20, "setting": "praesenz"})

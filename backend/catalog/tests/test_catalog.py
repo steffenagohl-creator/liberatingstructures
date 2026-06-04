@@ -20,10 +20,25 @@ class CatalogSeedTests(TestCase):
     def test_pflichtfelder_und_gueltige_verweise(self):
         slugs = set(Structure.objects.values_list("slug", flat=True))
         for s in Structure.objects.all():
-            self.assertTrue(s.short_desc, f"{s.slug}: short_desc leer")
-            self.assertTrue(s.design_elements.get("einladung"), f"{s.slug}: einladung leer")
+            # Zweisprachige Pflichtfelder: deutsche UND englische Fassung vorhanden.
+            self.assertTrue(s.short_desc.get("de"), f"{s.slug}: short_desc.de leer")
+            self.assertTrue(s.short_desc.get("en"), f"{s.slug}: short_desc.en leer")
+            self.assertTrue(s.name.get("de"), f"{s.slug}: name.de leer")
+            self.assertTrue(
+                s.design_elements.get("einladung", {}).get("de"),
+                f"{s.slug}: einladung.de leer",
+            )
             for ref in list(s.typical_predecessors) + list(s.typical_successors):
                 self.assertIn(ref, slugs, f"{s.slug}: Verweis {ref} existiert nicht")
+
+    def test_guide_und_icon_alt_zweisprachig(self):
+        for s in Structure.objects.all():
+            self.assertTrue(
+                s.guide.get("online_durchfuehrung", {}).get("de"),
+                f"{s.slug}: guide.online_durchfuehrung.de leer",
+            )
+            self.assertTrue(s.icon_alt.get("de"), f"{s.slug}: icon_alt.de leer")
+            self.assertTrue(s.icon_alt.get("en"), f"{s.slug}: icon_alt.en leer")
 
     def test_bogen_abdeckung(self):
         oeffnen = Structure.objects.filter(arc_role__contains=["öffnen"]).count()
