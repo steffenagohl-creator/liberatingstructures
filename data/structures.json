@@ -6085,10 +6085,8 @@
         "25-10-crowd-sourcing",
         "what-so-what-now-what",
         "troika-consulting",
-        "heard-seen-respected",
         "15-solutions",
         "min-specs",
-        "nine-whys",
         "drawing-together"
       ],
       "scrum_use": {
@@ -7640,7 +7638,8 @@
       "typical_successors": [
         "15-solutions",
         "design-storyboards",
-        "1-2-4-all"
+        "1-2-4-all",
+        "network-relationship-patterns"
       ],
       "scrum_use": {
         "de": "Informelle Netzwerke sichtbar machen und gezielt nutzen, um Veränderungen/Wissen über Team- und Bereichsgrenzen zu verbreiten.",
@@ -7858,6 +7857,10 @@
         "online_durchfuehrung": {
           "de": "Online auf einem geteilten Whiteboard mit konzentrischen Kreisen (Kern, unmittelbares Netzwerk, Peripherie). Ablauf: (1) Rollen per 1-2-4-All sammeln und eine Farb-Legende (max. 8) anlegen. (2) Namen als farbige Stickies in die Mitte und nach außen setzen. (3) Verbindungslinien und Symbole für Einfluss/Expertise ergänzen. (4) Gemeinsam „schließende Dreiecke“ markieren und festlegen, wer wen verbindet bzw. wie Blockaden umgangen werden. Die Karte als lebendes Dokument behalten und später fortschreiben.",
           "en": "Online on a shared whiteboard with concentric circles (core, immediate network, periphery). Flow: (1) Gather roles via 1-2-4-All and create a color legend (max 8). (2) Place names as colored stickies in the center and outward. (3) Add connecting lines and symbols for influence/expertise. (4) Together mark 'closing triangles' and decide who connects whom or how to work around blockages. Keep the map as a living document and revisit it later."
+        },
+        "optional_string": {
+          "de": "Verkette es mit Network Relationship Patterns, um mögliche Netzwerk-Neukonfigurationen durchzuspielen.",
+          "en": "String together with Network Relationship Patterns to imagine potential network reconfigurations."
         }
       }
     },
@@ -7899,7 +7902,8 @@
         "improv-prototyping",
         "design-storyboards",
         "discovery-action-dialogue-dad",
-        "1-2-4-all"
+        "1-2-4-all",
+        "drawing-together"
       ],
       "scrum_use": {
         "de": "Tatsächliches Nutzer-/Arbeitsverhalten vor Ort beobachten (z. B. echte Produktnutzung), um verborgene Bedürfnisse zu erkennen.",
@@ -8106,6 +8110,10 @@
         "online_durchfuehrung": {
           "de": "Simple Ethnography lässt sich auch in virtuellen Umgebungen durchführen: Beobachtungsorte sind dann z. B. Online-Meetings, geteilte Bildschirme, digitale Arbeitsabläufe oder aufgezeichnete Sitzungen. Ablauf: (1) Den Leitfaden digital verteilen und gemeinsam die Herausforderung sowie die Leiter der Schlussfolgerungen besprechen — nur Fakten festhalten. (2) Ethnograf:innen beobachten allein oder zu zweit ihre virtuellen „Orte“, machen Screenshots/Notizen, sammeln Artefakte. (3) Artefakte auf einem geteilten Board posten. (4) In Breakouts (1-2-4-All) Muster auf Basis beobachtbarer Fakten besprechen. (5) Im Plenum mit What, So What, Now What? auswerten und Experimente benennen. Hinweis: Einverständnis und Vertraulichkeit beim Beobachten echter Menschen sicherstellen.",
           "en": "Simple Ethnography can also be done in virtual settings: observation sites become e.g. online meetings, screen-shares, digital workflows or recorded sessions. Flow: (1) Distribute the guide digitally and review the challenge and the ladder of inference together — record facts only. (2) Ethnographers observe their virtual 'sites' alone or in pairs, take screenshots/notes, collect artifacts. (3) Post artifacts on a shared board. (4) In breakouts (1-2-4-All) discuss patterns based on observable facts. (5) In plenary, debrief with What/So What/Now What and name experiments. Note: ensure consent and confidentiality when observing real people."
+        },
+        "optional_string": {
+          "de": "Verkette es mit Drawing Together, um ein visuelles Modell der Herausforderung zu erstellen.",
+          "en": "String with Drawing Together to create a visual model of the challenge."
         }
       }
     },
@@ -8148,7 +8156,9 @@
       "typical_successors": [
         "min-specs",
         "what-so-what-now-what",
-        "social-network-webbing"
+        "social-network-webbing",
+        "network-relationship-patterns",
+        "triz"
       ],
       "scrum_use": {
         "de": "Gemeinsamer Initiativ-/Projektstart: Zweck, Prinzipien, Beteiligte, Struktur und Praktiken zusammen gestalten (z. B. Team-/Produkt-Kickoff).",
@@ -8369,6 +8379,10 @@
         "online_durchfuehrung": {
           "de": "P2P funktioniert online gut, erfordert aber konsequente Moderation. Ablauf: (1) Die P2P-Vorlage als geteiltes Whiteboard zeigen und die fünf Leitfragen erklären. (2) In stabilen Breakout-Vierergruppen den Zweck per 1-2-4-All klären, dann im Plenum zu einem Zweck konsolidieren. (3) Prinzipien, Beteiligte, Struktur und Praktiken in vier Runden á 20 Min nacheinander bearbeiten; die Gruppen bleiben konstant. (4) Zusammenfassungen im geteilten Raum festhalten; per Broadcast-Nachricht oder Sprach-Reminder den Takt halten. (5) Reflexion mit What, So What, Now What?, dann Folgetermin festlegen. Wichtig: Teilnehmende mehrfach zwischen Haupt- und Breakout-Raum bewegen, Gruppen konstant halten.",
           "en": "P2P works well online but needs disciplined facilitation. Flow: (1) Show the P2P template as a shared whiteboard and explain the five guiding questions. (2) In stable breakout quartets, clarify purpose via 1-2-4-All, then consolidate into one purpose in plenary. (3) Work through Principles, Participants, Structure and Practices in four rounds of 20 min; keep groups consistent. (4) Capture summaries in the shared space; keep the rhythm with broadcast messages or voice reminders. (5) Reflect with What/So What/Now What, then schedule a follow-up. Key: move participants between main room and breakouts multiple times, keeping groups consistent."
+        },
+        "optional_string": {
+          "de": "Nutze für die Entwicklung jedes Schlüsselelements eine andere LS, etwa 9 Whys für den Purpose (Zweck), Appreciative Interviews für die Principles (Prinzipien), Social Network Webbing für die Participants (Beteiligten), Network Relationship Patterns für die Structure (Struktur) und Options Place für die Practices (Praktiken). Wenn P2P eine neue Aktivität oder Beziehung anstößt, schaffe mit Creative Destruction Raum dafür. Nutze Network Relationship Patterns, um Teams bevorzugte Strukturen für verschiedene Aspekte ihrer Organisation visualisieren zu lassen.",
+          "en": "Use a different LS for developing each of the key elements, such as 9 Whys for Purpose, Appreciative Interviews for Principles, Social Network Webbing for Participants, Network Relationship Patterns for Structure, and Options Place for Practices. When P2P involves launching a new activity or relationship, make space for it with Creative Destruction. Use Network Relationship Patterns to help teams visualize preferred structures for different aspects of their organization."
         }
       }
     },
@@ -8585,6 +8599,10 @@
         "online_durchfuehrung": {
           "de": "Online heißt die Variante „Calm Tea“. Die Physis von Mad Tea lässt sich online kaum nachbilden; Calm Tea nutzt stattdessen „Chatterfall“, um schnell die Ideen aller einzufangen. Ablauf: (1) Alle stummschalten. (2) Die Moderatorin liest einen offenen Satz vor und fügt ihn in den Chat ein (in Großbuchstaben). (3) Alle tippen ihre Vervollständigung, drücken aber erst auf Signal „Los, Enter!“ — so erscheinen alle Antworten gleichzeitig. (4) Eine Minute Lesezeit. (5) Bis zu sechs Sätze wiederholen; am Ende nach oben scrollen und gemeinsam reflektieren, was möglich erscheint. Tipp: Rechtschreibfehler sind egal; ein, zwei Einspiel-Runden einplanen, damit niemand vorzeitig Enter drückt.",
           "en": "Online, the variant is called ‘Calm Tea’. Mad Tea’s physicality is hard to replicate online; Calm Tea instead uses ‘Chatterfall’ to quickly capture everyone’s ideas. Flow: (1) Everyone mutes. (2) The host reads an open sentence and pastes it into the chat (in ALL CAPS). (3) Everyone types their completion but only presses Enter on the signal ‘Go, hit Enter!’ — so all responses appear at once. (4) One minute of reading time. (5) Repeat for up to six sentences; at the end, scroll up and reflect together on what seems possible. Tip: spelling mistakes are fine; plan one or two warm-up rounds so no one hits Enter prematurely."
+        },
+        "optional_string": {
+          "de": "Nutze es vor oder nach LS, die von den Teilnehmenden verlangen, mit mehr Vorstellungskraft und Neugier tiefer zu gehen (z. B. Critical Uncertainties, Future~Present, Strategy Knotworking).",
+          "en": "Use before or after LS that require participants to dig deeper with more imagination and curiosity (e.g., Critical Uncertainties, Future~Present, Strategy Knotworking)."
         }
       },
       "icon_alt": {
@@ -8625,10 +8643,12 @@
       "difficulty": "leicht",
       "typical_predecessors": [
         "ecocycle-planning",
-        "critical-uncertainties"
+        "critical-uncertainties",
+        "what-i-need-from-you-winfy"
       ],
       "typical_successors": [
-        "15-solutions"
+        "15-solutions",
+        "what-so-what-now-what"
       ],
       "scrum_use": {
         "de": "Ruhiger, fokussierter Einstieg in Retrospektive, Planning oder Refinement: Das Team kommt zur Ruhe, sammelt einzeln Gedanken zu einer Herausforderung und legt beim Teilen gemeinsame Muster offen — ideal, um vom Tagesgeschäft in eine konzentrierte Reflexion zu wechseln.",
@@ -8834,6 +8854,10 @@
         "online_durchfuehrung": {
           "de": "Spiral Journal eignet sich online gut als ruhiger Einstieg. Remote-Ablauf: (1) Die Moderatorin teilt die Einladung per Video und fügt die vier Impulse in den Chat ein (vorbereitet zum Einfügen). (2) Alle arbeiten zu Hause mit echtem Papier und Stift — das bringt eine kleine analoge, körperliche Aktivität in die Videokonferenz und hilft beim ruhigen Ankommen; Kameras dürfen aus sein, Mikrofone stumm, eine bewusst stille Phase. (3) Zum Teilen öffnet die Moderatorin Breakout-Räume mit zwei bis drei Personen. (4) Im Plenum teilen einige wenige Personen ihre Kernerkenntnisse per „Chatterfall“ (alle tippen gleichzeitig in den Chat und senden auf ein gemeinsames Signal). Optional leise Hintergrundmusik über geteilten Ton. Bewährt als Brücke zwischen What I Need From You und What, So What, Now What.",
           "en": "Spiral Journal works well online as a calm opener. Remote flow: (1) The host shares the invitation on video and pastes the four prompts into the chat (prepared in advance). (2) Everyone works at home with real paper and pen — this brings a small analog, physical activity into the video call and helps people arrive calmly; cameras may be off, microphones muted, a deliberately quiet phase. (3) For sharing, the host opens breakout rooms of two to three people. (4) In plenary, a few people share their key insights via “Chatterfall” (everyone types into the chat at once and sends on a shared signal). Optional gentle background music over shared audio. Works well as a bridge between What I Need From You and What, So What, Now What."
+        },
+        "optional_string": {
+          "de": "Mach weiter mit 15% Solutions, um Ideen in Handeln zu überführen. Nutze es als Brücke zwischen What I Need From You und What, So What, Now What, um Gedanken zu ordnen. Nutze es, nachdem in Ecocycle Planning oder Critical Uncertainties mehrere Schichten neuer Ideen oder Strategien erzeugt wurden.",
+          "en": "Follow with 15% Solutions to bring ideas into action. Use as a bridge between What I Need From You and What, So What, Now What to settle thoughts. Use after multiple layers of new ideas or strategies have been generated in Ecocycle Planning or Critical Uncertainties."
         }
       }
     },
@@ -9067,6 +9091,10 @@
         "online_durchfuehrung": {
           "de": "Online auf einem geteilten Whiteboard (z. B. Mural/Miro/Jamboard) eine waagerechte Linie mit beschrifteten Endpunkten vorbereiten. Ablauf: (1) Die Moderatorin nennt die Aussage. (2) Alle setzen einen Punkt/Klebezettel an ihre Position auf der Linie. (3) „Umsehen“: alle betrachten die Verteilung; Beobachtungen in den Chat. (4) Einige von verschiedenen Stellen teilen ihre Sicht (laut oder im Chat). Ehrlicher Hinweis: Online fehlt die körperliche Bewegung, und feine Reaktionen der anderen sind schwerer wahrnehmbar; der „Falten“-Schritt entfällt online. Für mehr Tiefe stattdessen kurze Breakout-Gespräche zwischen Personen mit unterschiedlicher Position nutzen.",
           "en": "Online, prepare a horizontal line with labeled endpoints on a shared whiteboard (e.g. Mural/Miro/Jamboard). Flow: (1) The host states the statement. (2) Everyone places a dot/sticky note at their position on the line. (3) 'Look around': everyone views the distribution; observations go in the chat. (4) A few from different parts share their view (aloud or in the chat). Honest caveat: online lacks the physical movement, and subtle reactions are harder to read; the 'fold' step is skipped online. For more depth, use short breakout conversations between people with differing positions instead."
+        },
+        "optional_string": {
+          "de": "Greife identifizierte Spannungen und Herausforderungen mit Critical Uncertainties oder Wicked Questions auf, um Risiken und Chancen zu erkunden. Wenn die Herausforderung, mit der du gestartet bist, jetzt anders aussieht, verkette es mit der Agreement-Certainty Matrix, um die anstehenden Entscheidungen besser zu verstehen.",
+          "en": "Follow up on identified tensions and challenges with Critical Uncertainties or Wicked Questions to explore risks and opportunities. If the challenge you started with now looks different, string together with Agreement and Certainty to better understand the decisions ahead."
         }
       }
     },
@@ -9274,6 +9302,10 @@
         "online_durchfuehrung": {
           "de": "Online in Breakout-Räumen zu zweit. Ablauf: (1) Die Moderatorin postet den Impuls der jeweiligen Runde in den Chat, bevor sie alle in die Breakouts schickt. (2) Drei Runden à ~3 Min mit jeweils neuen Paaren; eine Broadcast-Nachricht signalisiert den Rollenwechsel. (3) Bei großen Gruppen kann der Tech-Host die Breakout-Räume nach der ersten Runde voreinstellen, damit jede Person neue Partner:innen bekommt. (4) Zurück im Plenum die Reflexionsfragen laut oder im Chat. Ehrlicher Hinweis: Mimik, Körpersprache, feine Gesten und Tonfall machen bei Positive Gossip viel aus und sind online leicht zu übersehen — bewusst auf Wärme im Ton achten.",
           "en": "Online in breakouts of two. Flow: (1) The host posts each round's prompt in the chat before sending everyone to breakouts. (2) Three rounds of ~3 min with new pairs each time; a broadcast message signals the role switch. (3) For large groups, the tech host can preset the breakout rooms after the first round so each person gets new partners. (4) Back in plenary, the reflection questions aloud or in the chat. Honest caveat: facial expressions, body language, subtle gestures and tone of voice matter a lot in Positive Gossip and are easy to miss online — pay deliberate attention to warmth in tone."
+        },
+        "optional_string": {
+          "de": "Verkette es mit What I Need From You oder Generative Relationships STAR, um auf positivem Schwung auf individueller und Gruppenebene aufzubauen. Mach weiter mit What, So What, Now What, um das Entdeckte zu nutzen.",
+          "en": "String with What I Need From You or Generative Relationships STAR to build on positive momentum at individual and group levels. Follow with What, So What, Now What to leverage what was discovered."
         }
       }
     },
@@ -9775,6 +9807,10 @@
         "online_durchfuehrung": {
           "de": "Funktioniert online ohne größere Anpassungen. Vorbereitung: die zehn Beziehungsmuster und das Risiken/Nutzen-Material als digitale Vorlage in einer visuellen Fläche (z. B. Miro/Mural) bereitstellen. Ablauf: (1) Alle lesen die zehn Muster und notieren bekannte. (2) In drei kurzen Runden markiert jede:r in einer jeweils anderen Farbe das Muster für „wie wir sagen, dass wir arbeiten“, „wie wir wirklich arbeiten“ und „wie wir arbeiten wollen“. (3) In Breakouts zu viert die gewählten Muster vergleichen (8 Min). (4) Im Plenum teilen einige Gruppen Erkenntnisse. (5) „Eine Veränderung machen“: eine konkrete Sache für heute benennen (laut oder im Chat).",
           "en": "Works online with no major adjustments. Setup: provide the ten relationship patterns and the risks/benefits material as a digital template in a visual collaboration space (e.g. Miro/Mural). Flow: (1) Everyone reads the ten patterns and notes familiar ones. (2) In three short rounds, each person marks — in a different color each time — the pattern for 'how we say we work', 'how we actually work', and 'how we want to work'. (3) In breakouts of four, compare the chosen patterns (8 min). (4) In plenary, a few groups share insights. (5) 'Making a change': name one concrete thing for today (aloud or in the chat)."
+        },
+        "optional_string": {
+          "de": "Verkette es mit Troika Consulting und 15% Solutions, um nächste Schritte und die Entschlossenheit zum Handeln zu formen. Verkette es mit Drawing Together, um Netzwerk-Beziehungsmuster als Teil einer Geschichte darzustellen.",
+          "en": "String with Troika Consulting and 15% Solutions to shape next steps and the resolve to take action. String with Drawing Together to depict network relationship patterns as part of a story."
         }
       }
     },
@@ -10007,6 +10043,10 @@
         "online_durchfuehrung": {
           "de": "Online: Der Tech-Host hebt Guide, Walker und Accompanists per Spotlight hervor und richtet vier Breakouts als „Stationen“ ein. Ablauf: (1) Alle vervollständigen die vier Sätze privat (Kamera und Mikro aus). (2) Ein bis zwei Freiwillige werden Walker. (3) Der Walker liest an jeder Station einen Satz; wer mitgehen möchte, schaltet Kamera und Mikro an und sagt „Ich gehe mit dir“, als Accompanist. (4) Zwischen den Sätzen schalten die Accompanists Kamera und Mikro wieder aus; der Guide begleitet mit etwas mehr Erzählung, um seine unterstützende Präsenz online spürbar zu machen. Ehrlicher Hinweis: Mimik, Körpersprache, feine Gesten und Tonfall sind hier zentral und online leicht zu übersehen — bewusst Raum und Ruhe geben, einen Recovery-Breakout bereithalten.",
           "en": "Online: the tech host spotlights the guide, walker and accompanists and sets up four breakouts as 'stations'. Flow: (1) Everyone completes the four sentences privately (camera and mic off). (2) One or two volunteers become walkers. (3) The walker reads one sentence at each station; anyone who wishes to join turns on camera and mic and says 'I will walk with you', as an accompanist. (4) Between sentences, accompanists turn camera and mic back off; the guide accompanies with a bit more narration to make their supportive presence felt online. Honest caveat: facial expressions, body language, subtle gestures and tone of voice are central here and easy to miss online — deliberately give space and calm, and keep a recovery breakout available."
+        },
+        "optional_string": {
+          "de": "Mach weiter mit einer ruhigen Aktivität oder einer Unterbrechung mit Bewegung. Verkette es mit Critical Uncertainties, um schwierige Herausforderungen zu bearbeiten.",
+          "en": "Follow with a quiet activity or a punctuation that includes movement. String with Critical Uncertainties to work through hard challenges."
         }
       }
     },
@@ -10186,6 +10226,10 @@
         "online_durchfuehrung": {
           "de": "Funktioniert online ohne größere Anpassungen. Vorbereitung: die vier Interviewfragen als Folie/Handout teilen. Ablauf: (1) Die Einladung vorlesen und die Fragen einblenden. (2) Breakouts mit vier bis fünf Personen; zwei spielen „Älteste“, die übrigen „Junge“, die die Ältesten mit den vier Fragen interviewen; die Ältesten improvisieren mit „ja, und …“. (3) Zurück im Plenum die Highlights per „Chatterfall“ sammeln: Was machte die Ältesten erfolgreich, welche Veränderungen/Unterstützung/Muster halfen?",
           "en": "Works online with no major adjustments. Setup: share the four interview questions as a slide/handout. Flow: (1) Read the invitation and display the questions. (2) Breakouts of four to five; two play elders, the others youths who interview the elders with the four questions; the elders improvise with 'yes, and …'. (3) Back in plenary, collect highlights via 'Chatterfall': what made the elders successful, which changes/support/patterns helped?"
+        },
+        "optional_string": {
+          "de": "Verkette es mit 9 Whys, um den Zweck zu klären, oder mit 15% Solutions, um die nächsten Schritte zu klären.",
+          "en": "String with 9 Whys to clarify purpose or 15% Solutions to clarify next steps."
         }
       }
     },
@@ -10411,6 +10455,10 @@
         "online_durchfuehrung": {
           "de": "Online in Vierer-Breakouts; alle Rollen lassen die Kamera an. Schritte und Interviewfragen im Chat oder auf einer Folie zeigen. Wichtig: Mimik, Körpersprache und Tonfall machen viel aus und sind online leicht zu übersehen. Der/die Listener darf das gleichzeitige Flüstern jederzeit beenden — überlagernder Ton kann sich online störend statt produktiv anfühlen. Ist das gleichzeitige Flüstern zu störend, flüstern die Pixies abwechselnd in schnellen, kurzen Phrasen.",
           "en": "Online in breakouts of four; all roles keep cameras on. Show the steps and interviewer questions in the chat or on a slide. Important: facial expressions, body language and tone of voice matter and are easy to miss online. The listener may end the simultaneous whispering at any time — overlapping audio can feel jarring rather than productive online. If simultaneous whispering is too disruptive, have the pixies take turns with rapid short phrases."
+        },
+        "optional_string": {
+          "de": "Mach weiter mit Spiral Journal oder Positive Gossip, um die Aufmerksamkeit zurück in den gegenwärtigen Moment zu bringen. Kombiniere es mit User Experience Fishbowl, damit eine große Gruppe zuhören kann, während eine Führungskraft mit ihren Pixies spricht.",
+          "en": "Follow with Spiral Journal or Positive Gossip to bring attention back to the present moment. Combine with User Experience Fishbowl to allow a large group to listen as a leader talks with their pixies."
         }
       }
     },
@@ -10696,6 +10744,10 @@
         "online_durchfuehrung": {
           "de": "Funktioniert online ohne größere Anpassungen; digitale Werkzeuge erleichtern das spätere Überarbeiten der Strategie. Vorbereitung: die SKW-Vorlage und die Vorlagen der eingebetteten Strukturen als digitales Board (z. B. Miro/Mural) anlegen. Wegen des häufigen Hin und Her zwischen Hauptraum und Breakouts die Teilnehmenden je Runde in denselben Kleingruppen halten. Ablauf: die sechs Fragen nacheinander mit der jeweils eingebetteten Liberating Structure bearbeiten und die Ergebnisse fortlaufend auf der gemeinsamen SKW-Vorlage festhalten.",
           "en": "Works online with no major adjustments; digital tools make later revision of the strategy easy. Setup: build the SKW template and the embedded structures' templates as a digital board (e.g. Miro/Mural). Due to the frequent back-and-forth between the main room and breakouts, keep participants in the same small groups each round. Flow: work the six questions one after another with their embedded Liberating Structure and continuously capture results on the shared SKW template."
+        },
+        "optional_string": {
+          "de": "Stelle Spiral Journal oder Drawing Together voran, um die Menschen darauf vorzubereiten, ihre Einsichten zu erweitern. Mach weiter mit P2P und WINFY, um neue Strategien zu operationalisieren und umzusetzen. Nutze Celebrity Interview, um die SKW-Ergebnisse breiter zu teilen.",
+          "en": "Preface with Spiral Journal or Drawing Together to prepare people to expand their insights. Follow with P2P and WINFY to operationalize and execute new strategies. Use Celebrity Interview to share the SKW results more widely."
         }
       }
     }
