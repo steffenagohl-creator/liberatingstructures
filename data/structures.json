@@ -2157,61 +2157,214 @@
       "edition": "original",
       "short_desc": {
         "de": "In Paaren erzählen und einander wirklich zuhören – baut gegenseitiges Vertrauen und Empathie auf und heilt Beziehungen nach Konflikten.",
-        "en": ""
+        "en": "Participants tell a partner about a time they felt unheard, unseen or disrespected while the other simply listens — no fixing, no judging. Deep listening builds empathy and trust and reveals where it matters most."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/heard-seen-respected/",
+      "source_url": "https://www.liberatingstructures.com/heard-seen-respected",
       "purpose_tags": [
         "helfen"
       ],
       "arc_role": [
         "öffnen"
       ],
-      "group_size_min": 4,
+      "group_size_min": 2,
       "group_size_max": null,
       "duration_min": 30,
       "duration_max": 35,
       "online_capable": true,
       "materials": {
         "de": "Stühle einander gegenüber (ca. 30 cm Knieabstand), keine Tische; optional Stifte, Papier/Post-its; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "Chairs facing each other, knees about 30 cm apart, no tables. Pens and paper for notes. Online: breakout rooms and a virtual whiteboard."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
-        "troika-consulting",
         "helping-heuristics",
-        "conversation-cafe"
+        "generative-relationships-star",
+        "appreciative-interviews"
       ],
       "scrum_use": {
         "de": "Vertrauen/psychologische Sicherheit stärken; Spannungen oder Konflikte in Retrospektiven aufarbeiten; Team-Start.",
-        "en": ""
+        "en": "Practising deep listening and empathy: a powerful way to reset interpersonal dynamics in a team, process a transition or loss, and improve how people really hear each other."
       },
       "design_elements": {
         "einladung": {
           "de": "Schildere eine Situation, in der du dich nicht gehört, gesehen oder respektiert gefühlt hast. Zuhörende unterbrechen nicht, außer mit „Was sonst noch?“",
-          "en": ""
+          "en": "The purpose of this activity is to practice listening without trying to fix anything or make any judgments. I invite you to tell a story to a partner about a time when you felt you were not heard, seen, or respected."
         },
         "raum_materialien": {
           "de": "Stühle einander gegenüber (ca. 30 cm Knieabstand), keine Tische; optional Stifte, Papier/Post-its; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "Chairs facing each other, knees about 30 cm apart, no tables. Pens and paper for notes. Online: breakout rooms and a virtual whiteboard."
         },
         "einbindung": {
           "de": "Jede Person hat gleich viel Zeit als Erzähler:in und als Zuhörer:in.",
-          "en": ""
+          "en": "Roles: host, storytellers, listeners. Minimum group size is two. Each person has equal time as storyteller and listener."
         },
         "gruppenkonfiguration": {
           "de": "Paare zum Erzählen, danach Vierergruppen zur Reflexion.",
-          "en": ""
+          "en": "Alone → pairs → quartets → whole group."
         },
         "ablauf_dauer": {
           "de": "Intention erklären 3 Min; je Person 4–7 Min Geschichte (8–15 Min); Austausch der Partner 3–5 Min; 1-2-4 in Vierergruppen 8–10 Min; Gesamtreflexion 5 Min. Gesamt 30–35 Min.",
-          "en": ""
+          "en": "Intro 3 min; think of a safe story 2 min; storytelling in pairs (each ~4–7 min; listener only asks ‘What happened next?’) 8–15 min; reflect in pairs 3–5 min; reflect in quartets (1-2-4-All) on patterns 8–10 min; whole-group reflection 5 min. ~30–35 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); inspiriert von Seiner Heiligkeit dem Dalai Lama; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Helfen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); inspired by His Holiness the Dalai Lama; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Help’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P3"
+      ],
+      "icon_alt": {
+        "de": "Zwei Stühle einander zugewandt; eine Person hört aufmerksam und ohne zu urteilen zu.",
+        "en": "Two chairs facing each other; one person listening attentively and without judging."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Teilnehmenden erzählen einer Partnerin von einer Situation, in der sie sich nicht gehört, gesehen oder respektiert fühlten — die andere hört nur zu, ohne zu reparieren oder zu urteilen. So entstehen Empathie und gegenseitiges Verständnis, das kulturelle Klima verbessert sich und Vertrauen wächst. Man lernt, sich in andere hineinzuversetzen, und erkennt, wo tiefes Zuhören wirklich zählt. HSR verkörpert LS-Prinzip #3 — Vertrauen Schritt für Schritt aufbauen.",
+          "en": "Participants tell a partner about a time when they felt unheard, unseen or disrespected — the other simply listens, without fixing or judging. This builds empathy and mutual understanding, improves the cultural climate and grows trust. People learn to walk in another's shoes and see where deep listening truly matters. HSR enacts LS Principle #3 — Build Trust as You Go."
+        },
+        "einladung": {
+          "de": "„Der Zweck dieser Übung ist, zuzuhören, ohne etwas reparieren oder bewerten zu wollen. Erzähle deiner Partnerin von einer Zeit, in der du dich nicht gehört, gesehen oder respektiert gefühlt hast.“",
+          "en": "The purpose of this activity is to practice listening without trying to fix anything or make any judgments. I invite you to tell a story to a partner about a time when you felt you were not heard, seen, or respected."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Erzähle von einer Zeit, in der du dich nicht gehört, gesehen oder respektiert gefühlt hast.",
+            "Als Zuhörer:in nur nachfragen: „Was geschah dann?“ oder „Was sonst noch?“",
+            "Vertraulich behandeln; auf die Situation schauen, nicht auf Schuld."
+          ],
+          "en": [
+            "Tell a story about a time when you were not heard, seen, or respected.",
+            "As listener, only ask: ‘What happened next?’ or ‘What else?’",
+            "Keep it confidential; focus on the situation, not blame."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Absicht vorstellen: zuhören ohne Lösungssuche, ohne Bewertung.",
+              "en": "Introduce the intention: listen without seeking solutions or judging."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einzelreflexion",
+              "en": "Individual reflection"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "An eine sichere Geschichte denken.",
+              "en": "Think of a safe story to share."
+            }
+          },
+          {
+            "phase": {
+              "de": "Erzählen in Paaren",
+              "en": "Storytelling in pairs"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Jede Person erzählt ~4–7 Minuten; die zuhörende Person fragt nur „Was geschah dann?“.",
+              "en": "Each person shares for ~4–7 minutes; the listener only asks ‘What happened next?’."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion in Paaren",
+              "en": "Reflect in pairs"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Erfahrung des Zuhörens und Erzählens teilen.",
+              "en": "Share the experience of listening and storytelling."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion in Quartetten",
+              "en": "Reflect in quartets"
+            },
+            "dauer_min": 9,
+            "beschreibung": {
+              "de": "In Vierergruppen mit 1-2-4-All Muster in den Geschichten erkennen und ihre Bedeutung besprechen.",
+              "en": "In quartets, use 1-2-4-All to identify patterns in the stories and discuss their meaning."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Gemeinsam reflektieren, wo tiefes Zuhören Herausforderungen meistern hilft und welche Strukturen anschließen könnten.",
+              "en": "Together reflect on where deep listening helps meet challenges and which structures could follow."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "„Geliebt“ statt „respektiert“",
+              "en": "‘Loved’ instead of ‘respected’"
+            },
+            "beschreibung": {
+              "de": "In Gruppen mit hohem Vertrauen „respektiert“ durch „geliebt“ ersetzen (Agape — uneigennützige Wertschätzung).",
+              "en": "For high-trust groups, replace ‘respected’ with ‘loved’ (agape — seeking the highest good without personal gain)."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Die Reflexion in Vierergruppen bei Bedarf überspringen oder das 1-3-All-Format nutzen.",
+              "en": "Skip the quartet reflection if difficult, or use the 1-3-All format instead."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Oft ist die erste Geschichte, die einem einfällt, die beste — aber nicht unbedingt die schmerzhafteste wählen.",
+            "Die Privatsphäre der erzählenden Person schützen; fragen, welche Teile geteilt werden dürfen.",
+            "Als Zuhörer:in nicht urteilen (richtig/falsch); eigene Hilfsideen für sich behalten."
+          ],
+          "en": [
+            "The first story that comes to mind is often the best — but don't necessarily pick the most painful one.",
+            "Protect the storyteller's privacy; ask which parts may be shared.",
+            "As listener, don't judge (right/wrong); keep your own urges to help to yourself."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Das gegenseitige Zuhören in Regelmeetings verbessern.",
+            "Zwischenmenschliche Dynamiken in festgefahrenen Gruppen ansprechen.",
+            "In Übergängen oder nach einem Verlust ein Forum zum Teilen schaffen.",
+            "Berichterstattung in hierarchischen Organisationen verbessern (auf- und abwärts)."
+          ],
+          "en": [
+            "Improve mutual listening in routine meetings.",
+            "Address interpersonal dynamics in stuck groups.",
+            "Create a forum for sharing during transitions or after a loss.",
+            "Improve reporting in hierarchical organizations (up and down)."
+          ]
+        },
+        "material_setup": {
+          "de": "Stühle einander zugewandt, ca. 30 cm zwischen den Knien, keine Tische; Stifte/Papier für Notizen. Online: Breakout-Räume und ein virtuelles Whiteboard.",
+          "en": "Chairs facing each other, about 30 cm between knees, no tables; pens/paper for notes. Online: breakout rooms and a virtual whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume für die Paargespräche und ein virtuelles Whiteboard für die Reflexion in Vierergruppen nutzen. Ablauf: (1) Absicht vorstellen. (2) Alle denken an eine sichere Geschichte. (3) In Zweier-Breakouts erzählt jede Person ~4–7 Min; die zuhörende Person fragt nur „Was geschah dann?“. (4) Kurze Reflexion zu zweit. (5) In Vierer-Breakouts per 1-2-4-All Muster erkennen. (6) Im Plenum reflektieren, wo tiefes Zuhören zählt. Sind Vierergruppen schwierig, das 1-3-All-Format nutzen.",
+          "en": "Works well online. Use breakout rooms for the pair conversations and a virtual whiteboard for the quartet reflection. Flow: (1) Introduce the intention. (2) Everyone thinks of a safe story. (3) In breakouts of two, each person shares ~4–7 min; the listener only asks ‘What happened next?’. (4) A short reflection in pairs. (5) In breakouts of four, identify patterns via 1-2-4-All. (6) In plenary, reflect on where deep listening matters. If quartets are difficult, use the 1-3-All format."
+        }
       }
     },
     {
@@ -2226,9 +2379,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Funktionsgruppen sagen einander klar, was sie voneinander brauchen, und antworten verbindlich – schafft Klarheit und Verantwortlichkeit zwischen Teams.",
-        "en": ""
+        "en": "Across functions, people state clearly what they need from each other and answer requests with one of just a few allowed responses. This dissolves long-standing misunderstandings and builds clarity, integrity and coordination across boundaries."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/what-i-need-from-you-winfy/",
+      "source_url": "https://www.liberatingstructures.com/what-i-need-from-you",
       "purpose_tags": [
         "helfen"
       ],
@@ -2238,49 +2391,238 @@
       ],
       "group_size_min": 9,
       "group_size_max": null,
-      "duration_min": 35,
-      "duration_max": 65,
+      "duration_min": 60,
+      "duration_max": 75,
       "online_capable": true,
       "materials": {
         "de": "Platz für 3–7 funktionale Gruppen, Stühle, Stuhlkreis in der Mitte; nützlich: Tische; optional: Stifte, Papier/Post-its; online: Breakout-Räume.",
-        "en": ""
+        "en": "A large room for 3–7 functional groups in their own areas; a circle of chairs in the center for the spokespeople; sticky notes and pens. Online: breakout rooms and a whiteboard."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [],
       "typical_successors": [
-        "what-so-what-now-what",
-        "integrated-autonomy"
+        "integrated-autonomy",
+        "purpose-to-practice",
+        "ecocycle-planning"
       ],
       "scrum_use": {
         "de": "Erwartungen zwischen Rollen/Teams klären (z. B. Dev–PO–Stakeholder), Abhängigkeiten und Zusammenarbeit verbessern.",
-        "en": ""
+        "en": "When cross-functional friction blocks progress: groups voice their real needs of each other and respond crisply (Yes/No/I'll try/I don't understand). Great for dependencies across teams, roles or disciplines."
       },
       "design_elements": {
         "einladung": {
           "de": "Formuliere unmissverständlich, was du von anderen Funktionen brauchst, und antworte auf Anfragen klar mit einer von vier Antworten.",
-          "en": ""
+          "en": "It's time to simplify how we collaborate. Working in functional groups, you'll identify what you need to achieve your goals and make direct requests to colleagues from other functions — and everyone practices giving clear responses."
         },
         "raum_materialien": {
           "de": "Platz für 3–7 funktionale Gruppen, Stühle, Stuhlkreis in der Mitte; nützlich: Tische; optional: Stifte, Papier/Post-its; online: Breakout-Räume.",
-          "en": ""
+          "en": "Enough space for 3–7 functional groups in their own areas; chairs for groups of 3–7; a circle of chairs in the center for the spokespeople. Sticky notes and pens. Online: breakout rooms."
         },
         "einbindung": {
           "de": "Jede:r ist in der eigenen Gruppe eingebunden und trägt gleichberechtigt bei.",
-          "en": ""
+          "en": "Roles: host, spokespeople, participants. Everyone is included in their functional group and contributes on an equal footing."
         },
         "gruppenkonfiguration": {
           "de": "3–7 funktionale Gruppen plus eine Sprechergruppe (3–7 Vertreter:innen).",
-          "en": ""
+          "en": "3–7 functional groups (any number per group); a central circle of 3–7 spokespeople, each representing their group."
         },
         "ablauf_dauer": {
           "de": "Ablauf erklären 2 Min; 1-2-4-All für Bedürfnisse + Top 2 + Sprecher:in 5–15 Min; Sprecher tragen Bedürfnisse vor 5–15 Min; Antworten („Ja / Nein / Ich versuche es / Nicht verstanden“) 5–10 Min; Antworten präsentieren 5–10 Min; Abschluss mit What-So-What-Now-What 15 Min. Gesamt 35–65 Min.",
-          "en": ""
+          "en": "Explain the process 2 min; group work to list and pick the top two needs (1-2-4-All) 5–15 min; spokespeople state needs 5–15 min; decide responses in groups 5–10 min; share responses 5–10 min; closing What/So What/Now What round 15 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Helfen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Help’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P6"
+      ],
+      "icon_alt": {
+        "de": "Sprecher:innen verschiedener Gruppen im Stuhlkreis äußern klar ihre Bedürfnisse.",
+        "en": "Spokespeople from different groups in a circle of chairs clearly stating their needs."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Mitarbeitende verschiedener Funktionen und Disziplinen verbessern schnell, wie sie mitteilen, was sie füreinander für erfolgreiche Arbeit brauchen. Durch klare Formulierung dessen, was zur Erreichung gemeinsamer Ziele nötig ist, lösen sich über lange Zeit entstandene Missverständnisse und Vorurteile auf. Weil alle ihre grundlegenden Bedürfnisse äußern und jede beteiligte Person klar antworten kann, entstehen Klarheit, Integrität und Transparenz — und zugleich Zusammenhalt und Koordination über Fachbereichsgrenzen hinweg. WINFY verkörpert LS-Prinzip #6 — Freiheit und Verantwortung stärken.",
+          "en": "People from different functions and disciplines quickly improve how they tell each other what they need to succeed. By clearly stating what's needed to reach shared goals, long-standing misunderstandings and prejudices dissolve. Because everyone voices their core needs and each person responds clearly, clarity, integrity and transparency emerge — along with cohesion and coordination across boundaries. WINFY enacts LS Principle #6 — Amplify Freedom and Responsibility."
+        },
+        "einladung": {
+          "de": "„Es ist Zeit, unser Zusammenarbeitsmuster zu vereinfachen. In funktionalen Gruppen formuliert ihr, was ihr zum Erreichen eurer Ziele braucht, und richtet direkte Anfragen an Kolleg:innen aus anderen Funktionen — und alle üben, klar auf Anfragen zu antworten.“",
+          "en": "It's time to simplify our collaborative pattern. Working in functional groups, you'll identify what you need to achieve your goals and make direct requests to colleagues from other functions. Everyone will also practice giving clear responses."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Formuliere Bedürfnisse als: „Was ich von dir brauche, ist …“ — so klar, dass sie mit Ja/Nein beantwortbar sind.",
+            "Erlaubte Antworten: „Ja“, „Nein“, „Ich werde es versuchen“, „Habe ich nicht verstanden“.",
+            "„Habe ich nicht verstanden“ bedeutet: das Bedürfnis war zu vage."
+          ],
+          "en": [
+            "Phrase needs as: ‘What I need from you is …’ — clear enough to be answered yes/no.",
+            "Allowed responses: ‘Yes’, ‘No’, ‘I'll try’, ‘I don't understand’ (Huh?), optionally ‘Whatever’ (need more clarity).",
+            "‘I don't understand’ means the need was too vague."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Erklärung",
+              "en": "Explain the process"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Die Schritte vorstellen; das Ziel/die Herausforderung wiederholen; betonen, dass Wünsche so klar sein müssen, dass sie mit Ja/Nein beantwortbar sind. Nur erlaubt: „Ja“, „Nein“, „Ich werde es versuchen“, „Habe ich nicht verstanden“.",
+              "en": "Explain the steps; restate the goal/challenge; stress that requests must be clear enough to answer yes/no. Only allowed: ‘Yes’, ‘No’, ‘I'll try’, ‘I don't understand’."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gruppenarbeit",
+              "en": "List needs in groups"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All wichtige Bedürfnisse als „Was ich von dir brauche, ist …“ formulieren, auf die zwei Top-Bedürfnisse reduzieren und eine:n Sprecher:in wählen.",
+              "en": "Use 1-2-4-All to list key needs as ‘What I need from you is …’, reduce to the top two, and choose a spokesperson."
+            }
+          },
+          {
+            "phase": {
+              "de": "Sprecher:innen versammeln",
+              "en": "Spokespeople gather"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Alle Sprecher:innen setzen sich in den Stuhlkreis in der Mitte.",
+              "en": "All spokespeople sit in the circle of chairs in the center."
+            }
+          },
+          {
+            "phase": {
+              "de": "Bedürfnisse vortragen",
+              "en": "Make requests"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Die Sprecher:innen tragen ihre zwei Bedürfnisse vor; die anderen notieren, antworten aber noch nicht.",
+              "en": "Spokespeople state their two needs; the others write them down but don't respond yet."
+            }
+          },
+          {
+            "phase": {
+              "de": "Antworten festlegen",
+              "en": "Decide responses"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Jede Gruppe vermerkt auf jedes Bedürfnis eine der erlaubten Antworten (allein oder mit der Gruppe).",
+              "en": "Each group records one of the allowed responses to each need (alone or with the group)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Antworten mitteilen",
+              "en": "Share decisions"
+            },
+            "dauer_min": 8,
+            "beschreibung": {
+              "de": "Jede:r Sprecher:in wiederholt das Bedürfnis und nennt die Antwort — keine Diskussion, keine Erklärungen.",
+              "en": "Each spokesperson repeats the need and gives the response — no discussion, no elaboration."
+            }
+          },
+          {
+            "phase": {
+              "de": "Abschluss",
+              "en": "Debrief"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Eine What, So What, Now What?-Runde zum Abschluss.",
+              "en": "A closing What, So What, Now What? round."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Zweite Runde",
+              "en": "Second round"
+            },
+            "beschreibung": {
+              "de": "Eine zweite Runde, falls vieles offen oder zu vage bleibt — klare Bedürfnisformulierung ist eine essenzielle Fähigkeit.",
+              "en": "A second round if requests stay too vague or unresolved — clear need-formulation is a key skill."
+            }
+          },
+          {
+            "name": {
+              "de": "Was fehlte",
+              "en": "What was missing"
+            },
+            "beschreibung": {
+              "de": "Im Debrief benennen, was nicht nachgefragt wurde, aber zum Ziel beitragen würde.",
+              "en": "In the debrief, name something not requested that would help achieve the purpose."
+            }
+          },
+          {
+            "name": {
+              "de": "Interdependente Teams",
+              "en": "Interdependent teams"
+            },
+            "beschreibung": {
+              "de": "WINFY auch für interdependente Gruppen/Teams nutzen, nicht nur für funktionale.",
+              "en": "Use WINFY for interdependent groups/teams, not only functional ones."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Vorbereitete Breakout-Räume und Whiteboards; die Sprecher:innen per Spotlight, die anderen mit Kamera aus.",
+              "en": "Prepared breakout rooms and whiteboards; spotlight the spokespeople, others with cameras off."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Streng durchsetzen: Niemand antwortet direkt auf ein geäußertes Bedürfnis.",
+            "Nur „Ja“, „Nein“, „Ich werde es versuchen“, „Habe ich nicht verstanden“ — keine weiteren Erklärungen.",
+            "Nach den wirklichen Bedarfen für Erfolg fragen; Spaß und gesundes Drama gehören dazu.",
+            "Bei mehr als 7 Rollen/Funktionen droht Verwässerung.",
+            "Die Gruppe entdecken lassen: Meckern ist leicht — Bedürfnisse zu formulieren ist schwerer; WINFY bringt vom Meckern ins Tun."
+          ],
+          "en": [
+            "Strictly enforce: no one responds directly to a stated need.",
+            "Only ‘Yes’, ‘No’, ‘I'll try’, ‘I don't understand’ — no further explanations.",
+            "Ask for the real needs for success; fun and healthy drama are part of it.",
+            "With more than seven roles/functions, it risks getting diluted.",
+            "Let the group discover: complaining is easy — formulating needs is harder; WINFY moves from complaining to doing."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Geografisch verteilte technische Gruppen, die schnelle Entscheidungen brauchen.",
+            "Top-Führungskräfte, die der nächsten Ebene konsistente Vorgaben geben wollen.",
+            "Eine patientenzentrierte Initiative mit vielen Spezialgebieten starten.",
+            "Eins-zu-eins-Beziehungen fruchtbarer machen."
+          ],
+          "en": [
+            "Geographically distributed technical groups needing fast decisions.",
+            "Top executives who want to give the next level consistent direction.",
+            "Launch a patient-centered initiative spanning many specialties.",
+            "Make one-on-one relationships more productive."
+          ]
+        },
+        "material_setup": {
+          "de": "Genügend Platz für 3–7 funktionale Gruppen in eigenen Bereichen; Stühle für Gruppen von 3–7; ein Stuhlkreis in der Mitte für die Sprecher:innen; Stifte, Post-its. Online: Breakout-Räume und ein Whiteboard.",
+          "en": "Enough space for 3–7 functional groups in their own areas; chairs for groups of 3–7; a circle of chairs in the center for the spokespeople; pens, sticky notes. Online: breakout rooms and a whiteboard."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich mit vorbereiteten Breakout-Räumen und Whiteboards. Die Sprecher:innen per Video-Spotlight hervorheben; die anderen schalten die Kamera aus. Ablauf: (1) Prozess und erlaubte Antworten erklären. (2) In funktionalen Breakouts via 1-2-4-All die zwei Top-Bedürfnisse formulieren („Was ich von dir brauche, ist …“). (3) Sprecher:innen tragen sie nacheinander vor (andere notieren, ohne zu antworten). (4) Funktionale Gruppen legen je Bedürfnis eine der erlaubten Antworten fest. (5) Sprecher:innen nennen die Antworten — ohne Diskussion. (6) Abschluss mit einer What, So What, Now What?-Runde.",
+          "en": "Works well online with prepared breakout rooms and whiteboards. Spotlight the spokespeople on video; others turn cameras off. Flow: (1) Explain the process and allowed responses. (2) In functional breakouts, use 1-2-4-All to formulate the top two needs ('What I need from you is …'). (3) Spokespeople state them one by one (others write them down without responding). (4) Functional groups decide one allowed response per need. (5) Spokespeople give the responses — no discussion. (6) Close with a What, So What, Now What? round."
+        }
       }
     },
     {
@@ -2295,12 +2637,11 @@
       "edition": "original",
       "short_desc": {
         "de": "Sieben Fragen decken lokale, bereits vorhandene Lösungen für chronische Probleme auf und führen zu selbstgetragenen Maßnahmen.",
-        "en": ""
+        "en": "A facilitated ‘treasure hunt’ through seven questions that uncovers the effective practices ‘positive deviance’ some members already use for a shared chronic problem — building ownership, fresh ideas and commitment to action."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/discovery-action-dialogue-dad/",
+      "source_url": "https://www.liberatingstructures.com/discovery-and-action-dialogue",
       "purpose_tags": [
-        "offenlegen",
-        "planen"
+        "offenlegen"
       ],
       "arc_role": [
         "divergieren",
@@ -2308,50 +2649,203 @@
       ],
       "group_size_min": 5,
       "group_size_max": null,
-      "duration_min": 25,
-      "duration_max": 60,
+      "duration_min": 35,
+      "duration_max": 80,
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier/Flipchart pro Gruppe, Tische und Stühle; optional Ausdrucke der Fragen; online: Breakout-Räume und virtuelle Whiteboards.",
-        "en": ""
+        "en": "Groups of five to seven (up to 15) sitting around tables. Paper or a flip chart per group and the seven questions displayed for each group. Online: breakout rooms, a virtual whiteboard or chat."
       },
       "difficulty": "mittel",
-      "typical_predecessors": [
-        "simple-ethnography"
-      ],
+      "typical_predecessors": [],
       "typical_successors": [
+        "simple-ethnography",
         "improv-prototyping"
       ],
       "scrum_use": {
         "de": "Chronische Team-Probleme angehen und „positive Abweichungen“ (gut funktionierende Praktiken) entdecken und verbreiten; tiefergehende Retrospektive.",
-        "en": ""
+        "en": "Surfacing solutions already alive in the team: instead of importing fixes, the group discovers what its own positive deviants do — strong for chronic, behavior-rooted problems and culture change."
       },
       "design_elements": {
         "einladung": {
           "de": "Die moderierende Person stellt sieben aufeinander aufbauende Fragen (Problem, eigene Beiträge, Hindernisse, positive Abweichungen, weitere Ideen, nötige Maßnahmen, weitere Beteiligte).",
-          "en": ""
+          "en": "We're going to uncover the behaviors and practices some of us are already using to tackle our shared challenge. It's like a treasure hunt to find the solutions hidden in our midst."
         },
         "raum_materialien": {
           "de": "Stifte, Papier/Flipchart pro Gruppe, Tische und Stühle; optional Ausdrucke der Fragen; online: Breakout-Räume und virtuelle Whiteboards.",
-          "en": ""
+          "en": "Pens and paper or a flip chart per small group; a printout of the seven DAD questions per group; tables and chairs. Online: breakout rooms, virtual whiteboard or chat."
         },
         "einbindung": {
           "de": "Die moderierende Person fragt; alle Anwesenden beteiligen sich gleichberechtigt.",
-          "en": ""
+          "en": "The host asks the questions. Everyone present is invited to take part; everyone has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Moderation + Protokoll; Gruppengröße 5–15 Personen; gemischte Rollen vorteilhaft.",
-          "en": ""
+          "en": "The host works with a partner who takes notes; group size 5–15; diverse roles and experiences are a big plus."
         },
         "ablauf_dauer": {
           "de": "Zweck klären + Vorstellung 5 Min; sieben Fragen nacheinander, Einsichten dokumentieren 15–50 Min; Rekapitulation 5 Min.",
-          "en": ""
+          "en": "Opening: clarify the purpose and do a round of introductions 5 min; ask the seven questions one by one while a scribe captures insights and action ideas 15–50 min; recap insights, action ideas and who else to involve 5 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); basierend auf dem Positive-Deviance-Ansatz; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); based on the Positive Deviance approach; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P2"
+      ],
+      "icon_alt": {
+        "de": "Eine Schatzsuche: sieben Fragen führen zu schon vorhandenen, verborgenen Lösungen in der Gruppe.",
+        "en": "A treasure hunt: seven questions lead to solutions already hidden within the group."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "DADs ermöglichen es Gruppen, Praktiken zu entdecken, die einige Personen befähigen, bessere Lösungen für ein gemeinsames Problem zu finden — sogenannte „positiv abweichende“ Verhaltensweisen. Lokal durchgeführt, schaffen sie einen sicheren Raum, um neue Ansätze zu entwickeln, stärken die Selbstverpflichtung zum Handeln und bauen Beziehungen über Rollen hinweg auf. Widerstand gegen Veränderung löst sich, sobald Teilnehmende ihre Lösungen selbst entdecken und anpassen. DAD verkörpert LS-Prinzip #2 — tiefen Respekt für Menschen und lokale Lösungen üben.",
+          "en": "DADs let groups discover the practices that enable some members to find better solutions to a shared problem — so-called ‘positive deviance’. Run locally, they create a safe space to develop new approaches, strengthen commitment to action and build cross-role relationships. Resistance to change dissolves as participants discover and adapt their own solutions. DAD enacts LS Principle #2 — Practice Deep Respect for People and Local Solutions."
+        },
+        "einladung": {
+          "de": "„Wir gehen auf Schatzsuche: Wir decken die Verhaltensweisen und Praktiken auf, die einige von uns bereits nutzen, um unsere gemeinsame Herausforderung anzugehen.“ Dann die sieben Fragen stellen.",
+          "en": "We're going to uncover the behaviors and practices some of us are already using to tackle our shared challenge — like a treasure hunt for solutions hidden in our midst. Then ask the seven questions."
+        },
+        "beispielsaetze": {
+          "de": [
+            "1. Woher wisst ihr, dass Problem X existiert?",
+            "2. Wie tragt ihr effektiv zur Lösung von Problem X bei?",
+            "3. Was hält euch davon ab, das ständig zu tun?",
+            "4. Kennt ihr jemanden, der dieses Problem schon mehrfach gelöst und Hindernisse überwunden hat? Welche Praktiken machten den Erfolg möglich?",
+            "5. Habt ihr weitere Ideen?",
+            "6. Was muss getan werden, damit es umgesetzt wird? Wer ist freiwillig dabei?",
+            "7. Wer muss noch einbezogen werden?"
+          ],
+          "en": [
+            "1. How do you know when problem X is present?",
+            "2. How do you contribute effectively to solving problem X?",
+            "3. What prevents you from doing this all the time?",
+            "4. Do you know anybody who frequently solves problem X and overcomes barriers? What practices made their success possible?",
+            "5. Do you have any new ideas for solving problem X?",
+            "6. What needs to be done to make it happen? Who volunteers?",
+            "7. Who else needs to be involved?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Eröffnung",
+              "en": "Opening"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Den Zweck klären und eine kurze Vorstellungsrunde machen.",
+              "en": "Clarify the purpose and do a short round of introductions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Sieben Fragen stellen",
+              "en": "Ask the seven questions"
+            },
+            "dauer_min": 40,
+            "beschreibung": {
+              "de": "Nacheinander alle sieben Fragen stellen; der/die Protokollführer:in dokumentiert Einsichten und Maßnahmenideen.",
+              "en": "Ask all seven questions one by one; the scribe captures insights and action ideas."
+            }
+          },
+          {
+            "phase": {
+              "de": "Zusammenfassung",
+              "en": "Recap"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einsichten, Maßnahmenideen und mögliche weitere Mitstreiter:innen rekapitulieren.",
+              "en": "Recap insights, action ideas and who else to involve."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "TRIZ-artige Fragen",
+              "en": "TRIZ-style questions"
+            },
+            "beschreibung": {
+              "de": "Alternative Fragen, um Hindernisse zu analysieren: „Was könntest du tun, damit Problem X viel schlimmer wird? Tust du etwas Ähnliches? Was hindert dich, damit aufzuhören?“",
+              "en": "Alternative questions to analyze barriers: ‘What could you do to make problem X much worse? Do you do anything similar? What prevents you from stopping?’"
+            }
+          },
+          {
+            "name": {
+              "de": "Improv Prototyping",
+              "en": "Improv Prototyping"
+            },
+            "beschreibung": {
+              "de": "Erkenntnisse und Hindernisse als Drehbücher für Improv-Sessions nutzen.",
+              "en": "Use insights and barriers as scripts for Improv sessions."
+            }
+          },
+          {
+            "name": {
+              "de": "1:1-Gespräche",
+              "en": "One-on-one"
+            },
+            "beschreibung": {
+              "de": "Dieselbe Frage-Reihenfolge in Vieraugengesprächen verwenden.",
+              "en": "Use the same question order in one-on-one conversations."
+            }
+          },
+          {
+            "name": {
+              "de": "Online / Solo",
+              "en": "Online / Solo"
+            },
+            "beschreibung": {
+              "de": "Online die Chat-Funktion zum Sammeln von Antworten nutzen. Solo: sich selbst die sieben Fragen stellen und aufschreiben (10–30 Min), dann mögliche Mitstreiter:innen identifizieren (5 Min).",
+              "en": "Online, use the chat to collect answers. Solo: ask yourself the seven questions and write (10–30 min), then identify possible allies (5 min)."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Frage 2 hat oft zwei Teile: persönliche und kollektive Auswirkungen.",
+            "DADs dort durchführen, wo die Teilnehmenden arbeiten; ad hoc einladen; informelles Klima schaffen.",
+            "Augenkontakt halten, weniger sprechen als die anderen, zum Geschichtenerzählen ermutigen.",
+            "Nicht werten („Das ist eine gute Idee!“); die Teilnehmenden selbst entscheiden lassen.",
+            "Echte Neugier zeigen, Fragen nicht selbst beantworten; keine Aufgaben übernehmen oder verteilen.",
+            "Wenn du innerlich wertest: bis zehn zählen und den Gedanken loslassen; Feedback vom Protokoll holen."
+          ],
+          "en": [
+            "Question 2 often has two parts: personal and collective impact.",
+            "Run DADs where participants work; invite people ad hoc; create an informal climate.",
+            "Keep eye contact, talk less than the others, encourage storytelling.",
+            "Don't judge ('That's a good idea!'); let participants decide for themselves.",
+            "Show genuine curiosity, don't answer your own questions; don't take on or hand out tasks.",
+            "If you judge internally: count to ten and let the thought go; get feedback from your scribe."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Patientenleid in cross-funktionalen Gruppen verringern.",
+            "Ethnografische Daten in Multi-Site-Projekten sammeln.",
+            "Unproduktive Verhaltensweisen von Fachleuten ablegen.",
+            "Community-Dialoge zu chronischen Problemen (Störungen im Klassenzimmer, Gewaltspiralen)."
+          ],
+          "en": [
+            "Reduce patient harm in cross-functional groups.",
+            "Gather ethnographic data in multi-site projects.",
+            "Shed unproductive professional behaviors.",
+            "Community dialogues on chronic problems (classroom disruption, cycles of violence)."
+          ]
+        },
+        "material_setup": {
+          "de": "Stifte und Papier oder ein Flipchart je Kleingruppe; ein Ausdruck der DAD-Fragen je Gruppe; Tische und Stühle. Online: Breakout-Räume, virtuelles Whiteboard oder Chat.",
+          "en": "Pens and paper or a flip chart per small group; a printout of the DAD questions per group; tables and chairs. Online: breakout rooms, virtual whiteboard or chat."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume, virtuelle Whiteboards oder die Chat-Funktion nutzen. Ablauf: (1) Zweck klären, kurze Vorstellungsrunde. (2) Nacheinander die sieben Fragen stellen; bei virtuellen Gruppen die Chat-Funktion zum Sammeln der Antworten nutzen und dann starke Geschichten/Verhaltensweisen mit der ganzen Gruppe besprechen; ein:e Protokollführer:in dokumentiert Einsichten und Maßnahmen. (3) Einsichten, Maßnahmen und mögliche weitere Mitstreiter:innen zusammenfassen.",
+          "en": "Works well online. Use breakout rooms, virtual whiteboards or the chat. Flow: (1) Clarify the purpose, short round of introductions. (2) Ask the seven questions one by one; for virtual groups, use the chat to collect answers, then discuss strong stories/behaviors with the whole group; a scribe captures insights and actions. (3) Summarize insights, actions and who else to involve."
+        }
       }
     },
     {
@@ -2366,9 +2860,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Lösungen werden in kurzen Theaterszenen durchgespielt und schrittweise verbessert – macht Verhalten erlebbar und durchbricht starre Muster.",
-        "en": ""
+        "en": "The group acts out a chronic challenge and improvises prototype solutions on a ‘stage’. By dramatizing the small elements that work, it taps explicit, tacit and latent knowledge — serious work with serious fun."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/improv-prototyping/",
+      "source_url": "https://www.liberatingstructures.com/improv-prototyping",
       "purpose_tags": [
         "offenlegen"
       ],
@@ -2376,54 +2870,229 @@
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 3,
+      "group_size_min": 9,
       "group_size_max": null,
-      "duration_min": 25,
+      "duration_min": 20,
       "duration_max": 60,
       "online_capable": true,
       "materials": {
         "de": "Offener Bereich/Bühne; Requisiten für Szenen; Stühle für Beobachtende; online: Breakout-Räume für Diskussionen.",
-        "en": ""
+        "en": "An open space or stage at the front of the room (online: spotlight). Chairs for participants in clusters of three to four. Props for scenes (optional)."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
         "discovery-action-dialogue-dad",
-        "simple-ethnography"
+        "simple-ethnography",
+        "user-experience-fishbowl"
       ],
-      "typical_successors": [
-        "design-storyboards",
-        "shift-share"
-      ],
+      "typical_successors": [],
       "scrum_use": {
         "de": "Schwierige Interaktionen üben (z. B. Stakeholder- oder Konfliktgespräche); Lernen durch Ausprobieren statt Theorie.",
-        "en": ""
+        "en": "Rehearsing real behavior change: instead of talking about a fix, the team acts it out, harvests what works, and reassembles better ‘chunks’ — powerful for service, communication and safety practices."
       },
       "design_elements": {
         "einladung": {
           "de": "Identifiziert frustrierende Herausforderungen und stellt sie spielerisch dar, um durch Experimentieren Lösungswege zu finden.",
-          "en": ""
+          "en": "Get ready to address a shared challenge by acting out the situation and improvising prototypes of possible solutions. You'll dramatize the simple elements that work to solve a problem — a playful way to get very serious work done!"
         },
         "raum_materialien": {
           "de": "Offener Bereich/Bühne; Requisiten für Szenen; Stühle für Beobachtende; online: Breakout-Räume für Diskussionen.",
-          "en": ""
+          "en": "An open space or stage at the front or center (online: spotlight). Chairs for clusters of three to four. Props for scenes (optional)."
         },
         "einbindung": {
           "de": "Alle beteiligt als Darstellende oder Beobachtende; zunächst wenige Freiwillige, später alle als Mitgestaltende.",
-          "en": ""
+          "en": "Roles: host/tech host, players and observers. Minimum group size is nine. Everyone takes part as both players and observers."
         },
         "gruppenkonfiguration": {
           "de": "Kleine Schauspielgruppe auf der „Bühne“; Beobachtende in kleinen Gruppen davor.",
-          "en": ""
+          "en": "A central group of three to four players and many small groups of three to four observers."
         },
         "ablauf_dauer": {
           "de": "Erklärung 2 Min; Szenario vorbereiten 3 Min; erste Szene 3–5 Min; Bewertung via 1-2(-4)-All 5 Min; verbesserte Versionen 5 Min; optimierte Prototypen 3–5 Min; Wiederholung bis zufriedenstellend.",
-          "en": ""
+          "en": "Intro 1 min; players prepare the scene while observers form small groups 3 min; act out the scene 3–5 min; whole-group debrief via 1-2-4-All on successful/unsuccessful ‘chunks’ 5 min; observer groups assemble chunks into a new prototype 5 min; act out improved prototypes, continuing rounds as needed 3–5 min per scene. ~20 min per round."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P4"
+      ],
+      "icon_alt": {
+        "de": "Eine kleine Bühne, auf der Personen eine Situation nachspielen und Lösungen improvisieren.",
+        "en": "A small stage where people act out a situation and improvise solutions."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Teilnehmenden reagieren auf eine Herausforderung, indem sie mögliche Lösungen nachspielen. Das aktiviert drei Wissensebenen — explizites Wissen (von den Teilnehmenden geteilt), stilles Wissen (durch Beobachten der Darstellung anderer entdeckt) und latentes Wissen (entsteht in der Zusammenarbeit). Beim Improvisieren entstehen aus einzelnen „Bausteinen“ neue, kombinierbare Lösungen — ernsthafte Arbeit mit echtem Spaß. Improv Prototyping verkörpert LS-Prinzip #4 — durch Vorwärtsscheitern lernen.",
+          "en": "Participants respond to a challenge by acting out possible solutions. This taps three levels of knowledge — explicit (shared by participants), tacit (discovered by watching others perform) and latent (emerging through collaboration). As they improvise, new, combinable solutions form from individual ‘chunks’ — serious work with real fun. Improv Prototyping enacts LS Principle #4 — Learn by Failing Forward."
+        },
+        "einladung": {
+          "de": "„Macht euch bereit, eine gemeinsame Herausforderung anzugehen, indem ihr die Situation nachspielt und Prototypen möglicher Lösungen improvisiert. Ihr stellt die einfachen Elemente dar, die ein Problem lösen — ein verspielter Weg, sehr ernsthafte Arbeit zu erledigen!“",
+          "en": "Get ready to address a shared challenge by acting out the situation and improvising prototypes of possible solutions. You'll dramatize the simple elements that work to solve a problem — a playful way to get very serious work done!"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Eine konkrete, frustrierende und chronische Herausforderung wählen.",
+            "Schlüsselrollen, Ort und Requisiten der Szene festlegen.",
+            "Improv-Regeln: Alle Angebote annehmen („ja, und …“); handlungsreiche Entscheidungen treffen; nur ein Gespräch gleichzeitig; zuhören, beobachten, konzentrieren."
+          ],
+          "en": [
+            "Choose a concrete, frustrating and chronic challenge.",
+            "Specify the scene's key roles, location and props.",
+            "Improv rules: accept all offers ('yes, and …'); make action-filled choices; one conversation at a time; listen, watch, concentrate."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Die Einladung teilen, das gemeinsame Problem benennen und Freiwillige für eine kurze improvisierte Szene einladen.",
+              "en": "Share the invitation, name the shared problem and invite players for a short improvised scene."
+            }
+          },
+          {
+            "phase": {
+              "de": "Vorbereitung",
+              "en": "Preparation"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Spieler:innen planen die Szene abseits; die Beobachtenden bilden Kleingruppen.",
+              "en": "Players plan the scene in a separate area; observers divide into small groups."
+            }
+          },
+          {
+            "phase": {
+              "de": "Szene spielen",
+              "en": "Act out the scene"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Spieler:innen führen die Szene vor; alle beobachten.",
+              "en": "Players act out the scene; everyone observes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Debrief",
+              "en": "Whole-group debrief"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All erfolgreiche und nicht erfolgreiche „Bausteine“ identifizieren.",
+              "en": "Use 1-2-4-All to identify successful and unsuccessful ‘chunks’."
+            }
+          },
+          {
+            "phase": {
+              "de": "Prototyping",
+              "en": "Prototyping"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Beobachtergruppen setzen erfolgreiche Bausteine zu einem neuen Prototyp zusammen und wählen Freiwillige zum Spielen.",
+              "en": "Observer groups assemble successful chunks into a new prototype and select volunteers to act it out."
+            }
+          },
+          {
+            "phase": {
+              "de": "Weitere Szenen",
+              "en": "Act out more scenes"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Verbesserte Prototypen vorführen; weitere Runden nach Bedarf, bis gangbare Lösungen entstehen.",
+              "en": "Act out improved prototypes; continue rounds as needed until workable solutions emerge."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Creative Director",
+              "en": "Creative director"
+            },
+            "beschreibung": {
+              "de": "Eine:n „Creative Director“ einladen, der Szenendetails festlegt und die Spieler:innen bei Bedarf sanft umlenkt.",
+              "en": "Invite a 'creative director' to specify scene details and gently redirect players if needed."
+            }
+          },
+          {
+            "name": {
+              "de": "Szenen-Battles",
+              "en": "Scene battles"
+            },
+            "beschreibung": {
+              "de": "Kleingruppen spielen selbstständig; „Battles“ mit Bewertung durch ein „Applaus-o-meter“.",
+              "en": "Small groups replay independently; 'battles' judged by an 'applause-o-meter'."
+            }
+          },
+          {
+            "name": {
+              "de": "Kombinieren",
+              "en": "Combine"
+            },
+            "beschreibung": {
+              "de": "Mit Design StoryBoards, Shift & Share und User Experience Fishbowl für ein größeres Publikum verbinden; „Was ist“ vs. „Was könnte sein“ spezifizieren.",
+              "en": "Combine with Design StoryBoards, Shift & Share and User Experience Fishbowl for a larger audience; specify 'what is' vs. 'what could be'."
+            }
+          },
+          {
+            "name": {
+              "de": "Kleine Gruppen / Online",
+              "en": "Small groups / Online"
+            },
+            "beschreibung": {
+              "de": "Mit wenigen Personen (z. B. zu dritt) mehrfach ohne Beobachter durchspielen. Online ohne größere Anpassungen; lässt sich leichter skalieren — Breakouts für die 1-2(-4)-All-Elemente.",
+              "en": "With few people (e.g. trios) play through several times without observers. Online with no major adjustments; scales more easily — breakouts for the 1-2(-4)-All elements."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Eine konkret und scharf umrissene Herausforderung führt zu besseren Ergebnissen.",
+            "Details der Szene festlegen: Schlüsselrollen, Ort, Requisiten.",
+            "Spieler:innen auf Improv-Regeln einstimmen („ja, und …“, handlungsreich, ein Gespräch zugleich, zuhören/konzentrieren).",
+            "Szenen, die die Fantasie nicht anregen, erneut spielen lassen.",
+            "Ermutigen, andere Rollen zu spielen — das baut Vorurteile ab."
+          ],
+          "en": [
+            "A concrete, sharply defined challenge leads to better results.",
+            "Specify the scene's details: key roles, location, props.",
+            "Coach players on improv rules ('yes, and …', action-filled, one conversation at a time, listen/concentrate).",
+            "Replay scenes that don't spark imagination.",
+            "Encourage playing other roles — it sheds prejudices."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Lebendige Alternative zu trockenen Trainings.",
+            "Neue Wege, wie Vertrieb mit Kund:innen interagiert.",
+            "Lehrkräfte finden wirksame Reaktionen auf Störungen im Klassenzimmer.",
+            "Ausbreitung von Keimen stoppen, indem man zeigt, was man NICHT tun sollte (z. B. ohne Handschuhe untersuchen)."
+          ],
+          "en": [
+            "A lively alternative to dry trainings.",
+            "New ways for sales reps to interact with customers.",
+            "Teachers find effective responses to classroom disruptions.",
+            "Stop the spread of superbugs by illustrating what NOT to do (e.g. examining without gloves)."
+          ]
+        },
+        "material_setup": {
+          "de": "Ein offener Bereich oder eine Bühne an Stirnseite/Mitte (online: Spotlight); Stühle in Gruppen von 3–4; optional Requisiten für die Szenen.",
+          "en": "An open space or stage at the front/center (online: spotlight); chairs in clusters of three to four; optional props for the scenes."
+        },
+        "online_durchfuehrung": {
+          "de": "Online ohne größere Anpassungen — lässt sich sogar leichter auf größere Gruppen skalieren als in Präsenz. Die Spieler:innen per Spotlight hervorheben; Breakout-Räume für die 1-2(-4)-All-Elemente nutzen. Ablauf: (1) Problem benennen, Freiwillige einladen. (2) Spieler:innen bereiten die Szene in einem eigenen Breakout vor; Beobachtende bilden Kleingruppen. (3) Szene vorführen. (4) Per 1-2-4-All erfolgreiche Bausteine identifizieren. (5) In Beobachter-Breakouts einen verbesserten Prototyp zusammensetzen. (6) Weitere Runden, bis gangbare Lösungen entstehen.",
+          "en": "Works online with no major adjustments — and scales to larger groups more easily than in person. Spotlight the players; use breakout rooms for the 1-2(-4)-All elements. Flow: (1) Name the problem, invite players. (2) Players prepare the scene in their own breakout; observers form small groups. (3) Act out the scene. (4) Identify successful chunks via 1-2-4-All. (5) In observer breakouts, assemble an improved prototype. (6) Continue rounds until workable solutions emerge."
+        }
       }
     },
     {
