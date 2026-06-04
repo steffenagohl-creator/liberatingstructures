@@ -272,9 +272,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Schneller Auftakt: In wechselnden Paaren teilen alle ihre Herausforderung und Erwartung. Aktiviert alle, taut Zurückhaltende auf und schafft Verbindungen.",
-        "en": ""
+        "en": "A fast start: in changing pairs, everyone shares their challenge and expectations. Builds connections immediately and surfaces shared ground — in just a few rounds."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/impromptu-networking/",
+      "source_url": "https://www.liberatingstructures.com/impromptu-networking",
       "purpose_tags": [
         "teilen"
       ],
@@ -282,51 +282,195 @@
         "öffnen",
         "divergieren"
       ],
-      "group_size_min": 6,
+      "group_size_min": 4,
       "group_size_max": null,
-      "duration_min": 12,
-      "duration_max": 15,
+      "duration_min": 15,
+      "duration_max": 25,
       "online_capable": true,
       "materials": {
         "de": "Offener Raum ohne Hindernisse für Zweiergruppen; optional Glocke/Tingsha zur Zeitmessung; online: Breakout-Räume.",
-        "en": ""
+        "en": "Open space to stand in pairs and move around easily (online: breakouts of two or three). A bell/chime to pace the rounds."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
         "15-solutions",
-        "social-network-webbing"
+        "social-network-webbing",
+        "network-relationship-patterns"
       ],
       "scrum_use": {
         "de": "Eröffnung von Retrospektive oder Workshop: Beziehungen und psychologische Sicherheit aufbauen, alle aktivieren.",
-        "en": ""
+        "en": "A quick opener for a workshop, planning or team start: everyone connects immediately and shares their challenge and expectations, creating productive collaboration from the first minute."
       },
       "design_elements": {
         "einladung": {
           "de": "„Welche Herausforderung bringst du mit? Was erhoffst du dir von dieser Gruppe und was möchtest du geben?“",
-          "en": ""
+          "en": "In fast and fun rounds, you will connect with a few people to find out what they think about a big challenge and their role in it."
         },
         "raum_materialien": {
           "de": "Offener Raum ohne Hindernisse für Zweiergruppen; optional Glocke/Tingsha zur Zeitmessung; online: Breakout-Räume nutzen.",
-          "en": ""
+          "en": "Open space to stand in pairs and move around easily (online: breakouts of two or three). A bell/chime to pace the rounds."
         },
         "einbindung": {
           "de": "Alle gleichzeitig, mit gleichem Zeitlimit; gleichberechtigte Beteiligung.",
-          "en": ""
+          "en": "Everyone at the same time with the same time limit; no upper group-size limit; everyone participates on an equal footing."
         },
         "gruppenkonfiguration": {
           "de": "Paare; möglichst auf Fremde oder Kolleg:innen aus anderen Bereichen zugehen.",
-          "en": ""
+          "en": "Pairs (or trios online); participants approach strangers or colleagues from other groups/areas."
         },
         "ablauf_dauer": {
           "de": "3 Runden zu je 4–5 Minuten (2 Minuten pro Person); insgesamt ca. 12–15 Minuten.",
-          "en": ""
+          "en": "About 2 minutes per person per round (4–5 min per round); three rounds (~12–15 min total)."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); inspiriert von June Holleys Netzwerkarbeit; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Teilen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); informed by June Holley's network weaving; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Share’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P9"
+      ],
+      "icon_alt": {
+        "de": "Mehrere Personen stehen paarweise zusammen und tauschen sich aus, in wechselnden Paaren.",
+        "en": "Several people standing in pairs and talking, in changing pairs."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Wenn eine Gruppe ihre Aufmerksamkeit auf Probleme richtet, die sie lösen möchte, werden Neugier und verborgene Talente sichtbar. Zu Beginn einer Arbeitssession durchgeführt, entsteht sofort produktive Zusammenarbeit. In nur etwa 15 Minuten lassen sich lockere und zugleich kraftvolle Verbindungen durch gegenseitiges Fragen aufbauen; alle helfen mit, die gemeinsame Arbeit zu gestalten, Gemeinsamkeiten zu erkennen und erste Lösungsansätze zu entdecken. Impromptu Networking verkörpert LS-Prinzip #9 — sich auf ernsthaft verspielte Neugier einlassen.",
+          "en": "When a group turns its attention to the problems it wants to solve, curiosity and hidden talents become visible. Run at the start of a work session, it creates productive collaboration immediately. In about fifteen minutes, loose yet powerful connections form through mutual questioning; everyone helps shape the shared work, notice common ground, and discover first solutions. Impromptu Networking enacts LS Principle #9 — Engage in Seriously Playful Curiosity."
+        },
+        "einladung": {
+          "de": "„Welche Herausforderung bringst du zu diesem Treffen? Was erhoffst du dir von dieser Gruppe und was möchtest du der Gruppe geben?“",
+          "en": "In fast and fun rounds, you will connect with a few people to find out what they think about a big challenge and their role in it."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Welche Herausforderung bringst du mit?",
+            "Was erhoffst du dir von dieser Gruppe — und was möchtest du ihr geben?",
+            "Variante: Welches Problem versuchst du zu lösen?",
+            "Variante: Welche Herausforderung ist vom letzten Meeting offen geblieben?"
+          ],
+          "en": [
+            "What big challenge do you bring?",
+            "What do you hope to give and get from this group?",
+            "Variation: What problem are you trying to solve?",
+            "Variation: What challenge is left over from the last meeting?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Einladung teilen; alle still überlegen lassen: Welche Herausforderung bringe ich? Was möchte ich geben und bekommen?",
+              "en": "Share the invitation; invite silent reflection: what challenge do I bring? What do I hope to give and get?"
+            }
+          },
+          {
+            "phase": {
+              "de": "Runde 1",
+              "en": "Round 1"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "In Paaren (online: Breakouts) die Antworten mit Menschen aus anderen Bereichen/Funktionen teilen — ca. 2 Min pro Person.",
+              "en": "In pairs (online: breakouts), share answers with people from other areas/functions — about 2 min per person."
+            }
+          },
+          {
+            "phase": {
+              "de": "Runden 2 & 3",
+              "en": "Rounds 2 & 3"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Neue Partner:innen, gleiche Fragen wiederholen (online: Breakouts neu mischen).",
+              "en": "New partners, repeat the process (online: remix breakout rooms)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Zurück im Plenum teilen einige zentrale Ideen.",
+              "en": "Back in plenary, a few share key ideas."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Fragen variieren",
+              "en": "Vary the questions"
+            },
+            "beschreibung": {
+              "de": "Eine Frage zur Herausforderung und eine zum Geben/Bekommen; je nach Anlass anpassen.",
+              "en": "One challenge question and one give-and-take question; adapt to the occasion."
+            }
+          },
+          {
+            "name": {
+              "de": "Anfang & Ende",
+              "en": "Start and end"
+            },
+            "beschreibung": {
+              "de": "Zu Beginn und am Ende eines Meetings einsetzen.",
+              "en": "Use at the start and the end of a meeting."
+            }
+          },
+          {
+            "name": {
+              "de": "Online-Trios",
+              "en": "Online trios"
+            },
+            "beschreibung": {
+              "de": "Online Trios statt Paare nutzen, damit niemand allein im Breakout sitzt.",
+              "en": "Online, use trios instead of pairs so no one is alone in a breakout."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Vielredner:innen verspielt ansprechen: „Wenn du zu viel Zeit gebraucht hast, rede in der nächsten Runde weniger!“",
+            "Treffen sich dieselben Partner wieder: „Glück gehabt! Geht tiefer.“",
+            "Der Versuchung widerstehen, auf nur ein, zwei Runden zu verkürzen — drei Runden durchführen.",
+            "Akustische Signale (Glocke/Tingsha) für die Übergänge nutzen."
+          ],
+          "en": [
+            "Address long speakers playfully: ‘If you used too much time, talk less next round!’",
+            "If the same partners meet again: ‘Lucky you! Dig deeper.’",
+            "Resist shortening to one or two rounds — do three.",
+            "Use an audible signal (bell/chime) for the transitions."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Verbindungen am ersten Tag eines Kurses vertiefen.",
+            "Interdisziplinäres Lernen in Gang bringen (z. B. Richter:innen, Anwält:innen, Sozialarbeiter:innen).",
+            "Verstreute Innovator:innen miteinander verbinden."
+          ],
+          "en": [
+            "Deepen connections on the first day of a class.",
+            "Jump-start interdisciplinary learning (e.g. judges, lawyers, social workers).",
+            "Connect distant innovators."
+          ]
+        },
+        "material_setup": {
+          "de": "Offener Raum ohne Hindernisse, damit alle umhergehen und sich paarweise zusammenstellen können; eine Glocke/Tingsha zum Takten der Runden. Online: Breakout-Räume für die Paargespräche.",
+          "en": "Open, unobstructed space so everyone can move around and pair up; a bell/chime to pace the rounds. Online: breakout rooms for the pair conversations."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Breakout-Räume für die Paargespräche nutzen; online Trios statt Paare, damit niemand allein sitzt. Ablauf: (1) Die zwei Fragen einblenden und alle kurz still überlegen lassen. (2) Drei Runden à 4–5 Min in neu gemischten Breakouts, ca. 2 Min pro Person; per Broadcast den Rundenwechsel signalisieren. (3) Zurück im Plenum einige zentrale Ideen teilen (laut oder im Chat).",
+          "en": "Works well online. Use breakout rooms for the pair conversations; online, use trios instead of pairs so no one is alone. Flow: (1) Show the two questions and let everyone reflect briefly. (2) Three rounds of 4–5 min in freshly remixed breakouts, about 2 min per person; broadcast the round switch. (3) Back in plenary, share a few key ideas (aloud or in the chat)."
+        }
       }
     },
     {
@@ -341,9 +485,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Durch wiederholtes „Warum ist das wichtig für dich?“ legt die Gruppe den gemeinsamen Sinn und Zweck ihrer Arbeit frei – für Klarheit, Fokus und Motivation.",
-        "en": ""
+        "en": "Through repeated ‘Why is that important to you?’, the group uncovers the shared purpose behind its work — and aligns it with higher-order goals."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/nine-whys/",
+      "source_url": "https://www.liberatingstructures.com/nine-whys",
       "purpose_tags": [
         "analysieren"
       ],
@@ -353,51 +497,223 @@
       ],
       "group_size_min": 2,
       "group_size_max": null,
-      "duration_min": 20,
-      "duration_max": 25,
+      "duration_min": 25,
+      "duration_max": 30,
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte und Papier; nützlich: Glocke/Tingsha, bequeme Stühle, Post-its; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "Chairs for face-to-face pairs (no tables). Paper for each participant."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
         "purpose-to-practice",
         "generative-relationships-star",
-        "wise-crowds",
         "what-so-what-now-what"
       ],
       "scrum_use": {
         "de": "Purpose-/Fokus-Klärung für Team oder Produkt; gut bei Team-Start oder zu Beginn einer Retrospektive.",
-        "en": ""
+        "en": "Clarify the purpose of a product, initiative or the team's work together: in paired interviews the deeper ‘why’ emerges — a strong foundation before planning or prioritising."
       },
       "design_elements": {
         "einladung": {
           "de": "„Was machst du, wenn du an [Aufgabe] arbeitest?“ – kurze Tätigkeitsliste; dann wiederholt „Warum ist das wichtig für dich?“ (bis zu neun Mal).",
-          "en": ""
+          "en": "Let's paint a clearer picture of what you do at the heart of your work and the purpose of our work together. Let's start by exploring what you spend your time doing."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte und Papier. Nützlich: Glocke/Tingsha, bequeme Stühle, Post-its. Online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "Chairs for face-to-face pairs (no tables). Paper for each participant."
         },
         "einbindung": {
           "de": "Alle haben gleiche Beteiligungsmöglichkeiten.",
-          "en": ""
+          "en": "Host and participants; everyone has equal time. Minimum group size: pairs (2)."
         },
         "gruppenkonfiguration": {
           "de": "Progressiv: zuerst zu zweit, dann zu viert, dann die ganze Gruppe (2-4-All).",
-          "en": ""
+          "en": "1-2-4-All (1-3-All if quartets are difficult online)."
         },
         "ablauf_dauer": {
           "de": "Partnerinterviews 10 Min (je 5 Min); Austausch mit anderem Paar 5 Min; gemeinsamen Purpose formulieren 5 Min; optional Reflexion 5 Min. Gesamt 20–25 Min.",
-          "en": ""
+          "en": "Paired interviews 7–10 min (asking ‘Why?’ up to nine times, then a 3–5 word action title); sharing in quartets 5 min; plenary reflection 5 min; shared purpose & next steps 5 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz, Keith McCandless & Nancy White); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz, Keith McCandless & Nancy White); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P10"
+      ],
+      "icon_alt": {
+        "de": "Zwei Personen im Interview; eine fragt wiederholt „Warum?“, um zum Kern des Sinns vorzudringen.",
+        "en": "Two people in an interview; one repeatedly asks ‘Why?’ to reach the core purpose."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Mit gezielten Fragen decken die Teilnehmenden die tieferen Zwecke und das Wesentliche ihrer Arbeit auf. 9 Whys hilft, einen persönlichen Sinn zu finden und die Ausrichtung auf übergeordnete Ziele zu erkennen. 9 Whys verkörpert LS-Prinzip #10 — nie ohne klaren Zweck beginnen.",
+          "en": "With guided questions, participants uncover the deeper purposes and what is essential in their work. 9 Whys helps people find a personal sense of purpose and see alignment with higher-order goals. 9 Whys enacts LS Principle #10 — Never Start Without Clear Purpose."
+        },
+        "einladung": {
+          "de": "„Lass uns ein klareres Bild davon zeichnen, was du im Kern deiner Arbeit tust und was der Zweck unserer gemeinsamen Arbeit ist. Beginnen wir damit, was du in deiner Zeit tust.“",
+          "en": "Let's paint a clearer picture of what you do at the heart of your work and the purpose of our work together. Let's start by exploring what you spend your time doing."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Warum sind diese Tätigkeiten dir wichtig?",
+            "Warum ist das wichtig für dich? (bis zu neunmal)",
+            "Variante (Wirtschaft): Warum würden Menschen ihr Geld bei dir ausgeben?",
+            "Variante (lokal): Warum ist das für deine Gemeinschaft wichtig?"
+          ],
+          "en": [
+            "Why are those activities important to you?",
+            "Why is that important to you? (up to nine times)",
+            "Variation (business): Why would people spend their money with you?",
+            "Variation (local): Why is that important to your community?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro & Herausforderung",
+              "en": "Intro & challenge"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einladung teilen und die gemeinsame Herausforderung benennen.",
+              "en": "Share the invitation and name the shared challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einzelreflexion",
+              "en": "Individual reflection"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Kurz die eigenen Tätigkeiten notieren.",
+              "en": "Briefly jot down your activities."
+            }
+          },
+          {
+            "phase": {
+              "de": "Partnerinterviews",
+              "en": "Paired interviews"
+            },
+            "dauer_min": 7,
+            "beschreibung": {
+              "de": "In Paaren: eine Person interviewt, fragt bis zu neunmal „Warum ist das wichtig für dich?“ und formuliert am Ende einen 3–5-Wort-Titel; dann Rollen tauschen.",
+              "en": "In pairs: one interviews, asking ‘Why is that important to you?’ up to nine times, then writes a 3–5 word action title; then switch roles."
+            }
+          },
+          {
+            "phase": {
+              "de": "Austausch in Quartetten",
+              "en": "Share in quartets"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Optional (online) in Vierergruppen die Zwecke teilen.",
+              "en": "Optionally (online) share purposes in quartets."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenums-Reflexion",
+              "en": "Plenary reflection"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Gemeinsam Muster und gemeinsamen Sinn erkennen.",
+              "en": "Together notice patterns and the shared purpose."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gemeinsamer Zweck & nächste Schritte",
+              "en": "Shared purpose & next steps"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einen gemeinsamen Zweck formulieren und nächste Schritte besprechen.",
+              "en": "Formulate a shared purpose and discuss next steps."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Kreativ ausdrücken",
+              "en": "Express creatively"
+            },
+            "beschreibung": {
+              "de": "Zwecke mit Emojis oder Zeichnungen ausdrücken.",
+              "en": "Express purposes with emojis or drawings."
+            }
+          },
+          {
+            "name": {
+              "de": "Neun-Wort-Zweck",
+              "en": "Nine-word purpose"
+            },
+            "beschreibung": {
+              "de": "Einen einzigen Neun-Wort-Zweck für die Gruppe formulieren.",
+              "en": "Craft a single nine-word group purpose statement."
+            }
+          },
+          {
+            "name": {
+              "de": "Vorlage",
+              "en": "Template"
+            },
+            "beschreibung": {
+              "de": "„Der Zweck unserer Arbeit ist, <was> zu tun, damit <wer> <was/welcher Nutzen> kann. Wir erkennen Fortschritt, wenn <was geschieht>.“",
+              "en": "‘The purpose of our work is to <do what> so that <who> can <do what/benefit how>. We know we are making progress when <describe what happens>.’"
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Den Chat für Likes/Emojis nutzen und zu gegenseitigen Reaktionen ermutigen.",
+              "en": "Use the chat for likes/emojis and encourage peer responses."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "„Warum ist es dir persönlich wichtig?“ fragen, um den persönlichen Fokus zu halten.",
+            "In Kulturen, in denen wiederholtes „Warum“ unhöflich wirkt, die Formulierung variieren.",
+            "Alternative Rahmungen je Kontext (Wirtschaft/lokal) nutzen."
+          ],
+          "en": [
+            "Ask ‘Why is it important to you?’ to keep the personal focus.",
+            "In cultures where repeated ‘why’ feels rude, vary the phrasing.",
+            "Use alternative framings by context (business/local)."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Den Zweck einer Organisation klären.",
+            "Den Zweck eines neuen Produkt-Launchs schärfen.",
+            "Den Zweck einer Coaching-Sitzung bestimmen."
+          ],
+          "en": [
+            "Identify an organization's purpose.",
+            "Clarify the purpose of a new product launch.",
+            "Identify the purpose of a coaching session."
+          ]
+        },
+        "material_setup": {
+          "de": "Stühle für Paare, die sich gegenübersitzen (keine Tische); Papier für jede Person.",
+          "en": "Chairs for pairs sitting face to face (no tables); paper for each person."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich (~25–30 Min). Statt Vierergruppen ggf. 1-3-All nutzen. Ablauf: (1) Alle notieren kurz ihre Tätigkeiten. (2) In Zweier-Breakouts interviewt eine Person die andere und fragt bis zu neunmal „Warum ist das wichtig für dich?“, dann Rollentausch. (3) Optional in Trios die Zwecke teilen. (4) Im Plenum Muster ernten und einen gemeinsamen Zweck formulieren. Den Chat für Likes/Emojis und gegenseitige Reaktionen nutzen.",
+          "en": "Works well online (~25–30 min). Use 1-3-All instead of quartets if needed. Flow: (1) Everyone briefly notes their activities. (2) In breakouts of two, one interviews the other, asking ‘Why is that important to you?’ up to nine times, then switch roles. (3) Optionally share purposes in trios. (4) In plenary, harvest patterns and formulate a shared purpose. Use the chat for likes/emojis and peer responses."
+        }
       }
     },
     {
@@ -412,12 +728,11 @@
       "edition": "original",
       "short_desc": {
         "de": "Bringt gegensätzliche, sich ergänzende Herausforderungen auf den Punkt und entfacht kreative Spannung – Grundlage für Strategien, die widersprüchliche Anforderungen zugleich berücksichtigen.",
-        "en": ""
+        "en": "Captures opposing yet complementary challenges in a single question and sparks creative, strategic thinking — reducing either-or thinking, especially in transitions."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/wicked-questions/",
+      "source_url": "https://www.liberatingstructures.com/wicked-questions",
       "purpose_tags": [
-        "offenlegen",
-        "strategie"
+        "offenlegen"
       ],
       "arc_role": [
         "divergieren",
@@ -425,52 +740,245 @@
       ],
       "group_size_min": 2,
       "group_size_max": null,
-      "duration_min": 25,
+      "duration_min": 30,
       "duration_max": 30,
       "online_capable": true,
       "materials": {
         "de": "Stuhlgruppen (4–6 Personen), Stifte und Papier/Post-its; optional kleine Tische; online: Breakout-Räume.",
-        "en": ""
+        "en": "Groups of four to six chairs (breakouts of 4–6), with or without small tables. Paper for each participant. Display examples and the sentence template."
       },
       "difficulty": "mittel",
       "typical_predecessors": [],
       "typical_successors": [
-        "15-solutions",
         "1-2-4-all",
-        "improv-prototyping",
-        "ecocycle-planning",
-        "25-10-crowd-sourcing"
+        "25-10-crowd-sourcing",
+        "critical-uncertainties"
       ],
       "scrum_use": {
         "de": "Sprint-/Produktstrategie und Zielkonflikte (z. B. Tempo vs. Qualität); in Retrospektiven zu Spannungsfeldern.",
-        "en": ""
+        "en": "Surface the paradoxical tensions a team must hold (e.g. structured vs. liberated, deciding vs. keeping options open) — strong for strategy, transitions and retrospectives on competing priorities."
       },
       "design_elements": {
         "einladung": {
           "de": "„Welche gegensätzlichen, sich aber ergänzenden Strategien sollten wir parallel verfolgen, um erfolgreich zu sein?“",
-          "en": ""
+          "en": "Let's identify realities that make progress challenging and rewarding. What opposing-yet-complementary strategies do we need to pursue simultaneously in order to be successful?"
         },
         "raum_materialien": {
           "de": "Wichtig: Stuhlgruppen (4–6 Personen), Stifte und Papier/Post-its. Optional: kleine Tische, online Breakout-Räume.",
-          "en": ""
+          "en": "Groups of four to six chairs (breakouts of 4–6), with or without small tables. Pens and paper. Online: breakout rooms."
         },
         "einbindung": {
           "de": "Alle vom Thema Betroffenen werden mit gleichen Beteiligungsmöglichkeiten eingebunden.",
-          "en": ""
+          "en": "Roles: host/tech host and participants. Minimum group size: two. Everyone affected is included, with equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln → kleine Gruppen (max. 6 Personen) → Gesamtgruppe.",
-          "en": ""
+          "en": "Alone → groups of four to six → whole group."
         },
         "ablauf_dauer": {
           "de": "Konzept/Paradoxon erklären 5 Min; Gegensatzpaare allein, dann in Gruppen 5 Min; einflussreichste Frage je Gruppe 5 Min; Gesamtgruppe wählt und verfeinert 10 Min. Gesamt ca. 25 Min.",
-          "en": ""
+          "en": "Explain the concept/paradox 5 min; find pairs of opposites (alone, then small groups) 5 min; each group picks its most powerful question 5 min; refine the most powerful questions with the whole group 10 min. ~30 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); auf Basis der Arbeiten von Brenda Zimmerman (Plexus Institute) und Scott Kelso zu komplementären Paaren; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); drawing on work by Brenda Zimmerman (Plexus Institute) and Scott Kelso on complementary pairs; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P7"
+      ],
+      "icon_alt": {
+        "de": "Zwei gegensätzliche Pfeile, die zugleich in dieselbe Richtung wirken — ein Paradox als Frage.",
+        "en": "Two opposing arrows that nonetheless pull the same way — a paradox posed as a question."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Wicked Questions reduzieren „ja, aber“- und „entweder-oder“-Denken und lösen zugleich innovative Handlungen aus. Sie zeigen miteinander verwobene Herausforderungen und Möglichkeiten, die nicht sofort offensichtlich sind, und bringen gegensätzliche, aber sich ergänzende Kräfte ans Licht, die Verhalten ständig beeinflussen — besonders wichtig in Change-Prozessen. So lassen sich Spannungen zwischen vorgegebener Strategie und tatsächlichen Umständen gefahrlos benennen und wertvolle Strategien entdecken, die im Paradox verborgen liegen. Wicked Questions verkörpert LS-Prinzip #7 — Möglichkeiten betonen: Glauben, bevor man sieht.",
+          "en": "Wicked Questions reduce ‘yes, but’ and either-or thinking while triggering innovative action. They reveal entangled challenges and possibilities that aren't immediately obvious and bring opposing-yet-complementary forces to light that constantly shape behavior — especially important in change processes. This makes it safe to name the tensions between stated strategy and actual circumstances and to discover valuable strategies hidden in the paradox. Wicked Questions enacts LS Principle #7 — Emphasize Possibilities: Believe Before You See."
+        },
+        "einladung": {
+          "de": "„Welche gegensätzlichen, sich aber ergänzenden Strategien sollten wir parallel verfolgen, um erfolgreich zu sein?“",
+          "en": "What opposing-yet-complementary strategies do we need to pursue simultaneously in order to be successful?"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Format: „Wie kann es sein, dass wir … und gleichzeitig … sind?“",
+            "Wie sind wir integriert als Ganzes UND autonom, lokal angepasst?",
+            "Wie sind wir zugleich strukturierter UND freier in unseren Interaktionen?",
+            "Wie machen wir es sicher, mutigere Risiken einzugehen?",
+            "Wie entscheiden wir, was zu tun ist, und halten zugleich alle Optionen offen?"
+          ],
+          "en": [
+            "Format: ‘How is it that we are ___ while simultaneously ___?’",
+            "How is it that we operate as an INTEGRATED whole AND as AUTONOMOUS, locally adapted units?",
+            "How is it that we are more STRUCTURED AND more LIBERATED in our interactions?",
+            "How is it that we are making it SAFE to take bolder RISKS?",
+            "How is it that we are DECIDING what to do while keeping all our OPTIONS OPEN?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einladung teilen und die gemeinsame Herausforderung benennen.",
+              "en": "Share the invitation and identify the shared challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einzelreflexion",
+              "en": "Individual reflection"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Wahrheiten über die Herausforderung auflisten.",
+              "en": "List truths about the challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Spannungen finden",
+              "en": "Find tensions"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Zwei scheinbar gegensätzliche Wahrheiten einkreisen.",
+              "en": "Circle two seemingly opposed truths."
+            }
+          },
+          {
+            "phase": {
+              "de": "Format erklären",
+              "en": "Explain the format"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Das Format „Wie kann es sein, dass wir … und gleichzeitig … sind?“ mit Beispielen vorstellen.",
+              "en": "Present the ‘How is it that we are ___ while simultaneously ___?’ format with examples."
+            }
+          },
+          {
+            "phase": {
+              "de": "Wicked Questions formulieren",
+              "en": "Ask wicked questions"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Sätze anhand der Schablone entwerfen.",
+              "en": "Draft sentences using the template."
+            }
+          },
+          {
+            "phase": {
+              "de": "In Gruppen verfeinern",
+              "en": "Refine in groups"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In Gruppen von 4–6 die Fragen verfeinern; ein „Arrrgh“ zeigt Erfolg an.",
+              "en": "In groups of 4–6, refine the questions; an ‘arrrgh’ indicates success."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die eindrücklichsten Fragen im Chat teilen und festhalten.",
+              "en": "Share the most dramatic questions in the chat and record them."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion",
+              "en": "Group reflection"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Über die Top drei Fragen per Applaus/Reaktionen abstimmen.",
+              "en": "Vote on the top three questions via applause or reactions."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Praxis-Riff",
+              "en": "Field experience riff"
+            },
+            "beschreibung": {
+              "de": "Fragen: „Wann waren diese beiden Dinge gleichzeitig wahr?“",
+              "en": "Ask: ‘When have you noticed these two things to be true at the same time?’"
+            }
+          },
+          {
+            "name": {
+              "de": "Online-Vorteil",
+              "en": "Online advantage"
+            },
+            "beschreibung": {
+              "de": "Erkenntnisse digital im Chat oder auf einem Whiteboard erfassen, um den Prozess zu beschleunigen.",
+              "en": "Capture insights digitally in the chat or on a shared whiteboard to accelerate the process."
+            }
+          },
+          {
+            "name": {
+              "de": "Weiterarbeiten",
+              "en": "Keep going"
+            },
+            "beschreibung": {
+              "de": "Mit 15% Solutions und 1-2-4-All weitere Ideen erarbeiten; Wicked Questions als Input für Improv Prototyping, Ecocycle Planning und 25/10 Crowd Sourcing nutzen.",
+              "en": "Generate more ideas with 15% Solutions and 1-2-4-All; use wicked questions as input for Improv Prototyping, Ecocycle Planning and 25/10 Crowdsourcing."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Beide Seiten des Widerspruchs anerkennend formulieren, nicht abwertend.",
+            "Mit Wörtern spielen, bis ein „Arrrgh“ entsteht — dann ist die Frage gut.",
+            "Garstige Fragen vermeiden, die Schuld zuweisen oder zu einseitig sind.",
+            "Faktenlastige Fragen vermeiden, die sich durch mehr Analyse lösen lassen.",
+            "Jeder Gegensatz am besten durch ein einziges Wort dargestellt.",
+            "In schnellen Zyklen arbeiten; oft braucht es mehrere Runden."
+          ],
+          "en": [
+            "Frame both sides of the contradiction appreciatively, not as a put-down.",
+            "Play with words until you get an ‘arrrgh’ — then the question is good.",
+            "Avoid nasty questions that assign blame or are too one-sided.",
+            "Avoid fact-heavy questions that can be answered with more analysis.",
+            "Each opposing truth is best represented by a single word.",
+            "Work in quick cycles; it often takes several rounds."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Übergänge: über altes Denken hinausgehen („Wie schließen wir das Alte ein und überschreiten es zugleich?“).",
+            "Nächste Schritte abwägen und Optionen offenhalten.",
+            "Globale Vorhaben steuern (einheitlich UND lokal einzigartig).",
+            "Persönliche Spannungen (z. B. Arbeit und Familie)."
+          ],
+          "en": [
+            "Transitions: move beyond old thinking (‘How do we include and transcend the old way?’).",
+            "Weigh next steps while keeping options open.",
+            "Manage global operations (unified AND locally unique).",
+            "Personal tensions (e.g. work and family)."
+          ]
+        },
+        "material_setup": {
+          "de": "Gruppen von 4–6 Stühlen, mit oder ohne kleine Tische; Stifte/Papier/Post-its; Beispiele und die Satz-Schablone sichtbar. Online: Breakout-Räume; Chat/Whiteboard zum Festhalten.",
+          "en": "Groups of four to six chairs, with or without small tables; pens/paper/sticky notes; examples and the sentence template visible. Online: breakout rooms; chat/whiteboard to capture."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich — sogar im Vorteil, weil sich Fragen leicht digital im Chat oder auf einem geteilten Whiteboard festhalten lassen, was den Prozess beschleunigt. Ablauf: (1) Konzept und Schablone erklären. (2) Jede:r notiert Wahrheiten über die Herausforderung und kreist zwei scheinbar gegensätzliche ein. (3) In Breakouts von 4–6 Personen Wicked Questions formulieren und verfeinern, bis ein „Arrrgh“ entsteht. (4) Im Plenum die stärksten Fragen im Chat sammeln und über die Top drei abstimmen (Reaktionen/Applaus).",
+          "en": "Works well online — even at an advantage, since questions are easy to capture digitally in the chat or on a shared whiteboard, which speeds up the process. Flow: (1) Explain the concept and template. (2) Each person notes truths about the challenge and circles two seemingly opposed ones. (3) In breakouts of 4–6, draft and refine wicked questions until an ‘arrrgh’ emerges. (4) In plenary, collect the strongest questions in the chat and vote on the top three (reactions/applause)."
+        }
       }
     },
     {
@@ -485,63 +993,225 @@
       "edition": "original",
       "short_desc": {
         "de": "Über erzählte Erfolgsgeschichten deckt die Gruppe auf, was Erfolg möglich macht – erzeugt positive Energie und Erkenntnisse für aktuelle Herausforderungen.",
-        "en": ""
+        "en": "Through told success stories, the group uncovers what makes success possible — generating momentum and insights for positive change, and showing that social support is key."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/appreciative-interviews-ai/",
+      "source_url": "https://www.liberatingstructures.com/appreciative-interviews",
       "purpose_tags": [
-        "analysieren"
+        "analysieren",
+        "offenlegen"
       ],
       "arc_role": [
         "öffnen",
         "konvergieren"
       ],
-      "group_size_min": 4,
+      "group_size_min": 2,
       "group_size_max": null,
-      "duration_min": 45,
-      "duration_max": 60,
+      "duration_min": 55,
+      "duration_max": 75,
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Post-its; optional Flipchart; online: Breakout-Räume und virtuelles Whiteboard.",
-        "en": ""
+        "en": "Chairs for face-to-face pairs (or breakouts of three, no tables). Paper for everyone; flip charts for each group (or chat/visual collaboration space)."
       },
       "difficulty": "mittel",
-      "typical_predecessors": [
-        "nine-whys"
-      ],
+      "typical_predecessors": [],
       "typical_successors": [
-        "min-specs",
-        "1-2-4-all"
+        "positive-gossip",
+        "what-i-need-from-you-winfy",
+        "purpose-to-practice"
       ],
       "scrum_use": {
         "de": "Positive Retrospektive (was lief gut und warum) und Team-Start; stärkt die Zusammenarbeit.",
-        "en": ""
+        "en": "Build on what already works: by mining concrete success stories, the team identifies the conditions and assets behind success — strong for retrospectives, culture and change initiatives."
       },
       "design_elements": {
         "einladung": {
           "de": "„Erzähle eine Geschichte, in der du mit anderen an einer Herausforderung gearbeitet hast und stolz auf das Ergebnis bist. Was hat den Erfolg möglich gemacht?“",
-          "en": ""
+          "en": "Tell a story about a time when you worked on a challenge with others and were proud of what you accomplished. What made success possible?"
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Papier, Platz für Paare und Vierergruppen. Nützlich: Post-its. Optional: Flipchart; online: Breakout-Räume und virtuelles Whiteboard.",
-          "en": ""
+          "en": "Chairs for face-to-face pairs (or breakouts of three, no tables). Paper for everyone; flip charts per group (or chat/visual collaboration space)."
         },
         "einbindung": {
           "de": "Alle sind beteiligt; gleiche Zeit und Gelegenheit für jede:n.",
-          "en": ""
+          "en": "Roles: host, interviewers, interviewees. Minimum group size: two. Everyone has equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Zuerst Paare, dann Vierergruppen (gemischt).",
-          "en": ""
+          "en": "Pairs, quartets, whole group (or trios, whole group)."
         },
         "ablauf_dauer": {
           "de": "Prozess erklären 3 Min; Paar-Interviews 15–20 Min; Vierergruppen-Austausch mit Mustern 15 Min; Erfolgsbedingungen via 1-2-4-All 10 Min. Gesamt 45–60 Min.",
-          "en": ""
+          "en": "Storytelling in pairs 15–20 min (7–10 min each); retelling in quartets (F2F) 15 min; plenary sharing of patterns 10–15 min; dig deeper into investing in success conditions 10 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); angelehnt an David Cooperriders Appreciative Inquiry; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren & Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); drawing on David Cooperrider's appreciative inquiry; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze & Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P5"
+      ],
+      "icon_alt": {
+        "de": "Zwei Personen im wertschätzenden Interview; eine erzählt eine Erfolgsgeschichte, die andere hört aufmerksam zu.",
+        "en": "Two people in an appreciative interview; one tells a success story, the other listens attentively."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Teilnehmenden erzählen Geschichten darüber, wie sie Herausforderungen erfolgreich gemeistert haben, und erkennen die Bedingungen, die für den Erfolg wesentlich waren. Das erzeugt Schwung und Einsichten für positive Veränderung und zeigt, dass soziale Unterstützung ein Schlüssel ist. Appreciative Interviews verkörpert LS-Prinzip #5 — Selbst-Entdeckung in der Gruppe ermöglichen.",
+          "en": "Participants tell stories about successfully facing challenges and identify the conditions essential for success. This generates momentum and insights for positive change and shows that social support is key. Appreciative Interviews enacts LS Principle #5 — Practice Self-Discovery Within a Group."
+        },
+        "einladung": {
+          "de": "„Erzähle eine Geschichte von einer Zeit, in der du mit anderen an einer Herausforderung gearbeitet hast und auf das Erreichte stolz warst. Was hat den Erfolg möglich gemacht?“",
+          "en": "Tell a story about a time when you worked on a challenge with others and were proud of what you accomplished. What made success possible?"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Erzähle eine Geschichte, in der du stolz auf das gemeinsam Erreichte warst.",
+            "Was genau hat den Erfolg möglich gemacht?",
+            "Welche Bedingungen, Stärken und Unterstützung haben geholfen?"
+          ],
+          "en": [
+            "Tell a story where you were proud of what you accomplished together.",
+            "What exactly made the success possible?",
+            "Which conditions, strengths and support helped?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Die Einladung teilen; bei Bezug zu einem Projekt/Thema den Geschichten-Typ angeben.",
+              "en": "Share the invitation; specify the story type if linked to a project/theme."
+            }
+          },
+          {
+            "phase": {
+              "de": "Geschichten erzählen",
+              "en": "Storytelling"
+            },
+            "dauer_min": 18,
+            "beschreibung": {
+              "de": "In Paaren gegenseitig interviewen und Erfolgsgeschichten erzählen; auf Bedingungen/Stärken achten, die den Erfolg trugen (7–10 Min je Person).",
+              "en": "In pairs, interview each other and tell success stories, noting the conditions/assets that supported success (7–10 min each)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Nacherzählen (nur Präsenz)",
+              "en": "Retelling (F2F only)"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Paare bilden Vierergruppen; jede:r erzählt die Geschichte der Partnerin nach; auf Muster in Bedingungen/Stärken achten und notieren.",
+              "en": "Pairs form quartets; each person retells their partner's story; listen for patterns in conditions/assets and write them down."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 12,
+            "beschreibung": {
+              "de": "Erkenntnisse und Muster im Plenum teilen (Flipchart).",
+              "en": "Share insights and patterns in plenary (flip chart)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Vertiefen",
+              "en": "Dig deeper"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Reflektieren, wie man in die Erfolgsbedingungen investiert und wo Gelegenheiten liegen, mehr davon zu tun.",
+              "en": "Reflect on how you invest in the success conditions and where opportunities exist to do more."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Geschichte betiteln",
+              "en": "Title the story"
+            },
+            "beschreibung": {
+              "de": "Die Teilnehmenden geben der Geschichte ihrer Partnerin einen Titel.",
+              "en": "Ask people to title their partner's story."
+            }
+          },
+          {
+            "name": {
+              "de": "Grafisch festhalten",
+              "en": "Graphically record"
+            },
+            "beschreibung": {
+              "de": "Geschichten auf einem großen Whiteboard grafisch festhalten; inspirierende Geschichten verbreiten.",
+              "en": "Record stories graphically on a large whiteboard; publicize inspiring stories."
+            }
+          },
+          {
+            "name": {
+              "de": "Zweite Runde",
+              "en": "Second round"
+            },
+            "beschreibung": {
+              "de": "Eine zweite Runde durchführen, um positive Abweichung (positive deviance) zu finden.",
+              "en": "Run a second round to find positive deviance."
+            }
+          },
+          {
+            "name": {
+              "de": "Online",
+              "en": "Online"
+            },
+            "beschreibung": {
+              "de": "Das 1-2-4-All-Format nutzen, um Zeit zu sparen und das Zusammenführen von Gruppen zu vermeiden.",
+              "en": "Use the 1-2-4-All format to save time and avoid combining groups."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Auftauchende Urteile beim Zuhören bemerken und loslassen.",
+            "Bei „erfolglosen“ Geschichten umlenken: „Wann hatten wir — auch nur bescheiden — Erfolg?“",
+            "In Präsenz Knie an Knie sitzen.",
+            "Als Interviewer:in nicht die eigene Erfahrung einbringen."
+          ],
+          "en": [
+            "Notice judgments that arise while listening and let them go.",
+            "If stories are unsuccessful, redirect: ‘When have we succeeded, even modestly?’",
+            "For F2F, sit knee to knee.",
+            "Do not share your own experience when interviewing."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Human-centered-Design-Projekte („Erzähle von einer kreativen, positiven Kund:innen-Interaktion“).",
+            "Überarbeitung eines Kurses („Erzähle von einer tiefen Lernerfahrung“).",
+            "Strategie nach einem Launch („Erzähle vom ersten Erfolg im Feld“)."
+          ],
+          "en": [
+            "Human-centered design projects (‘Tell a story about a creative, positive customer interaction’).",
+            "Revising a course (‘Tell a story about a profound learning experience’).",
+            "Post-launch strategy (‘Tell a story about a first success in the field’)."
+          ]
+        },
+        "material_setup": {
+          "de": "Stühle für Paare (oder Trios), keine Tische; Papier für alle; Flipcharts je Gruppe (online: Chat/visuelle Fläche).",
+          "en": "Chairs for pairs (or trios), no tables; paper for everyone; flip charts per group (online: chat/visual collaboration space)."
+        },
+        "online_durchfuehrung": {
+          "de": "Online im 1-2-4-All-Format, um Zeit zu sparen und das Zusammenführen von Gruppen zu vermeiden. Ablauf: (1) In Zweier-Breakouts gegenseitig interviewen und Erfolgsgeschichten erzählen (je 7–10 Min), Bedingungen/Stärken notieren. (2) In Vierer-Breakouts Muster sammeln. (3) Im Plenum Erkenntnisse teilen (Chat/visuelle Fläche). (4) Vertiefen: Wie investieren wir in diese Erfolgsbedingungen?",
+          "en": "Online, use the 1-2-4-All format to save time and avoid combining groups. Flow: (1) In breakouts of two, interview each other and tell success stories (7–10 min each), noting conditions/assets. (2) In breakouts of four, gather patterns. (3) In plenary, share insights (chat/visual space). (4) Dig deeper: how do we invest in these success conditions?"
+        }
       }
     },
     {
