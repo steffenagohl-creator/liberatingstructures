@@ -19,6 +19,7 @@ from catalog.models import Structure, StringTemplate
 _CANDIDATE_FIELDS = (
     "slug",
     "name",
+    "objective",
     "short_desc",
     "arc_role",
     "purpose_tags",
@@ -28,6 +29,7 @@ _CANDIDATE_FIELDS = (
     "group_size_max",
     "online_capable",
     "difficulty",
+    "embodied_principles",
 )
 
 
@@ -40,6 +42,50 @@ def load_diagnosis_schema() -> dict:
     path = settings.DATA_DIR / "diagnosis_schema.json"
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+@functools.lru_cache(maxsize=1)
+def load_principles() -> list[dict]:
+    """Lädt die 10 LS-Prinzipien (``data/ls_principles.json``) für das KI-Harness.
+
+    Liefert eine kompakte Liste ``[{"id", "name_de", "beschreibung"}, ...]``, auf die sich
+    das Sprachmodell bei Auswahl und Begründung berufen muss.
+    """
+    path = settings.DATA_DIR / "ls_principles.json"
+    with open(path, encoding="utf-8") as fh:
+        principles = json.load(fh)["principles"]
+    return [
+        {
+            "id": p["id"],
+            "name_de": p["name_de"],
+            "beschreibung": p["beschreibung"],
+            "must_do": p.get("must_do", ""),
+            "must_not_do": p.get("must_not_do", ""),
+        }
+        for p in principles
+    ]
+
+
+@functools.lru_cache(maxsize=1)
+def load_foundations() -> dict:
+    """Lädt das theoretische Fundament (Kernkonzepte + Komplexitäts-Linsen) fürs Harness.
+
+    Liefert eine kompakte Form, auf die sich das Sprachmodell zur fachlichen Vertiefung der
+    Begründung stützen kann (``data/ls_foundations.json``).
+    """
+    path = settings.DATA_DIR / "ls_foundations.json"
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    return {
+        "core_concepts": [
+            {"name": c["name_de"], "insight": c["insight"]}
+            for c in data.get("core_concepts", [])
+        ],
+        "complexity_lenses": [
+            {"name": lens["name"], "ls_bezug": lens["ls_bezug"]}
+            for lens in data.get("complexity_lenses", [])
+        ],
+    }
 
 
 def query_structures(

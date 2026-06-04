@@ -32,6 +32,9 @@ SCRUM_CONTEXTS = [
     "team-start",
 ]
 
+# IDs der 10 Liberating-Structures-Prinzipien (Details in data/ls_principles.json).
+PRINCIPLE_IDS = ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10"]
+
 
 def as_choices(values):
     """Wandelt eine Werteliste in Django-Choices [(wert, wert), ...] um."""

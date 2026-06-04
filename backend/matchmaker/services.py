@@ -227,12 +227,66 @@ def run_interview(situation: str, answers: dict | None) -> dict:
 # --------------------------------------------------------------------------- #
 # Pipeline 2: Matchmaking                                                      #
 # --------------------------------------------------------------------------- #
+def _run_with_gate(messages_builder, diagnose: dict, candidate_count: int,
+                   max_iter: int, client) -> dict:
+    """Führt eine LLM-Stufe mit Quality-Gate-Korrekturschleife aus und verpackt das Ergebnis.
+
+    ``messages_builder(correction)`` liefert die Nachrichten für einen Versuch (``correction`` ist
+    beim ersten Versuch ``None``, danach der Mängel-Hinweis). Gibt das beste Ergebnis-Dict zurück
+    (das erste Quality-Gate-konforme – sonst den jüngsten Versuch mit transparentem Hinweis).
+    """
+    correction = None
+    best = None
+    for attempt in range(1, max_iter + 1):
+        raw = client.chat(messages_builder(correction), json=True)
+        parsed = _parse_json(raw)
+        if parsed is None:
+            correction = "Die Antwort war kein gültiges JSON-Objekt. Liefere reines JSON."
+            continue
+
+        steps = parsed.get("string", []) or []
+        ok, violations = validate_string(steps, diagnose)
+        total = sum(_as_int(s.get("duration")) or 0 for s in steps)
+        result = {
+            "string": steps,
+            "total_duration": total,
+            "summary": parsed.get("summary", ""),
+            "principle_rationale": parsed.get("principle_rationale", ""),
+            "consolidation": parsed.get("consolidation", ""),
+            "alternatives": parsed.get("alternatives", []),
+            "quality": {"ok": ok, "violations": violations, "iterations": attempt},
+            "candidate_count": candidate_count,
+        }
+        if ok:
+            return result
+        best = result
+        correction = " ".join(violations)
+
+    if best is None:
+        best = {
+            "string": [], "total_duration": 0, "summary": "", "principle_rationale": "",
+            "consolidation": "", "alternatives": [],
+            "quality": {
+                "ok": False,
+                "violations": ["Es konnte kein gültiger Vorschlag erzeugt werden."],
+                "iterations": max_iter,
+            },
+            "candidate_count": candidate_count,
+        }
+    best["hinweis"] = (
+        "Hinweis: Dieser Vorschlag erfüllt noch nicht alle Qualitätskriterien "
+        "(siehe quality.violations). Bitte vor dem Einsatz prüfen."
+    )
+    return best
+
+
 def match(diagnose_raw: dict) -> dict:
     """Erzeugt aus der Diagnose einen validierten, begründeten String.
 
-    Ablauf: Vorfilterung → LLM-Sequenzierung → Quality Gate (mit Korrekturschleife,
-    max. ``MATCHMAKER_MAX_ITERATIONS`` Versuchen). Liefert den besten Vorschlag samt
-    transparentem Qualitäts-Status.
+    Ablauf: Vorfilterung → zwei unabhängige LLM-Vorschläge (Agent A & B) → Konsolidierung durch
+    einen prüfenden Agenten (vergleicht Unterschiede/Gemeinsamkeiten/Optionen, wie Co-Hosts im
+    offiziellen LS Selection Matchmaker) → Quality Gate mit Korrekturschleife. Über
+    ``MATCHMAKER_CONSOLIDATE`` abschaltbar (dann nur ein Vorschlag).
     """
     diagnose = normalize_diagnose(diagnose_raw)
     candidates = vorfilterung(diagnose)
@@ -241,60 +295,38 @@ def match(diagnose_raw: dict) -> dict:
         scrum_context=diagnose["scrum_kontext"], purpose_tags=diagnose["zweck"]
     )
     template_dicts = [tools.serialize_template(t) for t in templates]
+    principles = tools.load_principles()
+    foundations = tools.load_foundations()
 
     client = get_llm_client()
     budget = diagnose["zeitbudget"]
     max_iter = getattr(settings, "MATCHMAKER_MAX_ITERATIONS", 3)
+    n = len(candidate_dicts)
 
-    correction: str | None = None
-    best: dict | None = None
-
-    for attempt in range(1, max_iter + 1):
-        messages = prompts.build_sequence_messages(
-            diagnose, candidate_dicts, template_dicts, budget, correction
+    def seq_builder(correction):
+        return prompts.build_sequence_messages(
+            diagnose, candidate_dicts, template_dicts, budget,
+            principles=principles, foundations=foundations, correction=correction,
         )
-        raw = client.chat(messages, json=True)
-        parsed = _parse_json(raw)
 
-        if parsed is None:
-            correction = "Die Antwort war kein gültiges JSON-Objekt. Liefere reines JSON."
-            continue
+    # Vorschlag von Agent A.
+    proposal_a = _run_with_gate(seq_builder, diagnose, n, max_iter, client)
 
-        steps = parsed.get("string", []) or []
-        ok, violations = validate_string(steps, diagnose)
-        total = sum(_as_int(step.get("duration")) or 0 for step in steps)
+    if not getattr(settings, "MATCHMAKER_CONSOLIDATE", True):
+        return proposal_a
 
-        result = {
-            "string": steps,
-            "total_duration": total,
-            "summary": parsed.get("summary", ""),
-            "alternatives": parsed.get("alternatives", []),
-            "quality": {"ok": ok, "violations": violations, "iterations": attempt},
-            "candidate_count": len(candidate_dicts),
-        }
+    # Unabhängiger Vorschlag von Agent B, dann Konsolidierung durch einen prüfenden Agenten.
+    proposal_b = _run_with_gate(seq_builder, diagnose, n, max_iter, client)
 
-        if ok:
-            return result
+    def cons_builder(correction):
+        return prompts.build_consolidation_messages(
+            diagnose, candidate_dicts, budget, proposal_a, proposal_b,
+            principles=principles, foundations=foundations, correction=correction,
+        )
 
-        best = result  # bisher bester (jüngster) Versuch
-        correction = " ".join(violations)
-
-    # Kein vollständig sauberer String – ehrlich zurückgeben, was wir haben.
-    if best is None:
-        best = {
-            "string": [],
-            "total_duration": 0,
-            "summary": "",
-            "alternatives": [],
-            "quality": {
-                "ok": False,
-                "violations": ["Es konnte kein gültiger Vorschlag erzeugt werden."],
-                "iterations": max_iter,
-            },
-            "candidate_count": len(candidate_dicts),
-        }
-    best["hinweis"] = (
-        "Hinweis: Dieser Vorschlag erfüllt noch nicht alle Qualitätskriterien "
-        "(siehe quality.violations). Bitte vor dem Einsatz prüfen."
-    )
-    return best
+    final = _run_with_gate(cons_builder, diagnose, n, max_iter, client)
+    final["drafts"] = [
+        {"string": proposal_a.get("string", []), "summary": proposal_a.get("summary", "")},
+        {"string": proposal_b.get("string", []), "summary": proposal_b.get("summary", "")},
+    ]
+    return final

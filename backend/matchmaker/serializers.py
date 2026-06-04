@@ -90,7 +90,13 @@ class StringStepSerializer(serializers.Serializer):
     slug = serializers.CharField(help_text="Slug der Struktur (real im Katalog).")
     role = serializers.CharField(help_text="Rolle im Bogen für diesen Schritt.")
     duration = serializers.IntegerField(help_text="Geplante Dauer in Minuten.")
-    rationale = serializers.CharField(help_text="Ein-Satz-Begründung für diesen Schritt.")
+    rationale = serializers.CharField(
+        help_text="Ein-Satz-Begründung für diesen Schritt (mit Bezug auf ein LS-Prinzip).",
+    )
+    principles = serializers.ListField(
+        child=serializers.CharField(), required=False, default=list,
+        help_text="IDs der LS-Prinzipien (P1–P10), die diesen Schritt begründen.",
+    )
 
 
 class QualitySerializer(serializers.Serializer):
@@ -109,6 +115,14 @@ class MatchResponseSerializer(serializers.Serializer):
     string = StringStepSerializer(many=True)
     total_duration = serializers.IntegerField(help_text="Summe der Schritt-Dauern in Minuten.")
     summary = serializers.CharField(help_text="Kurze Zusammenfassung, was der String bewirkt.")
+    principle_rationale = serializers.CharField(
+        required=False, allow_blank=True,
+        help_text="Begründung von Auswahl UND Reihenfolge, belegt mit den LS-Prinzipien.",
+    )
+    consolidation = serializers.CharField(
+        required=False, allow_blank=True,
+        help_text="Was der Konsolidierer aus den zwei Vorschlägen übernommen/verschmolzen hat.",
+    )
     alternatives = serializers.ListField(
         required=False, default=list, help_text="Optionale Alternativen (v1: meist leer).",
     )
@@ -118,4 +132,8 @@ class MatchResponseSerializer(serializers.Serializer):
     )
     hinweis = serializers.CharField(
         required=False, help_text="Nur gesetzt, wenn der Vorschlag nicht voll Gate-konform ist.",
+    )
+    drafts = serializers.ListField(
+        required=False, default=list,
+        help_text="Die zwei unabhängigen Vorentwürfe (Agent A & B) zur Transparenz.",
     )

@@ -23,6 +23,12 @@ class Command(BaseCommand):
         daten = json.loads(pfad.read_text(encoding="utf-8"))
         strukturen = daten["structures"]
 
+        # Kanonische Ziele (LS Selection Matchmaker) je Slug – werden in 'objective' übernommen.
+        objektiv_pfad = settings.DATA_DIR / "ls_objectives.json"
+        objectives = {}
+        if objektiv_pfad.exists():
+            objectives = json.loads(objektiv_pfad.read_text(encoding="utf-8")).get("objectives", {})
+
         neu = aktualisiert = 0
         for s in strukturen:
             self._pruefe(s)
@@ -35,6 +41,7 @@ class Command(BaseCommand):
                     "base_structure": s.get("base_structure") or "",
                     "edition": s["edition"],
                     "short_desc": s["short_desc"],
+                    "objective": s.get("objective") or objectives.get(s["slug"], {}).get("de", ""),
                     "source_url": s["source_url"],
                     "purpose_tags": s["purpose_tags"],
                     "arc_role": s["arc_role"],
@@ -51,6 +58,8 @@ class Command(BaseCommand):
                     "design_elements": s["design_elements"],
                     "description_origin": s.get("description_origin", "uebernommen"),
                     "attribution": s.get("attribution", ""),
+                    "embodied_principles": s.get("embodied_principles", []),
+                    "guide": s.get("guide", {}),
                 },
             )
             neu += int(created)
@@ -76,6 +85,9 @@ class Command(BaseCommand):
         for a in s["arc_role"]:
             if a not in constants.ARC_ROLES:
                 raise CommandError(f"{slug}: ungültige arc_role {a!r}")
+        for p in s.get("embodied_principles", []):
+            if p not in constants.PRINCIPLE_IDS:
+                raise CommandError(f"{slug}: ungültiges Prinzip {p!r}")
         for k in PFLICHT_DESIGNELEMENTE:
             if not s.get("design_elements", {}).get(k):
                 raise CommandError(f"{slug}: Designelement {k!r} fehlt oder ist leer")

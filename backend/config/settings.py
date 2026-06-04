@@ -112,3 +112,5 @@ LLM_API_KEY = os.environ.get("MISTRAL_API_KEY") or os.environ.get("LLM_API_KEY",
 LLM_TIMEOUT = float(os.environ.get("LLM_TIMEOUT", "60"))
 # Wie oft die Sequenzierung nach einem Quality-Gate-Verstoß nachbessern darf.
 MATCHMAKER_MAX_ITERATIONS = int(os.environ.get("MATCHMAKER_MAX_ITERATIONS", "3"))
+# Zwei-Agenten-Konsolidierung (Agent A & B + prüfender Konsolidierer). Zum Sparen abschaltbar.
+MATCHMAKER_CONSOLIDATE = os.environ.get("MATCHMAKER_CONSOLIDATE", "true").lower() == "true"

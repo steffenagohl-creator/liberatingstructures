@@ -38,6 +38,8 @@ class StubClient(LLMClient):
             return self._interview(context)
         if task == "sequence":
             return self._sequence(context)
+        if task == "consolidate":
+            return self._consolidate(context)
         # Unbekannte Aufgabe: leeres, valides JSON-Objekt.
         return "{}"
 
@@ -106,6 +108,7 @@ class StubClient(LLMClient):
                     "role": role,
                     "duration": dur(cand),
                     "rationale": _ROLE_RATIONALE.get(role, "Trägt zum String bei."),
+                    "principles": list(cand.get("embodied_principles") or []),
                 }
             )
             used.add(cand["slug"])
@@ -141,6 +144,30 @@ class StubClient(LLMClient):
             "string": steps,
             "total_duration": total,
             "summary": summary,
+            "principle_rationale": (
+                "Die Reihenfolge folgt dem Bogen (öffnen → divergieren → konvergieren → "
+                "schließen) und stützt sich auf die von den gewählten Strukturen verkörperten "
+                "LS-Prinzipien (deterministischer Stub)."
+            ),
+            "alternatives": [],
+        }
+        return json.dumps(result, ensure_ascii=False)
+
+    # -- Konsolidierung ----------------------------------------------------- #
+    def _consolidate(self, context: dict) -> str:
+        """Übernimmt deterministisch Vorschlag A (beide Stub-Vorschläge sind identisch)."""
+        a = context.get("proposal_a") or {}
+        steps = a.get("string") or []
+        total = sum(int(s.get("duration") or 0) for s in steps)
+        result = {
+            "string": steps,
+            "total_duration": total,
+            "summary": a.get("summary", ""),
+            "principle_rationale": a.get("principle_rationale", ""),
+            "consolidation": (
+                "Vorschlag A und B waren deckungsgleich; Vorschlag A übernommen "
+                "(deterministischer Stub)."
+            ),
             "alternatives": [],
         }
         return json.dumps(result, ensure_ascii=False)

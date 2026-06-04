@@ -1394,6 +1394,84 @@
       },
       "description_origin": "uebernommen",
       "attribution": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de"
+    },
+    {
+      "id": 34,
+      "name": "Mad Tea | Calm Tea",
+      "slug": "mad-tea",
+      "type": "official",
+      "base_structure": null,
+      "edition": "extended",
+      "short_desc": "Alle vervollständigen im Höchsttempo offene Sätze zu einer gemeinsamen Herausforderung – in wenigen Minuten entstehen viele Perspektiven, verborgene Einsichten, Verbundenheit und Schwung. „Mad Tea“ ist die lebhafte Präsenz-Variante, „Calm Tea“ die ruhige Online-Variante im Chat.",
+      "source_url": "https://www.liberatingstructures.com/mad-tea-calm-tea",
+      "purpose_tags": [
+        "offenlegen",
+        "teilen"
+      ],
+      "arc_role": [
+        "öffnen",
+        "schließen"
+      ],
+      "group_size_min": 12,
+      "group_size_max": null,
+      "duration_min": 20,
+      "duration_max": 25,
+      "online_capable": true,
+      "materials": "Präsenz („Mad Tea“): offener Raum für zwei konzentrische Kreise (innen/außen), sodass sich Paare gegenüberstehen; Glocke/Signal für Übergänge. Online („Calm Tea“): Videokonferenz mit Chat und vorbereiteten offenen Satzanfängen in Großbuchstaben. Präsenz wirkt ab ca. 12 Personen, online ab ca. 6.",
+      "difficulty": "leicht",
+      "typical_predecessors": [],
+      "typical_successors": [
+        "critical-uncertainties"
+      ],
+      "scrum_use": "Schneller Check-in oder Check-out in nahezu jeder Zeremonie: als Energizer und Verbindungsritual zu Beginn (z. B. Retrospektive, Planning) oder zum gemeinsamen Reflektieren und Ableiten nächster Schritte am Ende.",
+      "design_elements": {
+        "einladung": "Macht euch bereit, unsere Herausforderung im Höchsttempo zu erkunden! Wir teilen Perspektiven, legen verborgene Einsichten frei und entwickeln neue Ideen – mit Freude und Schwung für die nächsten Schritte.",
+        "raum_materialien": "Präsenz: zwei konzentrische Kreise, Paare einander gegenüber. Online: Chat mit vorbereiteten offenen Satzanfängen („Chatterfall“). Glocke/Signal für die Übergänge.",
+        "einbindung": "Alle gleichberechtigt: Jede:r vervollständigt jeden Satzanfang, etwa 30 Sekunden pro Person, danach Wechsel des Gegenübers (online: alle gleichzeitig im Chat).",
+        "gruppenkonfiguration": "Wechselnde Paare und Gesamtgruppe (online nur Gesamtgruppe).",
+        "ablauf_dauer": "Einführung und Aufstellung ca. 5 Min → bis zu 12 offene Sätze à ca. 30 Sek. mit Partnerwechsel ca. 12 Min → gemeinsame Plenums-Reflexion 2–5 Min. Gesamt ca. 20–25 Min."
+      },
+      "description_origin": "eigen",
+      "attribution": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz, Nancy White & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com",
+      "embodied_principles": [
+        "P9"
+      ],
+      "guide": {
+        "was_wird_moeglich": "Bei Mad Tea / Calm Tea vervollständigen alle in hohem Tempo Sätze rund um eine gemeinsame Herausforderung. „Mad Tea“ ist die lautere, energiegeladene Präsenz-Variante, „Calm Tea“ die ruhigere Online-Alternative. Beide bringen die Gruppe dazu, anders zu denken, neue Ideen zu teilen und unterschiedliche Perspektiven zu verstehen – und stiften zugleich Verbundenheit und Lachen.",
+        "einladung": "Macht euch bereit, unsere Herausforderung im Höchsttempo zu erkunden! Wir teilen Perspektiven, legen verborgene Einsichten frei und entwickeln neue Ideen – mit Freude und Schwung für die nächsten Schritte.",
+        "beispielsaetze": [
+          "Was ich an dieser Situation schätze, ist …",
+          "Eine verzwickte Herausforderung, der ich gegenüberstehe, ist …",
+          "Was ich für uns erhoffe, ist …",
+          "Ein nächster Schritt für mich ist …",
+          "Was geschützt werden muss, ist …",
+          "Wogegen wir uns wehren müssen, ist …",
+          "Was losgelassen werden muss, ist …",
+          "Was erfunden oder entwickelt werden muss, ist …",
+          "Alles, was ich will, ist …"
+        ],
+        "schritte": [
+          { "phase": "Einführung", "dauer_min": 1, "beschreibung": "Die Einladung vorstellen." },
+          { "phase": "Aufstellung", "dauer_min": 2, "beschreibung": "Paare in zwei konzentrischen Kreisen bilden (innen/außen), sodass sich je zwei gegenüberstehen." },
+          { "phase": "Anleitung", "dauer_min": 2, "beschreibung": "Ablauf erklären: ca. 30 Sek. pro Person je Satz, dann Partnerwechsel; der äußere Kreis rotiert." },
+          { "phase": "Sätze vervollständigen", "dauer_min": 12, "beschreibung": "Bis zu 12 offene Sätze nacheinander; nach jedem Satz ein:e neue:r Partner:in." },
+          { "phase": "Plenums-Reflexion", "dauer_min": 5, "beschreibung": "Gemeinsam Unterschiede und Gemeinsamkeiten ernten und nächste Schritte benennen." }
+        ],
+        "varianten": [
+          { "name": "Calm Tea (online)", "beschreibung": "Ruhige Online-Variante im Chat: alle stummgeschaltet; pro Satz vervollständigen alle gleichzeitig und senden auf Signal („Chatterfall“), danach kurze Lesepause. Bis zu 6 Sätze; am Ende erneutes Lesen/Scrollen zur Reflexion." },
+          { "name": "Variationen (Riffs)", "beschreibung": "Tonalität der Satzanfänge variieren; online Anonymität über kollektive Pseudonyme; humorvolle Varianten wie „Ich erkenne ein dysfunktionales Team daran, dass …“." }
+        ],
+        "tipps": [
+          "Mad Tea ist schnell und kann laut werden: dazu ermutigen, sich nah zum Gegenüber zu beugen statt zu rufen; Übergänge mit einer Glocke/einem Signal ankündigen.",
+          "Calm Tea: anfangs senden manche reflexhaft zu früh – ein, zwei Runden zum Einspielen einplanen und eine ausgewogene Mischung der Satzanfänge wählen."
+        ],
+        "anlaesse": [
+          "Zu Beginn oder am Ende von Meetings, um schnell Verbindung und gemeinsamen Zweck herzustellen.",
+          "Zur Reflexion von Erkenntnissen.",
+          "Zum Identifizieren von Ambitionen und nächsten Schritten in Transitions- oder Planungsinitiativen."
+        ],
+        "material_setup": "Präsenz: genügend offener Raum für zwei konzentrische Kreise; eine Glocke oder ein akustisches Signal für die Übergänge. Online: Videokonferenz mit Chat; die offenen Satzanfänge vorbereitet (in Großbuchstaben) zum Einblenden."
+      }
     }
   ]
 }

@@ -36,6 +36,11 @@ class Structure(models.Model):
         help_text="original = die 33 Kern-LS; extended = später ergänzte.",
     )
     short_desc = models.TextField(help_text="Verständliche Kurzbeschreibung (1–3 Sätze).")
+    objective = models.CharField(
+        max_length=300, blank=True, default="",
+        help_text="Kanonisches Ziel (LS Selection Matchmaker): das eine Ziel, das die Struktur "
+                  "erfüllt – Matching-Schlüssel. Quelle: data/ls_objectives.json.",
+    )
     source_url = models.URLField(max_length=300, help_text="Link zur Original-Detailseite (Quelle).")
 
     purpose_tags = ArrayField(
@@ -83,6 +88,18 @@ class Structure(models.Model):
     )
     attribution = models.TextField(
         blank=True, default="", help_text="Namensnennung + Lizenz bei übernommenen Inhalten.",
+    )
+
+    embodied_principles = ArrayField(
+        models.CharField(max_length=4), default=list, blank=True,
+        help_text="IDs der besonders verkörperten LS-Prinzipien (P1–P10), "
+                  "siehe data/ls_principles.json.",
+    )
+    guide = models.JSONField(
+        default=dict, blank=True,
+        help_text="Ausführlicher Detailguide (Ebene 2, spiegelt die Quellseite): "
+                  "was_wird_moeglich, einladung, beispielsaetze[], schritte[], "
+                  "varianten[], tipps[], anlaesse[], material_setup.",
     )
 
     class Meta:

@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "beschreibung": "Theoretisches Fundament der Liberating Structures: die Kernkonzepte (wie LS Erkenntnisse der Komplexitätswissenschaft in den Alltag übersetzt) und die fünf Komplexitäts-Linsen (die Quellen dahinter). Teil des KI-Harness: Das Sprachmodell nutzt diese Konzepte, um Vorschläge fachlich zu vertiefen und zu begründen (z. B. Min Specs, Maximale Durchmischung, Angrenzende Möglichkeiten, Confusiasm).",
+  "quelle": "https://www.liberatingstructures.com/ (Core Concepts & Complexity Science Lenses)",
+  "lizenz_hinweis": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White; CC BY-SA 4.0; siehe NOTICE.md.",
+  "core_concepts": [
+    {
+      "id": "C1",
+      "name_de": "Selbstorganisation & Dynamische Unvollständigkeit",
+      "name_en": "Self-Organization & Dynamic Incompleteness",
+      "insight": "Ordnung entsteht von unten (Emergenz). Pläne, Einladungen und Ziele bewusst „unfertig“ lassen – eine „offene Tür“, die andere hereinzieht, mitzugestalten und Verantwortung zu übernehmen. Die moderierende Person wird vom „Sage on the Stage“ zur Gastgeberin; die Lösung ist mit-verfasst statt verordnet."
+    },
+    {
+      "id": "C2",
+      "name_de": "Min Specs – die DNA der Anpassungsfähigkeit",
+      "name_en": "Min Specs",
+      "insight": "Nur die minimal nötigen Regeln setzen – die „mikrostrukturelle DNA“ (Einladung, Raum, Beteiligung, Gruppen, Timing); der Rest bleibt Raum für Kreativität. Zu viele Regeln führen zu Über-Kontrolle, zu wenige zu Unter-Kontrolle."
+    },
+    {
+      "id": "C3",
+      "name_de": "Fraktale & Skalierung",
+      "name_en": "Fractals & Scaling",
+      "insight": "Ein Muster wiederholt sich auf allen Ebenen. Wie wir in einer 10-Minuten-Mikrointeraktion miteinander umgehen, spiegelt die ganze Kultur. Ändert man die Mikrostrukturen der Meetings, verschiebt man die Makro-Kultur des Systems."
+    },
+    {
+      "id": "C4",
+      "name_de": "Angrenzende Möglichkeiten",
+      "name_en": "Adjacent Possibilities",
+      "insight": "Evolution springt nicht ans Ziel, sondern erkundet die „nächste Tür“. Neue Möglichkeiten entstehen, indem man Bestehendes neu verbindet. Schnelle Zyklen erlauben, Optionen zu „erkunden“, bevor man sich auf einen Weg festlegt."
+    },
+    {
+      "id": "C5",
+      "name_de": "Kreative Anpassungsfähigkeit (Shared Flow)",
+      "name_en": "Creative Adaptability (Shared Flow)",
+      "insight": "Ein Flow-Zustand, in dem Wahrnehmung und Handeln der Gruppe synchron sind; Lernen und Leistung steigen gemeinsam. Einstieg oft „Confusiasm“ (die Herausforderung ist groß, die kollektive Vorstellungskraft größer). Lernen im Tun, mit Echtzeit-Feedback (Developmental Evaluation)."
+    },
+    {
+      "id": "C6",
+      "name_de": "Maximale Durchmischung & Vielfalt",
+      "name_en": "Maximum Mixing & Diversity",
+      "insight": "Teilnehmende bewusst über Rollen, Hierarchien und Perspektiven mischen. Das spiegelt reale Komplexität, bricht „Deference“- und Bestätigungs-Bias und hebt die verborgene „Positive Deviance“ in der Gruppe."
+    },
+    {
+      "id": "C7",
+      "name_de": "Kunstvolle Schichtung & kaleidoskopische Sicht",
+      "name_en": "Artful Layering & Kaleidoscopic Views",
+      "insight": "Worte, Zeichnungen und Metaphern kombinieren, um Ganzes und Teile zugleich zu sehen. Artefakte (Zeichnungen, Notizen, Charts) „fangen“ die kollektive Weisheit ein, sodass man später daran anknüpfen kann."
+    },
+    {
+      "id": "C8",
+      "name_de": "Schmetterlingseffekt (sensitive Abhängigkeit)",
+      "name_en": "The Butterfly Effect",
+      "insight": "Kleine Ereignisse können große Folgen haben; Langfrist-Prognosen sind unzuverlässig. Eine einzelne Einladung oder Punctuation kann die Energie eines großen Raums verschieben. „Klein und lokal starten“ ist Strategie, nicht Einschränkung."
+    },
+    {
+      "id": "C9",
+      "name_de": "Wicked Questions & Paradox",
+      "name_en": "Wicked Questions & Paradox",
+      "insight": "Lebende Systeme leben von Paradoxien statt Entweder-oder-Logik. Wicked Questions legen komplementäre Spannungen offen (z. B. „Wie sind wir zugleich stark integriert und autonom?“). Mit dem Paradox arbeiten – statt nur eine Seite zu „fixen“ – führt zu robusteren Lösungen."
+    }
+  ],
+  "complexity_lenses": [
+    {
+      "id": "L1",
+      "name": "Adaptive-Health-Linse (Zimmerman, Plsek & Lindberg, „EdgeWare“, 2001)",
+      "uebersetzung": "Unterscheidet einfache, komplizierte und komplexe Herausforderungen. In lebenden Systemen lässt sich ein Ergebnis nicht von oben „managen“; man muss Beziehungen pflegen und Lösungen lokal entstehen lassen.",
+      "ls_bezug": "Begründet den Fokus auf „Min Specs“ – minimale Vorgaben, die Selbstorganisation ermöglichen, ohne Anpassungsfähigkeit zu ersticken."
+    },
+    {
+      "id": "L2",
+      "name": "Beziehungs-Linse (Ralph Stacey, „Complex Responsive Processes“, 2001)",
+      "uebersetzung": "Organisationen ändern sich, wenn sich die Muster der ganz alltäglichen Gespräche ändern – nicht durch große Strategien.",
+      "ls_bezug": "Begründet den Fokus auf Mikrostrukturen: Ändert man, wie Menschen in Paaren und Vierergruppen sprechen, ändert man die Bahn der ganzen Organisation."
+    },
+    {
+      "id": "L3",
+      "name": "Metaphern-Linse (Gareth Morgan, „Images of Organization“, 1998)",
+      "uebersetzung": "Die mentalen Bilder, mit denen wir Organisationen beschreiben (Maschine vs. Organismus/Gehirn), bestimmen unser Verhalten. „Maschine“ führt zu Über-Kontrolle; „lebender Organismus“ zu verteilter Intelligenz.",
+      "ls_bezug": "LS bricht bewusst die „Maschinen“-Gewohnheit und gestaltet Interaktionen nach den resilienten Mustern der Natur."
+    },
+    {
+      "id": "L4",
+      "name": "Selbstorganisations-Linse (Glenda Eoyang, „Coping with Chaos“, 2001)",
+      "uebersetzung": "Einfache Regeln, Grenzen und Unterschiede entfachen schnelle Selbstorganisation im „unscharfen Mittelfeld“ der Veränderung.",
+      "ls_bezug": "Theoretische Basis für „Confusiasm“: Die Unsicherheit ist genau der angrenzende Raum, in dem neue Optionen entstehen."
+    },
+    {
+      "id": "L5",
+      "name": "Lebende-Systeme-Linse (Joanna Macy, „Coming Back to Life“, 1998)",
+      "uebersetzung": "Ökologisch-regenerativer Blick: Gruppen kommen durch kollektives Wahrsprechen (harte Realitäten anerkennen) zu neuer Energie und Handlungskraft.",
+      "ls_bezug": "Informiert Strukturen wie Grief Walking und Heard, Seen, Respected, die schwierige emotionale Realitäten verarbeitbar machen."
+    }
+  ]
+}

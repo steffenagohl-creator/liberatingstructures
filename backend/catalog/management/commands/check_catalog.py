@@ -31,6 +31,9 @@ class Command(BaseCommand):
             for t in s.purpose_tags:
                 if t not in constants.PURPOSE_TAGS:
                     probleme.append(f"{s.slug}: ungültiger purpose_tag {t!r}.")
+            for p in (s.embodied_principles or []):
+                if p not in constants.PRINCIPLE_IDS:
+                    probleme.append(f"{s.slug}: ungültiges Prinzip {p!r}.")
             for ref in list(s.typical_predecessors) + list(s.typical_successors):
                 if ref not in slugs:
                     probleme.append(f"{s.slug}: Verweis auf unbekannten Slug {ref!r}.")
