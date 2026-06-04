@@ -1,6 +1,10 @@
 {
   "schema_version": "1.1",
   "beschreibung": "Die 10 Prinzipien der Liberating Structures als eigene, selbstbeschreibende Wissensquelle. Sie bilden das 'Harness' für die KI: Bei jedem Vorschlag/jeder Sequenzierung muss sich das Sprachmodell auf diese Prinzipien berufen und seine Begründung damit belegen – einschließlich der konkreten Must-Dos (was zu starten/verstärken ist) und Must-Not-Dos (was zu stoppen/reduzieren ist). Zusätzlich wird je Struktur über 'embodied_principles' markiert, welche Prinzipien sie besonders verkörpert.",
+  "framing": {
+    "de": "Zehn Prinzipien der Liberating Structures erzeugen neue Gewohnheiten und schließen die Lücke zwischen dem, was wir für wichtig erklären (unsere Werte und Prinzipien), und dem, was wir tatsächlich tun (unsere alltäglichen Routinen). Die ‚Must Dos‘ sind Verhaltensweisen, die zu STARTEN und zu VERSTÄRKEN sind – oft erklärt, aber selten praktiziert. Die ‚Must Not Dos‘ sind herkömmliche Verhaltensweisen, die zu STOPPEN und zu REDUZIEREN sind – meist unbemerkte Autopilot-Gewohnheiten.",
+    "en": "Ten Liberating Structures principles generate new habits and close the gap between what we say is important (our values and principles) and what we actually do (our everyday routines). The ‘Must Dos’ are behaviors to START and AMPLIFY — frequently explained but rarely practiced. The ‘Must Not Dos’ are conventional behaviors to STOP and REDUCE — often unnoticed, autopilot habits."
+  },
   "quelle": "https://www.liberatingstructures.com/ls-principles",
   "lizenz_hinweis": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); CC BY-SA 4.0; siehe NOTICE.md.",
   "principles": [
@@ -9,80 +13,100 @@
       "name_en": "Include and Unleash Everyone",
       "name_de": "Alle einbeziehen und entfalten",
       "beschreibung": "Alle, die von einer Herausforderung berührt sind, einbeziehen und ihre Beiträge entfesseln – statt nur wenige Auserwählte entscheiden zu lassen.",
-      "must_do": "Alle Betroffenen einladen, gemeinsam Lösungen zu finden oder neue Ansätze zu erfinden; aktiv über Ebenen und Barrieren hinweg gehen, nicht nur die üblichen Verdächtigen.",
-      "must_not_do": "Wenige eine „elegante Lösung“ entwerfen lassen und sie anderen zur Umsetzung diktieren; Widerstand mit stundenlangen Präsentationen erschlagen; Buy-in erzwingen; Entscheider von Umsetzenden trennen."
+      "must_do": "Alle, die von einer Herausforderung berührt sind, einladen, gemeinsam mögliche Lösungen zu teilen oder neue Ansätze zu erfinden.",
+      "must_not_do": "Wenige eine ‚elegante Lösung‘ entwerfen lassen und allen anderen auftragen, sie hinterher umzusetzen.",
+      "must_do_en": "Invite everyone touched by a challenge to share possible solutions or invent new approaches together.",
+      "must_not_do_en": "Appoint a few to design an ‘elegant solution’ and then tell all others to implement it after the fact."
     },
     {
       "id": "P2",
       "name_en": "Practice Deep Respect for People and Local Solutions",
       "name_de": "Tiefen Respekt für Menschen und lokale Lösungen üben",
       "beschreibung": "Den Menschen und ihren vor Ort entstandenen Lösungen tiefen Respekt entgegenbringen, statt Lösungen von außen aufzuzwingen.",
-      "must_do": "Die einbeziehen, die die Arbeit tun und den lokalen Kontext kennen; ihrer kollektiven Expertise und Erfindungskraft vertrauen; den Zwang zur Kontrolle loslassen.",
-      "must_not_do": "Best Practices importieren, Buy-in erzwingen oder mehr Training unterstellen; Experten und Systeme über lokale Menschen und ihr Wissen stellen."
+      "must_do": "Die Menschen einbeziehen, die die Arbeit tun und den lokalen Kontext kennen. Ihrer kollektiven Expertise vertrauen und sie entfalten.",
+      "must_not_do": "Best Practices importieren, Buy-in erzwingen oder annehmen, die Leute bräuchten mehr Schulung.",
+      "must_do_en": "Engage people doing the work & familiar with the local context. Trust and unleash their collective expertise.",
+      "must_not_do_en": "Import best practices, drive buy-in, or assume people need more training."
     },
     {
       "id": "P3",
       "name_en": "Build Trust As You Go",
       "name_de": "Schritt für Schritt Vertrauen aufbauen",
       "beschreibung": "Vertrauen im gemeinsamen Tun nach und nach aufbauen, nicht voraussetzen.",
-      "must_do": "Ein vertrauensvolles Klima schaffen, in dem Wahrheit zählt und geteilte Verantwortung das Ziel ist; mit Input aller entscheiden; „nichts über mich ohne mich“; führen und folgen.",
-      "must_not_do": "Die Arbeit anderer über-helfen oder über-kontrollieren; Ideen nur scheinbar aufgreifen; auf Beiträge mit Zynismus, Spott, Kritik oder Bestrafung reagieren."
+      "must_do": "Ein vertrauensvolles Gruppenklima pflegen, in dem das Aussprechen der Wahrheit geschätzt wird und gemeinsame Verantwortung das Ziel ist.",
+      "must_not_do": "Die Arbeit anderer überhelfen oder überkontrollieren. Die Ideen von Kolleg:innen loben, aber nur vorgeben, ihnen zu folgen.",
+      "must_do_en": "Cultivate a trusting group climate where speaking the truth is valued and shared ownership is the goal.",
+      "must_not_do_en": "Over-help or over-control the work of others. Praise and pretend to follow the ideas of colleagues."
     },
     {
       "id": "P4",
       "name_en": "Learn by Failing Forward",
       "name_de": "Durch Vorwärts-Scheitern lernen",
       "beschreibung": "Durch Ausprobieren sowie frühe, kleine Fehler lernen und sich verbessern.",
-      "must_do": "Jeden Schritt auswerten; Sicherheit zum Aussprechen schaffen; positive Abweichung entdecken; in kleinen, schnellen Schritten Risiken eingehen und Iterationen verkürzen.",
-      "must_not_do": "Nur machen und entscheiden; schwierige Gespräche meiden und Fehler beschönigen; Risikofreudige bei Überraschungen bestrafen; nichts ohne vorab festgelegtes Ergebnis starten."
+      "must_do": "Jeden Schritt debriefen. Es sicher machen, den Mund aufzumachen. Schnell kleine Risiken eingehen und die Zeit zwischen den Iterationen verkürzen.",
+      "must_not_do": "Sich aufs Tun und Entscheiden versteifen. Schwierige Gespräche vermeiden und über Misserfolge hinweggehen.",
+      "must_do_en": "Debrief every step. Make it safe to speak up. Take small risks quickly, reducing time between iterations.",
+      "must_not_do_en": "Focus on doing and deciding. Avoid difficult conversations and gloss over failures."
     },
     {
       "id": "P5",
       "name_en": "Practice Self-Discovery in a Group",
       "name_de": "Selbstentdeckung in der Gruppe ermöglichen",
       "beschreibung": "Einsichten die Gruppe selbst entdecken lassen, statt sie zu belehren.",
-      "must_do": "Gruppen so weit wie möglich selbst Lösungen entdecken lassen; Vielfalt für Kreativität erhöhen; Peer-Unterstützung, tiefere Reflexion und Coaching stärken; Experimente auf mehreren Spuren.",
-      "must_not_do": "Lösungen von oben aufzwingen; Experten „belehren“ lassen; pauschal Veränderungswiderstand unterstellen; Schilder statt Gespräch; die Nächsten an der Arbeit vom Erneuern ausschließen."
+      "must_do": "Gruppen im größtmöglichen Maß daran beteiligen, Lösungen selbst zu entdecken.",
+      "must_not_do": "Lösungen von oben aufzwingen. Expert:innen ‚aufklären‘ und den Leuten sagen lassen, was zu tun ist.",
+      "must_do_en": "Engage groups to the maximum degree in discovering solutions on their own.",
+      "must_not_do_en": "Impose solutions from the top. Let experts ‘educate’ and tell people what to do."
     },
     {
       "id": "P6",
       "name_en": "Amplify Freedom AND Responsibility",
       "name_de": "Freiheit UND Verantwortung verstärken",
       "beschreibung": "Freiheit und Verantwortung zugleich stärken – beides gehört untrennbar zusammen.",
-      "must_do": "Minimale Rahmenbedingungen festlegen und Über-Kontrolle loslassen; die Kraft der Einladung nutzen; schnelle Experimente vor Sicherheitsdenken; Fortschritt rigoros verfolgen und an alle zurückspiegeln; Fehler als Fortschritt feiern.",
-      "must_not_do": "Menschen ohne Struktur (klarer Zweck/Mindestvorgaben) loslassen; Regeln und Prozeduren Initiative ersticken lassen; ignorieren, wie Arbeit zusammenwirkt; Leistungsdaten vorenthalten."
+      "must_do": "Minimale Rahmenbedingungen festlegen und Überkontrolle loslassen. Fortschritt rigoros verfolgen und die Ergebnisse an alle zurückspiegeln.",
+      "must_not_do": "Menschen ohne Struktur entfesseln – etwa ohne klaren Zweck oder ohne minimale Spezifikationen.",
+      "must_do_en": "Specify minimum constraints and let go of over-control. Track progress rigorously and feed back results to all.",
+      "must_not_do_en": "Unleash people without structure such as a clear purpose or minimum specifications."
     },
     {
       "id": "P7",
       "name_en": "Emphasize Possibilities: Believe Before You See",
       "name_de": "Möglichkeiten betonen – erst glauben, dann sehen",
       "beschreibung": "Auf Möglichkeiten setzen und an sie glauben, bevor Beweise vorliegen.",
-      "must_do": "Sichtbar machen, was gut läuft; auf das fokussieren, was jetzt mit vorhandener Vorstellungskraft, Ambition und Mitteln möglich ist; die nächsten Schritte an die Kante von Kreativität und Erneuerung gehen.",
-      "must_not_do": "Auf das fokussieren, was falsch ist; warten, bis alle Barrieren fallen oder ideale Bedingungen da sind; das ganze System auf einmal ändern wollen."
+      "must_do": "Sichtbar machen, was gut funktioniert. Sich darauf konzentrieren, was jetzt mit der vorhandenen Vorstellungskraft und den vorhandenen Mitteln erreichbar ist.",
+      "must_not_do": "Sich auf das konzentrieren, was falsch läuft. Darauf warten, dass alle Barrieren fallen oder ideale Bedingungen entstehen.",
+      "must_do_en": "Expose what is working well. Focus on what can be accomplished now with the imagination and materials at hand.",
+      "must_not_do_en": "Focus on what’s wrong. Wait for all the barriers to come down or ideal conditions to emerge."
     },
     {
       "id": "P8",
       "name_en": "Invite Creative Destruction to Enable Innovation",
       "name_de": "Kreative Zerstörung einladen, um Innovation zu ermöglichen",
       "beschreibung": "Überholtes bewusst loslassen/zerstören, um Raum für Neues und Innovation zu schaffen.",
-      "must_do": "Gespräche darüber führen, was Menschen vom Wesentlichen ihrer Arbeit abhält; Barrieren entfernen, auch wenn es ketzerisch wirkt; den Umgang mit Ängsten erleichtern.",
-      "must_not_do": "Das Stoppen hinderlicher Verhaltensweisen, Praktiken und Regeln vermeiden oder verzögern; annehmen, Hindernisse seien egal oder nicht zu beseitigen."
+      "must_do": "Gespräche darüber einberufen, was die Menschen davon abhält, am Wesentlichen ihrer Arbeit zu arbeiten.",
+      "must_not_do": "Es vermeiden oder hinauszögern, die Verhaltensweisen, Praktiken und Regeln zu stoppen, die sich als Barrieren erweisen.",
+      "must_do_en": "Convene conversations about what is keeping people from working on the essence of their work.",
+      "must_not_do_en": "Avoid or delay stopping the behaviors, practices and policies that are revealed as barriers."
     },
     {
       "id": "P9",
       "name_en": "Engage in Seriously Playful Curiosity",
       "name_de": "Ernsthaft verspielte Neugier leben",
       "beschreibung": "Mit ernsthaft verspielter Neugier arbeiten – Leichtigkeit und Tiefgang verbinden.",
-      "must_do": "Mit Leichtigkeit, paradoxen Fragen und Improvisation aufrütteln, um aktuelle Praktiken und verborgene Innovationen tief zu erkunden; Zusammenarbeit fordernd UND einladend machen.",
-      "must_not_do": "Lösungen vorab festlegen; alle Gespräche kontrollieren; nur geschlossene Ja/Nein-Fragen stellen; Zusammenarbeit wie Plackerei wirken lassen."
+      "must_do": "Dinge aufrütteln – mit Leichtigkeit, paradoxen Fragen und Improvisation –, um eine tiefe Erkundung der gegenwärtigen Praktiken anzustoßen.",
+      "must_not_do": "Alle Gespräche kontrollieren. Nur geschlossene Ja-/Nein-Fragen stellen.",
+      "must_do_en": "Stir things up - with levity, paradoxical questions, and improv - to spark a deep exploration of current practices.",
+      "must_not_do_en": "Control all conversations. Ask only closed yes or no questions."
     },
     {
       "id": "P10",
       "name_en": "Never Start Without a Clear Purpose",
       "name_de": "Nie ohne klaren Zweck starten",
       "beschreibung": "Niemals ohne geklärten, gemeinsamen Zweck beginnen.",
-      "must_do": "Tief danach graben, was dir und anderen wichtig und bedeutsam ist; „9 Whys“ routinemäßig nutzen; alle in eine unmissverständliche Formulierung des tiefsten Bedarfs einbeziehen.",
-      "must_not_do": "Mit Jargon Mehrdeutigkeit pflegen; ein sicheres Kurzzeitziel als Ersatz für einen mutigen Daseinsgrund setzen; anderen die eigene Zukunftsvision aufzwingen."
+      "must_do": "Tief graben nach dem, was dir und anderen wichtig und bedeutsam ist. Routinemäßig 9 Whys nutzen.",
+      "must_not_do": "Mehrdeutigkeit durch Fachjargon aufrechterhalten. Anderen deinen Zweck aufzwingen.",
+      "must_do_en": "Dig deep for what is important and meaningful to you and to others. Use 9 Whys routinely.",
+      "must_not_do_en": "Maintain ambiguity by using jargon. Impose your purpose on others."
     }
   ]
 }

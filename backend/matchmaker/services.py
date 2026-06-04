@@ -305,6 +305,7 @@ def match(diagnose_raw: dict) -> dict:
     template_dicts = [tools.serialize_template(t) for t in templates]
     principles = tools.load_principles()
     foundations = tools.load_foundations()
+    principles_framing = tools.load_principles_framing()
 
     client = get_llm_client()
     budget = diagnose["zeitbudget"]
@@ -315,6 +316,7 @@ def match(diagnose_raw: dict) -> dict:
         return prompts.build_sequence_messages(
             diagnose, candidate_dicts, template_dicts, budget,
             principles=principles, foundations=foundations, correction=correction,
+            principles_framing=principles_framing,
         )
 
     # Vorschlag von Agent A.
@@ -330,6 +332,7 @@ def match(diagnose_raw: dict) -> dict:
         return prompts.build_consolidation_messages(
             diagnose, candidate_dicts, budget, proposal_a, proposal_b,
             principles=principles, foundations=foundations, correction=correction,
+            principles_framing=principles_framing,
         )
 
     final = _run_with_gate(cons_builder, diagnose, n, max_iter, client)

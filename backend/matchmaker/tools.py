@@ -76,6 +76,16 @@ def load_principles() -> list[dict]:
 
 
 @functools.lru_cache(maxsize=1)
+def load_principles_framing() -> str:
+    """Lädt das deutsche ``framing``-Intro der Prinzipien (Must-Do = starten/verstärken,
+    Must-Not-Do = stoppen/reduzieren) für den LLM-Kontext. Leerer String, falls nicht gesetzt."""
+    path = settings.DATA_DIR / "ls_principles.json"
+    with open(path, encoding="utf-8") as fh:
+        framing = json.load(fh).get("framing", {})
+    return framing.get("de", "") if isinstance(framing, dict) else ""
+
+
+@functools.lru_cache(maxsize=1)
 def load_foundations() -> dict:
     """Lädt das theoretische Fundament (Kernkonzepte + Komplexitäts-Linsen) fürs Harness.
 

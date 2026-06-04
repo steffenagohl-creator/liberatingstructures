@@ -139,6 +139,7 @@ def build_sequence_messages(
     principles: list[dict] | None = None,
     foundations: dict | None = None,
     correction: str | None = None,
+    principles_framing: str | None = None,
 ) -> list[dict]:
     """Baut die Nachrichten für den Sequenzierungs-Schritt (Matchmaking)."""
     context = {
@@ -147,6 +148,7 @@ def build_sequence_messages(
         "setting": diagnose.get("setting"),
         "gruppengroesse": diagnose.get("gruppengroesse"),
         "purpose_tags": diagnose.get("zweck", []),
+        "principles_framing": principles_framing or "",
         "principles": principles or [],
         "foundations": foundations or {},
         "candidates": candidates,
@@ -210,6 +212,7 @@ def build_consolidation_messages(
     principles: list[dict] | None = None,
     foundations: dict | None = None,
     correction: str | None = None,
+    principles_framing: str | None = None,
 ) -> list[dict]:
     """Baut die Nachrichten für den Konsolidierungs-Schritt (Agent A + B -> ein String)."""
     def compact(p: dict) -> dict:
@@ -225,6 +228,7 @@ def build_consolidation_messages(
         "setting": diagnose.get("setting"),
         "gruppengroesse": diagnose.get("gruppengroesse"),
         "purpose_tags": diagnose.get("zweck", []),
+        "principles_framing": principles_framing or "",
         "principles": principles or [],
         "foundations": foundations or {},
         "candidates": candidates,
