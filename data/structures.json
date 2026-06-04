@@ -5667,12 +5667,12 @@
       "edition": "original",
       "short_desc": {
         "de": "Analysiert das Aktivitäten-Portfolio einer Gruppe entlang eines Lebenszyklus – deckt auf, wo Ressourcen gebunden oder verschwendet werden, und setzt Fokus.",
-        "en": ""
+        "en": "A group maps its whole portfolio of activities and relationships onto a four-phase ecocycle (birth, maturity, creative destruction, renewal). Seeing the entire system reveals bottlenecks — things stuck in the rigidity trap or starved in the scarcity trap — and frees resources to move forward."
       },
-      "source_url": "https://liberatingstructures.de/ecocycle-planning/",
+      "source_url": "https://www.liberatingstructures.com/ecocycle-planning",
       "purpose_tags": [
-        "strategie",
-        "planen"
+        "analysieren",
+        "strategie"
       ],
       "arc_role": [
         "konvergieren",
@@ -5685,7 +5685,7 @@
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier, Ecocycle-Arbeitsblatt pro Person; Post-its (farblich sortiert); freie Wand-/Bodenfläche; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "An open wall with a large Ecocycle template; individual copies and sticky notes for each participant; groups of four at small tables. Online: a shared whiteboard with the template (works best on large screens)."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -5699,34 +5699,242 @@
       ],
       "scrum_use": {
         "de": "Product Backlog oder Aktivitäten-Portfolio entrümpeln: erkennen, was reif oder überfällig für „kreative Zerstörung“ ist.",
-        "en": ""
+        "en": "Portfolio and strategy reviews: laying out all of a team's activities, products or relationships to spot what to grow, maintain, let go of (rigidity trap) or invest more in (scarcity trap) — e.g. a backlog or initiative review that decides what to stop, not only what to start."
       },
       "design_elements": {
         "einladung": {
           "de": "Sammelt eure laufenden Aktivitäten und bewertet sie nach vier Phasen (Keimzeit, Entstehung, Reife, kreative Zerstörung); formuliert Maßnahmen je Phase.",
-          "en": ""
+          "en": "Just like living organisms, our activities and relationships go through phases of development. Today we'll sort our portfolio of key activities and/or relationships into four phases and identify the roles we take in each — to find bottlenecks and uncover opportunities to move forward."
         },
         "raum_materialien": {
           "de": "Stifte, Papier, Ecocycle-Arbeitsblatt pro Person; Post-its (farblich sortiert); freie Wand-/Bodenfläche; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "An open wall with an Ecocycle template; individual copies and sticky notes for each participant. Groups of four at small tables. Online: a shared whiteboard with the template (large screens recommended)."
         },
         "einbindung": {
           "de": "Alle Beteiligten aus allen Ebenen/Funktionen, gleiche Beitragschancen.",
-          "en": ""
+          "en": "Roles: host (plus tech host if virtual) and participants. No minimum group size. All levels and functions are invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "1-2-4-All; Kleingruppen für Maßnahmen.",
-          "en": ""
+          "en": "1-2-All or 1-3-All — alone, in pairs/trios, then the whole group around the shared ecocycle."
         },
         "ablauf_dauer": {
           "de": "Idee vorstellen 5 Min; eigene Aktivitätenliste 5 Min; zu zweit platzieren 10 Min; zu viert finalisieren 15 Min; gemeinsam visualisieren 15 Min; Muster/kritische Aktivitäten 15 Min; Maßnahmen für „Starrheits-“ und „Armuts-Falle“ je 10+ Min; Dissens diskutieren 10 Min. Gesamt ca. 95 Min.",
-          "en": ""
+          "en": "Intro and explain the four phases 5 min; walk through the ecocycle with examples 5 min; map your own ecocycle alone 10 min; compare in pairs/trios 10 min; build the shared ecocycle 15 min; reflect and analyze 15 min; identify the rigidity and scarcity traps 15 min; name action steps in foursomes 10 min; next steps and closing 5 min. ~90 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); baut auf der Arbeit von Brenda Zimmerman und dem ökologischen Adaptive-Cycle-Modell (Holling) auf; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren, Strategie“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); builds on Brenda Zimmerman's work and the ecological adaptive-cycle model (Holling); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze, Strategy’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P8"
+      ],
+      "icon_alt": {
+        "de": "Eine liegende Acht (Lazy Eight) mit vier Phasen: Geburt, Reife, kreative Zerstörung und Erneuerung.",
+        "en": "A lazy-eight loop with four phases: birth, maturity, creative destruction and renewal."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine Gruppe erstellt einen gemeinsamen Ecocycle, der ihr Portfolio von Aktivitäten und Beziehungen über vier Entwicklungsphasen erzählt. Indem das ganze System betrachtet wird — nicht nur das Wachstum — werden Ressourcenlücken und Wachstumschancen sichtbar. Die Gruppe denkt systemisch über Gesundheit, Resilienz und dauerhafte Wirksamkeit nach, erkennt Ineffizienzen und kann Ressourcen umverteilen. Ecocycle Planning verkörpert LS-Prinzip #8 — kreative Zerstörung einladen, um Innovation zu ermöglichen.",
+          "en": "A group creates a shared ecocycle that narrates its portfolio of activities and relationships across four phases of development. By looking at the whole system — not just growth — resource gaps and growth opportunities become visible. The group thinks systemically about health, resilience and lasting effectiveness, spots inefficiencies and can reallocate resources. Ecocycle Planning enacts LS Principle #8 — Invite Creative Destruction to Enable Innovation."
+        },
+        "einladung": {
+          "de": "„Wie lebende Organismen durchlaufen auch unsere Aktivitäten und Beziehungen Entwicklungsphasen. Heute sortieren wir unser Portfolio in vier Phasen und bestimmen unsere Rolle in jeder — so finden wir Engpässe und entdecken Chancen, voranzukommen.“",
+          "en": "Just like living organisms, our activities and relationships go through phases of development. Today we'll sort our portfolio into four phases and identify our role in each — to find bottlenecks and uncover opportunities to move forward."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Die vier Phasen: Geburt (Wachstum beschleunigen), Reife (Langlebigkeit/Effizienz steigern), kreative Zerstörung (Überholtes loslassen und recyceln), Erneuerung (kreative Menschen verbinden, Boden für Neues bereiten).",
+            "Rigiditätsfalle (zwischen Reife und kreativer Zerstörung): „Woran halten wir fest, obwohl es nicht mehr wirkt?“",
+            "Knappheitsfalle (zwischen Erneuerung und Geburt): „In welche vielversprechende Idee investieren wir zu wenig?“"
+          ],
+          "en": [
+            "The four phases: birth (accelerate growth), maturity (extend longevity/efficiency), creative destruction (let go of and recycle the obsolete), renewal (connect creative people, prepare ground for the new).",
+            "Rigidity trap (between maturity and creative destruction): 'What are we clinging to even though it no longer works?'",
+            "Scarcity trap (between renewal and birth): 'Which promising idea are we underinvesting in?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Einführung",
+              "en": "Introduction"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einladung teilen und die vier Phasen mit zugehörigen Handlungen erklären.",
+              "en": "Share the invitation and explain the four phases with their corresponding actions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Durchgang mit Beispielen",
+              "en": "Walk-through with examples"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Vorlagen verteilen; bekannte Beispiele mit verschiebbaren Stickies einordnen.",
+              "en": "Hand out templates; place recognizable examples using movable sticky notes."
+            }
+          },
+          {
+            "phase": {
+              "de": "Eigenes Ecocycle",
+              "en": "Map your own ecocycle"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Jede:r listet bedeutende Aktivitäten/Projekte und platziert sie auf dem persönlichen Ecocycle.",
+              "en": "Each person lists significant activities/projects and places them on their personal ecocycle."
+            }
+          },
+          {
+            "phase": {
+              "de": "Vergleichen",
+              "en": "Compare"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In Paaren oder Trios Platzierungen vergleichen und Unterschiede besprechen.",
+              "en": "In pairs or trios, compare placements and discuss differences."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gemeinsames Ecocycle",
+              "en": "Shared ecocycle"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Je ein:e Vertreter:in überträgt die Stickies auf das geteilte Ecocycle.",
+              "en": "One representative per group adds the sticky notes to the shared ecocycle."
+            }
+          },
+          {
+            "phase": {
+              "de": "Reflexion & Analyse",
+              "en": "Reflection & analysis"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Das geteilte Ecocycle prüfen: Wo Einigkeit, wo Uneinigkeit? Welche Erkenntnisse fürs Portfolio?",
+              "en": "Examine the shared ecocycle: where agreement, where disagreement? What portfolio insights emerge?"
+            }
+          },
+          {
+            "phase": {
+              "de": "Fallen erkennen",
+              "en": "Identify traps"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Festsitzende Aktivitäten finden: Rigiditätsfalle (loslassen) und Knappheitsfalle (mehr investieren).",
+              "en": "Find stuck activities: rigidity trap (let go) and scarcity trap (invest more)."
+            }
+          },
+          {
+            "phase": {
+              "de": "Handlungsschritte",
+              "en": "Action steps"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In Vierergruppen erste Schritte benennen, um festsitzende Aktivitäten zu bewegen oder zu beenden.",
+              "en": "In foursomes, name first actions to move or conclude stuck activities."
+            }
+          },
+          {
+            "phase": {
+              "de": "Abschluss",
+              "en": "Closing"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Rhythmus fürs Wiederbesuchen festlegen; einige teilen ihre wichtigsten Erkenntnisse.",
+              "en": "Set a revisit rhythm; a few share their key learnings."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Strategie-Dokumentation",
+              "en": "Strategy documentation"
+            },
+            "beschreibung": {
+              "de": "Das Ecocycle als zentrales Dokument durch eine ganze Strategieplanung tragen.",
+              "en": "Carry the ecocycle as a central document through an entire strategic planning effort."
+            }
+          },
+          {
+            "name": {
+              "de": "Förderanträge prüfen",
+              "en": "Review proposals"
+            },
+            "beschreibung": {
+              "de": "Anträge gemeinsam sichten und entscheiden, was eingestellt wird.",
+              "en": "Review grant proposals together and decide collectively what to discontinue."
+            }
+          },
+          {
+            "name": {
+              "de": "Persönliches Leben",
+              "en": "Personal life"
+            },
+            "beschreibung": {
+              "de": "Veränderungen im persönlichen Umfeld einer einzelnen Person navigieren.",
+              "en": "Navigate changes in an individual's personal life context."
+            }
+          },
+          {
+            "name": {
+              "de": "Mit Panarchy verketten",
+              "en": "String with Panarchy"
+            },
+            "beschreibung": {
+              "de": "Pro Phase eigene Strukturen nutzen; Panarchy oder What, So What, Now What für die Reifephase.",
+              "en": "Use distinct structures per phase; Panarchy or What/So What/Now What to catalyze maturity-phase action."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Zuerst entweder auf Aktivitäten oder auf Beziehungen fokussieren, nicht beides gleichzeitig.",
+            "Die Phasensprache an den Kontext anpassen (Gesundheitsbereich: „Erneuerung“; Unternehmen: „Reorganisation“).",
+            "Betonen: Platzierungen zeigen den IST-Zustand, nicht den Wunschzustand.",
+            "Uneinigkeit willkommen heißen — sie ist oft eine Quelle für Einsichten; strittige Items ggf. in mehrere Phasen setzen oder unterteilen."
+          ],
+          "en": [
+            "Focus first on either activities or relationships, not both at once.",
+            "Adapt the phase language to context (health: 'renewal'; business: 'reorganization').",
+            "Emphasize that placements show current reality, not aspiration.",
+            "Welcome disagreement — it's often a source of insight; place contentious items in multiple phases or subdivide them."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Strategische Planung, die das gesamte Portfolio sichtbar machen soll.",
+            "Entscheiden, was beendet werden muss — nicht nur, was begonnen wird.",
+            "Ressourcen aus festgefahrenen in vielversprechende Initiativen umlenken.",
+            "Über Resilienz und langfristige Gesundheit eines Systems nachdenken."
+          ],
+          "en": [
+            "Strategic planning that needs to make the whole portfolio visible.",
+            "Decide what must end — not only what to begin.",
+            "Reallocate resources from stuck to promising initiatives.",
+            "Think about the resilience and long-term health of a system."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit großer Ecocycle-Vorlage; je Person eine Kopie und Post-its; Vierergruppen an kleinen Tischen. Online: geteiltes Whiteboard mit Vorlage (große Bildschirme empfohlen).",
+          "en": "An open wall with a large Ecocycle template; a copy and sticky notes per person; foursomes at small tables. Online: a shared whiteboard with the template (large screens recommended)."
+        },
+        "online_durchfuehrung": {
+          "de": "Ecocycle Planning funktioniert online ohne große Änderungen — am besten auf großen Bildschirmen, da das Verschieben digitaler Stickies auf kleinen Geräten umständlich ist. Ablauf: (1) Vorlage als geteiltes Whiteboard öffnen, die vier Phasen erklären, ein paar Beispiele gemeinsam platzieren. (2) Alle mappen ihr eigenes Portfolio auf einer persönlichen Kopie. (3) In Breakouts zu zweit/dritt vergleichen. (4) Vertreter:innen übertragen ins geteilte Ecocycle. (5) Im Plenum reflektieren, Rigiditäts- und Knappheitsfalle markieren (eigene Sticky-Farbe). (6) In Breakout-Vierergruppen Handlungsschritte festlegen, dann Abschluss.",
+          "en": "Ecocycle Planning works online with no major changes — best on large screens, since moving digital stickies on small devices is awkward. Flow: (1) Open the template as a shared whiteboard, explain the four phases, place a few examples together. (2) Everyone maps their own portfolio on a personal copy. (3) Compare in breakouts of two/three. (4) Representatives transfer onto the shared ecocycle. (5) In plenary reflect, mark the rigidity and scarcity traps (distinct sticky color). (6) In breakout foursomes set action steps, then close."
+        }
       }
     },
     {
@@ -5741,9 +5949,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Bewertet eine Arbeitsgruppe entlang vier Faktoren (Unterschiedlichkeit, Zuhören, Aktion, Sinn) und macht hilfreiche wie schädliche Beziehungsmuster sichtbar.",
-        "en": ""
+        "en": "A team assesses its relationships with the STAR compass — Separateness, Tuning, Action opportunities and Reason to work together — to see what makes interactions more or less generative. Spotting the pattern reveals where to act to unlock hidden potential and repair strained connections."
       },
-      "source_url": "https://liberatingstructures.de/generative-relationships-star/",
+      "source_url": "https://www.liberatingstructures.com/generative-relationships-star",
       "purpose_tags": [
         "analysieren"
       ],
@@ -5758,7 +5966,7 @@
       "online_capable": true,
       "materials": {
         "de": "Stifte, Papier und STAR-Kompass-Grafik (Flipchart/Ausdruck); online: Breakout-Räume, virtuelles Whiteboard, farbige Post-its.",
-        "en": ""
+        "en": "An open wall with a STAR Compass template; small tables with 4-7 chairs per group; a flip chart with the template per group; handouts, paper and pens. Online: a shared whiteboard with the compass and breakout rooms."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
@@ -5772,34 +5980,199 @@
       ],
       "scrum_use": {
         "de": "Teamdynamik bewerten und verbessern (Vielfalt, Zuhören, gemeinsame Aktion, Sinn); gut bei neuen Teamzusammensetzungen oder Spannungen.",
-        "en": ""
+        "en": "Diagnosing how a team actually works together — at a strategy retreat, when a collaboration feels stuck, or to repair a strained pair of roles — by rating diversity, tuning, joint action and shared purpose, then acting on the weakest point."
       },
       "design_elements": {
         "einladung": {
           "de": "Bewertet eure Arbeitsgruppe anhand von vier Attributen: S (Separateness/Unterschiedlichkeit), T (Tuning/Zuhören), A (Action/innovative Zusammenarbeit), R (Reason/Nutzen der Zusammenarbeit).",
-          "en": ""
+          "en": "Together we'll explore the dynamics of our team's relationships using the STAR Compass. By understanding what makes our interactions more or less generative, we can unlock hidden potential and build stronger connections."
         },
         "raum_materialien": {
           "de": "Stifte, Papier und STAR-Kompass-Grafik (Flipchart/Ausdruck); online: Breakout-Räume, virtuelles Whiteboard, farbige Post-its.",
-          "en": ""
+          "en": "An open wall with a STAR Compass template; small tables with 4-7 chairs per group; a flip chart with the template per group; handouts, paper and pens. Online: a shared whiteboard."
         },
         "einbindung": {
           "de": "Alle eingebunden, gleiche Mitgestaltung.",
-          "en": ""
+          "en": "Roles: host and participants. No minimum group size. Every team member has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln → Kleingruppen → Gesamtgruppe.",
-          "en": ""
+          "en": "Alone, then quartets, then the whole group."
         },
         "ablauf_dauer": {
           "de": "Einzelne Einschätzung 5 Min; Kleingruppen-Diskussion + Punkte 5 Min; Muster analysieren 5 Min; Aktionspunkte brainstormen 5 Min; Gesamtgruppe entscheidet nächste Schritte 5 Min. Gesamt ca. 25 Min.",
-          "en": ""
+          "en": "Intro and distribute template 1 min; individual reflection on the four STAR elements 4 min; form groups and pool the dots on a shared compass 5 min; identify the results the combined points produce 5 min; brainstorm action steps 5 min; all-together sharing of assessments and first steps 5 min. ~25 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White; entwickelt von Brenda Zimmerman, adaptiert von Henri Lipmanowicz & Keith McCandless; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White; developed by Brenda Zimmerman, adapted by Henri Lipmanowicz & Keith McCandless; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P5"
+      ],
+      "icon_alt": {
+        "de": "Ein Stern-Kompass mit vier Punkten: Unterschiedlichkeit, Abstimmung, Aktion und gemeinsamer Sinn.",
+        "en": "A star compass with four points: separateness, tuning, action and reason to work together."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Teilnehmende bewerten die Eigenschaften ihres Teams mit dem STAR-Kompass und erkennen Muster in ihren Interaktionen. Indem sie sehen, was Beziehungen generativer oder weniger generativ macht, entdecken sie Verbesserungschancen, schaffen neuen Wert und reparieren beschädigte Verbindungen. Generative Relationships STAR verkörpert LS-Prinzip #5 — Selbstentdeckung in der Gruppe üben.",
+          "en": "Participants assess their team's attributes with the STAR compass and recognize patterns in their interactions. By seeing what makes relationships more or less generative, they discover improvement opportunities, create new value and repair damaged connections. Generative Relationships STAR enacts LS Principle #5 — Practice Self-Discovery Within a Group."
+        },
+        "einladung": {
+          "de": "„Gemeinsam erkunden wir die Dynamik unserer Team-Beziehungen mit dem STAR-Kompass. Wenn wir verstehen, was unsere Interaktionen generativer oder weniger generativ macht, können wir verborgenes Potenzial heben und stärkere Verbindungen aufbauen.“",
+          "en": "Together we'll explore the dynamics of our team's relationships using the STAR Compass. By understanding what makes our interactions more or less generative, we can unlock hidden potential and build stronger connections."
+        },
+        "beispielsaetze": {
+          "de": [
+            "S – Separateness (Unterschiedlichkeit): „Wie vielfältig sind unsere Gruppe und unsere Perspektiven?“",
+            "T – Tuning (Abstimmung): „Wie gut sind wir aufeinander eingestimmt, wie gut hören wir zu?“",
+            "A – Action (Aktion): „Wie viel handeln wir tatsächlich gemeinsam?“",
+            "R – Reason to work together (Sinn): „Wie wichtig ist es, dass wir zusammenarbeiten? Wie klar ist unser Zweck?“",
+            "Beispiel-Muster: hohes T + kein A = Harmonie ohne Ergebnisse; hohes A + niedriges T = Routine ohne Innovation."
+          ],
+          "en": [
+            "S – Separateness: 'How diverse are our group and our perspectives?'",
+            "T – Tuning: 'How well are we in tune with each other, how well do we listen?'",
+            "A – Action: 'How much do we actually act together?'",
+            "R – Reason to work together: 'How important is it that we collaborate? How clear is our purpose?'",
+            "Example patterns: high T + no A = harmony without accomplishment; high A + low T = routine results without innovation."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einladung teilen und die Vorlage verteilen.",
+              "en": "Share the invitation and distribute the template."
+            }
+          },
+          {
+            "phase": {
+              "de": "Eigene Einschätzung",
+              "en": "Individual reflection"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Jede:r bewertet das Team auf den vier STAR-Elementen.",
+              "en": "Each person rates the team on the four STAR elements."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gruppen & teilen",
+              "en": "Form groups & share"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "In Kleingruppen die einzelnen Punkte auf einem gemeinsamen STAR-Kompass bündeln und Unterschiede besprechen.",
+              "en": "In small groups, pool the individual dots on a shared STAR compass and discuss differences."
+            }
+          },
+          {
+            "phase": {
+              "de": "Ergebnisse erkennen",
+              "en": "Identify results"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Bestimmen, welche Ergebnisse die Kombination der Kompasspunkte erzeugt.",
+              "en": "Identify what results the combination of compass points produces."
+            }
+          },
+          {
+            "phase": {
+              "de": "Handlungsschritte",
+              "en": "Brainstorm action steps"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Maßnahmen finden, um die nötigen Elemente zu stärken.",
+              "en": "Find actions to strengthen the elements that need it."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einschätzungen und Schritte im Plenum vergleichen; erste Schritte und Verantwortliche festhalten.",
+              "en": "Compare assessments and steps in plenary; capture first steps and responsible people."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Persönliche Reflexion",
+              "en": "Personal reflection"
+            },
+            "beschreibung": {
+              "de": "Den Kompass auf sich selbst anwenden: Was bringe ich ein? Wie sehr reflektiere ich? Schaffe ich Entwicklungschancen? Wie klar ist mein Zweck?",
+              "en": "Apply the compass to yourself: What do I bring? How much do I reflect? Am I creating development opportunities? How clear is my purpose?"
+            }
+          },
+          {
+            "name": {
+              "de": "Beziehung reparieren",
+              "en": "Repair a relationship"
+            },
+            "beschreibung": {
+              "de": "Zwei Personen erkennen dysfunktionale Muster und stellen die Beziehung wieder her.",
+              "en": "Two people identify dysfunctional patterns and repair the relationship."
+            }
+          },
+          {
+            "name": {
+              "de": "Gezielt verketten",
+              "en": "Targeted string"
+            },
+            "beschreibung": {
+              "de": "Pro Schwachstelle eine Struktur: Separateness → Conversation Café; Tuning → Troika/Heard, Seen, Respected; Action → 15% Solutions/Min Specs; Reason → 9 Whys/Drawing Together.",
+              "en": "One structure per weak point: Separateness → Conversation Café; Tuning → Troika/Heard, Seen, Respected; Action → 15% Solutions/Min Specs; Reason → 9 Whys/Drawing Together."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Kein Urteil über die „Richtigkeit“ der Einschätzungen — es geht um geteilte Wahrnehmung.",
+            "Sicherstellen, dass mindestens ein Handlungsschritt tatsächlich umgesetzt wird.",
+            "Klären: Wer macht was bis wann?"
+          ],
+          "en": [
+            "No judgment about whether assessments are 'accurate' — it's about shared perception.",
+            "Make sure at least one action step actually gets done.",
+            "Clarify: who does what by when?"
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Gruppendynamik in einer Strategieklausur untersuchen.",
+            "Organisationen unterstützen, die mehr Inklusion, Beteiligung oder Graswurzel-Innovation anstreben.",
+            "Zwei Menschen helfen, dysfunktionale Muster zu erkennen und ihre Beziehung zu reparieren."
+          ],
+          "en": [
+            "Examine group dynamics during a strategy retreat.",
+            "Support organizations moving toward more inclusion, engagement or grassroots innovation.",
+            "Help two people identify dysfunctional patterns and repair their relationship."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit STAR-Kompass-Vorlage; kleine Tische mit 4-7 Stühlen je Gruppe; je Gruppe ein Flipchart mit Vorlage; Handouts, Papier, Stifte. Online: geteiltes Whiteboard mit Kompass und Breakout-Räume.",
+          "en": "An open wall with a STAR Compass template; small tables with 4-7 chairs per group; a flip chart with the template per group; handouts, paper, pens. Online: a shared whiteboard and breakout rooms."
+        },
+        "online_durchfuehrung": {
+          "de": "STAR braucht online keine großen Anpassungen. Ablauf: (1) Den STAR-Kompass als geteiltes Whiteboard zeigen und die vier Fragen erklären. (2) Alle setzen still ihre vier Bewertungspunkte (S, T, A, R) auf eine eigene Kopie oder per Marker auf den geteilten Kompass. (3) In Breakouts die Punkte bündeln und über Ähnlichkeiten/Unterschiede sprechen. (4) Das entstehende Muster deuten (z. B. „Harmonie ohne Ergebnis“). (5) Handlungsschritte sammeln und im Plenum teilen; Verantwortliche und erste Schritte festhalten.",
+          "en": "STAR needs no major adjustments online. Flow: (1) Show the STAR compass as a shared whiteboard and explain the four questions. (2) Everyone silently places their four rating dots (S, T, A, R) on a personal copy or with a marker on the shared compass. (3) In breakouts, pool the dots and discuss similarities/differences. (4) Interpret the emerging pattern (e.g. 'harmony without accomplishment'). (5) Gather action steps and share in plenary; capture owners and first steps."
+        }
       }
     },
     {
@@ -5814,9 +6187,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Ordnet Herausforderungen in einfach/kompliziert/komplex/chaotisch ein – hilft, den jeweils passenden Lösungsansatz zu wählen statt Methoden falsch einzusetzen.",
-        "en": ""
+        "en": "A group sorts its challenges into simple, complicated, complex or chaotic — based on how much agreement and how much certainty surrounds each — so it can match the right approach to each challenge and stop wasting effort on mismatched methods."
       },
-      "source_url": "https://liberatingstructures.de/agreement-certainty-matrix/",
+      "source_url": "https://www.liberatingstructures.com/agreement-and-certainty",
       "purpose_tags": [
         "analysieren"
       ],
@@ -5830,7 +6203,7 @@
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Papier, ACM-Grafik auf Metaplanwand; nützlich: ausgedruckte ACM-Grafiken pro Person, farbige Post-its; optional Tische für Gruppen à 4–6; online: Breakout-Räume, virtuelles Whiteboard.",
-        "en": ""
+        "en": "An open wall with the Agreement-Certainty matrix; pens, sticky notes; optional digital whiteboards. Online: a shared whiteboard with the four-zone matrix and breakout rooms."
       },
       "difficulty": "mittel",
       "typical_predecessors": [
@@ -5846,34 +6219,224 @@
       ],
       "scrum_use": {
         "de": "Herausforderungen nach Komplexität einordnen und den passenden Ansatz wählen; gut zu Beginn von Problemlösungs-Workshops.",
-        "en": ""
+        "en": "Diagnosing the nature of the work before choosing how to tackle it: deciding whether a backlog item or problem is simple (best practice), complicated (expert analysis), complex (safe-to-try experiments) or chaotic (act first) — so the team stops applying recipes to complex problems."
       },
       "design_elements": {
         "einladung": {
           "de": "Ordnet Herausforderungen anhand zweier Fragen ein – Grad der Übereinstimmung und Grad der Sicherheit/Vorhersehbarkeit – und reflektiert die Passung von Ansatz und Herausforderung.",
-          "en": ""
+          "en": "Let's get strategic about matching our approaches to our challenges! We'll use a simple framework to categorize our challenges and identify any mismatches between them and our current approaches to addressing them."
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Papier, ACM-Grafik auf Metaplanwand; nützlich: ausgedruckte ACM-Grafiken pro Person, farbige Post-its; optional Tische für Gruppen à 4–6; online: Breakout-Räume, virtuelles Whiteboard.",
-          "en": ""
+          "en": "An open wall with the Agreement-Certainty matrix; pens, sticky notes; optional digital whiteboards. Online: a shared whiteboard with the four-zone matrix."
         },
         "einbindung": {
           "de": "Alle Beteiligten (nicht nur Führungskräfte), gleiche Beitragschancen.",
-          "en": ""
+          "en": "Roles: host and participants. All those involved are included on an equal footing."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln → Paare → Kleingruppen (4–6) → Gesamtgruppe.",
-          "en": ""
+          "en": "Alone → pairs → groups of 4-6 → whole group."
         },
         "ablauf_dauer": {
           "de": "Herausforderungsliste einzeln 5 Min; auf Matrix platzieren 5 Min; zu zweit diskutieren 5 Min; Kleingruppen Muster 10 Min; an Wand anbringen 5 Min; Kleingruppen reflektieren 5 Min; Plenum Einsichten + nächste Schritte 10 Min. Gesamt ca. 45 Min.",
-          "en": ""
+          "en": "List challenges alone 5 min; place them on the matrix 5 min; discuss in pairs 5 min; reflect in groups 10 min; transfer to the wall matrix 5 min; analyze patterns 5 min; all-together sharing 10 min. ~45 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); baut auf der Arbeit von Brenda Zimmerman und Ralph Stacey auf; lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); builds on the work of Brenda Zimmerman and Ralph Stacey; licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P10"
+      ],
+      "icon_alt": {
+        "de": "Eine Vier-Felder-Matrix aus Übereinstimmung und Gewissheit: einfach, kompliziert, komplex, chaotisch.",
+        "en": "A four-zone matrix of agreement and certainty: simple, complicated, complex, chaotic."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Struktur verhindert eine Diskrepanz zwischen Herausforderung und Lösungsmethode. Sie macht den Charakter von Problemen sichtbar, reduziert Frustration durch unpassende Ansätze und zeigt Orte für lokale Experimente. Indem die Gruppe Herausforderungen nach Übereinstimmung und Gewissheit einordnet, richtet sie ihre Interventionen an der tatsächlichen Komplexität aus und vermeidet Ressourcenverschwendung. Die Agreement-Certainty Matrix verkörpert LS-Prinzip #10 — nie ohne klaren Zweck starten.",
+          "en": "The structure prevents a mismatch between challenge and solution method. It makes the character of problems visible, reduces the frustration of inappropriate approaches and reveals places for local experiments. By sorting challenges by agreement and certainty, the group aligns its interventions with actual complexity and avoids wasting resources. The Agreement-Certainty Matrix enacts LS Principle #10 — Never Start Without a Clear Purpose."
+        },
+        "einladung": {
+          "de": "„Lasst uns strategisch werden und unsere Ansätze zu unseren Herausforderungen passend machen! Mit einem einfachen Rahmen ordnen wir unsere Herausforderungen ein und erkennen Diskrepanzen zwischen ihnen und unseren aktuellen Lösungswegen.“",
+          "en": "Let's get strategic about matching our approaches to our challenges! We'll use a simple framework to categorize our challenges and identify any mismatches between them and our current approaches."
+        },
+        "beispielsaetze": {
+          "de": [
+            "Zwei Leitfragen: (1) Wie hoch ist die Übereinstimmung über Herausforderung und Lösung? (2) Wie sicher sind die Ergebnisse vorhersehbar?",
+            "Einfach = hohe Übereinstimmung + hohe Gewissheit (bewährte Praxis; Kochrezept).",
+            "Kompliziert = hohe Übereinstimmung + geringe Gewissheit (Expertenanalyse; Mondrakete).",
+            "Komplex = geringe Übereinstimmung + geringe Gewissheit (mehrere gültige Wege; Kinder großziehen).",
+            "Chaotisch = Kontext zu turbulent für klare Wege (schnell handeln nötig)."
+          ],
+          "en": [
+            "Two guiding questions: (1) How much agreement is there about the challenge and its solution? (2) How certain/predictable are the outcomes?",
+            "Simple = high agreement + high certainty (best practice; following a recipe).",
+            "Complicated = high agreement + low certainty (expert analysis; sending a rocket to the moon).",
+            "Complex = low agreement + low certainty (multiple valid paths; raising children).",
+            "Chaotic = context too turbulent for clear paths (act quickly)."
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Listen erstellen",
+              "en": "List challenges"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Jede:r listet allein die aktuellen Herausforderungen.",
+              "en": "Each person lists current challenges alone."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einordnen",
+              "en": "Place on matrix"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Herausforderungen auf der Matrix platzieren.",
+              "en": "Place the challenges on the matrix."
+            }
+          },
+          {
+            "phase": {
+              "de": "Paare",
+              "en": "Pairs"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Zu zweit über Platzierungen und Unterschiede sprechen.",
+              "en": "In pairs, discuss placements and differences."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gruppen",
+              "en": "Groups"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In 4-6er-Gruppen reflektieren und konsolidieren.",
+              "en": "Reflect and consolidate in groups of 4-6."
+            }
+          },
+          {
+            "phase": {
+              "de": "An die Wand",
+              "en": "Transfer to wall"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Auf die große Wand-Matrix übertragen.",
+              "en": "Transfer onto the large wall matrix."
+            }
+          },
+          {
+            "phase": {
+              "de": "Muster",
+              "en": "Analyze patterns"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Muster und Diskrepanzen zwischen Herausforderung und Ansatz analysieren.",
+              "en": "Analyze patterns and mismatches between challenge and approach."
+            }
+          },
+          {
+            "phase": {
+              "de": "Plenum",
+              "en": "All-together sharing"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Im Plenum Erkenntnisse und passende nächste Schritte teilen.",
+              "en": "Share insights and fitting next steps in plenary."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Diskrepanz-Tabelle",
+              "en": "Mismatch table"
+            },
+            "beschreibung": {
+              "de": "Fragen: „Wo passt unser Ansatz nicht?“ und eine Gegenmaßnahmen-Tabelle erstellen.",
+              "en": "Ask 'Where does our approach not fit?' and build a counter-measure table."
+            }
+          },
+          {
+            "name": {
+              "de": "Einzelne Herausforderung",
+              "en": "Single challenge"
+            },
+            "beschreibung": {
+              "de": "Für eine einzige Herausforderung nutzen, um den passenden Ansatz zu finden.",
+              "en": "Use for a single challenge to find the fitting approach."
+            }
+          },
+          {
+            "name": {
+              "de": "Sichtschilder",
+              "en": "Visual signs"
+            },
+            "beschreibung": {
+              "de": "Mit visuellen Schildern die Zonen schnell anzeigen.",
+              "en": "Use visual signs to indicate the zones quickly."
+            }
+          },
+          {
+            "name": {
+              "de": "Verketten",
+              "en": "String"
+            },
+            "beschreibung": {
+              "de": "Direkt mit dem LS-Auswahl-Matchmaker, Critical Uncertainties oder Ecocycle Planning weiterarbeiten.",
+              "en": "Follow immediately with the LS Selection Matchmaker, Critical Uncertainties or Ecocycle Planning."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Vorab klären, welche Herausforderungen betrachtet werden.",
+            "Mit Einzelarbeit beginnen, dann zu immer größeren Gruppen.",
+            "Nicht bewerten, wo Items platziert werden — die geteilte Sicht zählt.",
+            "Bei mehrfach platzierten Items fragen: „Hat diese Herausforderung mehrere Facetten?“"
+          ],
+          "en": [
+            "Clarify in advance which challenges you're looking at.",
+            "Start with solo work, then progressively larger groups.",
+            "Don't judge where items are placed — the shared view is what matters.",
+            "For items placed in several zones, ask: 'Does this challenge have multiple facets?'"
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Vor der Methodenwahl bestimmen, welcher Art ein Problem ist.",
+            "Frustration durch unpassende Ansätze (z. B. Rezept für ein komplexes Problem) sichtbar machen.",
+            "Orte für sichere lokale Experimente bei komplexen Themen identifizieren.",
+            "Perspektiven funktionsübergreifend teilen und abgleichen."
+          ],
+          "en": [
+            "Determine the nature of a problem before choosing a method.",
+            "Make visible the frustration of inappropriate approaches (e.g. a recipe for a complex problem).",
+            "Identify places for safe local experiments on complex topics.",
+            "Share and align perspectives across functions."
+          ]
+        },
+        "material_setup": {
+          "de": "Offene Wand mit der Agreement-Certainty-Matrix; Stifte, Post-its; optional digitale Whiteboards. Online: ein geteiltes Whiteboard mit der Vier-Zonen-Matrix.",
+          "en": "An open wall with the Agreement-Certainty matrix; pens, sticky notes; optional digital whiteboards. Online: a shared whiteboard with the four-zone matrix."
+        },
+        "online_durchfuehrung": {
+          "de": "Online auf einem geteilten Whiteboard mit der Vier-Zonen-Matrix. Ablauf: (1) Die zwei Achsen (Übereinstimmung, Gewissheit) und die vier Zonen erklären. (2) Alle listen ihre Herausforderungen als Stickies und platzieren sie zunächst auf einer eigenen Kopie. (3) In Paar- und Kleingruppen-Breakouts vergleichen und konsolidieren. (4) Auf die geteilte Matrix übertragen. (5) Muster und Diskrepanzen analysieren — wo passt der aktuelle Ansatz nicht zur Zone? (6) Passende nächste Schritte je Zone teilen. Tipp: nicht über die „richtige“ Platzierung streiten, sondern Facetten unterscheiden.",
+          "en": "Online on a shared whiteboard with the four-zone matrix. Flow: (1) Explain the two axes (agreement, certainty) and the four zones. (2) Everyone lists their challenges as stickies and first places them on a personal copy. (3) Compare and consolidate in pair and small-group breakouts. (4) Transfer onto the shared matrix. (5) Analyze patterns and mismatches — where does the current approach not fit the zone? (6) Share fitting next steps per zone. Tip: don't argue over the 'right' placement, distinguish facets instead."
+        }
       }
     },
     {
@@ -5888,24 +6451,25 @@
       "edition": "original",
       "short_desc": {
         "de": "Macht sichtbar, wie Systemebenen ineinander verschachtelt sind, und hilft großen Gruppen, Hindernisse und Chancen für die Verbreitung von Ideen zu erkennen.",
-        "en": ""
+        "en": "A group zooms in and out across the nested levels of a system — like Russian nesting dolls — to see how a shift at one level opens opportunities at another. It reveals where innovations can spread across scales and which levels have been neglected."
       },
-      "source_url": "https://liberatingstructures.de/panarchy/",
+      "source_url": "https://www.liberatingstructures.com/panarchy",
       "purpose_tags": [
+        "analysieren",
         "strategie"
       ],
       "arc_role": [
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 4,
+      "group_size_min": 8,
       "group_size_max": null,
       "duration_min": 120,
       "duration_max": 150,
       "online_capable": true,
       "materials": {
         "de": "Wichtig: freie Wand-/Bodenfläche, Tape/Kreide, Stifte, Papier; nützlich: leeres Panarchy-Chart (Handout + großformatig); optional Tische, Stühle; online: Breakout-Räume + virtuelles Whiteboard.",
-        "en": ""
+        "en": "A large Panarchy chart on an open wall; small tables with groups of four; sticky notes and individual copies. Online: a shared whiteboard with the Panarchy chart, breakout rooms and a polling tool."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -5918,34 +6482,278 @@
       ],
       "scrum_use": {
         "de": "Verbreitung von Ideen/Veränderungen über Systemebenen verstehen (Team → Bereich → Organisation); für komplexe Transformationen.",
-        "en": ""
+        "en": "Spreading a practice or innovation beyond a single team across organizational levels — team, programme, department, enterprise — by spotting which level is ready, what windows are opening above, and what resources flow down."
       },
       "design_elements": {
         "einladung": {
           "de": "Erkundet, wodurch Herausforderungen auf darüber- und darunterliegenden Systemebenen genährt werden, und benennt Strategien für Veränderung.",
-          "en": ""
+          "en": "Let's zoom in and zoom out, exploring the levels of our world like Russian nesting dolls and looking for shifts in one layer that can create opportunities in another."
         },
         "raum_materialien": {
           "de": "Wichtig: freie Wand-/Bodenfläche, Tape/Kreide, Stifte, Papier; nützlich: leeres Panarchy-Chart (Handout + großformatig); optional Tische, Stühle; online: Breakout-Räume + virtuelles Whiteboard.",
-          "en": ""
+          "en": "A large Panarchy chart on an open wall; small tables with groups of four (breakouts of three); sticky notes and individual copies. Online: a shared whiteboard and a polling tool."
         },
         "einbindung": {
           "de": "Alle am Transformations-/Innovationsprozess Beteiligten, gleiche Beitragschancen.",
-          "en": ""
+          "en": "No minimum group size; works best with eight or more people across multiple organizational levels. Everyone involved in spreading innovation has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzeln → Paare → Vierergruppen → Gesamtgruppe (1-2-4-All).",
-          "en": ""
+          "en": "1-2-4-All (or 1-3-All online)."
         },
         "ablauf_dauer": {
           "de": "Umfangreich (ca. 145 Min): Idee einführen, Faktoren erarbeiten, auf Ebenen übersetzen, Charts finalisieren und zusammenführen, Ecocycle-Analyse, Hindernisse/Chancen brainstormen und priorisieren, Maßnahmen mit 1-2-4-All, Debrief mit What-So-What-Now-What.",
-          "en": ""
+          "en": "Intro and shared challenge 5 min; identify influential factors 5 min; translate factors to levels (pairs/trios) 10 min; compare and consolidate levels 10 min; integrate into the shared chart 10 min; generate insights on dynamics 15 min; share insights 10 min; break 10 min; brainstorm opportunities/obstacles in quartets 15 min; share them 10 min; vote on priorities 10 min; identify action steps via 1-2-4-All 15 min; schedule follow-up 5 min. ~130 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); gegründet auf sozio-ökologischer Systemtheorie und dem Adaptive-Cycle-Modell (Gunderson & Holling); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Analysieren, Strategie“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); grounded in socio-ecological systems and adaptive-cycle theory (Gunderson & Holling); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Analyze, Strategy’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P2"
+      ],
+      "icon_alt": {
+        "de": "Ineinander verschachtelte Systemebenen wie russische Matrjoschka-Puppen, mit Pfeilen nach oben und unten.",
+        "en": "Nested system levels like Russian nesting dolls, with arrows moving up and down."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Eine Gruppe erkennt Chancen und Hindernisse, um Ideen über mehrere Wirkungsebenen hinweg zu verbreiten. Panarchy macht sichtbar, wie Systeme miteinander verbunden sind und wie Veränderungen zwischen den Ebenen weiterwirken — schnell auf lokaler, langsam auf Makro-Ebene. Kleine, schnelle Experimente auf unteren Ebenen wandern nach oben zu größeren, langsameren Ebenen, die erfolgreiche Innovationen bewahren; angesammeltes Wissen fließt nach unten und stabilisiert. So erkennt die Gruppe die Fenster, in denen Innovationen über Grenzen springen. Panarchy verkörpert LS-Prinzip #2 — tiefen Respekt für Menschen und lokale Lösungen üben.",
+          "en": "A group identifies opportunities and obstacles for spreading ideas across multiple operating levels. Panarchy reveals how systems interconnect and how change ripples between levels — fast at local, slow at macro scale. Small, fast experiments at lower levels move upward to larger, slower levels that conserve successful innovations; accumulated knowledge flows downward and stabilizes. This shows the windows when innovations leap across boundaries. Panarchy enacts LS Principle #2 — Practice Deep Respect for People and Local Solutions."
+        },
+        "einladung": {
+          "de": "„Lasst uns hinein- und herauszoomen und die Ebenen unserer Welt wie russische Matrjoschka-Puppen erkunden — und nach Verschiebungen in einer Schicht suchen, die Chancen in einer anderen eröffnen.“",
+          "en": "Let's zoom in and zoom out, exploring the levels of our world like Russian nesting dolls and looking for shifts in one layer that can create opportunities in another."
+        },
+        "beispielsaetze": {
+          "de": [
+            "„Welche Ebenen haben Aufmerksamkeit und Ressourcen bekommen — welche wurden vernachlässigt?“",
+            "„Welche Chancen und Hindernisse gibt es für Bewegung zwischen oder über die Ebenen hinweg?“",
+            "„Welche Fenster für neue Ideen öffnen sich oben? Welche Ressourcen fließen nach unten?“",
+            "„Welche kleinen Entwicklungen auf unterer Ebene stören die Ebene darüber?“"
+          ],
+          "en": [
+            "'Which levels have received attention and resources — which have been neglected?'",
+            "'What opportunities and obstacles exist for movement between or across levels?'",
+            "'What windows for new ideas are opening above? What resources flow downward?'",
+            "'What small-scale developments at a lower level disrupt the level above?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einladung und gemeinsame Herausforderung benennen.",
+              "en": "Name the invitation and the shared challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Faktoren finden",
+              "en": "Identify factors"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Einflussreiche Faktoren der Herausforderung sammeln.",
+              "en": "Collect influential factors of the challenge."
+            }
+          },
+          {
+            "phase": {
+              "de": "Auf Ebenen übersetzen",
+              "en": "Translate to levels"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "In Paaren/Trios die Faktoren den Systemebenen zuordnen.",
+              "en": "In pairs/trios, map the factors to the system levels."
+            }
+          },
+          {
+            "phase": {
+              "de": "Vergleichen",
+              "en": "Compare levels"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Ebenen vergleichen und zusammenführen.",
+              "en": "Compare and consolidate the levels."
+            }
+          },
+          {
+            "phase": {
+              "de": "Gemeinsame Karte",
+              "en": "Shared chart"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Alles in die geteilte Panarchy-Karte integrieren.",
+              "en": "Integrate everything into the shared Panarchy chart."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einsichten erzeugen",
+              "en": "Generate insights"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Über die Dynamik zwischen den Ebenen Erkenntnisse gewinnen.",
+              "en": "Generate insights about the dynamics between levels."
+            }
+          },
+          {
+            "phase": {
+              "de": "Einsichten teilen",
+              "en": "Share insights"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Im Plenum teilen.",
+              "en": "Share in plenary."
+            }
+          },
+          {
+            "phase": {
+              "de": "Pause",
+              "en": "Break"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Kurze Pause.",
+              "en": "Short break."
+            }
+          },
+          {
+            "phase": {
+              "de": "Chancen & Hindernisse",
+              "en": "Opportunities & obstacles"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "In Vierergruppen Chancen und Hindernisse für Bewegung zwischen Ebenen sammeln.",
+              "en": "In quartets, brainstorm opportunities and obstacles for movement between levels."
+            }
+          },
+          {
+            "phase": {
+              "de": "Teilen",
+              "en": "Share"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Chancen und Hindernisse im Plenum teilen.",
+              "en": "Share opportunities and obstacles in plenary."
+            }
+          },
+          {
+            "phase": {
+              "de": "Priorisieren",
+              "en": "Vote priorities"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Per Abstimmung Prioritäten setzen.",
+              "en": "Set priorities by voting."
+            }
+          },
+          {
+            "phase": {
+              "de": "Handlungsschritte",
+              "en": "Action steps"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Mit 1-2-4-All Handlungsschritte bestimmen.",
+              "en": "Identify action steps via 1-2-4-All."
+            }
+          },
+          {
+            "phase": {
+              "de": "Follow-up",
+              "en": "Follow-up"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "In Trios einen Folgetermin zur Überprüfung festlegen.",
+              "en": "In trios, schedule a follow-up review."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Mit Ecocycle Planning",
+              "en": "With Ecocycle Planning"
+            },
+            "beschreibung": {
+              "de": "Kombinieren, um den Innovationsstand auf einzelnen Ebenen zu bewerten (+30-50 Min).",
+              "en": "Combine to assess innovation status at specific levels (+30-50 min)."
+            }
+          },
+          {
+            "name": {
+              "de": "Solo",
+              "en": "Solo"
+            },
+            "beschreibung": {
+              "de": "Einzeln nutzen: „Was trägt auf den Ebenen über/unter mir zu meiner Herausforderung bei?“",
+              "en": "Use individually: 'What contributes to my challenge at the levels above/below me?'"
+            }
+          },
+          {
+            "name": {
+              "de": "Verbreitung verketten",
+              "en": "String for spreading"
+            },
+            "beschreibung": {
+              "de": "Für mehr Beteiligung mit What I Need From You, Network Relationship Patterns oder Social Network Webbing fortsetzen.",
+              "en": "For broader engagement, sequence with What I Need From You, Network Relationship Patterns or Social Network Webbing."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Herausforderungen wählen, die ebenenübergreifende Koordination erfordern.",
+            "Die Teilnehmenden vorab mit Ecocycle Planning vertraut machen (Panarchy nutzt Ecocycles je Ebene).",
+            "Recherchieren, wie die Ebenen im konkreten Kontext zusammenhängen.",
+            "Online schneller zwischen Hauptraum und Breakouts wechseln, bis alle den Ablauf verinnerlicht haben."
+          ],
+          "en": [
+            "Choose challenges that require cross-scale coordination.",
+            "Familiarize participants with Ecocycle Planning beforehand (Panarchy uses an ecocycle at each level).",
+            "Research how the levels interconnect in your specific context.",
+            "Online, cycle faster between main room and breakouts until people are comfortable with the process."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Eine Innovation von der lokalen auf die nationale/größere Ebene verbreiten.",
+            "Pädagog:innen helfen, Chancen über Systemebenen hinweg zu erkennen.",
+            "Einzelnen helfen, ihre Rolle im Wirkungsgefüge neu zu denken.",
+            "Vernachlässigte Ebenen sichtbar machen und Ressourcen ausbalancieren."
+          ],
+          "en": [
+            "Spread an innovation from local to national/larger scale.",
+            "Help educators identify opportunities across system levels.",
+            "Help individuals reimagine their role in their operating environment.",
+            "Make neglected levels visible and rebalance resources."
+          ]
+        },
+        "material_setup": {
+          "de": "Große Panarchy-Karte an offener Wand; kleine Tische mit Vierergruppen; Post-its und Einzelkopien. Online: geteiltes Whiteboard mit Panarchy-Karte, Breakout-Räume und ein Abstimmungstool.",
+          "en": "A large Panarchy chart on an open wall; small tables with foursomes; sticky notes and individual copies. Online: a shared whiteboard with the Panarchy chart, breakout rooms and a polling tool."
+        },
+        "online_durchfuehrung": {
+          "de": "Panarchy läuft online ähnlich wie in Präsenz, braucht aber etwas mehr Zeit und ein Abstimmungstool. Ablauf: (1) Die Panarchy-Karte (verschachtelte Ebenen) als geteiltes Whiteboard zeigen und die Herausforderung benennen. (2) Faktoren sammeln und in Trio-Breakouts den Ebenen zuordnen. (3) Im Plenum konsolidieren und in die geteilte Karte integrieren. (4) Einsichten zur Dynamik zwischen den Ebenen erzeugen und teilen — Pause einlegen. (5) In Vierer-Breakouts Chancen/Hindernisse sammeln, im Plenum per Online-Polling priorisieren. (6) Mit 1-2-4-All Handlungsschritte festlegen, in Trios einen Folgetermin vereinbaren. Tipp: Anfangs schneller zwischen Haupt- und Breakout-Räumen wechseln.",
+          "en": "Panarchy runs online much like in person, but needs a bit more time and a polling tool. Flow: (1) Show the Panarchy chart (nested levels) as a shared whiteboard and name the challenge. (2) Collect factors and map them to levels in trio breakouts. (3) Consolidate in plenary and integrate into the shared chart. (4) Generate and share insights on the dynamics between levels — take a break. (5) In quartet breakouts gather opportunities/obstacles, prioritize in plenary via online polling. (6) Identify action steps via 1-2-4-All, schedule a follow-up in trios. Tip: cycle faster between main and breakout rooms at first."
+        }
       }
     },
     {
@@ -5960,9 +6768,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Hilft, von „Entweder-oder“ zu „Beides-und“ zu kommen – etwa zwischen lokaler Autonomie und zentraler Standardisierung – und dafür konkrete Maßnahmen zu finden.",
-        "en": ""
+        "en": "A group moves a tension from either/or to both/and: how to integrate centrally AND strengthen local autonomy at the same time. It finds concrete actions that increase both standardization and customization instead of trading one off against the other."
       },
-      "source_url": "https://liberatingstructures.de/integrated-autonomy/",
+      "source_url": "https://www.liberatingstructures.com/integrated-autonomy",
       "purpose_tags": [
         "strategie"
       ],
@@ -5977,7 +6785,7 @@
       "online_capable": true,
       "materials": {
         "de": "Wichtig: Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Arbeitsblatt pro Person, großer Wandarbeitsbereich; optional Tische/Stühle; online: Breakout-Räume.",
-        "en": ""
+        "en": "Groups of four chairs at small tables; an Integrated~Autonomy template and pens for each participant. Online: breakouts of three and a shared whiteboard with the template."
       },
       "difficulty": "fortgeschritten",
       "typical_predecessors": [
@@ -5989,34 +6797,212 @@
       ],
       "scrum_use": {
         "de": "Spannung „Standardisierung vs. lokale Freiheit“ auflösen (z. B. teamübergreifende Standards vs. Team-Autonomie) – „beides-und“ statt „entweder-oder“.",
-        "en": ""
+        "en": "Resolving the classic tension between central standards and team autonomy — shared definition of done vs team practices, a platform vs local customization — by finding actions that strengthen both at once rather than swinging between centralize and decentralize."
       },
       "design_elements": {
         "einladung": {
           "de": "„Wird unser Ziel besser durch mehr lokale Autonomie/Freiheit oder durch mehr Integration/Standardisierung/Kontrolle unterstützt – oder beides?“",
-          "en": ""
+          "en": "Have you ever felt the tension between standardization and customization, or between central control and local autonomy? How are we integrating centrally while enhancing local autonomy? Let's tackle this and move from either-or to more of both!"
         },
         "raum_materialien": {
           "de": "Wichtig: Stifte, Papier, Platz für Paar- und Vierergruppen; nützlich: Arbeitsblatt pro Person, großer Wandarbeitsbereich; optional Tische/Stühle; online: Breakout-Räume.",
-          "en": ""
+          "en": "Groups of four chairs around small tables (breakouts of three online). Integrated~Autonomy templates and pens for each participant. Online: a shared whiteboard with the template."
         },
         "einbindung": {
           "de": "Leitende aller relevanten zentralen und lokalen Einheiten, gleiche Beitragschancen.",
-          "en": ""
+          "en": "Roles: host and participants; no minimum group size. Everyone involved — both central and local stakeholders — is invited with an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Einzelarbeit → Vierergruppen → Gesamtgruppe.",
-          "en": ""
+          "en": "1-2-4-All (or 1-3-All online)."
         },
         "ablauf_dauer": {
           "de": "Konzept vorstellen 5 Min; Spannungen mit 1-2-4-All 10–15 Min; Gründe Standardisierung vs. Anpassung 10 Min; Maßnahmen mit 1-2-4 10–15 Min; beidseitige Maßnahmen 5 Min; kreative Ideen 15 Min; priorisieren mit 1-2-4-All 10–15 Min. Gesamt 65–80 Min.",
-          "en": ""
+          "en": "Intro 1 min; list activities with integration/autonomy tensions 3 min; combine lists in pairs 7 min; quartets pick one activity and brainstorm Section A (integration actions) and B (customization actions) 10 min; brainstorm Section C — actions that increase BOTH 20 min; prioritize the most promising dual-benefit actions 15 min; plan follow-up and evaluation 15 min. ~70 min."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Strategie“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Strategy’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P6"
+      ],
+      "icon_alt": {
+        "de": "Eine Tilde (~) zwischen „Integration“ und „Autonomie“ — von Entweder-oder zu Beides-und.",
+        "en": "A tilde (~) between 'integration' and 'autonomy' — from either-or to both-and."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Die Struktur hilft, zentrale Integration zu stärken UND lokale Autonomie zu bewahren — gleichzeitig. Sie beantwortet zwei Grundfragen: „Welche Mischung aus Kontrolle und Freiheit bringt unseren Zweck voran?“ und „Wie verbinden wir globale Konsistenz mit lokaler Anpassung?“ Wenn die Gruppe diese Kräfte als einander ergänzend statt widersprechend versteht, bleibt sie in verteilten Abläufen flexibel und hält zugleich zentrale Standards ein. Integrated~Autonomy verkörpert LS-Prinzip #6 — Freiheit UND Verantwortung stärken.",
+          "en": "The structure helps strengthen central integration AND preserve local autonomy — at the same time. It answers two foundational questions: 'What mix of control and freedom will advance our purpose?' and 'How can we combine global consistency with local customization?' When the group sees these forces as complementary rather than contradictory, it stays flexible in distributed operations while adhering to central standards. Integrated~Autonomy enacts LS Principle #6 — Amplify Freedom AND Responsibility."
+        },
+        "einladung": {
+          "de": "„Kennst du die Spannung zwischen Standardisierung und Anpassung, zwischen zentraler Kontrolle und lokaler Autonomie? Wie integrieren wir zentral und stärken zugleich die lokale Autonomie? Lass uns von Entweder-oder zu mehr von beidem kommen!“",
+          "en": "Have you ever felt the tension between standardization and customization, or between central control and local autonomy? How are we integrating centrally while enhancing local autonomy? Let's move from either-or to more of both!"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Abschnitt A: „Welche Handlungen stärken die zentrale Integration?“",
+            "Abschnitt B: „Welche Handlungen stärken die lokale Anpassung/Autonomie?“",
+            "Abschnitt C (der Kern): „Welche Handlungen erhöhen BEIDES zugleich — Integration UND Autonomie?“",
+            "Rückfrage zum Takt: „Wie integrieren wir zentral, während wir die lokale Autonomie stärken?“"
+          ],
+          "en": [
+            "Section A: 'Which actions strengthen central integration?'",
+            "Section B: 'Which actions strengthen local customization/autonomy?'",
+            "Section C (the core): 'Which actions increase BOTH at once — integration AND autonomy?'",
+            "Recurring check: 'How are we integrating centrally while enhancing local autonomy?'"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "Intro",
+              "en": "Intro"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Einladung teilen, Vorlage verteilen, Schritte zeigen.",
+              "en": "Share the invitation, distribute the template, display the steps."
+            }
+          },
+          {
+            "phase": {
+              "de": "Aktivitäten auflisten",
+              "en": "List activities"
+            },
+            "dauer_min": 3,
+            "beschreibung": {
+              "de": "Aktivitäten finden, die Spannungen zwischen Integration/Anpassung und Zentralisierung/Autonomie zeigen.",
+              "en": "Identify activities that show tensions between integration/customization and centralization/autonomy."
+            }
+          },
+          {
+            "phase": {
+              "de": "Listen verbinden",
+              "en": "Combine lists"
+            },
+            "dauer_min": 7,
+            "beschreibung": {
+              "de": "In Paaren die wichtigsten Punkte zusammenführen.",
+              "en": "In pairs, merge the key items."
+            }
+          },
+          {
+            "phase": {
+              "de": "A & B brainstormen",
+              "en": "Brainstorm A & B"
+            },
+            "dauer_min": 10,
+            "beschreibung": {
+              "de": "Vierergruppen wählen eine Aktivität; Abschnitt A (Integration) und B (Anpassung) brainstormen.",
+              "en": "Quartets pick one activity; brainstorm Section A (integration) and B (customization)."
+            }
+          },
+          {
+            "phase": {
+              "de": "C: Beides-und",
+              "en": "C: both-and"
+            },
+            "dauer_min": 20,
+            "beschreibung": {
+              "de": "Abschnitt C: Handlungen finden, die Integration UND Autonomie zugleich erhöhen.",
+              "en": "Section C: find actions that increase both integration AND autonomy at once."
+            }
+          },
+          {
+            "phase": {
+              "de": "Priorisieren",
+              "en": "Prioritize"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Im Plenum Abschnitt C sichten; die vielversprechendsten Doppelnutzen-Aktionen wählen.",
+              "en": "In plenary, review Section C; choose the most promising dual-benefit actions."
+            }
+          },
+          {
+            "phase": {
+              "de": "Follow-up",
+              "en": "Plan follow-up"
+            },
+            "dauer_min": 15,
+            "beschreibung": {
+              "de": "Nächste Schritte und Evaluationszeitpunkt festlegen.",
+              "en": "Determine next steps and an evaluation timeline."
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "Kooperation & Wettbewerb",
+              "en": "Collaboration & competition"
+            },
+            "beschreibung": {
+              "de": "„Integration und Autonomie“ durch „Kooperation und Wettbewerb“ ersetzen.",
+              "en": "Substitute 'collaboration and competition' for 'integration and autonomy'."
+            }
+          },
+          {
+            "name": {
+              "de": "Agile/Code",
+              "en": "Agile/code"
+            },
+            "beschreibung": {
+              "de": "Im agilen Umfeld verteilte Versionskontrolle entwickeln, die Code-Integrität wahrt und lokale Anpassungen erlaubt.",
+              "en": "In agile settings, develop distributed version control that keeps code integrity while allowing local adaptation."
+            }
+          },
+          {
+            "name": {
+              "de": "Mit Min Specs / 9 Whys",
+              "en": "With Min Specs / 9 Whys"
+            },
+            "beschreibung": {
+              "de": "Danach mit Min Specs Muss-/Darf-nicht-Regeln klären; mit 9 Whys taktische Lösungen mit der Strategie verbinden.",
+              "en": "Follow with Min Specs to clarify must/must-not rules; use 9 Whys to connect tactical solutions to strategy."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Die zugrunde liegende Spannung zwischen zentral und lokal bleibt oft implizit — sichtbar machen.",
+            "Wenn eine Gruppe festfährt oder streitet: jede Seite die Gegenposition einnehmen und vertreten lassen.",
+            "Regelmäßig zurückfragen: „Wie integrieren wir zentral und stärken zugleich die lokale Autonomie?“",
+            "Lachen und stöhnendes Aufstöhnen sind gute Zeichen für Fortschritt."
+          ],
+          "en": [
+            "The underlying central-vs-local tension often stays implicit — make it visible.",
+            "When a group gets stuck or contentious, have each side take and argue the opposing view.",
+            "Periodically revisit: 'How are we integrating centrally while enhancing local autonomy?'",
+            "Laughter and expressive groans are good signs of progress."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Spannung zwischen zentralen Standards und Team-Autonomie auflösen.",
+            "Globale Konsistenz mit lokaler Anpassung in verteilten Organisationen verbinden.",
+            "Eine Plattform-vs-Maßanfertigung-Debatte in eine Beides-und-Lösung überführen.",
+            "Eine festgefahrene Entweder-oder-Diskussion entkrampfen."
+          ],
+          "en": [
+            "Resolve tension between central standards and team autonomy.",
+            "Combine global consistency with local customization in distributed organizations.",
+            "Turn a platform-vs-customization debate into a both-and solution.",
+            "Unstick a deadlocked either-or discussion."
+          ]
+        },
+        "material_setup": {
+          "de": "Vierergruppen an kleinen Tischen; je Person eine Integrated~Autonomy-Vorlage und ein Stift. Online: Dreier-Breakouts und ein geteiltes Whiteboard mit der Vorlage.",
+          "en": "Foursomes at small tables; an Integrated~Autonomy template and pen per person. Online: breakouts of three and a shared whiteboard with the template."
+        },
+        "online_durchfuehrung": {
+          "de": "Online mit einem geteilten Whiteboard (Vorlage mit den Abschnitten A, B, C) und Dreier-Breakouts. Ablauf: (1) Die Spannung benennen und die Einladung teilen. (2) Alle listen still spannungsgeladene Aktivitäten, führen sie in Paar-Breakouts zusammen. (3) In Dreier-/Vierer-Breakouts eine Aktivität wählen und Abschnitt A (Integration) und B (Anpassung) füllen. (4) Den meisten Raum für Abschnitt C nehmen: Handlungen, die BEIDES zugleich erhöhen. (5) Im Plenum die vielversprechendsten Doppelnutzen-Aktionen priorisieren und Follow-up planen. Tipp: Bei Festfahren die Seiten die Perspektive tauschen lassen.",
+          "en": "Online with a shared whiteboard (template with Sections A, B, C) and breakouts of three. Flow: (1) Name the tension and share the invitation. (2) Everyone silently lists tension-laden activities, then merges them in pair breakouts. (3) In breakouts of three/four, pick one activity and fill Section A (integration) and B (customization). (4) Give the most room to Section C: actions that increase BOTH at once. (5) In plenary, prioritize the most promising dual-benefit actions and plan follow-up. Tip: when stuck, have the sides swap perspectives."
+        }
       }
     },
     {
