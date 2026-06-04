@@ -48,9 +48,9 @@
       "edition": "original",
       "short_desc": {
         "de": "Bindet in rund 12 Minuten alle ein: Ideen wachsen von stiller Einzelarbeit über Paare und Vierergruppen bis zur Gesamtgruppe. Vermeidet Groupthink und gibt auch zurückhaltenden Personen eine Stimme.",
-        "en": ""
+        "en": "Engages everyone in about fifteen minutes: ideas grow from silent individual reflection through pairs and quartets to the whole group. Avoids groupthink and gives quieter people a voice too."
       },
-      "source_url": "https://liberatingstructures.de/liberating-structures-menue/1-2-4-all/",
+      "source_url": "https://www.liberatingstructures.com/1-2-4-all",
       "purpose_tags": [
         "offenlegen"
       ],
@@ -59,52 +59,205 @@
         "divergieren",
         "konvergieren"
       ],
-      "group_size_min": 6,
+      "group_size_min": 4,
       "group_size_max": null,
       "duration_min": 12,
       "duration_max": 15,
       "online_capable": true,
       "materials": {
         "de": "Genug Platz für Paare und Vierergruppen; nützlich: Stifte, Papier, Post-its; optional: Tische und Stühle; online: Breakout-Räume erforderlich.",
-        "en": ""
+        "en": "Space to work in pairs and quartets; useful: pens, paper, sticky notes; optional: tables and chairs; online: breakout rooms required."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
+        "spiral-journal",
+        "mad-tea",
         "design-storyboards",
         "improv-prototyping",
         "ecocycle-planning"
       ],
       "scrum_use": {
         "de": "Universell in fast jeder Retrospektive und im Planning: gleichberechtigtes Sammeln und Verdichten von Ideen; oft als Baustein in andere Strukturen (z. B. TRIZ) verschachtelt.",
-        "en": ""
+        "en": "Universal in almost any retrospective and in planning: equal-footing gathering and condensing of ideas; often nested as a building block inside other structures (e.g. TRIZ)."
       },
       "design_elements": {
         "einladung": {
           "de": "Stelle eine Frage zu einer Herausforderung, einem Problem oder einer gemeinsamen Aufgabe – z. B. „Welche Möglichkeiten siehst du, um Fortschritte zu machen?“ oder „Welche Ideen oder Handlungsempfehlungen hast du?“",
-          "en": ""
+          "en": "Let's think about our shared challenge and generate ideas to address it. What opportunities do you see for making progress on this challenge?"
         },
         "raum_materialien": {
           "de": "Genug Platz für Paare und Vierergruppen. Nützlich: Stifte, Papier, Post-its. Optional: Tische und Stühle. Online: Breakout-Räume erforderlich.",
-          "en": ""
+          "en": "Space for participants to work in pairs and quartets (breakouts). Pens, paper and sticky notes are useful; chairs and tables are optional. Online: breakout rooms required."
         },
         "einbindung": {
           "de": "Alle Teilnehmenden werden gleichberechtigt eingebunden (die moderierende Person üblicherweise nicht). Jede:r hat dieselbe Zeit und Gelegenheit, beizutragen.",
-          "en": ""
+          "en": "Everyone is included (the facilitator usually is not); everyone has an equal opportunity to contribute."
         },
         "gruppenkonfiguration": {
           "de": "Stufenweise: zuerst Einzelarbeit, dann Paare, dann Vierergruppen, dann die Gesamtgruppe.",
-          "en": ""
+          "en": "First alone, then in pairs, then in quartets, finally the whole group."
         },
         "ablauf_dauer": {
           "de": "1 Minute allein nachdenken; 2 Minuten zu zweit Ideen austauschen; 4 Minuten zu viert verfeinern und Gemeinsamkeiten suchen; 5 Minuten in der Gesamtgruppe ernten. Gesamt ca. 12 Minuten.",
-          "en": ""
+          "en": "1 min alone reflecting; 2 min sharing in pairs; 4 min refining in quartets; 5 min harvesting with the whole group. About 12–15 min total."
         }
       },
-      "description_origin": "uebernommen",
+      "description_origin": "eigen",
       "attribution": {
-        "de": "© Keith McCandless & Henri Lipmanowicz; deutsche Übersetzung © Holisticon AG; lizenziert unter CC BY-NC 3.0; Quelle: liberatingstructures.de",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally Henri Lipmanowicz & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
+      },
+      "embodied_principles": [
+        "P1"
+      ],
+      "icon_alt": {
+        "de": "Stufen von einer Person über ein Paar und eine Vierergruppe bis zur ganzen Gruppe.",
+        "en": "Stages from one person to a pair to a quartet to the whole group."
+      },
+      "guide": {
+        "was_wird_moeglich": {
+          "de": "Mit 1-2-4-All beziehst du alle ein — unabhängig von der Gruppengröße — und machst Betroffene zu Beteiligten. In rund 12 Minuten werden Ideen, Fragen oder Meinungen erzeugt und fokussiert: von stiller Einzelarbeit über Paare und Vierergruppen bis zur Gesamtgruppe. Weil alle gleichberechtigt beitragen, stehen am Ende auch alle hinter den Ideen — spätere Überzeugungsarbeit entfällt und die Umsetzung wird leichter. 1-2-4-All verkörpert LS-Prinzip #1 — alle einbeziehen und freisetzen.",
+          "en": "With 1-2-4-All you engage everyone — regardless of group size — turning those affected into participants. In about fifteen minutes, ideas, questions or opinions are generated and focused: from silent individual reflection through pairs and quartets to the whole group. Because everyone contributes on an equal footing, everyone stands behind the ideas — later persuasion is unnecessary and implementation becomes easier. 1-2-4-All enacts LS Principle #1 — Include and Unleash Everyone."
+        },
+        "einladung": {
+          "de": "Stelle eine Frage zu einer Herausforderung, einem Thema oder einer gemeinsamen Aufgabe, z. B.: „Welche Möglichkeiten siehst du, bei dieser Herausforderung Fortschritte zu machen?“",
+          "en": "Let's think about our shared challenge and generate ideas to address it. What opportunities do you see for making progress on this challenge?"
+        },
+        "beispielsaetze": {
+          "de": [
+            "Welche Möglichkeiten siehst du, bei dieser Herausforderung Fortschritte zu machen?",
+            "Wie würdest du mit dieser Situation umgehen?",
+            "Welche Ideen oder Handlungsempfehlungen hast du?",
+            "Welche Frage ist bei dir noch offen?",
+            "Was müssen wir heute klären, damit wir als Team voranschreiten können?"
+          ],
+          "en": [
+            "What opportunities do you see for making progress on this challenge?",
+            "How would you handle this situation?",
+            "What ideas or recommendations do you have?",
+            "What question is still open for you?",
+            "What do we need to clarify today so we can move forward as a team?"
+          ]
+        },
+        "schritte": [
+          {
+            "phase": {
+              "de": "„1“ / Allein",
+              "en": "1 / Alone"
+            },
+            "dauer_min": 1,
+            "beschreibung": {
+              "de": "Jede:r macht sich still Gedanken zur Frage und notiert Ideen.",
+              "en": "Each person silently reflects on the question and notes ideas."
+            }
+          },
+          {
+            "phase": {
+              "de": "„2“ / Zu zweit",
+              "en": "2 / In pairs"
+            },
+            "dauer_min": 2,
+            "beschreibung": {
+              "de": "Ideen, Fragen und Erkenntnisse teilen und weiterentwickeln; Bewertung zurückstellen.",
+              "en": "Share ideas, questions and insights and build on them; defer judgment."
+            }
+          },
+          {
+            "phase": {
+              "de": "„4“ / Zu viert",
+              "en": "4 / In quartets"
+            },
+            "dauer_min": 4,
+            "beschreibung": {
+              "de": "Je zwei Paare bilden eine Vierergruppe: Ergebnisse verfeinern, auf Gemeinsamkeiten und Unterschiede achten, sich auf das Wichtigste einigen.",
+              "en": "Two pairs form a quartet: refine results, note similarities and differences, agree on what matters most."
+            }
+          },
+          {
+            "phase": {
+              "de": "„Alle“ / Gesamtgruppe",
+              "en": "All / Whole group"
+            },
+            "dauer_min": 5,
+            "beschreibung": {
+              "de": "Die Ergebnisse ernten, z. B.: „Welche Idee fand eure Gruppe besonders bemerkenswert? Was bringt uns als Gesamtgruppe voran?“",
+              "en": "Harvest results, e.g.: ‘Which idea did your group find most notable? What moves us forward as a whole group?’"
+            }
+          }
+        ],
+        "varianten": [
+          {
+            "name": {
+              "de": "1-3-All",
+              "en": "1-3-All"
+            },
+            "beschreibung": {
+              "de": "Paare überspringen und von der Einzelarbeit direkt in Trios gehen, dann ins Plenum (Vorsicht: in Trios kann eine Person dominieren).",
+              "en": "Skip pairs and go from individual reflection straight to trios, then to the whole group (note: in trios one person may dominate)."
+            }
+          },
+          {
+            "name": {
+              "de": "Reihenfolge/Runden",
+              "en": "Order/rounds"
+            },
+            "beschreibung": {
+              "de": "Reihenfolge umkehren oder eine weitere Runde anhängen, um tiefer zu gehen.",
+              "en": "Reverse the order or add another round to dig deeper."
+            }
+          },
+          {
+            "name": {
+              "de": "Visualisieren",
+              "en": "Visualize"
+            },
+            "beschreibung": {
+              "de": "Erkenntnisse grafisch festhalten; in Runde 2 und 3 Post-its nutzen.",
+              "en": "Capture insights graphically; use sticky notes in rounds 2 and 3."
+            }
+          }
+        ],
+        "tipps": {
+          "de": [
+            "Erst still nachdenken lassen, bevor ausgetauscht wird.",
+            "Eine Glocke nutzen, um die Phasen anzukündigen; Zeitfenster strikt einhalten.",
+            "Nicht über-helfen oder die Gespräche zu stark steuern.",
+            "Bei großen Gruppen geteilte Ideen auf drei bis vier begrenzen und Übriges einsammeln lassen.",
+            "Vorsicht: 1-2-4-All geht manchmal überraschend tief, eignet sich aber nicht, um auf individueller Ebene Themen in der Tiefe zu erfassen — nicht jedes Meeting damit strukturieren."
+          ],
+          "en": [
+            "Let people reflect quietly before sharing.",
+            "Use a bell to announce the phases; keep the time windows strict.",
+            "Don't over-help or overcontrol the conversations.",
+            "For large groups, limit shared ideas to three or four and have someone collect the rest.",
+            "Caution: 1-2-4-All can go surprisingly deep, but it isn't suited to exploring topics in depth at the individual level — don't structure every meeting with it."
+          ]
+        },
+        "anlaesse": {
+          "de": [
+            "Nach einem Vortrag/einer Präsentation für ausführliches Feedback statt „Noch Fragen?“.",
+            "Um langweilig gewordenen Regelmeetings wieder Leben einzuhauchen.",
+            "Für eine Gruppe, die ein Problem angehen oder Innovationsmöglichkeiten finden möchte.",
+            "Um eine stockende oder dysfunktionale Diskussion wieder in Gang zu bringen.",
+            "Für Gruppen, die sich zu stark von Meinungsführern beeinflussen lassen."
+          ],
+          "en": [
+            "After a talk/presentation for rich feedback instead of 'Any questions?'.",
+            "To revive routine meetings that have become dull.",
+            "For a group that wants to tackle a problem or find opportunities for innovation.",
+            "To restart a stalled or dysfunctional discussion.",
+            "For groups that tend to be over-influenced by opinion leaders."
+          ]
+        },
+        "material_setup": {
+          "de": "Genügend Platz für Paare und Vierergruppen; Stifte, Papier/Post-its zum Festhalten; optional Tische und Stühle. Online: Breakout-Räume für die Paar- und Vierer-Phasen.",
+          "en": "Enough space for pairs and quartets; pens, paper/sticky notes to capture ideas; optional tables and chairs. Online: breakout rooms for the pair and quartet phases."
+        },
+        "online_durchfuehrung": {
+          "de": "Online gut möglich. Vorbereitung: Breakout-Räume für die Paar- und Vierer-Phasen. Ablauf: (1) Die Frage stellen und alle still für sich Ideen notieren lassen (1 Min). (2) In Zweier-Breakouts teilen und weiterentwickeln (2 Min). (3) Zwei Paare in einem Vierer-Breakout zusammenführen, verfeinern und das Wichtigste auswählen (4 Min). (4) Zurück im Plenum ernten — bei großen Gruppen die Zahl der geteilten Beiträge begrenzen und Übriges im Chat sammeln. Tipp: klare Zeitsignale geben, da der Wechsel zwischen Haupt- und Breakout-Räumen Zeit kostet.",
+          "en": "Works well online. Setup: breakout rooms for the pair and quartet phases. Flow: (1) Ask the question and have everyone note ideas silently (1 min). (2) Share and build in breakouts of two (2 min). (3) Merge two pairs into a breakout of four, refine and select what matters most (4 min). (4) Back in plenary, harvest — for large groups limit the number of shared contributions and collect the rest in the chat. Tip: give clear time signals, as switching between main room and breakouts takes time."
+        }
       }
     },
     {
@@ -2397,12 +2550,11 @@
       "edition": "extended",
       "short_desc": {
         "de": "Alle vervollständigen im Höchsttempo offene Sätze zu einer gemeinsamen Herausforderung – in wenigen Minuten entstehen viele Perspektiven, verborgene Einsichten, Verbundenheit und Schwung. „Mad Tea“ ist die lebhafte Präsenz-Variante, „Calm Tea“ die ruhige Online-Variante im Chat.",
-        "en": ""
+        "en": "Everyone rapidly completes open sentences about a shared challenge — in a few minutes, many perspectives, hidden insights, connection and momentum emerge. ‘Mad Tea’ is the lively in-person version, ‘Calm Tea’ the quiet online variant in the chat."
       },
       "source_url": "https://www.liberatingstructures.com/mad-tea-calm-tea",
       "purpose_tags": [
-        "offenlegen",
-        "teilen"
+        "offenlegen"
       ],
       "arc_role": [
         "öffnen",
@@ -2415,43 +2567,45 @@
       "online_capable": true,
       "materials": {
         "de": "Präsenz („Mad Tea“): offener Raum für zwei konzentrische Kreise (innen/außen), sodass sich Paare gegenüberstehen; Glocke/Signal für Übergänge. Online („Calm Tea“): Videokonferenz mit Chat und vorbereiteten offenen Satzanfängen in Großbuchstaben. Präsenz wirkt ab ca. 12 Personen, online ab ca. 6.",
-        "en": ""
+        "en": "In person (‘Mad Tea’): an open space for two concentric circles (inner/outer) so pairs face each other; a bell/signal for transitions. Online (‘Calm Tea’): a video conference with chat and prepared open sentence stems in ALL CAPS. In person works from about 12 people, online from about 6."
       },
       "difficulty": "leicht",
       "typical_predecessors": [],
       "typical_successors": [
-        "critical-uncertainties"
+        "critical-uncertainties",
+        "future-present",
+        "strategy-knotworking"
       ],
       "scrum_use": {
         "de": "Schneller Check-in oder Check-out in nahezu jeder Zeremonie: als Energizer und Verbindungsritual zu Beginn (z. B. Retrospektive, Planning) oder zum gemeinsamen Reflektieren und Ableiten nächster Schritte am Ende.",
-        "en": ""
+        "en": "A quick check-in or check-out in almost any ceremony: as an energizer and connection ritual at the start (e.g. retrospective, planning) or to reflect together and derive next steps at the end."
       },
       "design_elements": {
         "einladung": {
           "de": "Macht euch bereit, unsere Herausforderung im Höchsttempo zu erkunden! Wir teilen Perspektiven, legen verborgene Einsichten frei und entwickeln neue Ideen – mit Freude und Schwung für die nächsten Schritte.",
-          "en": ""
+          "en": "Get ready to explore our challenge at warp speed! We will be sharing our perspectives, uncovering hidden insights, and unleashing new ideas, all while having fun and inspiring our next steps."
         },
         "raum_materialien": {
           "de": "Präsenz: zwei konzentrische Kreise, Paare einander gegenüber. Online: Chat mit vorbereiteten offenen Satzanfängen („Chatterfall“). Glocke/Signal für die Übergänge.",
-          "en": ""
+          "en": "In person: two concentric circles, pairs facing each other. Online: chat with prepared open sentence stems (‘Chatterfall’). A bell/signal for the transitions."
         },
         "einbindung": {
           "de": "Alle gleichberechtigt: Jede:r vervollständigt jeden Satzanfang, etwa 30 Sekunden pro Person, danach Wechsel des Gegenübers (online: alle gleichzeitig im Chat).",
-          "en": ""
+          "en": "Everyone on an equal footing: each person completes every sentence stem, about 30 seconds per person, then switch partners (online: everyone types in the chat at once)."
         },
         "gruppenkonfiguration": {
           "de": "Wechselnde Paare und Gesamtgruppe (online nur Gesamtgruppe).",
-          "en": ""
+          "en": "Rotating pairs and the whole group (online: whole group only)."
         },
         "ablauf_dauer": {
           "de": "Einführung und Aufstellung ca. 5 Min → bis zu 12 offene Sätze à ca. 30 Sek. mit Partnerwechsel ca. 12 Min → gemeinsame Plenums-Reflexion 2–5 Min. Gesamt ca. 20–25 Min.",
-          "en": ""
+          "en": "Introduction and setup ~5 min → up to 12 open sentences at ~30 sec each with partner changes ~12 min → shared plenary reflection 2–5 min. Total ~20–25 min."
         }
       },
       "description_origin": "eigen",
       "attribution": {
-        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz, Nancy White & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com",
-        "en": ""
+        "de": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (ursprünglich Henri Lipmanowicz, Nancy White & Keith McCandless); lizenziert unter CC BY-SA 4.0; Quelle: liberatingstructures.com. Kategorie „Offenlegen“ gemäß offiziellem deutschen LS-Matchmaker.",
+        "en": "Liberating Structures Fieldbook (2026), Keith McCandless & Nancy White (originally developed by Henri Lipmanowicz, Nancy White & Keith McCandless); licensed under CC BY-SA 4.0; source: liberatingstructures.com. Category ‘Reveal’ per the official German LS Matchmaker."
       },
       "embodied_principles": [
         "P9"
@@ -2459,11 +2613,11 @@
       "guide": {
         "was_wird_moeglich": {
           "de": "Bei Mad Tea / Calm Tea vervollständigen alle in hohem Tempo Sätze rund um eine gemeinsame Herausforderung. „Mad Tea“ ist die lautere, energiegeladene Präsenz-Variante, „Calm Tea“ die ruhigere Online-Alternative. Beide bringen die Gruppe dazu, anders zu denken, neue Ideen zu teilen und unterschiedliche Perspektiven zu verstehen – und stiften zugleich Verbundenheit und Lachen.",
-          "en": ""
+          "en": "In Mad Tea / Calm Tea, everyone rapidly completes sentences around a shared challenge. Mad Tea is the louder, more energetic in-person version, Calm Tea the quieter online alternative. Both get people thinking differently, sharing new ideas and understanding different perspectives — while generating fellowship and laughter. Both bring to life LS Principle #9, Engage in Seriously Playful Curiosity."
         },
         "einladung": {
           "de": "Macht euch bereit, unsere Herausforderung im Höchsttempo zu erkunden! Wir teilen Perspektiven, legen verborgene Einsichten frei und entwickeln neue Ideen – mit Freude und Schwung für die nächsten Schritte.",
-          "en": ""
+          "en": "Get ready to explore our challenge at warp speed! We will be sharing our perspectives, uncovering hidden insights, and unleashing new ideas, all while having fun and inspiring our next steps."
         },
         "beispielsaetze": {
           "de": [
@@ -2477,62 +2631,72 @@
             "Was erfunden oder entwickelt werden muss, ist …",
             "Alles, was ich will, ist …"
           ],
-          "en": []
+          "en": [
+            "What I appreciate in this situation is …",
+            "An entangled challenge I face is …",
+            "What I hope can happen for us is …",
+            "A next step for me is …",
+            "What must be protected is …",
+            "What must be resisted is …",
+            "What must be let go of is …",
+            "What must be invented or developed is …",
+            "All I want is …"
+          ]
         },
         "schritte": [
           {
             "phase": {
               "de": "Einführung",
-              "en": ""
+              "en": "Intro"
             },
             "dauer_min": 1,
             "beschreibung": {
               "de": "Die Einladung vorstellen.",
-              "en": ""
+              "en": "Share the structuring invitation."
             }
           },
           {
             "phase": {
               "de": "Aufstellung",
-              "en": ""
+              "en": "Setup"
             },
             "dauer_min": 2,
             "beschreibung": {
               "de": "Paare in zwei konzentrischen Kreisen bilden (innen/außen), sodass sich je zwei gegenüberstehen.",
-              "en": ""
+              "en": "Participants stand face to face in pairs in two concentric circles, the inner circle facing out and the outer facing in."
             }
           },
           {
             "phase": {
               "de": "Anleitung",
-              "en": ""
+              "en": "Instructions"
             },
             "dauer_min": 2,
             "beschreibung": {
               "de": "Ablauf erklären: ca. 30 Sek. pro Person je Satz, dann Partnerwechsel; der äußere Kreis rotiert.",
-              "en": ""
+              "en": "Explain the process: about 30 seconds per person per sentence, then switch; the outer circle rotates to a new partner."
             }
           },
           {
             "phase": {
               "de": "Sätze vervollständigen",
-              "en": ""
+              "en": "Complete sentences"
             },
             "dauer_min": 12,
             "beschreibung": {
               "de": "Bis zu 12 offene Sätze nacheinander; nach jedem Satz ein:e neue:r Partner:in.",
-              "en": ""
+              "en": "Up to twelve open sentences in turn; a new partner after each sentence."
             }
           },
           {
             "phase": {
               "de": "Plenums-Reflexion",
-              "en": ""
+              "en": "All-together sharing"
             },
             "dauer_min": 5,
             "beschreibung": {
               "de": "Gemeinsam Unterschiede und Gemeinsamkeiten ernten und nächste Schritte benennen.",
-              "en": ""
+              "en": "Together harvest differences and similarities in the responses and name what seems possible now."
             }
           }
         ],
@@ -2540,21 +2704,21 @@
           {
             "name": {
               "de": "Calm Tea (online)",
-              "en": ""
+              "en": "Calm Tea (online)"
             },
             "beschreibung": {
               "de": "Ruhige Online-Variante im Chat: alle stummgeschaltet; pro Satz vervollständigen alle gleichzeitig und senden auf Signal („Chatterfall“), danach kurze Lesepause. Bis zu 6 Sätze; am Ende erneutes Lesen/Scrollen zur Reflexion.",
-              "en": ""
+              "en": "The quiet online variant in the chat: everyone muted; for each sentence all type simultaneously and send on a signal (‘Chatterfall’), then a short reading pause. Up to six sentences; at the end, reread/scroll to reflect."
             }
           },
           {
             "name": {
               "de": "Variationen (Riffs)",
-              "en": ""
+              "en": "Variations (Riffs)"
             },
             "beschreibung": {
               "de": "Tonalität der Satzanfänge variieren; online Anonymität über kollektive Pseudonyme; humorvolle Varianten wie „Ich erkenne ein dysfunktionales Team daran, dass …“.",
-              "en": ""
+              "en": "Vary the tone of the sentence stems; online anonymity via collective pseudonyms; playful variants like ‘I know a team is dysfunctional when …’."
             }
           }
         ],
@@ -2563,7 +2727,10 @@
             "Mad Tea ist schnell und kann laut werden: dazu ermutigen, sich nah zum Gegenüber zu beugen statt zu rufen; Übergänge mit einer Glocke/einem Signal ankündigen.",
             "Calm Tea: anfangs senden manche reflexhaft zu früh – ein, zwei Runden zum Einspielen einplanen und eine ausgewogene Mischung der Satzanfänge wählen."
           ],
-          "en": []
+          "en": [
+            "Mad Tea goes very fast and can be noisy: encourage leaning in close to your partner rather than shouting; announce transitions with a bell/signal.",
+            "Calm Tea: at first some hit Enter reflexively too early — plan one or two warm-up rounds and use a balanced mix of sentence stems (appreciative, problem-focused, hopeful, action-oriented)."
+          ]
         },
         "anlaesse": {
           "de": [
@@ -2571,12 +2738,24 @@
             "Zur Reflexion von Erkenntnissen.",
             "Zum Identifizieren von Ambitionen und nächsten Schritten in Transitions- oder Planungsinitiativen."
           ],
-          "en": []
+          "en": [
+            "At the beginning or end of meetings to quickly create connection and shared purpose.",
+            "To reflect on takeaways.",
+            "To identify ambitions and next steps in a transition or planning initiative."
+          ]
         },
         "material_setup": {
           "de": "Präsenz: genügend offener Raum für zwei konzentrische Kreise; eine Glocke oder ein akustisches Signal für die Übergänge. Online: Videokonferenz mit Chat; die offenen Satzanfänge vorbereitet (in Großbuchstaben) zum Einblenden.",
-          "en": ""
+          "en": "In person: enough open space for two concentric circles; a bell or audible signal for the transitions. Online: a video conference with chat; the open sentence stems prepared (in ALL CAPS) to display."
+        },
+        "online_durchfuehrung": {
+          "de": "Online heißt die Variante „Calm Tea“. Die Physis von Mad Tea lässt sich online kaum nachbilden; Calm Tea nutzt stattdessen „Chatterfall“, um schnell die Ideen aller einzufangen. Ablauf: (1) Alle stummschalten. (2) Die Moderatorin liest einen offenen Satz vor und fügt ihn in den Chat ein (in Großbuchstaben). (3) Alle tippen ihre Vervollständigung, drücken aber erst auf Signal „Los, Enter!“ — so erscheinen alle Antworten gleichzeitig. (4) Eine Minute Lesezeit. (5) Bis zu sechs Sätze wiederholen; am Ende nach oben scrollen und gemeinsam reflektieren, was möglich erscheint. Tipp: Rechtschreibfehler sind egal; ein, zwei Einspiel-Runden einplanen, damit niemand vorzeitig Enter drückt.",
+          "en": "Online, the variant is called ‘Calm Tea’. Mad Tea’s physicality is hard to replicate online; Calm Tea instead uses ‘Chatterfall’ to quickly capture everyone’s ideas. Flow: (1) Everyone mutes. (2) The host reads an open sentence and pastes it into the chat (in ALL CAPS). (3) Everyone types their completion but only presses Enter on the signal ‘Go, hit Enter!’ — so all responses appear at once. (4) One minute of reading time. (5) Repeat for up to six sentences; at the end, scroll up and reflect together on what seems possible. Tip: spelling mistakes are fine; plan one or two warm-up rounds so no one hits Enter prematurely."
         }
+      },
+      "icon_alt": {
+        "de": "Zwei konzentrische Kreise aus Personen, die sich paarweise gegenüberstehen und im Höchsttempo Sätze austauschen.",
+        "en": "Two concentric circles of people facing each other in pairs, rapidly exchanging sentences."
       }
     },
     {
