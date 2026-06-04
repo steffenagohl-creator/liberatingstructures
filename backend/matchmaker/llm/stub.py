@@ -136,11 +136,21 @@ class StubClient(LLMClient):
         if closer and closer["slug"] not in used:
             add(closer, "schließen")
 
+        # Ziel-String deterministisch aus den objectives der gewählten Strukturen ableiten
+        # (Autoren-Methode: erst Ziele Anfang→Mitte→Ende, dann Struktur je Ziel).
+        objective_by_slug = {c["slug"]: c.get("objective") for c in candidates}
+        objective_string = [
+            objective_by_slug[s["slug"]]
+            for s in steps
+            if objective_by_slug.get(s["slug"])
+        ]
+
         summary = (
             f"Vorgeschlagener String aus {len(steps)} Strukturen "
             f"(deterministischer Stub, Gesamtdauer {total} Minuten)."
         )
         result = {
+            "objective_string": objective_string,
             "string": steps,
             "total_duration": total,
             "summary": summary,
@@ -148,6 +158,10 @@ class StubClient(LLMClient):
                 "Die Reihenfolge folgt dem Bogen (öffnen → divergieren → konvergieren → "
                 "schließen) und stützt sich auf die von den gewählten Strukturen verkörperten "
                 "LS-Prinzipien (deterministischer Stub)."
+            ),
+            "emergent_hinweis": (
+                "Im Verlauf können neue oder geschärfte Ziele auftauchen; der String darf dann "
+                "angepasst werden (deterministischer Stub)."
             ),
             "alternatives": [],
         }
@@ -160,10 +174,15 @@ class StubClient(LLMClient):
         steps = a.get("string") or []
         total = sum(int(s.get("duration") or 0) for s in steps)
         result = {
+            "objective_string": a.get("objective_string", []),
             "string": steps,
             "total_duration": total,
             "summary": a.get("summary", ""),
             "principle_rationale": a.get("principle_rationale", ""),
+            "emergent_hinweis": (
+                "Im Verlauf können neue oder geschärfte Ziele auftauchen; der String darf dann "
+                "angepasst werden (deterministischer Stub)."
+            ),
             "consolidation": (
                 "Vorschlag A und B waren deckungsgleich; Vorschlag A übernommen "
                 "(deterministischer Stub)."

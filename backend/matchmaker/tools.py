@@ -25,6 +25,8 @@ _LLM_LANG = "de"
 _BILINGUAL_CANDIDATE_FIELDS = ("name", "objective", "short_desc")
 
 # Felder, die der LLM-Teil pro Kandidat braucht (kompakt halten – spart Tokens).
+# typical_predecessors/successors sind sprachneutrale Slug-Listen und liefern der KI das
+# Verkettungswissen der Autoren („Optional String") für die Sequenzierung.
 _CANDIDATE_FIELDS = (
     "slug",
     "name",
@@ -39,6 +41,20 @@ _CANDIDATE_FIELDS = (
     "online_capable",
     "difficulty",
     "embodied_principles",
+    "typical_predecessors",
+    "typical_successors",
+)
+
+# Sprachneutrale Felder fürs 43-Ziele-„Menü" (Selection-Matchmaker-Schritt: Ziel-String bilden,
+# dann Ziel→Struktur mappen). objective wird auf Deutsch aufgelöst (App-/LLM-Sprache).
+_OBJECTIVE_MENU_FIELDS = (
+    "slug",
+    "arc_role",
+    "purpose_tags",
+    "duration_min",
+    "duration_max",
+    "online_capable",
+    "difficulty",
 )
 
 
@@ -114,7 +130,7 @@ def query_structures(
     max_duration: int | None = None,
     online_only: bool = False,
     difficulties: list[str] | None = None,
-    edition: str = "original",
+    edition: str | None = None,
     types: list[str] | None = None,
 ) -> list[Structure]:
     """Filtert den Katalog nach harten Kriterien und gibt passende Strukturen zurück.
@@ -124,10 +140,14 @@ def query_structures(
     :param max_duration: nur Strukturen, deren ``duration_min`` in dieses Budget passt.
     :param online_only: bei Remote – nur ``online_capable`` Strukturen.
     :param difficulties: erlaubte Schwierigkeitsgrade.
-    :param edition: ``original`` (die 33) oder ``extended``.
+    :param edition: ``None`` = alle 43 (Default), ``original`` = nur die 33 klassischen,
+        ``extended`` = nur die 10 neueren. Der Default-Umfang ist der ganze kuratierte Katalog;
+        ein späterer „klein (33) ↔ alle (43)"-Umschalter setzt diesen Parameter.
     :param types: erlaubte Typen (Default: nur ``official``).
     """
-    qs = Structure.objects.filter(edition=edition, type__in=types or ["official"])
+    qs = Structure.objects.filter(type__in=types or ["official"])
+    if edition is not None:
+        qs = qs.filter(edition=edition)
 
     if group_size is not None:
         qs = qs.filter(group_size_min__lte=group_size).filter(
@@ -179,6 +199,29 @@ def serialize_candidate(structure: Structure) -> dict:
             value = localize(value, _LLM_LANG)
         candidate[field] = value
     return candidate
+
+
+def load_objective_menu(edition: str | None = None) -> list[dict]:
+    """Das „Ziele-Menü" für den Selection-Matchmaker-Schritt: alle Strukturen kompakt mit ihrem
+    kanonischen ``objective``.
+
+    Die KI bildet zuerst einen **String von Zielen** (Anfang→Mitte→Ende) und mappt diese dann auf
+    Strukturen. Dafür braucht sie die volle Ziel-Übersicht – nicht nur die hart vorgefilterten
+    Kandidaten. ``edition=None`` (Default) = **alle 43**; ``original`` = nur die 33 klassischen
+    (passt zum späteren „klein (33) ↔ alle (43)"-Umschalter). ``objective`` wird auf Deutsch
+    (App-/LLM-Sprache) aufgelöst; alle übrigen Felder sind sprachneutral (Slugs/Enums/Zahlen) →
+    derselbe Auswahlprozess in DE und EN.
+    """
+    menu = []
+    qs = Structure.objects.filter(type="official")
+    if edition is not None:
+        qs = qs.filter(edition=edition)
+    for s in qs:
+        entry = {"objective": localize(s.objective, _LLM_LANG)}
+        for field in _OBJECTIVE_MENU_FIELDS:
+            entry[field] = getattr(s, field)
+        menu.append(entry)
+    return menu
 
 
 def serialize_template(template: StringTemplate) -> dict:

@@ -1,10 +1,17 @@
 {
   "schema_version": "1.0",
-  "beschreibung": "Diagnoseschema des LS-Matchmaker: die strukturierten Merkmale, die aus der geschilderten Situation erhoben werden. Der Interview-Agent UND die deterministische Vorfilterung arbeiten gegen dieselbe Quelle. Siehe data/diagnosis_schema.md.",
+  "beschreibung": "Diagnoseschema des LS-Matchmaker: die strukturierten Merkmale, die aus der geschilderten Situation erhoben werden. Der Interview-Agent UND die deterministische Vorfilterung arbeiten gegen dieselbe Quelle. Hinweis zur Konzeption (Selection Matchmaker der Autoren): Zu Beginn werden Problem (Freitext 'situation') UND das vom Nutzer benannte Ziel ('ziel_text') erhoben; das genannte Ziel ist oft noch nicht das echte – Ziele können im Prozess emergent auftauchen/sich schärfen (Dynamic Incompleteness), daher ist 'ziel_text' erbeten, aber nicht blockierend. Siehe data/diagnosis_schema.md.",
   "dimensions": [
     {
+      "key": "ziel_text",
+      "label": "Was ist dein Ziel – was soll am Ende anders oder erreicht sein?",
+      "hint": "In eigenen Worten. Falls noch diffus: ruhig grob – das echte Ziel darf sich im Prozess schärfen.",
+      "input_type": "text",
+      "maps_to": "-"
+    },
+    {
       "key": "zweck",
-      "label": "Was soll am Ende herauskommen – was ist das Ziel?",
+      "label": "Welche Zweck-Kategorie(n) trifft/treffen am ehesten zu?",
       "hint": "Eine oder mehrere Zweck-Kategorien wählen.",
       "input_type": "multi_choice",
       "maps_to": "purpose_tags",

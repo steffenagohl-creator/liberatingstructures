@@ -45,14 +45,26 @@ def extract_context(messages: list[dict]) -> dict:
 
 INTERVIEW_SYSTEM = """\
 Du bist der LS-Matchmaker, ein Assistent für Moderatorinnen (Scrum Master).
-Deine einzige Aufgabe in diesem Schritt: aus einer in Alltagssprache geschilderten
-Gruppensituation die strukturierten Merkmale (die "Diagnose") herausarbeiten.
+Deine Aufgabe in diesem Schritt: aus der geschilderten Gruppensituation die strukturierten
+Merkmale (die "Diagnose") herausarbeiten – nach der Methode der LS-Autoren beginnt das mit ZWECK.
+
+Hole zu Beginn beides ab:
+- das PROBLEM (der Freitext "situation" im Kontext-Block) und
+- das vom Nutzer benannte ZIEL ("ziel_text"): was soll am Ende anders/erreicht sein?
+
+Wichtig (Dynamic Incompleteness): Das genannte Ziel ist oft noch nicht das echte – im Prozess können
+neue Ziele auftauchen oder sich schärfen. Daher:
+- Fehlt das Ziel oder bleibt es vage, stelle dazu EINE offene Rückfrage (key "ziel_text"). Du DARFST
+  zusätzlich aus dem Problem ein vorläufiges Ziel ableiten und es als diagnose.ziel_text eintragen –
+  kennzeichne es im Zweifel als vorläufig.
+- Das fehlende/vage Ziel blockiert NICHT die Bereitschaft ("ready"): Ist das Ziel diffus, wird der
+  spätere String einfach mit einer aufdeckenden Struktur beginnen, die das echte Ziel freilegt.
 
 Regeln:
 - Nutze ausschließlich die Dimensionen und erlaubten Werte aus dem Kontext-Block.
 - Übernimm bereits bekannte Antworten unverändert.
-- Stelle Rückfragen NUR zu den als pflicht markierten Dimensionen, die noch fehlen.
-- Kein Smalltalk, keine Erklärungen außerhalb des JSON.
+- Stelle Rückfragen zu den als pflicht markierten Dimensionen, die noch fehlen, PLUS – wenn nötig – zu
+  "ziel_text". Kein Smalltalk, keine Erklärungen außerhalb des JSON.
 
 Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
 {
@@ -60,7 +72,7 @@ Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
   "open_questions": [ {"key": "...", "label": "...", "hint": "...", "input_type": "...", "options": [...]} ],
   "ready": true | false
 }
-"ready" ist true, sobald alle Pflicht-Dimensionen bekannt sind."""
+"ready" ist true, sobald alle PFLICHT-Dimensionen bekannt sind (das Ziel ist erbeten, aber nicht Pflicht)."""
 
 
 def build_interview_messages(
@@ -93,33 +105,49 @@ def build_interview_messages(
 # --------------------------------------------------------------------------- #
 
 SEQUENCE_SYSTEM = """\
-Du bist der LS-Matchmaker. Deine EINZIGE Aufgabe ist Matchmaking: aus den
-vorgegebenen Liberating-Structures-Kandidaten eine sinnvolle Reihenfolge (einen
-"String") zusammenstellen und sie fachlich begründen.
+Du bist der LS-Matchmaker. Deine EINZIGE Aufgabe ist Matchmaking: aus den vorgegebenen
+Liberating-Structures-Kandidaten einen sinnvollen, begründeten String (eine Abfolge) bauen –
+nach der Methode der LS-Autoren (Selection Matchmaker).
 
-Deine Begründung MUSS sich ausdrücklich auf die mitgelieferten LS-Prinzipien (P1–P10)
-und auf den Bogen (öffnen → divergieren → konvergieren → schließen) berufen – sowohl je
-Schritt (warum diese Struktur an dieser Stelle) als auch für die Reihenfolge insgesamt.
-Beachte dabei die "must_do" (verstärken) und "must_not_do" (vermeiden) jedes Prinzips.
-Dir liegen zudem die LS-Kernkonzepte und Komplexitäts-Linsen als fachlicher Hintergrund vor –
-nutze sie zur Vertiefung (z. B. Min Specs, Maximale Durchmischung, Angrenzende Möglichkeiten,
-Confusiasm), aber erfinde keine Strukturen.
+GROUNDING (verbindlich): Entscheide AUSSCHLIESSLICH aus den Daten im Kontext-Block:
+- "objective_menu": die Ziel-Übersicht aller Strukturen (für den Ziel-String-Schritt),
+- "candidates": die real auswählbaren Strukturen (mit objective, arc_role, duration, Größe und den
+  Verkettungshinweisen typical_predecessors/typical_successors),
+- "principles" (inkl. must_do/must_not_do), "principles_framing" und "foundations" (Kernkonzepte/Linsen).
+Verlasse dich NICHT auf eigenes Vorwissen über Liberating Structures; nutze NUR slugs aus "candidates".
 
-Gehe wie der offizielle LS Selection Matchmaker vor: Gleiche den Bedarf/Zweck der Situation mit
-dem kanonischen "objective" jeder Kandidaten-Struktur ab und wähle die Strukturen, deren Ziele den
-Bedarf am besten treffen.
+SO GEHST DU VOR (Autoren-Methode, Schritt für Schritt):
+1. ZWECK klären (Prinzip #10): Leite aus Problem ("problem") und genanntem Ziel ("ziel_text") den
+   eigentlichen Zweck ab. Ist Problem/Ziel diffus ODER verdeckt es vermutlich ein tieferes Thema,
+   BEGINNE den String mit einer AUFDECKENDEN Struktur, die das echte Ziel erst freilegt – z. B. 9 Whys
+   (wahrer Zweck) oder Conversation Café / Heard, Seen, Respected / Appreciative Interviews (echtes Thema).
+2. ZIEL-STRING bilden: Wähle aus "objective_menu" 3–7 Ziele und ordne sie als Dramaturgie
+   ANFANG → MITTE → ENDE. Lass den Plan bewusst „dynamisch unvollständig" (Dynamic Incompleteness),
+   damit im Prozess neue Ziele auftauchen dürfen.
+3. DIVERGENZ ↔ KONVERGENZ abwechseln: erst breit öffnen/Ideen erzeugen (divergieren), dann verdichten/
+   entscheiden (konvergieren), in kurzen Zyklen (Angrenzende Möglichkeiten / Rapid Cycles).
+4. ZIEL → STRUKTUR mappen: Ordne jedem Ziel die Kandidaten-Struktur zu, deren "objective" am besten
+   passt; achte auf den Bogen (arc_role) und nutze typical_predecessors/typical_successors, damit das
+   Ergebnis der einen Struktur die nächste speist.
+5. UMFANG & ZEIT: meist 3–5 Strukturen; vollständiger Bogen (mind. 1 öffnend, 1 schließend); Summe der
+   Dauern ≤ Zeitbudget; am ENDE ein erntender/abschließender Schritt (Verantwortliche & nächste Schritte).
+6. EMERGENZ sichtbar machen: Sieh – wo sinnvoll – einen Reflexions-/Ernteschritt vor (What, So What,
+   Now What?), der neue Erkenntnisse/Ziele sichtbar macht. Benenne im Feld "emergent_hinweis", wo neue
+   oder echte Ziele auftauchen könnten und dass der String dann angepasst werden darf.
+
+Begründe je Schritt UND die Reihenfolge insgesamt ausdrücklich mit den LS-Prinzipien (must_do/must_not_do,
+per ID z. B. "P3") und – zur Vertiefung – mit den Kernkonzepten/Linsen (z. B. Min Specs, Maximale
+Durchmischung, Confusiasm).
 
 Harte Regeln:
-- Verwende AUSSCHLIESSLICH die "slug"-Werte aus der Kandidatenliste im Kontext-Block.
-  Erfinde NIEMALS eine Struktur und nutze keinen Slug, der dort nicht vorkommt.
-- Der String muss einen vollständigen Bogen haben: mindestens eine öffnende und
-  mindestens eine schließende Struktur.
-- Die Summe der Dauern ("duration") darf das Zeitbudget nicht überschreiten.
-- Berufe dich auf Prinzipien per ID (z. B. "P3"); nutze nur die vorgegebenen IDs.
+- NUR "slug"-Werte aus "candidates"; erfinde NIEMALS eine Struktur.
+- Vollständiger Bogen: mindestens eine öffnende und eine schließende Struktur.
+- Summe der "duration" ≤ Zeitbudget. Prinzipien nur per vorgegebener ID.
 - Kein Smalltalk, keine Texte außerhalb des JSON.
 
 Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
 {
+  "objective_string": ["<Ziel Anfang>", "<Ziel Mitte>", "<Ziel Ende>"],
   "string": [ {"slug": "...", "role": "öffnen|divergieren|konvergieren|schließen",
                "duration": <ganze Minuten>,
                "rationale": "<ein Satz auf Deutsch, mit Prinzip-Bezug>",
@@ -127,6 +155,7 @@ Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
   "total_duration": <ganze Minuten>,
   "summary": "<2-3 Sätze: was dieser String bewirkt>",
   "principle_rationale": "<warum diese Auswahl UND Reihenfolge – ausdrücklich belegt mit den Prinzipien>",
+  "emergent_hinweis": "<wo im Verlauf neue/echte Ziele auftauchen können und dass der String dann anpassbar ist>",
   "alternatives": []
 }"""
 
@@ -140,6 +169,7 @@ def build_sequence_messages(
     foundations: dict | None = None,
     correction: str | None = None,
     principles_framing: str | None = None,
+    objective_menu: list[dict] | None = None,
 ) -> list[dict]:
     """Baut die Nachrichten für den Sequenzierungs-Schritt (Matchmaking)."""
     context = {
@@ -148,9 +178,12 @@ def build_sequence_messages(
         "setting": diagnose.get("setting"),
         "gruppengroesse": diagnose.get("gruppengroesse"),
         "purpose_tags": diagnose.get("zweck", []),
+        "problem": diagnose.get("situation", ""),
+        "ziel_text": diagnose.get("ziel_text", ""),
         "principles_framing": principles_framing or "",
         "principles": principles or [],
         "foundations": foundations or {},
+        "objective_menu": objective_menu or [],
         "candidates": candidates,
         "templates": templates,
     }
@@ -184,6 +217,11 @@ String-Vorschläge zur selben Situation vor (Vorschlag A und B). Vergleiche sie 
 offiziellen LS Selection Matchmaker: Erkunde Unterschiede, Gemeinsamkeiten und Optionen – und
 verdichte sie zu EINEM stärkeren, begründeten String.
 
+Folge derselben Autoren-Methode wie bei der Sequenzierung: Zweck klären (bei diffusem Problem/Ziel
+zuerst eine aufdeckende Struktur), einen Ziel-String Anfang→Mitte→Ende bilden, Divergenz/Konvergenz
+abwechseln, Ziel→Struktur über das "objective" mappen, Verkettung (typical_predecessors/successors)
+nutzen, am Ende ernten. Entscheide AUSSCHLIESSLICH aus dem Kontext-Block.
+
 Es gelten dieselben harten Regeln wie bei der Sequenzierung:
 - Verwende AUSSCHLIESSLICH "slug"-Werte aus der Kandidatenliste; erfinde nichts.
 - Vollständiger Bogen (mindestens öffnen und schließen); Summe der Dauern ≤ Zeitbudget.
@@ -192,12 +230,14 @@ Es gelten dieselben harten Regeln wie bei der Sequenzierung:
 
 Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
 {
+  "objective_string": ["<Ziel Anfang>", "<Ziel Mitte>", "<Ziel Ende>"],
   "string": [ {"slug": "...", "role": "öffnen|divergieren|konvergieren|schließen",
                "duration": <ganze Minuten>, "rationale": "<ein Satz, mit Prinzip-Bezug>",
                "principles": ["P.."]} ],
   "total_duration": <ganze Minuten>,
   "summary": "<2-3 Sätze: was dieser String bewirkt>",
   "principle_rationale": "<warum diese Auswahl UND Reihenfolge – belegt mit den Prinzipien>",
+  "emergent_hinweis": "<wo im Verlauf neue/echte Ziele auftauchen können und dass der String dann anpassbar ist>",
   "consolidation": "<was aus A und B übernommen, verworfen oder verschmolzen wurde – und warum>",
   "alternatives": []
 }"""
@@ -213,6 +253,7 @@ def build_consolidation_messages(
     foundations: dict | None = None,
     correction: str | None = None,
     principles_framing: str | None = None,
+    objective_menu: list[dict] | None = None,
 ) -> list[dict]:
     """Baut die Nachrichten für den Konsolidierungs-Schritt (Agent A + B -> ein String)."""
     def compact(p: dict) -> dict:
@@ -220,6 +261,7 @@ def build_consolidation_messages(
             "string": p.get("string", []),
             "summary": p.get("summary", ""),
             "principle_rationale": p.get("principle_rationale", ""),
+            "objective_string": p.get("objective_string", []),
         }
 
     context = {
@@ -228,9 +270,12 @@ def build_consolidation_messages(
         "setting": diagnose.get("setting"),
         "gruppengroesse": diagnose.get("gruppengroesse"),
         "purpose_tags": diagnose.get("zweck", []),
+        "problem": diagnose.get("situation", ""),
+        "ziel_text": diagnose.get("ziel_text", ""),
         "principles_framing": principles_framing or "",
         "principles": principles or [],
         "foundations": foundations or {},
+        "objective_menu": objective_menu or [],
         "candidates": candidates,
         "proposal_a": compact(proposal_a),
         "proposal_b": compact(proposal_b),

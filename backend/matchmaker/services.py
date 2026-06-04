@@ -50,6 +50,10 @@ def normalize_diagnose(raw: dict | None) -> dict:
     """Bringt eine (ggf. unvollständige) Diagnose in eine saubere, typisierte Form."""
     raw = raw or {}
     return {
+        # Problem (Freitext) + vom Nutzer benanntes Ziel: Grundlage des Zweck-Schritts der
+        # Autoren-Methode. Beide sind erbeten, blockieren das Matching aber nicht (Emergenz).
+        "situation": (raw.get("situation") or "").strip(),
+        "ziel_text": (raw.get("ziel_text") or "").strip(),
         "zweck": list(raw.get("zweck") or []),
         "phase_bogen": list(raw.get("phase_bogen") or []),
         "gruppengroesse": _as_int(raw.get("gruppengroesse")),
@@ -256,10 +260,12 @@ def _run_with_gate(messages_builder, diagnose: dict, candidate_count: int,
         ok, violations = validate_string(steps, diagnose)
         total = sum(_as_int(s.get("duration")) or 0 for s in steps)
         result = {
+            "objective_string": parsed.get("objective_string", []),
             "string": steps,
             "total_duration": total,
             "summary": parsed.get("summary", ""),
             "principle_rationale": parsed.get("principle_rationale", ""),
+            "emergent_hinweis": parsed.get("emergent_hinweis", ""),
             "consolidation": parsed.get("consolidation", ""),
             "alternatives": parsed.get("alternatives", []),
             "quality": {"ok": ok, "violations": violations, "iterations": attempt},
@@ -272,8 +278,8 @@ def _run_with_gate(messages_builder, diagnose: dict, candidate_count: int,
 
     if best is None:
         best = {
-            "string": [], "total_duration": 0, "summary": "", "principle_rationale": "",
-            "consolidation": "", "alternatives": [],
+            "objective_string": [], "string": [], "total_duration": 0, "summary": "",
+            "principle_rationale": "", "emergent_hinweis": "", "consolidation": "", "alternatives": [],
             "quality": {
                 "ok": False,
                 "violations": ["Es konnte kein gültiger Vorschlag erzeugt werden."],
@@ -306,6 +312,8 @@ def match(diagnose_raw: dict) -> dict:
     principles = tools.load_principles()
     foundations = tools.load_foundations()
     principles_framing = tools.load_principles_framing()
+    # Volle Ziel-Übersicht für den „Ziel-String"-Schritt der Autoren-Methode (sprachneutral grounded).
+    objective_menu = tools.load_objective_menu()
 
     client = get_llm_client()
     budget = diagnose["zeitbudget"]
@@ -316,7 +324,7 @@ def match(diagnose_raw: dict) -> dict:
         return prompts.build_sequence_messages(
             diagnose, candidate_dicts, template_dicts, budget,
             principles=principles, foundations=foundations, correction=correction,
-            principles_framing=principles_framing,
+            principles_framing=principles_framing, objective_menu=objective_menu,
         )
 
     # Vorschlag von Agent A.
@@ -332,7 +340,7 @@ def match(diagnose_raw: dict) -> dict:
         return prompts.build_consolidation_messages(
             diagnose, candidate_dicts, budget, proposal_a, proposal_b,
             principles=principles, foundations=foundations, correction=correction,
-            principles_framing=principles_framing,
+            principles_framing=principles_framing, objective_menu=objective_menu,
         )
 
     final = _run_with_gate(cons_builder, diagnose, n, max_iter, client)

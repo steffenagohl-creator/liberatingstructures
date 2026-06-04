@@ -8,8 +8,21 @@ from rest_framework import serializers
 
 
 class DiagnoseSerializer(serializers.Serializer):
-    """Die strukturierten Merkmale einer Situation (Diagnoseschema, 8 Dimensionen)."""
+    """Die strukturierten Merkmale einer Situation (Diagnoseschema).
 
+    Nach der Autoren-Methode (Selection Matchmaker) gehören dazu auch das geschilderte
+    Problem (``situation``) und das vom Nutzer benannte Ziel (``ziel_text``) – beide erbeten,
+    aber nicht blockierend (Ziele dürfen im Prozess emergent auftauchen/sich schärfen).
+    """
+
+    situation = serializers.CharField(
+        required=False, allow_blank=True, allow_null=True,
+        help_text="Das geschilderte Problem in eigenen Worten (Freitext).",
+    )
+    ziel_text = serializers.CharField(
+        required=False, allow_blank=True, allow_null=True,
+        help_text="Das vom Nutzer benannte Ziel: was soll am Ende anders/erreicht sein? (Freitext)",
+    )
     zweck = serializers.ListField(
         child=serializers.CharField(), required=False, default=list,
         help_text="Zweck-Kategorien, z. B. offenlegen, planen, helfen.",
@@ -112,12 +125,22 @@ class QualitySerializer(serializers.Serializer):
 class MatchResponseSerializer(serializers.Serializer):
     """Antwort des Matchmakings: der validierte, begründete String."""
 
+    objective_string = serializers.ListField(
+        child=serializers.CharField(), required=False, default=list,
+        help_text="Der String von Zielen (Anfang bis Mitte bis Ende) aus der Autoren-Methode, aus "
+                  "dem der String von Strukturen abgeleitet wurde.",
+    )
     string = StringStepSerializer(many=True)
     total_duration = serializers.IntegerField(help_text="Summe der Schritt-Dauern in Minuten.")
     summary = serializers.CharField(help_text="Kurze Zusammenfassung, was der String bewirkt.")
     principle_rationale = serializers.CharField(
         required=False, allow_blank=True,
         help_text="Begründung von Auswahl UND Reihenfolge, belegt mit den LS-Prinzipien.",
+    )
+    emergent_hinweis = serializers.CharField(
+        required=False, allow_blank=True,
+        help_text="Wo im Verlauf neue/echte Ziele auftauchen können und dass der String dann "
+                  "angepasst werden darf (Dynamic Incompleteness).",
     )
     consolidation = serializers.CharField(
         required=False, allow_blank=True,

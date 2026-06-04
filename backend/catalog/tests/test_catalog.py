@@ -53,10 +53,13 @@ class CatalogSeedTests(TestCase):
             for schritt in tpl.sequence:
                 self.assertIn(schritt["slug"], slugs)
 
-    def test_diagnoseschema_laedt_mit_8_dimensionen(self):
+    def test_diagnoseschema_laedt_mit_9_dimensionen(self):
         pfad = settings.DATA_DIR / "diagnosis_schema.json"
         daten = json.loads(pfad.read_text(encoding="utf-8"))
-        self.assertEqual(len(daten["dimensions"]), 8)
+        # 8 ursprüngliche Dimensionen + ziel_text (vom Nutzer benanntes Ziel, Autoren-Methode).
+        self.assertEqual(len(daten["dimensions"]), 9)
+        keys = {d["key"] for d in daten["dimensions"]}
+        self.assertIn("ziel_text", keys)
 
     def test_check_catalog_command_laeuft_durch(self):
         # Wirft CommandError bei Problemen -> Test schlägt sonst fehl.

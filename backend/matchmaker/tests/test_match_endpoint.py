@@ -64,6 +64,36 @@ class MatchEndpointTests(APITestCase):
         resp = self.client.post(reverse("match"), {}, format="json")
         self.assertEqual(resp.status_code, 400)
 
+    def test_match_liefert_ziel_string_und_emergenz_hinweis(self):
+        # Autoren-Methode: Der String wird aus einem String von Zielen abgeleitet; zudem ein
+        # Hinweis auf emergente Ziele (Dynamic Incompleteness).
+        diagnose = {
+            "situation": "Diffuses Unbehagen im Team, niemand weiß genau warum.",
+            "ziel_text": "",  # bewusst leer -> echtes Ziel soll im Prozess auftauchen
+            "zweck": ["offenlegen"], "gruppengroesse": 8, "zeitbudget": 120, "setting": "praesenz",
+        }
+        resp = self.client.post(reverse("match"), {"diagnose": diagnose}, format="json")
+        self.assertEqual(resp.status_code, 200, resp.content)
+        data = resp.json()
+        self.assertIn("objective_string", data)
+        self.assertIsInstance(data["objective_string"], list)
+        self.assertGreaterEqual(len(data["objective_string"]), 1)
+        self.assertIn("emergent_hinweis", data)
+        self.assertTrue(data["emergent_hinweis"])
+
+    def test_match_ist_deterministisch_sprachneutral(self):
+        # Die Auswahl beruht auf sprachneutralen Treibern -> gleiche Diagnose, gleicher String
+        # (Beleg für „ein Prozess", Grundlage der späteren DE=EN-Parität).
+        diagnose = {
+            "zweck": ["analysieren"], "gruppengroesse": 6, "zeitbudget": 90, "setting": "praesenz",
+        }
+        a = self.client.post(reverse("match"), {"diagnose": diagnose}, format="json").json()
+        b = self.client.post(reverse("match"), {"diagnose": diagnose}, format="json").json()
+        self.assertEqual(
+            [s["slug"] for s in a["string"]],
+            [s["slug"] for s in b["string"]],
+        )
+
 
 @override_settings(LLM_PROVIDER="stub")
 class InterviewEndpointTests(APITestCase):
@@ -99,3 +129,21 @@ class InterviewEndpointTests(APITestCase):
         self.assertFalse(data["ready"])
         offene_keys = {q["key"] for q in data["open_questions"]}
         self.assertIn("zeitbudget", offene_keys)
+
+    def test_benanntes_ziel_wird_in_diagnose_mitgefuehrt(self):
+        # Das vom Nutzer benannte Ziel (ziel_text) ist erbeten und blockiert nicht, wird aber
+        # in die Diagnose übernommen (fließt später in den Matchmaker-Zweck-Schritt).
+        payload = {
+            "situation": "Sprint-Review steht an.",
+            "answers": {
+                "ziel_text": "Klares Feedback der Stakeholder einsammeln.",
+                "zweck": ["teilen"], "gruppengroesse": 8, "zeitbudget": 60, "setting": "praesenz",
+            },
+        }
+        resp = self.client.post(reverse("interview"), payload, format="json")
+        self.assertEqual(resp.status_code, 200, resp.content)
+        data = resp.json()
+        self.assertTrue(data["ready"])  # Ziel ist nicht Pflicht -> ready bleibt true
+        self.assertEqual(
+            data["diagnose"]["ziel_text"], "Klares Feedback der Stakeholder einsammeln."
+        )
