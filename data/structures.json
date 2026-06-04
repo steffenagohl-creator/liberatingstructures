@@ -4626,6 +4626,10 @@
         "online_durchfuehrung": {
           "de": "Open Space gelingt online über Breakout-Räume und ein gemeinsames Whiteboard als Marktplatz. Ablauf: (1) Im Plenum die Herausforderung, das Gesetz der zwei Füße und die vier Prinzipien vorstellen. (2) Teilnehmende tragen ihre Themen samt Zeitfenster in ein geteiltes Online-Board ein (jede Zeile = ein Breakout-Raum). (3) Alle wählen frei und wechseln per Link eigenständig zwischen den Breakout-Räumen — das „Gesetz der zwei Füße“ wird zum „Gesetz der zwei Klicks“. (4) Jede Session hält Ergebnisse direkt im Board fest. (5) Zurück im Plenum: Muster ernten, nächste Schritte. Wichtig: Selbstständiges Wechseln zwischen Breakouts in der Konferenzsoftware aktivieren.",
           "en": "Open Space works online via breakout rooms and a shared whiteboard as the marketplace. Flow: (1) In plenary, introduce the challenge, the Law of Two Feet and the four principles. (2) Participants enter their topics and time slots into a shared online board (each row = one breakout room). (3) Everyone chooses freely and moves between breakout rooms via link on their own — the 'Law of Two Feet' becomes the 'Law of Two Clicks'. (4) Each session records results directly in the board. (5) Back in plenary: harvest patterns, next steps. Key: enable self-service movement between breakouts in your conferencing tool."
+        },
+        "optional_string": {
+          "de": "Baue einen String mit Celebrity Interview, Appreciative Interviews (AI) und/oder TRIZ, bevor du den Open Space startest, und führe ein 25/10 Crowd Sourcing nach dem Abschluss durch.",
+          "en": "Build a string with Celebrity Interview, Appreciative Interviews (AI), and/or TRIZ before you start the Open Space, and run a 25/10 Crowd Sourcing after it concludes."
         }
       }
     },
@@ -5179,7 +5183,10 @@
       "typical_predecessors": [],
       "typical_successors": [
         "1-2-4-all",
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "future-present",
+        "spiral-journal",
+        "nine-whys"
       ],
       "scrum_use": {
         "de": "Verborgene Gefühle/Muster im Team sichtbar machen (z. B. emotionale Retrospektive, Team-Bindung), wenn Worte nicht weiterhelfen.",
@@ -5409,6 +5416,10 @@
         "online_durchfuehrung": {
           "de": "Drawing Together gelingt online mit einem geteilten Whiteboard oder einer Zeichen-App, in der jede:r eine eigene Fläche hat. Ablauf: (1) Die fünf Symbole einblenden und ihre Bedeutung erklären — wenn möglich vormachen, wie man sie zeichnet. (2) Alle zeichnen ihre erste und zweite Version auf ihrer eigenen Board-Fläche. (3) Für die stille Deutung in Paar-Breakouts gehen: die zeichnende Person teilt nur das Bild (Kamera/Bildschirm) und schweigt, die andere deutet. (4) Zweimal die Paare wechseln. (5) Im Plenum eine Galerie aller Bilder zeigen und gemeinsame Themen ernten. Wer lieber auf Papier zeichnet, hält die Zeichnung in die Kamera.",
           "en": "Drawing Together works online with a shared whiteboard or drawing app where each person has their own area. Flow: (1) Show the five symbols and explain their meaning — if possible, demonstrate drawing them. (2) Everyone draws their first and second draft on their own board area. (3) For silent interpretation, go into pair breakouts: the artist only shares the image (camera/screen) and stays silent while the partner interprets. (4) Switch pairs twice. (5) In plenary, show a gallery of all drawings and harvest common themes. Those who prefer paper hold their drawing up to the camera."
+        },
+        "optional_string": {
+          "de": "Um die Selbsterkundung zu vertiefen, verkette es mit Future~Present, Spiral Journal und 9 Whys.",
+          "en": "To deepen self-discovery, string with Future~Present, Spiral Journal, and 9 Whys."
         }
       }
     },
@@ -5450,7 +5461,10 @@
       "typical_successors": [
         "min-specs",
         "what-so-what-now-what",
-        "15-solutions"
+        "15-solutions",
+        "folding-spectrogram",
+        "talking-with-pixies",
+        "grief-walking"
       ],
       "scrum_use": {
         "de": "Strategie unter Unsicherheit (z. B. Produkt-/Roadmap-Planung mit mehreren Zukunftsszenarien).",
@@ -5734,6 +5748,10 @@
         "online_durchfuehrung": {
           "de": "Online auf einem geteilten Whiteboard mit vorbereitetem 2x2-Raster und Breakout-Räumen. Ablauf: (1) Im Plenum Unsicherheiten auf Stickies sammeln. (2) In Paar-Breakouts die kritischsten herausarbeiten, dann gemeinsam X und Y wählen und die Achsen beschriften. (3) Je eine Kleingruppe in einen Breakout-Raum pro Quadrant: kreativen Namen und Zwei-Satz-Szenario sowie drei Strategien auf dem Board festhalten. (4) Im Plenum Szenarien und Strategien teilen, dann robuste von absichernden trennen (z. B. zwei Farbpunkte). (5) Debrief in neuen Breakouts mit What, So What, Now What?, anschließend erste Schritte teilen. Tipp: Das Raster vorab anlegen, eine Pause in der Mitte einplanen.",
           "en": "Online on a shared whiteboard with a prepared 2x2 grid and breakout rooms. Flow: (1) In plenary, gather uncertainties on stickies. (2) In pair breakouts, distill the most critical ones, then together choose X and Y and label the axes. (3) One small group per quadrant in its own breakout: capture a creative name, a two-sentence scenario and three strategies on the board. (4) In plenary, share scenarios and strategies, then separate robust from hedging (e.g. two colored dots). (5) Debrief in new breakouts with What/So What/Now What, then share first steps. Tip: prepare the grid in advance and plan a break in the middle."
+        },
+        "optional_string": {
+          "de": "Wenn Critical Uncertainties eine schwierige Weggabelung mit weitreichenden Folgen offenlegt, erkunde sie mit Folding Spectrogram. Mach weiter mit Talking with Pixies oder Grief Walking, um alle vorzubereiten.",
+          "en": "When Critical Uncertainties reveals a difficult crossroads with far-reaching consequences, explore with Folding Spectrogram. Follow with Talking with Pixies or Grief Walking to prepare everyone."
         }
       }
     },
@@ -5777,7 +5795,9 @@
         "panarchy",
         "what-i-need-from-you-winfy",
         "open-space-technology",
-        "triz"
+        "triz",
+        "what-so-what-now-what",
+        "principles-walk-around"
       ],
       "scrum_use": {
         "de": "Product Backlog oder Aktivitäten-Portfolio entrümpeln: erkennen, was reif oder überfällig für „kreative Zerstörung“ ist.",
@@ -6016,6 +6036,10 @@
         "online_durchfuehrung": {
           "de": "Ecocycle Planning funktioniert online ohne große Änderungen — am besten auf großen Bildschirmen, da das Verschieben digitaler Stickies auf kleinen Geräten umständlich ist. Ablauf: (1) Vorlage als geteiltes Whiteboard öffnen, die vier Phasen erklären, ein paar Beispiele gemeinsam platzieren. (2) Alle mappen ihr eigenes Portfolio auf einer persönlichen Kopie. (3) In Breakouts zu zweit/dritt vergleichen. (4) Vertreter:innen übertragen ins geteilte Ecocycle. (5) Im Plenum reflektieren, Rigiditäts- und Knappheitsfalle markieren (eigene Sticky-Farbe). (6) In Breakout-Vierergruppen Handlungsschritte festlegen, dann Abschluss.",
           "en": "Ecocycle Planning works online with no major changes — best on large screens, since moving digital stickies on small devices is awkward. Flow: (1) Open the template as a shared whiteboard, explain the four phases, place a few examples together. (2) Everyone maps their own portfolio on a personal copy. (3) Compare in breakouts of two/three. (4) Representatives transfer onto the shared ecocycle. (5) In plenary reflect, mark the rigidity and scarcity traps (distinct sticky color). (6) In breakout foursomes set action steps, then close."
+        },
+        "optional_string": {
+          "de": "Nutze für die Entwicklung jeder Schlüsselphase des Ecocycle eine andere LS. Nutze Panarchy oder What, So What, Now What, um in der Reife-Phase zum Handeln anzuregen. Greife mit Principles Walk-Around die Werte wieder auf, um Portfolio-Aktivitäten und Beziehungen zu steuern.",
+          "en": "Use a different LS for developing each of the key phases of the Ecocycle. Use Panarchy or What, So What, Now What to spur action in Maturity. Revisit values with Principles Walk-Around to help manage portfolio activities and relationships."
         }
       }
     },
@@ -6058,7 +6082,14 @@
       "typical_successors": [
         "conversation-cafe",
         "wise-crowds",
-        "25-10-crowd-sourcing"
+        "25-10-crowd-sourcing",
+        "what-so-what-now-what",
+        "troika-consulting",
+        "heard-seen-respected",
+        "15-solutions",
+        "min-specs",
+        "nine-whys",
+        "drawing-together"
       ],
       "scrum_use": {
         "de": "Teamdynamik bewerten und verbessern (Vielfalt, Zuhören, gemeinsame Aktion, Sinn); gut bei neuen Teamzusammensetzungen oder Spannungen.",
@@ -6254,6 +6285,10 @@
         "online_durchfuehrung": {
           "de": "STAR braucht online keine großen Anpassungen. Ablauf: (1) Den STAR-Kompass als geteiltes Whiteboard zeigen und die vier Fragen erklären. (2) Alle setzen still ihre vier Bewertungspunkte (S, T, A, R) auf eine eigene Kopie oder per Marker auf den geteilten Kompass. (3) In Breakouts die Punkte bündeln und über Ähnlichkeiten/Unterschiede sprechen. (4) Das entstehende Muster deuten (z. B. „Harmonie ohne Ergebnis“). (5) Handlungsschritte sammeln und im Plenum teilen; Verantwortliche und erste Schritte festhalten.",
           "en": "STAR needs no major adjustments online. Flow: (1) Show the STAR compass as a shared whiteboard and explain the four questions. (2) Everyone silently places their four rating dots (S, T, A, R) on a personal copy or with a marker on the shared compass. (3) In breakouts, pool the dots and discuss similarities/differences. (4) Interpret the emerging pattern (e.g. 'harmony without accomplishment'). (5) Gather action steps and share in plenary; capture owners and first steps."
+        },
+        "optional_string": {
+          "de": "Verkette es mit anderen Liberating Structures, die einzelne Kompasspunkte stärken können, etwa Separateness/Getrenntheit (Conversation Café, What, So What, Now What), Tuning/Abstimmung (Troika Consulting, Heard, Seen, Respected), Action/Handeln (15% Solutions, Options Place, Min Specs) oder Reason/Sinn (9 Whys, Drawing Together).",
+          "en": "String together with other Liberating Structures that may boost specific compass points, such as Separateness (Conversation Café, What, So What, Now What), Tuning (Troika Consulting, Heard, Seen, Respected), Action (15% Solutions, Options Place, Min Specs), or Reason (9 Whys, Drawing Together)."
         }
       }
     },
@@ -6297,7 +6332,8 @@
         "ecocycle-planning",
         "panarchy",
         "integrated-autonomy",
-        "discovery-action-dialogue-dad"
+        "discovery-action-dialogue-dad",
+        "strategy-knotworking"
       ],
       "scrum_use": {
         "de": "Herausforderungen nach Komplexität einordnen und den passenden Ansatz wählen; gut zu Beginn von Problemlösungs-Workshops.",
@@ -6518,6 +6554,10 @@
         "online_durchfuehrung": {
           "de": "Online auf einem geteilten Whiteboard mit der Vier-Zonen-Matrix. Ablauf: (1) Die zwei Achsen (Übereinstimmung, Gewissheit) und die vier Zonen erklären. (2) Alle listen ihre Herausforderungen als Stickies und platzieren sie zunächst auf einer eigenen Kopie. (3) In Paar- und Kleingruppen-Breakouts vergleichen und konsolidieren. (4) Auf die geteilte Matrix übertragen. (5) Muster und Diskrepanzen analysieren — wo passt der aktuelle Ansatz nicht zur Zone? (6) Passende nächste Schritte je Zone teilen. Tipp: nicht über die „richtige“ Platzierung streiten, sondern Facetten unterscheiden.",
           "en": "Online on a shared whiteboard with the four-zone matrix. Flow: (1) Explain the two axes (agreement, certainty) and the four zones. (2) Everyone lists their challenges as stickies and first places them on a personal copy. (3) Compare and consolidate in pair and small-group breakouts. (4) Transfer onto the shared matrix. (5) Analyze patterns and mismatches — where does the current approach not fit the zone? (6) Share fitting next steps per zone. Tip: don't argue over the 'right' placement, distinguish facets instead."
+        },
+        "optional_string": {
+          "de": "Begegne Fehlpassungen mit Discovery & Action Dialogue, Panarchy oder Strategy Knotworking, um mehr lokale Prototypen zu erzeugen.",
+          "en": "Address mismatches with Discovery & Action Dialogue, Panarchy, or Strategy Knotworking to generate more local prototypes."
         }
       }
     },
@@ -6560,7 +6600,8 @@
       "typical_successors": [
         "what-i-need-from-you-winfy",
         "social-network-webbing",
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "network-relationship-patterns"
       ],
       "scrum_use": {
         "de": "Verbreitung von Ideen/Veränderungen über Systemebenen verstehen (Team → Bereich → Organisation); für komplexe Transformationen.",
@@ -6835,6 +6876,10 @@
         "online_durchfuehrung": {
           "de": "Panarchy läuft online ähnlich wie in Präsenz, braucht aber etwas mehr Zeit und ein Abstimmungstool. Ablauf: (1) Die Panarchy-Karte (verschachtelte Ebenen) als geteiltes Whiteboard zeigen und die Herausforderung benennen. (2) Faktoren sammeln und in Trio-Breakouts den Ebenen zuordnen. (3) Im Plenum konsolidieren und in die geteilte Karte integrieren. (4) Einsichten zur Dynamik zwischen den Ebenen erzeugen und teilen — Pause einlegen. (5) In Vierer-Breakouts Chancen/Hindernisse sammeln, im Plenum per Online-Polling priorisieren. (6) Mit 1-2-4-All Handlungsschritte festlegen, in Trios einen Folgetermin vereinbaren. Tipp: Anfangs schneller zwischen Haupt- und Breakout-Räumen wechseln.",
           "en": "Panarchy runs online much like in person, but needs a bit more time and a polling tool. Flow: (1) Show the Panarchy chart (nested levels) as a shared whiteboard and name the challenge. (2) Collect factors and map them to levels in trio breakouts. (3) Consolidate in plenary and integrate into the shared chart. (4) Generate and share insights on the dynamics between levels — take a break. (5) In quartet breakouts gather opportunities/obstacles, prioritize in plenary via online polling. (6) Identify action steps via 1-2-4-All, schedule a follow-up in trios. Tip: cycle faster between main and breakout rooms at first."
+        },
+        "optional_string": {
+          "de": "Wenn Panarchy zeigt, dass mehr Menschen über alle Ebenen hinweg einbezogen werden müssen, verkette es mit What I Need From You, Network Relationship Patterns oder Social Network Webbing.",
+          "en": "When Panarchy reveals a need to engage more people from across levels, string with What I Need From You, Network Relationship Patterns, or Social Network Webbing."
         }
       }
     },
@@ -6875,7 +6920,8 @@
       ],
       "typical_successors": [
         "min-specs",
-        "design-storyboards"
+        "design-storyboards",
+        "nine-whys"
       ],
       "scrum_use": {
         "de": "Spannung „Standardisierung vs. lokale Freiheit“ auflösen (z. B. teamübergreifende Standards vs. Team-Autonomie) – „beides-und“ statt „entweder-oder“.",
@@ -7084,6 +7130,10 @@
         "online_durchfuehrung": {
           "de": "Online mit einem geteilten Whiteboard (Vorlage mit den Abschnitten A, B, C) und Dreier-Breakouts. Ablauf: (1) Die Spannung benennen und die Einladung teilen. (2) Alle listen still spannungsgeladene Aktivitäten, führen sie in Paar-Breakouts zusammen. (3) In Dreier-/Vierer-Breakouts eine Aktivität wählen und Abschnitt A (Integration) und B (Anpassung) füllen. (4) Den meisten Raum für Abschnitt C nehmen: Handlungen, die BEIDES zugleich erhöhen. (5) Im Plenum die vielversprechendsten Doppelnutzen-Aktionen priorisieren und Follow-up planen. Tipp: Bei Festfahren die Seiten die Perspektive tauschen lassen.",
           "en": "Online with a shared whiteboard (template with Sections A, B, C) and breakouts of three. Flow: (1) Name the tension and share the invitation. (2) Everyone silently lists tension-laden activities, then merges them in pair breakouts. (3) In breakouts of three/four, pick one activity and fill Section A (integration) and B (customization). (4) Give the most room to Section C: actions that increase BOTH at once. (5) In plenary, prioritize the most promising dual-benefit actions and plan follow-up. Tip: when stuck, have the sides swap perspectives."
+        },
+        "optional_string": {
+          "de": "Sobald du eine Lösung gefunden hast, die sowohl Integration als auch Autonomie fördert, nutze Min Specs, um die Muss- und Darf-nicht-Kriterien für den Erfolg zu schärfen. Verkette es mit 9 Whys, um eine taktische Lösung mit den strategischen Zielen der Gruppe zu verbinden.",
+          "en": "Once you identify a solution that promotes both integration and autonomy, use Min Specs to refine the must-dos and must-not-dos for success. String with 9 Whys to connect a tactical solution back to the group's strategic goals."
         }
       }
     },
@@ -7123,7 +7173,10 @@
         "user-experience-fishbowl",
         "open-space-technology",
         "discovery-action-dialogue-dad",
-        "what-i-need-from-you-winfy"
+        "what-i-need-from-you-winfy",
+        "wicked-questions",
+        "critical-uncertainties",
+        "strategy-knotworking"
       ],
       "scrum_use": {
         "de": "Wissen/Erfahrung einer Schlüsselperson lebendig vermitteln (z. B. Stakeholder, neue Führungskraft, Expert:in) statt trockener Präsentation.",
@@ -7309,6 +7362,10 @@
         "online_durchfuehrung": {
           "de": "Online sehr gut umsetzbar. Ablauf: (1) Den Gast „spotlighten“ (in der Konferenzsoftware anpinnen), das Publikum bittet man, die Kameras auszuschalten — das schärft Fokus und Zuhören. (2) Die Moderation interviewt mit vorbereiteten Fragen. (3) Für neue Fragen kurze 1-2-4-All-Breakouts (zu 2-3) nutzen; Fragen kommen in den Chat. (4) Die Moderation sichtet den Chat und stellt mehrere Fragen. Tipp: Fragen vorab mit dem Gast teilen.",
           "en": "Works very well online. Flow: (1) Spotlight the guest (pin them in the conferencing tool), ask the audience to turn cameras off — this sharpens focus and listening. (2) The host interviews with prepared questions. (3) For new questions, use short 1-2-4-All breakouts (of 2-3); questions go into the chat. (4) The host sifts the chat and asks several. Tip: share the questions with the guest in advance."
+        },
+        "optional_string": {
+          "de": "Verkette es mit Wicked Questions oder Critical Uncertainties, um aufkommende Optionen zu erkunden. Kombiniere es mit Strategy Knotworking, um deine Strategie voranzubringen.",
+          "en": "String with Wicked Questions or Critical Uncertainties to explore emerging options. Pair with Strategy Knotworking to advance your strategy."
         }
       }
     },
@@ -7351,7 +7408,8 @@
         "improv-prototyping",
         "25-10-crowd-sourcing",
         "simple-ethnography",
-        "what-so-what-now-what"
+        "what-so-what-now-what",
+        "shift-share"
       ],
       "scrum_use": {
         "de": "Erfahrene Praktiker:innen teilen Erkenntnisse mit einer größeren Gruppe (z. B. Team teilt Learnings, „aus Fehlern lernen“).",
@@ -7536,6 +7594,10 @@
         "online_durchfuehrung": {
           "de": "Funktioniert online mit minimalen Anpassungen. Ablauf: (1) Die „Fische“ (3-7) in der Konferenzsoftware spotlighten/anpinnen; das übrige Publikum schaltet die Kameras aus, um Fokus und Zuhören zu stärken. (2) Der innere Kreis spricht natürlich über Erfolge und Misserfolge — zwei Regeln: keine Vorträge, miteinander reden. (3) Der äußere Kreis sammelt in kurzen Breakouts (oder direkt im Chat) Beobachtungen und Fragen. (4) Fragerunde: ausgewählte Fragen aus dem Chat an die Fische. (5) Debrief mit What, So What, Now What?: „Was scheint jetzt möglich?“",
           "en": "Works online with minimal adjustment. Flow: (1) Spotlight/pin the 'fish' (3-7) in the conferencing tool; the rest of the audience turns cameras off to boost focus and listening. (2) The inner circle talks naturally about successes and failures — two rules: no speeches, talk to each other. (3) The outer circle gathers observations and questions in short breakouts (or directly in chat). (4) Q&A: selected chat questions go to the fish. (5) Debrief with What/So What/Now What: 'What seems possible now?'"
+        },
+        "optional_string": {
+          "de": "Verkette es mit Improv Prototyping, Simple Ethnography und Shift & Share, um Belege für eine Vermutung zu sammeln, lokale Beobachtungen zu erfassen und Daten zu deuten, während du in der Aktionsforschung die nächsten Schritte gestaltest.",
+          "en": "String together with Improv Prototyping, Simple Ethnography, and Shift & Share to gather evidence to inform a hunch, collect local observations, and make sense of data as you shape next steps during action research."
         }
       }
     },
