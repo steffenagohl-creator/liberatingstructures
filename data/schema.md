@@ -68,7 +68,7 @@ Spalte **„Sprache"**: `{de,en}` = zweisprachiges Textfeld; `neutral` = sprachn
 | `materials` | `{de,en}` | Text | Benötigte/empfohlene Materialien und Raumhinweise. |
 | `difficulty` | neutral | Text | Moderations-Schwierigkeit: `leicht, mittel, fortgeschritten`. |
 | `typical_predecessors` | neutral | Liste `slug` | Methoden, die typischerweise **davor** in einem String stehen. |
-| `typical_successors` | neutral | Liste `slug` | Methoden, die typischerweise **danach** stehen. |
+| `typical_successors` | neutral | Liste `slug` | Methoden, die typischerweise **danach** stehen. Aus `guide.optional_string` quellentreu abgeleitet. |
 | `scrum_use` | `{de,en}` | Text | Einsatz im Scrum-Kontext (Retro, Planning, Review, Daily, Refinement, Team-Start). |
 | `icon` | neutral | Text | Datei-/Pfadkennung des offiziellen LS-Icons. |
 | `icon_alt` | `{de,en}` | Text | **Alt-Text**: beschreibt das Icon für Screenreader und Crawler. |
@@ -106,3 +106,4 @@ kann. Alle Texte zweisprachig `{de,en}`. Felder (alle optional):
 | `anlaesse` | `{de,en}` (Listen) | Typische Einsatzanlässe („Wann einsetzen"). |
 | `material_setup` | `{de,en}` | Ausführliche Material-/Raum-/Setup-Hinweise. |
 | `online_durchfuehrung` | `{de,en}` | **Ausführliche Online-/Remote-Anleitung:** wie man die Struktur per Videokonferenz durchführt (Tools, Breakout-Räume, Chat/Whiteboard, konkrete Anpassungen). |
+| `optional_string` | `{de,en}` | **Optional String** (offizielle LS-Empfehlung): Wortlaut der Quelle, welche anderen Strukturen sich davor/danach/zusammen anbieten. EN quellentreu, DE als Übersetzung. Aus diesem Text sind die sprachneutralen `typical_predecessors`/`typical_successors` (oben) abgeleitet. Für die Detailansicht; nicht in jeden Match injiziert. |
