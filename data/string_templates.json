@@ -22,12 +22,13 @@
       "name": "Schnelle Ideenfindung",
       "purpose": "In kurzer Zeit zu einer Herausforderung viele Ideen erzeugen und priorisieren.",
       "scrum_context": "planning",
-      "total_duration": 65,
-      "context_notes": "Gut, wenn ein Thema feststeht und viele tragfähige Optionen gebraucht werden.",
+      "total_duration": 85,
+      "context_notes": "Gut, wenn ein Thema feststeht und viele tragfähige Optionen gebraucht werden. Schließer je nach Lage: „15% Solutions“ wenn jede:r individuell etwas umsetzt (Change-Management-artig); „What, So What, Now What?“ wenn die Gruppe gemeinsam reflektiert und entscheidet.",
       "sequence": [
         {"slug": "wicked-questions", "note": "Das zentrale Spannungsfeld der Herausforderung schärfen."},
         {"slug": "1-2-4-all", "note": "Breit Ideen erzeugen und verdichten."},
-        {"slug": "25-10-crowd-sourcing", "note": "Mutige Ideen sammeln und die Top 10 priorisieren (Präsenz/große Gruppe)."}
+        {"slug": "25-10-crowd-sourcing", "note": "Mutige Ideen sammeln und die Top 10 priorisieren (Präsenz/große Gruppe)."},
+        {"slug": "15-solutions", "note": "Schließen: aus den Top-Ideen konkrete, sofort machbare eigene Schritte ableiten (Alternative bei kollektivem Fokus: What, So What, Now What?)."}
       ]
     },
     {
@@ -54,6 +55,167 @@
         {"slug": "heard-seen-respected", "note": "Öffnen: einander wirklich zuhören, Vertrauen aufbauen."},
         {"slug": "troika-consulting", "note": "Reihum konkrete Hilfe zu je einer eigenen Herausforderung."},
         {"slug": "15-solutions", "note": "Schließen: jede:r benennt die nächsten kleinen Schritte."}
+      ]
+    },
+    {
+      "slug": "sinn-aus-ueberraschung",
+      "name": "Sinn aus einer überraschenden Lage",
+      "purpose": "Nach einem Schock oder einer unerwarteten Wendung gemeinsam verstehen, was passiert ist, und nächste Schritte ableiten.",
+      "scrum_context": "",
+      "total_duration": 75,
+      "context_notes": "Gut, wenn Verunsicherung im Raum steht und erst ein gemeinsames Lagebild entstehen muss, bevor gehandelt wird.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Sample-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "conversation-cafe", "note": "Öffnen: in Ruhe-Runden gemeinsam Sinn aus der Lage machen, jede Stimme gehört."},
+        {"slug": "what-so-what-now-what", "note": "Schließen: Fakten und Bedeutung verdichten und konkrete nächste Schritte festhalten."}
+      ]
+    },
+    {
+      "slug": "muster-veraendern",
+      "name": "Festgefahrene Zusammenarbeit verändern",
+      "purpose": "Die unausgesprochenen Interaktionsmuster sichtbar machen, die das Team ausbremsen, und gemeinsam Auswege finden.",
+      "scrum_context": "",
+      "total_duration": 60,
+      "context_notes": "Wirkt, wenn die Zusammenarbeit hakt, ohne dass klar ist warum.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Sample-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "impromptu-networking", "note": "Öffnen: Erwartungen teilen und Verbindungen knüpfen."},
+        {"slug": "generative-relationships-star", "note": "Die Beziehungsmuster diagnostizieren, die Wert oder Reibung erzeugen."},
+        {"slug": "1-2-4-all", "note": "Schließen: gemeinsam konkrete nächste Schritte erzeugen."}
+      ]
+    },
+    {
+      "slug": "erneuern-wuerdigen-loslassen",
+      "name": "Erneuern: würdigen, loslassen, planen",
+      "purpose": "An Bewährtem anknüpfen, kontraproduktive Gewohnheiten loslassen und einen erneuerten Weg nach vorn festhalten.",
+      "scrum_context": "",
+      "total_duration": 145,
+      "context_notes": "Längerer Workshop; gut für Neustarts und tiefere Erneuerung statt schneller Korrektur.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Sample-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "impromptu-networking", "note": "Öffnen: ankommen, Erwartungen klären."},
+        {"slug": "appreciative-interviews", "note": "Die Wurzeln früherer Erfolge entdecken, an die angeknüpft werden kann."},
+        {"slug": "triz", "note": "Bewusst benennen, welche kontraproduktiven Gewohnheiten gestoppt werden sollten."},
+        {"slug": "what-so-what-now-what", "note": "Schließen: Erkenntnisse verdichten und Maßnahmen festhalten."}
+      ]
+    },
+    {
+      "slug": "zweck-zum-prototyp",
+      "name": "Vom Zweck zum konkreten Prototyp",
+      "purpose": "Den tieferen Zweck einer Aufgabe klären und daraus einen greifbaren, durchspielbaren Lösungsentwurf bauen.",
+      "scrum_context": "planning",
+      "total_duration": 110,
+      "context_notes": "Gut, wenn das Ziel noch unscharf ist und am Ende ein konkreter, testbarer Plan stehen soll.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Sample-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "nine-whys", "note": "Öffnen: den eigentlichen Zweck der Arbeit freilegen."},
+        {"slug": "improv-prototyping", "note": "Lösungsansätze spielerisch und schnell ausprobieren."},
+        {"slug": "design-storyboards", "note": "Schließen: die Schritte des Vorgehens konkret als Plan festhalten."}
+      ]
+    },
+    {
+      "slug": "strategie-retreat",
+      "name": "Strategie-Retreat: Sinn, Optionen, Zusagen",
+      "purpose": "In einem längeren Format gemeinsam Sinn klären, robuste Strategie-Optionen erkunden und gegenseitige Zusagen festhalten.",
+      "scrum_context": "",
+      "total_duration": 280,
+      "context_notes": "Ganztägiges Strategieformat für größere Runden; nicht für ein kurzes Meeting.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Maestro-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "nine-whys", "note": "Öffnen: den gemeinsamen Sinn klar machen."},
+        {"slug": "25-10-crowd-sourcing", "note": "Mutige Ideen sammeln und die stärksten sieben."},
+        {"slug": "critical-uncertainties", "note": "Strategien für unsichere, plausible Zukünfte entwickeln."},
+        {"slug": "ecocycle-planning", "note": "Das Portfolio an Aktivitäten ordnen und Engpässe erkennen."},
+        {"slug": "what-i-need-from-you-winfy", "note": "Schließen: über Funktionen hinweg klare gegenseitige Zusagen treffen."}
+      ]
+    },
+    {
+      "slug": "spannung-behutsam-loesen",
+      "name": "Spannung im Team behutsam lösen",
+      "purpose": "Bei angespannter Stimmung erst Sicherheit schaffen, das eigentliche Spannungsfeld benennen und einander konkret helfen.",
+      "scrum_context": "",
+      "total_duration": 110,
+      "context_notes": "Für heikle, emotional aufgeladene Situationen — beginnt bewusst geschützt.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Sample-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "drawing-together", "note": "Öffnen: über eine nonverbale Zeichnung sicher ins Thema kommen."},
+        {"slug": "impromptu-networking", "note": "In Paaren erste Gedanken und Erwartungen teilen."},
+        {"slug": "wicked-questions", "note": "Das paradoxe Spannungsfeld offen benennen, statt nur eine Seite zu lösen."},
+        {"slug": "troika-consulting", "note": "Schließen: einander reihum konkrete Hilfe zu je einer Herausforderung geben."}
+      ]
+    },
+    {
+      "slug": "peer-coaching-lernziele",
+      "name": "Peer-Coaching: Lernziele und gegenseitige Hilfe",
+      "purpose": "Lernziele auffrischen, hilfreiche und hinderliche Aktivitäten erkennen und einander beim Vorankommen unterstützen.",
+      "scrum_context": "",
+      "total_duration": 160,
+      "context_notes": "Für Lern-/Coaching-Runden; etwa zwei Stunden, stärkt zugleich Vertrauen.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Praxis-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "impromptu-networking", "note": "Öffnen: Lernziele und Entwicklung seit dem letzten Mal teilen."},
+        {"slug": "ecocycle-planning", "note": "Aktivitäten erkennen, die Lernziele unterstützen oder behindern."},
+        {"slug": "15-solutions", "note": "Konkrete Verbesserungen im eigenen Einflussbereich finden."},
+        {"slug": "troika-consulting", "note": "Schließen: einander reihum praktische Hilfe geben."}
+      ]
+    },
+    {
+      "slug": "retro-ursachen-tief",
+      "name": "Retrospektive: Ursachen tief verstehen",
+      "purpose": "Eine Retrospektive, die nicht an der Oberfläche bleibt, sondern Ursachen analytisch aufdeckt und in Handlung übersetzt.",
+      "scrum_context": "retrospektive",
+      "total_duration": 110,
+      "context_notes": "Gut, wenn dieselben Probleme immer wiederkehren und ein tieferer Blick nötig ist.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten Scrum-/LS-Praxis-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "impromptu-networking", "note": "Öffnen: Highlights und Tiefpunkte des Sprints teilen."},
+        {"slug": "what-so-what-now-what", "note": "Die Erfahrungen gemeinsam reflektieren und einordnen."},
+        {"slug": "discovery-action-dialogue-dad", "note": "Das Problem analytisch durchdringen: Ursachen, Beiträge, Hindernisse."},
+        {"slug": "15-solutions", "note": "Schließen: konkrete, sofort umsetzbare Schritte festhalten."}
+      ]
+    },
+    {
+      "slug": "team-neuausrichtung",
+      "name": "Team neu ausrichten (ganztägig)",
+      "purpose": "Ein Team auf einen gemeinsamen Zweck und tragfähige Arbeitsweisen ausrichten und Festgefahrenes auflösen.",
+      "scrum_context": "team-start",
+      "total_duration": 220,
+      "context_notes": "Ganztägiger Workshop für (neu zusammengesetzte) Teams oder grundlegende Neuausrichtung.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Praxis-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "heard-seen-respected", "note": "Öffnen: einander wirklich zuhören und Vertrauen aufbauen."},
+        {"slug": "purpose-to-practice", "note": "Zweck, Prinzipien, Beteiligte, Struktur und Praktiken gemeinsam gestalten."},
+        {"slug": "triz", "note": "Kontraproduktive Gewohnheiten benennen und loslassen."},
+        {"slug": "improv-prototyping", "note": "Neue Arbeitsweisen spielerisch durchprobieren."}
+      ]
+    },
+    {
+      "slug": "sprint-review-stakeholder",
+      "name": "Sprint Review mit Stakeholder-Dialog",
+      "purpose": "Stakeholder aktiv ins Sprint Review einbeziehen, Arbeit lebendig teilen und gemeinsam die nächsten Schritte ableiten.",
+      "scrum_context": "review",
+      "total_duration": 120,
+      "context_notes": "Macht aus einer passiven Vorführung einen echten Dialog mit Stakeholdern.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten Scrum-/LS-Praxis-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "impromptu-networking", "note": "Öffnen: Stakeholder und Team kommen ins Gespräch."},
+        {"slug": "shift-share", "note": "Die Arbeit in kleinen Runden parallel zeigen und Feedback einsammeln."},
+        {"slug": "what-so-what-now-what", "note": "Schließen: Erkenntnisse bündeln und nächste Schritte festhalten."}
+      ]
+    },
+    {
+      "slug": "gemeinsam-entscheiden",
+      "name": "Gemeinsam eine Entscheidung treffen",
+      "purpose": "Aus vielen Optionen gemeinsam und mitgetragen die stärksten auswählen, statt im Kreis zu diskutieren.",
+      "scrum_context": "planning",
+      "total_duration": 90,
+      "context_notes": "Gut, wenn eine Gruppe feststeckt und eine getragene Entscheidung braucht.",
+      "idea_source": "Abfolge-Idee aus öffentlich dokumentierten LS-Praxis-Strings; Texte eigen.",
+      "sequence": [
+        {"slug": "1-2-4-all", "note": "Öffnen: alle bringen gleichberechtigt Optionen ein."},
+        {"slug": "wicked-questions", "note": "Das zentrale Spannungsfeld der Entscheidung schärfen."},
+        {"slug": "25-10-crowd-sourcing", "note": "Die Optionen sammeln und die stärksten priorisieren."},
+        {"slug": "15-solutions", "note": "Schließen: konkrete erste Schritte zur gewählten Option festhalten."}
       ]
     }
   ]

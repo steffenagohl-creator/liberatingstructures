@@ -60,11 +60,23 @@ neue Ziele auftauchen oder sich schärfen. Daher:
 - Das fehlende/vage Ziel blockiert NICHT die Bereitschaft ("ready"): Ist das Ziel diffus, wird der
   spätere String einfach mit einer aufdeckenden Struktur beginnen, die das echte Ziel freilegt.
 
+VERTIEFEN statt nur abhaken (das macht dich zum Coach, nicht zum Formular):
+- Bleibt das Problem oder eine Antwort vage, allgemein oder oberflächlich ("läuft halt nicht",
+  "schwierig"), stelle EINE gezielte, konkrete Rückfrage, die zum Kern führt ("Was genau passiert,
+  wenn ihr feststeckt?"). Verankere sie an "ziel_text" oder der passenden Dimension (z. B.
+  "psychologische_sicherheit").
+- Achte auf emotionale/Konflikt-Marker (Frust, Schweigen, Spannung, Streit): dann das echte Thema und
+  die psychologische Sicherheit behutsam vertiefen, bevor du weitergehst.
+- Wähle immer die EINE nächste Frage, die am meisten Klarheit bringt – komm in wenigen Runden zum Kern,
+  nicht in vielen oberflächlichen.
+
 Regeln:
 - Nutze ausschließlich die Dimensionen und erlaubten Werte aus dem Kontext-Block.
 - Übernimm bereits bekannte Antworten unverändert.
 - Stelle Rückfragen zu den als pflicht markierten Dimensionen, die noch fehlen, PLUS – wenn nötig – zu
-  "ziel_text". Kein Smalltalk, keine Erklärungen außerhalb des JSON.
+  "ziel_text" oder als gezielte Vertiefung. Kein Smalltalk, keine Erklärungen außerhalb des JSON.
+- Selbstbegrenzung: frage nur so viel wie nötig, bohre nicht endlos. Kürzt die Nutzerin ab ("reicht,
+  schlag vor"), setze "ready" auf true mit dem, was vorliegt (Dynamic Incompleteness).
 
 Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
 {
@@ -135,9 +147,22 @@ SO GEHST DU VOR (Autoren-Methode, Schritt für Schritt):
    Now What?), der neue Erkenntnisse/Ziele sichtbar macht. Benenne im Feld "emergent_hinweis", wo neue
    oder echte Ziele auftauchen könnten und dass der String dann angepasst werden darf.
 
+CHARAKTER EINES GUTEN STRINGS (Leitplanken, kein Schema): Der Bogen verläuft meist breit → tief →
+konkret. Die EMOTIONALE LAGE steuert die Behutsamkeit: bei vorsichtiger/angespannter Stimmung ZUERST
+sichere, öffnende Strukturen, bevor Heikles kommt; bei sachlicher Lage darf direkt vertieft werden.
+Vor generativen Schritten kann ein „aufräumender" Schritt (kontraproduktive Muster stoppen) stehen.
+Der Abschluss übersetzt Erkenntnisse in Handlung – kollektiv (gemeinsame Ernte) ODER individuell
+(jede:r nimmt eigene Schritte mit), je nach Lage.
+
 Begründe je Schritt UND die Reihenfolge insgesamt ausdrücklich mit den LS-Prinzipien (must_do/must_not_do,
 per ID z. B. "P3") und – zur Vertiefung – mit den Kernkonzepten/Linsen (z. B. Min Specs, Maximale
 Durchmischung, Confusiasm).
+
+ZEIG, DASS DU DENKST (nicht Vorlagen kopierst): Jede "rationale" MUSS die KONKRETEN Diagnose-Werte
+dieser Situation aufgreifen – z. B. die psychologische Sicherheit, Gruppengröße, das Zeitbudget, das
+Setting oder den Zweck ("…weil die Gruppe vorsichtig ist und online arbeitet…"). Die mitgelieferten
+"templates" sind NUR KALIBRIERUNG für den Charakter eines guten Bogens – KEIN Auswahlmenü: baue einen
+EIGENEN, auf genau diese Diagnose gemünzten String. Kopiere niemals eine Vorlage unverändert.
 
 Harte Regeln:
 - NUR "slug"-Werte aus "candidates"; erfinde NIEMALS eine Struktur.
@@ -192,7 +217,8 @@ def build_sequence_messages(
 
     user_lines = [
         "Stelle aus den Kandidaten im Kontext-Block einen begründeten String zusammen.",
-        "Orientiere dich an den mitgelieferten bewährten String-Vorlagen, wo sie passen.",
+        "Die String-Vorlagen zeigen nur den Charakter guter Bögen (Kalibrierung) – baue einen eigenen, "
+        "auf diese Diagnose gemünzten String, statt eine Vorlage zu kopieren.",
     ]
     if correction:
         user_lines.append(
@@ -225,7 +251,8 @@ nutzen, am Ende ernten. Entscheide AUSSCHLIESSLICH aus dem Kontext-Block.
 Es gelten dieselben harten Regeln wie bei der Sequenzierung:
 - Verwende AUSSCHLIESSLICH "slug"-Werte aus der Kandidatenliste; erfinde nichts.
 - Vollständiger Bogen (mindestens öffnen und schließen); Summe der Dauern ≤ Zeitbudget.
-- Begründung mit Bezug auf die LS-Prinzipien (P1–P10), deren Must-Dos/Must-Not-Dos und den Bogen.
+- Begründung mit Bezug auf die LS-Prinzipien (P1–P10), deren Must-Dos/Must-Not-Dos und den Bogen;
+  jede "rationale" greift die KONKRETEN Diagnose-Werte dieser Situation auf (kein Kopieren von Vorlagen).
 - Kein Smalltalk, kein Text außerhalb des JSON.
 
 Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
