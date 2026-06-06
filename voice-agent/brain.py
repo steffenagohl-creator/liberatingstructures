@@ -38,9 +38,13 @@ class LSInterviewBrain:
     :param timeout: HTTP-Timeout in Sekunden.
     """
 
-    def __init__(self, backend_url: str, timeout: float = 30.0):
+    def __init__(self, backend_url: str, timeout: float = 30.0, match_timeout: float = 180.0):
         self.backend_url = backend_url.rstrip("/")
         self.timeout = timeout
+        # Der Match (LLM-Verdichtung) braucht real bis ~60 s; eigener, großzügiger Timeout,
+        # damit der Agent nicht vorzeitig aufgibt (sonst: „Matchmaking fehlgeschlagen", kein
+        # String). Das Interview (observe) bleibt beim kurzen Timeout — es muss flott sein.
+        self.match_timeout = match_timeout
         self._utterances: list[str] = []
         self.state = InterviewState()
 
@@ -48,6 +52,22 @@ class LSInterviewBrain:
     def situation_text(self) -> str:
         """Das bisher Gesagte als ein Freitext (so erwartet es ``/api/interview/``)."""
         return " ".join(self._utterances).strip()
+
+    # Reine Grußfloskeln taugen NICHT als Situations-Beschriftung (Test 2026-06-06: der Mittelpunkt
+    # zeigte „Hallo."). Wir überspringen sie und nehmen die erste inhaltliche Äußerung.
+    _GREETINGS = {"hallo", "hi", "hey", "hallöchen", "moin", "servus", "guten tag", "guten morgen",
+                  "guten abend", "grüß dich", "grüß gott", "na", "jo", "ja"}
+
+    @property
+    def opening(self) -> str:
+        """Die erste INHALTLICHE Nutzeräußerung (gekürzt) — dient dem Frontend als kurze
+        Situations-Beschriftung des Spinnen-Mittelpunkts, falls das Backend keinen
+        ``scrum_kontext`` erkennt. Reine Grüße werden übersprungen."""
+        for u in self._utterances:
+            clean = u.strip().rstrip(".!?,").lower()
+            if clean and clean not in self._GREETINGS:
+                return u[:80].strip()
+        return ""
 
     async def observe(self, user_text: str) -> InterviewState:
         """Verarbeitet eine Nutzer-Äußerung: anhängen → ``/api/interview/`` → neuen Zustand.
@@ -71,7 +91,7 @@ class LSInterviewBrain:
 
     async def match(self) -> dict:
         """Ruft ``/api/match/`` mit der erhobenen Diagnose → der begründete LS-String."""
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
+        async with httpx.AsyncClient(timeout=self.match_timeout) as client:
             resp = await client.post(
                 f"{self.backend_url}/api/match/", json={"diagnose": self.state.diagnose}
             )

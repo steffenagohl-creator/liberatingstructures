@@ -63,3 +63,45 @@ export function answersToDiagnose(a = {}) {
   if (SETTING[a.setting]) d.setting = SETTING[a.setting];
   return d;
 }
+
+// ---- Rückrichtung: Backend-Diagnose → Prototyp-Antworten -----------
+// Wird im SPRACH-Modus gebraucht: Das Backend (/api/interview/) liefert die laufend
+// erkannten Dimensionen; daraus füllt sich live die „Spinne" (Constellation), die in den
+// Prototyp-Antworten denkt. Umkehrung der Maps oben + Zahl→Label für Größe/Zeit.
+const ZWECK_REV = Object.fromEntries(Object.entries(ZWECK).map(([k, v]) => [v, k]));
+const SICHERHEIT_REV = Object.fromEntries(Object.entries(SICHERHEIT).map(([k, v]) => [v, k]));
+const SETTING_REV = Object.fromEntries(Object.entries(SETTING).map(([k, v]) => [v, k]));
+
+function groesseLabel(n) {
+  if (n == null) return undefined;
+  if (n <= 4) return '2–4';
+  if (n <= 9) return '5–9';
+  if (n <= 20) return '10–20';
+  return '20+';
+}
+function zeitLabel(min) {
+  if (min == null) return undefined;
+  if (min <= 15) return '15 Min';
+  if (min <= 30) return '30 Min';
+  if (min <= 60) return '60 Min';
+  return 'Halber Tag';
+}
+
+/**
+ * diagnoseToAnswers — übersetzt die Backend-Diagnose aus dem Sprach-Interview zurück in
+ * Prototyp-Antworten, damit die Spinne sich live aus dem Gespräch füllt. Nur tatsächlich
+ * erkannte Dimensionen werden gesetzt (fehlende bleiben offen = ungefüllter Knoten).
+ */
+export function diagnoseToAnswers(d = {}) {
+  const a = {};
+  if (d.ziel_text) a.ziel = d.ziel_text;
+  if (Array.isArray(d.zweck) && d.zweck.length && ZWECK_REV[d.zweck[0]]) a.zweck = ZWECK_REV[d.zweck[0]];
+  if (d.psychologische_sicherheit && SICHERHEIT_REV[d.psychologische_sicherheit]) a.sicherheit = SICHERHEIT_REV[d.psychologische_sicherheit];
+  const g = groesseLabel(d.gruppengroesse); if (g) a.groesse = g;
+  const z = zeitLabel(d.zeitbudget); if (z) a.zeit = z;
+  if (d.setting && SETTING_REV[d.setting]) a.setting = SETTING_REV[d.setting];
+  // Das Backend gibt keinen Situations-Freitext zurück; der erkannte scrum_kontext dient
+  // als kurze, sprechende Beschriftung des Situations-Knotens (z. B. „Retrospektive").
+  if (d.scrum_kontext) a.situation = String(d.scrum_kontext).charAt(0).toUpperCase() + String(d.scrum_kontext).slice(1);
+  return a;
+}

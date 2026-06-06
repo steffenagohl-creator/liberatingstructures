@@ -9,10 +9,9 @@
      dem freien Gespräch ab und füllt das „Spinnennetz" (Constellation) live.
    Die Modus-Struktur (mode 'voice'/'type', voiceAllowed) ist hier bereits angelegt.
    =================================================================== */
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo } from 'react'
 import { QUESTIONS, THEME, StatusBar } from './shared.jsx'
 import { Chip } from './ui.jsx'
-import { startVoiceSession } from './api/voice.js'
 
 export const LSC = { CW: 390, CH: 376, cx: 195, cy: 178, rx: 128, ry: 122 };
 
@@ -44,7 +43,9 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
         opacity: collapse ? 0 : 1, transition: 'opacity .5s' }}>
         {seq.map((q, i) => {
           const p = nodePos(i, seq.length);
-          const active = i < filled;
+          // Faden „aktiv", sobald der zugehörige Wert erkannt ist (wie die Knoten) — sonst
+          // würden im Sprach-Modus (nicht-lineare Füllung) die falschen Linien gezogen.
+          const active = answers[q.id] != null;
           return (
             <path key={q.id} d={curve(p.x, p.y, i % 2 ? 1 : -1)} fill="none"
               stroke={active ? 'var(--sage)' : 'var(--line)'} strokeWidth={active ? 1.7 : 1}
@@ -65,7 +66,10 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
       {/* Knoten */}
       {seq.map((q, i) => {
         const p = nodePos(i, seq.length);
-        const done = i < filled;
+        // „Erkannt", sobald ein Wert vorliegt — füllt die Spinne im Sprach-Modus auch
+        // nicht-linear (das Gespräch nennt die Dimensionen in beliebiger Reihenfolge).
+        // Im Tipp-Modus identisch zum bisherigen Verhalten (Antworten kommen der Reihe nach).
+        const done = answers[q.id] != null;
         const isNew = busyStep === i;
         const tx = collapse ? cx - p.x : 0, ty = collapse ? cy - p.y : 0;
         return (
@@ -95,14 +99,17 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
 }
 
 // ---- Diagnose-Bildschirm -----------------------------------------
-export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
+// Sprach-Sitzung lebt auf App-Ebene (überlebt Phasen-/Schrittwechsel) und wird über Props
+// hereingereicht: voiceStatus + live erkannte voiceAnswers (für die Spinne), onVoiceStart/Stop.
+export function DiagnoseCanvas({ sovereignty, onComplete, onBack,
+  voiceStatus = 'idle', voiceAnswers = {}, voiceMuted = false,
+  onVoiceStart, onVoiceStop, onVoiceToggleMute }) {
   const [answers, setAnswers] = useState({});
   const [step, setStep] = useState(0);
   const [busy, setBusy] = useState(false);
   const [draft, setDraft] = useState('');
   const voiceAllowed = sovereignty !== 'sov';
   const [mode, setMode] = useState(voiceAllowed ? 'voice' : 'type');
-  const [listening, setListening] = useState(false);
 
   const tension = useMemo(() => {
     const s = (answers.situation || '').toLowerCase();
@@ -112,10 +119,16 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
   const current = seq[step];
   const filled = step + (busy ? 1 : 0);
 
+  const isVoice = mode === 'voice';
+  // Im Sprach-Modus speist die live aus dem Gespräch erkannte Diagnose (voiceAnswers) die
+  // Spinne; im Tipp-Modus die selbst gewählten Antworten. Fortschritt = Anzahl erkannter Knoten.
+  const shownAnswers = isVoice ? voiceAnswers : answers;
+  const filledCount = isVoice ? seq.filter((q) => shownAnswers[q.id] != null).length : filled;
+
   const answer = (val, extra) => {
     if (busy) return;
     setAnswers((a) => ({ ...a, [current.id]: val, ...extra }));
-    setDraft(''); setListening(false); setBusy(true);
+    setDraft(''); setBusy(true);
     const next = step + 1;
     setTimeout(() => {
       setBusy(false);
@@ -143,25 +156,27 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
         <span style={{ fontSize: 11.5, fontWeight: 600, color: 'var(--muted)', flex: '0 0 auto' }}>{sovBadge}</span>
       </div>
 
-      <Constellation seq={seq} answers={answers} filled={filled} busyStep={busy ? step : -1} />
+      <Constellation seq={seq} answers={shownAnswers} filled={filledCount} busyStep={busy ? step : -1} />
 
       {/* Frage-/Eingabepanel */}
-      <div key={step} style={{ flex: 1, overflowY: 'auto', padding: '14px 22px 18px', animation: 'lsRise .4s both' }}>
+      <div key={isVoice ? 'voice' : step} style={{ flex: 1, overflowY: 'auto', padding: '14px 22px 18px', animation: 'lsRise .4s both' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 7 }}>
-          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--sage)' }}>{current.label}</span>
-          <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--faint)', fontVariantNumeric: 'tabular-nums' }}>{filled} von {seq.length}</span>
+          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--sage)' }}>{isVoice ? 'Gespräch' : current.label}</span>
+          <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--faint)', fontVariantNumeric: 'tabular-nums' }}>{filledCount} von {seq.length}</span>
         </div>
         <h2 className="ls-serif" style={{ margin: '0 0 5px', fontSize: 23, lineHeight: 1.15, fontWeight: 500,
-          letterSpacing: '-.01em', color: 'var(--ink)', textWrap: 'balance' }}>{current.q}</h2>
-        {current.adaptive && current.why
-          ? <p style={{ margin: 0, fontSize: 13, lineHeight: 1.45, color: 'var(--terra)' }}><span style={{ fontWeight: 600 }}>✦ </span>{current.why}</p>
-          : <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>{current.hint}</p>}
+          letterSpacing: '-.01em', color: 'var(--ink)', textWrap: 'balance' }}>{isVoice ? 'Erzähl frei — ich höre zu' : current.q}</h2>
+        {isVoice
+          ? <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>Sprich einfach über eure Situation. Oben im Bild siehst du, was ich schon verstanden habe — du musst keine Fragen abarbeiten.</p>
+          : (current.adaptive && current.why
+            ? <p style={{ margin: 0, fontSize: 13, lineHeight: 1.45, color: 'var(--terra)' }}><span style={{ fontWeight: 600 }}>✦ </span>{current.why}</p>
+            : <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>{current.hint}</p>)}
 
         {/* Eingabe-Umschalter */}
         {voiceAllowed && (
           <div style={{ display: 'flex', gap: 6, margin: '14px 0 4px' }}>
             {[['voice', '🎤 Sprechen'], ['type', '⌨️ Tippen']].map(([m, lbl]) => (
-              <button key={m} onClick={() => { setMode(m); setListening(false); }}
+              <button key={m} onClick={() => { if (m !== 'voice') onVoiceStop && onVoiceStop(); setMode(m); }}
                 aria-pressed={mode === m} aria-label={m === 'voice' ? 'Eingabe per Sprache' : 'Eingabe per Tastatur'}
                 style={{ flex: 1, padding: '8px',
                 borderRadius: 10, cursor: 'pointer', fontFamily: THEME.sans, fontSize: 13, fontWeight: 600,
@@ -171,8 +186,9 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
           </div>
         )}
 
-        {mode === 'voice' && voiceAllowed ? (
-          <VoicePanel current={current} listening={listening} setListening={setListening} onPick={answer} sovereignty={sovereignty} />
+        {isVoice && voiceAllowed ? (
+          <VoicePanel status={voiceStatus} muted={voiceMuted} diagCount={filledCount}
+            onStart={onVoiceStart} onStop={onVoiceStop} onToggleMute={onVoiceToggleMute} />
         ) : (
           <div style={{ marginTop: 14 }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -206,70 +222,53 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
   );
 }
 
-// ---- Sprach-Panel (Mikrofon-Ästhetik; Chips bleiben echte Eingabe)
-// (In Stufe 1D/4 wird hieraus das echte Gespräch — Chips entfallen dann im Sprach-Modus.)
-function VoicePanel({ current, listening, setListening, onPick, sovereignty }) {
-  const sessionRef = useRef(null);
-  const [status, setStatus] = useState('idle'); // idle|connecting|live|closed|error
-  const [diagCount, setDiagCount] = useState(0);
-
-  // Mikro an/aus → echte LiveKit-Sitzung starten/stoppen (additiv; Chips bleiben Fallback).
-  useEffect(() => {
-    let cancelled = false;
-    if (listening && !sessionRef.current) {
-      startVoiceSession({
-        sovereignty,
-        onStatus: (s) => { if (!cancelled) setStatus(s); },
-        onDiagnose: (d) => { if (!cancelled) setDiagCount(Object.keys(d?.diagnose || {}).length); },
-        onResult: () => { /* Stufe 4: Ergebnis-Übergabe an den Result-Screen */ },
-      }).then((h) => {
-        if (cancelled) { h.stop(); return; }
-        sessionRef.current = h;
-      }).catch(() => { if (!cancelled) setStatus('error'); });
-    }
-    if (!listening && sessionRef.current) {
-      sessionRef.current.stop();
-      sessionRef.current = null;
-      setStatus('idle');
-    }
-    return () => { cancelled = true; };
-  }, [listening, sovereignty]);
-
-  // Aufräumen, wenn das Panel verschwindet.
-  useEffect(() => () => { if (sessionRef.current) { sessionRef.current.stop(); sessionRef.current = null; } }, []);
-
+// ---- Sprach-Panel: reines „freies Gespräch" ----------------------------------
+// Die LiveKit-Sitzung lebt auf APP-Ebene (überlebt Phasen-/Schrittwechsel) und wird hier
+// nur gesteuert (Mikro an/aus) + der Status gespiegelt. Im Sprach-Modus führt die Coachin
+// das Gespräch (Steffen 2026-06-06) — daher KEINE Antwort-Chips; die Rückmeldung ist das
+// „Spinnennetz" oben. Der Tipp-Modus mit Chips bleibt davon unberührt erhalten.
+function VoicePanel({ status, muted = false, diagCount = 0, onStart, onStop, onToggleMute }) {
+  const active = status === 'live' || status === 'connecting';   // Sitzung läuft
+  const live = status === 'live';
+  // Mikro-Knopf: ohne Sitzung → starten; mit Sitzung → stumm/laut schalten (Sitzung bleibt).
+  const onMic = () => (active ? onToggleMute && onToggleMute() : onStart && onStart());
   const statusText = {
-    idle: 'Tippe aufs Mikro und erzähl — oder wähle unten.',
+    idle: 'Tippe aufs Mikro und erzähl frei.',
     connecting: 'Verbinde …',
-    live: diagCount ? `Ich höre zu … (${diagCount} erkannt)` : 'Ich höre zu … sprich frei.',
-    closed: 'Verbindung beendet.',
-    error: 'Sprachverbindung nicht möglich — nutze unten die Antworten.',
-  }[status] || 'Tippe aufs Mikro und erzähl — oder wähle unten.';
+    live: muted ? 'Mikro stumm — tippe aufs Mikro zum Weitersprechen.'
+                : (diagCount ? `Ich höre zu … (${diagCount} erkannt)` : 'Ich höre zu … sprich frei.'),
+    closed: 'Gespräch beendet — tippe aufs Mikro für ein neues.',
+    error: 'Sprachverbindung nicht möglich — wechsle oben zu „Tippen".',
+  }[status] || 'Tippe aufs Mikro und erzähl frei.';
+
+  const micBg = !active ? 'var(--sage)' : (muted ? 'var(--faint)' : 'var(--terra)');
+  const ring = !active ? '#EAF1ED' : (muted ? 'rgba(0,0,0,.06)' : 'rgba(184,88,39,.15)');
+  const waving = live && !muted;
 
   return (
     <div style={{ marginTop: 14 }}>
       <div style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
-        <button onClick={() => setListening((v) => !v)} aria-pressed={listening}
-          aria-label={listening ? 'Sprachaufnahme stoppen' : 'Sprachaufnahme starten'}
+        <button onClick={onMic} aria-pressed={active && !muted}
+          aria-label={!active ? 'Sprachaufnahme starten' : (muted ? 'Mikrofon wieder einschalten' : 'Mikrofon stummschalten')}
           style={{ width: 60, height: 60, borderRadius: 32, border: 'none', cursor: 'pointer', fontSize: 24,
-            background: listening ? 'var(--terra)' : 'var(--sage)', color: '#fff',
-            boxShadow: `0 0 0 ${listening ? 8 : 5}px ${listening ? 'rgba(184,88,39,.15)' : '#EAF1ED'}`, transition: 'box-shadow .3s, background .3s' }}>🎤</button>
+            background: micBg, color: '#fff',
+            boxShadow: `0 0 0 ${active && !muted ? 8 : 5}px ${ring}`, transition: 'box-shadow .3s, background .3s' }}>
+          {muted ? '🔇' : '🎤'}</button>
         <div aria-hidden="true" style={{ display: 'flex', gap: 3, alignItems: 'center', justifyContent: 'center', height: 22, marginTop: 12 }}>
           {[10, 18, 26, 16, 22, 12, 24, 14, 8].map((h, i) => (
-            <span key={i} style={{ width: 3.5, height: h, borderRadius: 2, background: listening ? 'var(--sage)' : 'var(--line)',
-              transformOrigin: 'center', animation: listening ? `lsWave ${0.7 + (i % 4) * 0.12}s ${i * 0.05}s infinite` : 'none' }} />
+            <span key={i} style={{ width: 3.5, height: h, borderRadius: 2, background: waving ? 'var(--sage)' : 'var(--line)',
+              transformOrigin: 'center', animation: waving ? `lsWave ${0.7 + (i % 4) * 0.12}s ${i * 0.05}s infinite` : 'none' }} />
           ))}
         </div>
         <p style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--muted)' }} aria-live="polite">
           {statusText}</p>
       </div>
-      <p style={{ fontSize: 11.5, color: 'var(--faint)', margin: '12px 0 8px', textAlign: 'center', letterSpacing: '.04em' }}>SCHNELLE ANTWORTEN</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-        {(current.kind === 'text' ? current.presets.map((p) => p.v) : current.options).map((opt, i) => {
-          const tension = current.kind === 'text' ? current.presets[i].tension : false;
-          return <Chip key={opt} onClick={() => onPick(opt, { _tension: !!tension })} style={current.kind === 'text' ? { width: '100%', textAlign: 'left' } : undefined}>{opt}</Chip>;
-        })}
-      </div>
+      {active && (
+        <button onClick={() => onStop && onStop()} aria-label="Gespräch beenden und Sitzung schließen"
+          style={{ display: 'block', margin: '12px auto 0', border: 'none', background: 'none', cursor: 'pointer',
+            fontSize: 13, fontWeight: 600, color: 'var(--muted)', textDecoration: 'underline', padding: 6 }}>
+          Gespräch beenden</button>
+      )}
     </div>
   );
 }

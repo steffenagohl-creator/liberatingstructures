@@ -4,13 +4,15 @@
    PhoneStage (skaliert 390×844) · Onboarding · Souveränität · MorphView.
    Render passiert in main.jsx (hier nur die Komponenten + default export).
    =================================================================== */
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { THEME, StatusBar, Glyph, QUESTIONS } from './shared.jsx'
 import { Constellation, DiagnoseCanvas, LSC } from './Diagnose.jsx'
+import ArcadeLoader from './ArcadeLoader.jsx'
 import { ResultString } from './Result.jsx'
 import { Button } from './ui.jsx'
 import { fetchMatch, fetchStructure } from './api/client.js'
-import { answersToDiagnose } from './api/mapping.js'
+import { answersToDiagnose, diagnoseToAnswers } from './api/mapping.js'
+import { startVoiceSession } from './api/voice.js'
 
 // ---- Stage: responsiver, raumfüllender Container (kein Fake-Handy mehr) ----
 // Web nutzt die volle Höhe; der Inhalt liegt in einer angenehm breiten Spalte auf
@@ -130,6 +132,10 @@ function MorphView({ answers, match, details, matchError, onDone, onRetry, onBac
   const tension = (() => { const s = (answers.situation || '').toLowerCase(); return answers._tension || /frust|still|schweig|konflikt|spannung|streit|nicht weiter/.test(s); })();
   const seq = QUESTIONS.filter((q) => !q.adaptive || tension);
   const [stage, setStage] = useState(0);
+  // „thinking" = Backend verdichtet noch. Solange poppt das Arcade-Spiel als Overlay auf
+  // (mit Wartemusik) und blendet sanft aus, sobald das Ergebnis da ist.
+  const thinking = !match && !matchError;
+  const [gameVisible, setGameVisible] = useState(() => !match && !matchError);
 
   // Sobald der echte Match da ist: kollabieren, kurz die Spine zeigen, dann weiter.
   useEffect(() => {
@@ -138,6 +144,34 @@ function MorphView({ answers, match, details, matchError, onDone, onRetry, onBac
     const t2 = setTimeout(() => onDone(), 2400);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [match, matchError]);
+
+  // --- Wartemusik: überbrückt sanft die ~60 s Verdichtung. Blendet beim Start ein und —
+  // sobald das Ergebnis da ist — wieder aus (kein abrupter Schnitt). Datei liegt optional
+  // unter public/wait-music.mp3; fehlt sie oder blockt Autoplay, passiert einfach nichts.
+  const musicRef = useRef(null);
+  useEffect(() => {
+    const el = musicRef.current;
+    if (!el) return;
+    el.volume = 0;
+    let t;
+    el.play().then(() => {
+      const fadeIn = () => { el.volume = Math.min(0.45, el.volume + 0.02); if (el.volume < 0.45) t = setTimeout(fadeIn, 90); };
+      fadeIn();
+    }).catch(() => { /* Autoplay/keine Datei → still ignorieren */ });
+    return () => { clearTimeout(t); el.pause(); };
+  }, []);
+  useEffect(() => {
+    if (!match) return;
+    const el = musicRef.current;
+    if (!el) return;
+    let t;
+    const fadeOut = () => {
+      el.volume = Math.max(0, el.volume - 0.03);
+      if (el.volume > 0.001) t = setTimeout(fadeOut, 70); else el.pause();
+    };
+    fadeOut();
+    return () => clearTimeout(t);
+  }, [match]);
 
   const { CW, CH, cx } = LSC;
   const steps = match?.string || [];
@@ -166,8 +200,9 @@ function MorphView({ answers, match, details, matchError, onDone, onRetry, onBac
   }
 
   return (
-    <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
+    <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}>
       <StatusBar />
+      <audio ref={musicRef} src="/wait-music.mp3" loop preload="auto" aria-hidden="true" />
       <div style={{ position: 'relative', flex: '0 0 auto' }}>
         <Constellation seq={seq} answers={answers} filled={seq.length} collapse={stage >= 1} />
         {/* String-Spine erscheint mit den ECHTEN Methoden aus dem Match */}
@@ -200,6 +235,17 @@ function MorphView({ answers, match, details, matchError, onDone, onRetry, onBac
         <h2 className="ls-serif" style={{ margin: 0, fontSize: 22, fontWeight: 500, color: 'var(--ink)', lineHeight: 1.2 }}>
           {stage >= 1 ? 'Euer Weg: öffnen → vertiefen → schließen' : 'Ich verdichte euer Lagebild …'}</h2>
       </div>
+
+      {/* Arcade-Spiel als Wartespiel-Overlay: poppt auf während der Verdichtung, blendet
+          sanft aus, sobald das Ergebnis da ist (onExit räumt das Overlay dann ganz weg).
+          Hintergrund ist var(--bg) wie der Screen darunter → kein harter Schnitt. */}
+      {gameVisible && (
+        <div style={{ position: 'absolute', inset: 0, zIndex: 10, background: 'var(--bg)',
+          display: 'grid', placeItems: 'center', padding: 16 }}>
+          <ArcadeLoader active={thinking} onExit={() => setGameVisible(false)}
+            width={320} height={400} message="Ich stelle euren Vorschlag zusammen …" />
+        </div>
+      )}
     </div>
   );
 }
@@ -232,6 +278,15 @@ export default function App() {
   const [matchError, setMatchError] = useState(null);
   const [running, setRunning] = useState(false);
 
+  // --- Sprach-Sitzung: lebt auf App-Ebene, überlebt Phasen-/Schrittwechsel ---------------
+  // (Steffen 2026-06-06: ein Seitenwechsel darf den Sprachkanal NICHT mehr töten.)
+  const voiceRef = useRef(null);            // die laufende LiveKit-Sitzung (oder null)
+  const voiceAnswersRef = useRef({});       // stets aktuelle Diagnose (gegen stale Closures)
+  const resultHandledRef = useRef(false);   // schützt vor doppeltem Ergebnis-Übergang
+  const [voiceStatus, setVoiceStatus] = useState('idle');
+  const [voiceAnswers, setVoiceAnswers] = useState({});
+  const [voiceMuted, setVoiceMuted] = useState(false);
+
   // Diagnose abgeschlossen → echten Match laden (läuft, während die Morph-Animation spielt).
   // Danach für jeden Slug die vollen Struktur-Details (Name, Badges, Anleitung, Icon).
   async function runMatch(a) {
@@ -239,6 +294,66 @@ export default function App() {
     try {
       const m = await fetchMatch(answersToDiagnose(a));
       const slugs = [...new Set((m.string || []).map((s) => s.slug))];
+      const structs = await Promise.all(slugs.map((s) => fetchStructure(s, 'de').catch(() => null)));
+      const byslug = {};
+      structs.forEach((s) => { if (s) byslug[s.slug] = s; });
+      setDetails(byslug); setMatch(m);
+    } catch (e) {
+      setMatchError(e);
+    } finally {
+      setRunning(false);
+    }
+  }
+
+  // Startet die Sprach-Sitzung (Mikro). Diagnose-Updates füllen live die Spinne; meldet der
+  // Agent das fertige Match, gleiten wir zum Ergebnis — die Sitzung bleibt aktiv, damit die
+  // Coachin den Vorschlag noch vorlesen kann.
+  async function startVoice() {
+    if (voiceRef.current) return;
+    resultHandledRef.current = false;
+    voiceAnswersRef.current = {};
+    setVoiceAnswers({});
+    setVoiceMuted(false);
+    try {
+      const h = await startVoiceSession({
+        sovereignty: sov,
+        onStatus: setVoiceStatus,
+        onDiagnose: (d) => {
+          const a = diagnoseToAnswers(d?.diagnose || {});
+          if (!a.situation && d?.situation) a.situation = d.situation;  // Mittelpunkt beschriften
+          voiceAnswersRef.current = a;
+          setVoiceAnswers(a);
+        },
+        onResult: (r) => handleVoiceResult(r),
+      });
+      voiceRef.current = h;
+    } catch {
+      setVoiceStatus('error');
+    }
+  }
+
+  function stopVoice() {
+    if (voiceRef.current) { voiceRef.current.stop(); voiceRef.current = null; }
+    setVoiceStatus('idle'); setVoiceMuted(false);
+  }
+
+  // Mikro stumm/laut — beendet die Sitzung NICHT (Gespräch läuft weiter, kein Neustart).
+  function toggleVoiceMute() {
+    if (!voiceRef.current) return;
+    const next = !voiceMuted;
+    voiceRef.current.setMuted(next);
+    setVoiceMuted(next);
+  }
+
+  // Der Agent liefert das fertige Match über den Data-Channel → zum Ergebnis gleiten und nur
+  // die Struktur-Details nachladen (das Matching selbst hat der Agent bereits erledigt).
+  async function handleVoiceResult(m) {
+    if (!m || !Array.isArray(m.string) || resultHandledRef.current) return;
+    resultHandledRef.current = true;
+    setAnswers(voiceAnswersRef.current);
+    setMatch(null); setDetails({}); setMatchError(null); setRunning(true); setPhase('morph');
+    try {
+      const slugs = [...new Set(m.string.map((s) => s.slug))];
       const structs = await Promise.all(slugs.map((s) => fetchStructure(s, 'de').catch(() => null)));
       const byslug = {};
       structs.forEach((s) => { if (s) byslug[s.slug] = s; });
@@ -262,14 +377,17 @@ export default function App() {
   let screen;
   if (phase === 'onboarding') screen = <Onboarding onStart={() => setPhase('sov')} />;
   else if (phase === 'sov') screen = <Sovereignty value={sov} onChange={setSov} onBack={() => setPhase('onboarding')} onContinue={() => setPhase('diagnose')} />;
-  else if (phase === 'diagnose') screen = <DiagnoseCanvas sovereignty={sov} onBack={() => setPhase('sov')} onComplete={runMatch} />;
+  else if (phase === 'diagnose') screen = <DiagnoseCanvas sovereignty={sov}
+    onBack={() => { stopVoice(); setPhase('sov'); }} onComplete={runMatch}
+    voiceStatus={voiceStatus} voiceAnswers={voiceAnswers} voiceMuted={voiceMuted}
+    onVoiceStart={startVoice} onVoiceStop={stopVoice} onVoiceToggleMute={toggleVoiceMute} />;
   else if (phase === 'morph') screen = <MorphView answers={answers} match={match} details={details} matchError={matchError}
     onDone={() => setPhase('result')} onRetry={() => runMatch(answers)} onBack={() => setPhase('diagnose')} />;
   else screen = (
     <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
       <StatusBar />
       <ResultString match={match} details={details}
-        onRestart={() => { setAnswers({}); setMatch(null); setDetails({}); setMatchError(null); setPhase('onboarding'); }} />
+        onRestart={() => { stopVoice(); setAnswers({}); setMatch(null); setDetails({}); setMatchError(null); setPhase('onboarding'); }} />
     </div>
   );
 

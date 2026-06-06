@@ -8,7 +8,7 @@
    Bewusst klein & rein technisch: die Optik bleibt im VoicePanel. Mikrofon braucht HTTPS
    (sicherer Kontext) — lokal über localhost, in Produktion über ls.klara.services.
 */
-import { Room, RoomEvent } from 'livekit-client';
+import { Room, RoomEvent, Track } from 'livekit-client';
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
@@ -35,17 +35,36 @@ export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onS
 
   const room = new Room({ adaptiveStream: true, dynacast: true });
 
+  // Stimme des Agenten hörbar machen: eingehende Audio-Tracks an ein (verstecktes)
+  // <audio>-Element hängen. Ohne attach() bleibt der Agent stumm — sein Ton käme zwar
+  // im Browser an, würde aber nie abgespielt.
+  const audioEls = new Set();
+  const cleanupAudio = () => { audioEls.forEach((el) => el.remove()); audioEls.clear(); };
+  room.on(RoomEvent.TrackSubscribed, (track) => {
+    if (track.kind !== Track.Kind.Audio) return;
+    const el = track.attach();
+    el.setAttribute('data-ls-voice', 'agent');
+    el.style.display = 'none';
+    document.body.appendChild(el);
+    audioEls.add(el);
+  });
+  room.on(RoomEvent.TrackUnsubscribed, (track) => {
+    track.detach().forEach((el) => { el.remove(); audioEls.delete(el); });
+  });
+
   room.on(RoomEvent.DataReceived, (payload, _participant, _kind, topic) => {
     let msg;
     try { msg = JSON.parse(new TextDecoder().decode(payload)); } catch { return; }
     if (topic === 'diagnose' || msg?.type === 'diagnose') onDiagnose && onDiagnose(msg);
     else if (topic === 'result' || msg?.type === 'result') onResult && onResult(msg.result || msg);
   });
-  room.on(RoomEvent.Disconnected, () => setStatus('closed'));
+  room.on(RoomEvent.Disconnected, () => { cleanupAudio(); setStatus('closed'); });
 
   try {
     await room.connect(session.livekit_url, session.token);
     await room.localParticipant.setMicrophoneEnabled(true); // offenes Mikro
+    // Autoplay-Sperre der Browser lösen (der Klick aufs Mikro zählt als Nutzergeste).
+    try { await room.startAudio(); } catch { /* ignore */ }
     setStatus('live');
   } catch (err) {
     setStatus('error');
@@ -56,6 +75,9 @@ export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onS
   return {
     room,
     session,
-    stop: async () => { try { await room.disconnect(); } finally { setStatus('closed'); } },
+    // Mikro stumm/laut schalten OHNE die Sitzung zu beenden — das Gespräch (Kontext beim
+    // Agenten) bleibt erhalten, man kann nahtlos weitersprechen.
+    setMuted: async (m) => { try { await room.localParticipant.setMicrophoneEnabled(!m); } catch { /* ignore */ } },
+    stop: async () => { try { await room.disconnect(); } finally { cleanupAudio(); setStatus('closed'); } },
   };
 }
