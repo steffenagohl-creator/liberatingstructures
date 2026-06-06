@@ -19,7 +19,9 @@ function nodePos(i, n) {
   const ang = -Math.PI / 2 + (i * 2 * Math.PI) / n;
   return { x: LSC.cx + LSC.rx * Math.cos(ang), y: LSC.cy + LSC.ry * Math.sin(ang) };
 }
-function shortVal(v) { return v && v.length > 16 ? v.slice(0, 14).trimEnd() + '…' : v; }
+// Etwas mehr Text in den Knoten zeigen (Wunsch: „Situation"/„Ziel" wirken auf großem Screen
+// zu knapp). Bewusst maßvoll, damit das feste Konstellations-Layout nicht überläuft.
+function shortVal(v) { return v && v.length > 30 ? v.slice(0, 28).trimEnd() + '…' : v; }
 
 // geschwungener Pfad Kern -> Knoten (Bezier mit seitlichem Bauch)
 function curve(x, y, bend) {
@@ -73,7 +75,7 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
         const isNew = busyStep === i;
         const tx = collapse ? cx - p.x : 0, ty = collapse ? cy - p.y : 0;
         return (
-          <div key={q.id} style={{ position: 'absolute', left: p.x, top: p.y, width: 96, textAlign: 'center', zIndex: 1,
+          <div key={q.id} style={{ position: 'absolute', left: p.x, top: p.y, width: 116, textAlign: 'center', zIndex: 1,
             transform: `translate(-50%,-50%) translate(${tx}px,${ty}px) scale(${collapse ? .25 : 1})`,
             opacity: collapse ? 0 : 1, transition: 'transform .6s cubic-bezier(.5,0,.3,1), opacity .5s',
             animation: isNew && !collapse ? 'lsPop .5s both' : 'none' }}>
@@ -115,7 +117,13 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack,
     const s = (answers.situation || '').toLowerCase();
     return answers._tension || /frust|still|schweig|konflikt|spannung|streit|nicht weiter/.test(s);
   }, [answers]);
-  const seq = useMemo(() => QUESTIONS.filter((q) => !q.adaptive || tension), [tension]);
+  // Adaptive Knoten (z. B. „offen sprechen" = psychologische Sicherheit) werden im Tipp-Modus
+  // nur bei erkannter Spannung gezeigt (Prototyp-Verhalten, bewusst erhalten). Im SPRACH-Modus
+  // erhebt das Backend diese Dimension aber IMMER → dann auch immer als Strang visualisieren.
+  const seq = useMemo(
+    () => QUESTIONS.filter((q) => !q.adaptive || tension || mode === 'voice'),
+    [tension, mode],
+  );
   const current = seq[step];
   const filled = step + (busy ? 1 : 0);
 

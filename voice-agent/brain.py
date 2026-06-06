@@ -89,11 +89,57 @@ class LSInterviewBrain:
         )
         return self.state
 
+    @staticmethod
+    def _to_int(value):
+        """Robust nach int: akzeptiert Zahlen und zieht Ziffern aus Text („60 Minuten" → 60).
+        Gibt None zurück, wenn nichts Sinnvolles drinsteckt."""
+        if isinstance(value, bool):
+            return None
+        if isinstance(value, int):
+            return value
+        if isinstance(value, float):
+            return int(value)
+        if isinstance(value, str):
+            digits = "".join(ch for ch in value if ch.isdigit())
+            return int(digits) if digits else None
+        return None
+
+    @classmethod
+    def _sanitize_diagnose(cls, raw: dict | None) -> dict:
+        """Bringt die Diagnose in die vom ``/api/match/``-Serializer erwarteten TYPEN. Das
+        Interview-LLM liefert gelegentlich falsche Typen (z. B. ``zweck`` als String,
+        ``zeitbudget`` als „60 Minuten") — ohne diese Härtung antwortet der Match-Endpunkt mit
+        400 (Test 2026-06-06, nach einem Realtime-Verbindungsabriss). Werte werden nur
+        umgeformt, nie erfunden."""
+        d = dict(raw or {})
+        # Listenfelder: String → einelementige Liste, None → leere Liste.
+        for key in ("zweck", "phase_bogen"):
+            val = d.get(key)
+            if isinstance(val, str):
+                d[key] = [val] if val.strip() else []
+            elif isinstance(val, list):
+                d[key] = [str(x) for x in val if str(x).strip()]
+            elif val is None:
+                d.pop(key, None)
+            else:
+                d[key] = []
+        # Zahlenfelder: robust zu int — sonst Feld weglassen (Serializer erlaubt das Fehlen).
+        for key in ("gruppengroesse", "zeitbudget"):
+            if key in d:
+                num = cls._to_int(d.get(key))
+                if num is None:
+                    d.pop(key, None)
+                else:
+                    d[key] = num
+        return d
+
     async def match(self) -> dict:
-        """Ruft ``/api/match/`` mit der erhobenen Diagnose → der begründete LS-String."""
+        """Ruft ``/api/match/`` mit der erhobenen Diagnose → der begründete LS-String.
+        Die Diagnose wird vorher typsicher gemacht (s. ``_sanitize_diagnose``)."""
+        diagnose = self._sanitize_diagnose(self.state.diagnose)
         async with httpx.AsyncClient(timeout=self.match_timeout) as client:
             resp = await client.post(
-                f"{self.backend_url}/api/match/", json={"diagnose": self.state.diagnose}
+                f"{self.backend_url}/api/match/", json={"diagnose": diagnose}
             )
             resp.raise_for_status()
             return resp.json()

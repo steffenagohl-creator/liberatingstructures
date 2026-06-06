@@ -77,14 +77,18 @@ COACH_INSTRUCTIONS = PHASE_ERHEBUNG
 # des Strings steuert UNSER Code (Erkennung der Bestätigung), nicht das Modell.
 PHASE_BESTAETIGUNG = COACH_PERSONA + (
     "Du hast jetzt zu allen wichtigen Punkten etwas gehört. BEVOR irgendein Vorschlag erstellt "
-    "wird, fasse der Person in zwei, drei ruhigen Sätzen zusammen, was du verstanden hast — und "
-    "zwar zu: Zweck/Anlass, Gruppengröße, verfügbarer Zeit, Setting (Präsenz/Online/Hybrid) und "
-    "psychologischer Sicherheit. Stelle danach GENAU EINE einzige, klare Ja/Nein-Frage, ob du auf "
-    "dieser Grundlage den Vorschlag erstellen sollst (z. B. „Passt das so für dich — soll ich dir "
-    "jetzt einen Vorschlag zusammenstellen?“). Stelle NICHT zwei Fragen auf einmal und frage NICHT "
-    "getrennt, ob du richtig zusammengefasst hast — eine einzige Frage genügt. "
+    "wird, vergewissere dich sorgfältig. Gehe dafür die FÜNF Punkte EINZELN durch: Zweck/Anlass, "
+    "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+    "Prüfe bei JEDEM für dich innerlich: Wurde dieser Punkt im Gespräch wirklich AUSDRÜCKLICH "
+    "genannt, oder nehme ich ihn nur an? Sage der Person zu jedem Punkt kurz, was du verstanden "
+    "hast. Ist ein Punkt unklar, vage oder wurde er NICHT ausdrücklich genannt, frage GEZIELT "
+    "danach, statt zu raten — lieber einmal mehr nachfragen. "
+    "Erst wenn alle fünf Punkte klar und ausdrücklich sind, stelle GENAU EINE einzige, klare "
+    "Ja/Nein-Frage, ob du auf dieser Grundlage den Vorschlag erstellen sollst (z. B. „Passt das "
+    "so für dich — soll ich dir jetzt einen Vorschlag zusammenstellen?“). Stelle nicht zwei Fragen "
+    "auf einmal. "
     "Schlage selbst KEINE Methode vor und nenne KEINE Liberating Structures. Wenn die Person "
-    "etwas korrigiert oder ergänzt, nimm es dankbar auf und fasse danach erneut kurz zusammen. "
+    "etwas korrigiert oder ergänzt, nimm es dankbar auf und vergewissere dich danach erneut. "
     "Erst wenn die Person ausdrücklich zustimmt, geht es weiter."
 )
 
@@ -234,16 +238,23 @@ class LSCoach(Agent):
         )
 
         # ── Bestätigungs-Schleife: wir haben zusammengefasst und warten auf das ausdrückliche „Go".
+        # Die Person antwortet auf eine Ja/Nein-Frage. Die Spracherkennung verstümmelt kurze
+        # Bestätigungen oft („Ja" → „Yeah"/„On va"/„Hello"). Darum: Antwort gilt als GO, ES SEI
+        # DENN sie sieht nach einer KORREKTUR aus (Verneinung, ein Dimensions-Wert wie „online",
+        # oder eine Zahl). So zählt jedes „irgendwie ja", echte Korrekturen aber nicht.
         if self._awaiting_confirmation:
-            if self._is_affirmation(user_text):
-                logger.info("Bestätigung erhalten → Match wird gestartet")
+            if self._is_correction(user_text):
+                logger.info("Korrektur erkannt (%r) → erneut zusammenfassen", user_text[:60])
+                await self._enter_confirmation()
+            elif self._is_affirmation(user_text):
+                logger.info("Go erkannt (%r) → Match wird gestartet", user_text[:60])
                 self._awaiting_confirmation = False
                 await self._run_match()
             else:
-                # Korrektur/Ergänzung (z. B. „nein, online"): ist über observe() schon im Backend.
-                # Erneut zusammenfassen und wieder um Bestätigung bitten — Schleife bis zum „Go".
-                logger.info("Noch kein Go (Korrektur/Ergaenzung) - erneut zusammenfassen")
-                await self._enter_confirmation()
+                # Unklare/verstümmelte Antwort (die Spracherkennung macht aus „okay" schon mal
+                # „добре"): NIEMALS einfach starten. Lieber freundlich um ein klares Ja/Nein bitten.
+                logger.info("Unklar (%r) → klares Ja/Nein erbitten", user_text[:60])
+                await self._ask_confirm_again()
             return
 
         # ── Genug erhoben? Dann NICHT automatisch matchen, sondern Zusammenfassung + GO einholen.
@@ -263,11 +274,23 @@ class LSCoach(Agent):
         # Das Modell JETZT zusammenfassen + nachfragen lassen — es hat den Gesprächskontext, fasst
         # also natürlicher zusammen, als wir es aus (teils kodierten) Diagnose-Feldern könnten.
         await self._request_reply(
-            "Fasse jetzt in zwei, drei ruhigen Sätzen zusammen, was du über die Situation "
-            "verstanden hast — zu Zweck, Gruppengröße, verfügbarer Zeit, Setting "
-            "(Präsenz/Online/Hybrid) und psychologischer Sicherheit. Stelle danach GENAU EINE "
-            "einzige, klare Ja/Nein-Frage, ob du auf dieser Grundlage einen Vorschlag erstellen "
-            "sollst — nicht zwei Fragen. Schlage selbst noch nichts vor."
+            "Gehe jetzt ruhig die fünf Punkte EINZELN durch und sage zu jedem kurz, was du "
+            "verstanden hast: Zweck/Anlass, Gruppengröße, verfügbare Zeit, Setting "
+            "(Präsenz/Online/Hybrid) und psychologische Sicherheit. Wurde ein Punkt nicht "
+            "ausdrücklich genannt oder ist er unklar, frage gezielt danach, statt zu raten. "
+            "Erst wenn alle fünf klar sind, stelle GENAU EINE einzige, klare Ja/Nein-Frage, ob du "
+            "auf dieser Grundlage einen Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
+        )
+
+    async def _ask_confirm_again(self) -> None:
+        """Bei unklarer/verstümmelter Antwort kurz um ein klares Ja oder Nein bitten — OHNE die
+        ganze Zusammenfassung zu wiederholen. Bleibt in der Bestätigungsphase (startet nie von
+        selbst)."""
+        await self._request_reply(
+            "Du hast die Antwort gerade nicht eindeutig verstanden. Frage kurz und freundlich "
+            "nach, ob du auf der eben besprochenen Grundlage einen Vorschlag erstellen sollst, "
+            "und bitte um ein klares Ja oder Nein. Fasse NICHT erneut alles zusammen — stelle nur "
+            "diese eine kurze Frage."
         )
 
     async def _run_match(self) -> None:
@@ -325,17 +348,44 @@ class LSCoach(Agent):
                       "warte", "moment", "aber", "doch", "eigentlich", "noch"}
         if words & verneinung:
             return False
+        # Nur EINDEUTIGE Bestätigungs-Wörter. Bewusst NICHT dabei: beschreibende Adjektive wie
+        # „gut/super/sicher" oder Verben wie „machen/los" — die kommen oft in INHALTLICHEN
+        # Antworten vor („das Vertrauen ist gut", „die machen das alte") und lösten fälschlich
+        # ein GO aus.
         zustimmung = {"ja", "jo", "joa", "joah", "jaa", "jaja", "jau", "jawohl", "jawoll",
                       "yeah", "yea", "yep", "yes", "jup", "jupp", "jepp", "klar", "genau",
                       "stimmt", "passt", "richtig", "korrekt", "perfekt", "gerne", "gern",
-                      "okay", "ok", "mhm", "mhmm", "definitiv", "absolut", "exakt", "sicher",
-                      "los", "mach", "machen", "gut", "super", "prima"}
+                      "okay", "ok", "mhm", "mhmm"}
         if words & zustimmung:
             return True
-        phrasen = ("auf jeden", "leg los", "los geht", "passt so", "stimmt so", "mach mal",
-                   "machen wir", "kannst du", "können wir", "sehr gut", "alles richtig",
-                   "alles korrekt", "ist richtig", "ist korrekt")
+        phrasen = ("auf jeden fall", "leg los", "los geht", "passt so", "stimmt so", "mach mal",
+                   "machen wir", "alles richtig", "alles korrekt", "ist richtig", "ist korrekt",
+                   "kannst loslegen", "leg gern los")
         return any(p in low for p in phrasen)
+
+    @staticmethod
+    def _is_correction(text: str) -> bool:
+        """Sieht eine Antwort in der Bestätigungsphase nach einer KORREKTUR/Ergänzung aus (statt
+        nach Zustimmung)? Signale: Verneinung, ein konkreter Dimensions-Wert (z. B. „online",
+        „hybrid", „niedrig") oder eine Zahl (korrigiert Größe/Zeit). Dann NICHT matchen, sondern
+        neu zusammenfassen."""
+        low = text.lower()
+        for ch in ".,!?;:\"'„“”-—…":
+            low = low.replace(ch, " ")
+        words = set(low.split())
+        verneinung = {"nein", "nicht", "falsch", "ne", "nee", "quatsch", "stopp", "stop",
+                      "warte", "moment", "aber", "doch", "eigentlich", "noch", "kein", "keine"}
+        if words & verneinung:
+            return True
+        dimwerte = {"online", "remote", "digital", "präsenz", "praesenz", "vorort", "hybrid",
+                    "niedrig", "mittel", "hoch"}
+        if words & dimwerte:
+            return True
+        if any(ch.isdigit() for ch in text):  # eine Zahl → korrigiert meist Größe/Zeit
+            return True
+        if "vor ort" in low or "lieber" in low:
+            return True
+        return False
 
     async def _set_phase(self, name: str, instructions: str) -> None:
         """Schaltet die Verhaltens-Leitplanken des Modells auf eine neue Phase um (ERHEBUNG →
@@ -448,7 +498,16 @@ def _build_session(tier: str) -> AgentSession:
         rt_model = os.environ.get("VOICE_REALTIME_MODEL", "").strip()
         if rt_model:
             rt_kwargs["model"] = rt_model
-        return AgentSession(llm=openai.realtime.RealtimeModel(**rt_kwargs))
+        # Server-seitige Sprechpausen-Erkennung ABSCHALTEN (turn_detection=None) und stattdessen
+        # eine eigene Silero-VAD an die Sitzung hängen. Grund (Test 2026-06-06, Log-Hinweis): mit
+        # Server-Turn-Detection ignoriert das Realtime-Modell ``allow_interruptions`` und
+        # unterbricht den Agenten selbst — das zerschoss das vollständige Vorlesen des Vorschlags
+        # und führte am Anfang zu abgehacktem „Zickzack". Mit eigener VAD haben WIR die Kontrolle.
+        rt_kwargs["turn_detection"] = None
+        return AgentSession(
+            llm=openai.realtime.RealtimeModel(**rt_kwargs),
+            vad=silero.VAD.load(),
+        )
 
     logger.info("EU-Pfad: Mistral-Pipeline (Voxtral-STT → Mistral-LLM → Voxtral-TTS)")
     # Eine VAD-Instanz für Session UND Realtime-STT (das Voxtral-Realtime-STT hat kein
