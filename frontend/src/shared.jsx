@@ -4,6 +4,7 @@
    + kleine geteilte UI-Bausteine (StatusBar, Glyph, ChapterBar)
    Aus window-Globals → echte ES-Module-Exporte. Optik 1:1 zum Prototyp.
    =================================================================== */
+import { iconSvg } from './icons.js'
 
 // ---- 1. THEME (verfeinertes "Creme & Bernstein") ------------------
 // serif/sans verweisen auf die LOKAL gebündelten Variable-Fonts (@fontsource,
@@ -41,6 +42,8 @@ export function injectTheme() {
     .ls-app{font-family:${THEME.sans};color:var(--ink);}
     .ls-app ::selection{background:var(--sand);}
     .ls-serif{font-family:${THEME.serif};}
+    /* Echte LS-Icons: erben currentColor, füllen die getönte Kachel. */
+    .ls-icon svg{width:100%;height:100%;display:block;fill:currentColor;}
     @keyframes lsRise{from{transform:translateY(10px);}to{transform:translateY(0);}}
     @keyframes lsFade{from{transform:translateY(4px);}to{transform:translateY(0);}}
     @keyframes lsPop{0%{transform:scale(.55);}60%{transform:scale(1.08);}100%{transform:scale(1);}}
@@ -267,20 +270,30 @@ export function StatusBar({ tone = 'var(--ink)' }) {
   );
 }
 
-// Echtes LS-Icon oder typografischer Platzhalter in getöntem Tile.
-export function Glyph({ name, size = 46, tile = true }) {
+// Echtes LS-Icon in getöntem Tile.
+// Bevorzugt `iconFile` (Dateiname aus dem Backend-Feld `icon`, SSOT) → lädt das echte
+// offizielle SVG. Fallback für Mock/Übergang: die 3 Inline-ICONS bzw. ein typografischer
+// Platzhalter-Glyph nach Methoden-Name. `iconAlt` = Screenreader-Text (sonst dekorativ).
+export function Glyph({ name, iconFile, iconAlt, size = 46, tile = true }) {
+  const real = iconSvg(iconFile);
   const ic = ICONS[name];
   const m = METHODS[name] || {};
   const inner = tile
     ? { padding: size * 0.16, borderRadius: size * 0.26, background: 'var(--sand)' }
     : {};
+  const a11y = iconAlt
+    ? { role: 'img', 'aria-label': iconAlt }
+    : { 'aria-hidden': 'true' };
   return (
-    <span style={{ display: 'inline-grid', placeItems: 'center', width: size, height: size,
-      flex: '0 0 auto', color: 'var(--terra)', ...inner }}>
-      {ic
-        ? <svg viewBox={ic.vb} width="100%" height="100%" fill="currentColor"
-            dangerouslySetInnerHTML={{ __html: ic.svg }} aria-hidden="true" />
-        : <span className="ls-serif" style={{ fontSize: size * 0.5, fontWeight: 500, lineHeight: 1 }}>{m.glyph || '◆'}</span>}
+    <span className="ls-icon" {...a11y}
+      style={{ display: 'inline-grid', placeItems: 'center', width: size, height: size,
+        flex: '0 0 auto', color: 'var(--terra)', ...inner }}>
+      {real
+        ? <span style={{ width: '100%', height: '100%', display: 'block' }} dangerouslySetInnerHTML={{ __html: real }} />
+        : ic
+          ? <svg viewBox={ic.vb} width="100%" height="100%" fill="currentColor"
+              dangerouslySetInnerHTML={{ __html: ic.svg }} />
+          : <span className="ls-serif" style={{ fontSize: size * 0.5, fontWeight: 500, lineHeight: 1 }}>{m.glyph || '◆'}</span>}
     </span>
   );
 }
