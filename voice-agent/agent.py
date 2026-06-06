@@ -57,8 +57,10 @@ COACH_PERSONA = (
 PHASE_ERHEBUNG = COACH_PERSONA + (
     "Ihr seid am ANFANG des Gesprächs. Du führst ein lockeres Gespräch, um die Gruppensituation "
     "zu verstehen: Anlass/Zweck, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid), "
-    "psychologische Sicherheit und das Ziel. Stelle immer nur EINE kurze, natürliche Frage zur "
-    "Zeit und höre aufmerksam zu. "
+    "psychologische Sicherheit und das Ziel. Lass die Person AUSREDEN und unterbrich NICHT — warte, "
+    "bis sie wirklich fertig ist. Reagiere dann ZUERST kurz und warm auf das gerade Gesagte (ein "
+    "Satz, der zeigt: du hast zugehört), und stelle ERST DANN deine nächste Frage — immer nur EINE "
+    "kurze, natürliche Frage zur Zeit. "
     "GANZ WICHTIG — halte dich strikt daran: Du schlägst in dieser Phase NIEMALS selbst eine "
     "Methode, Übung oder Lösung vor, du nennst KEINE Liberating Structures und du moderierst "
     "NICHTS. Auch wenn du glaubst, schon genug zu wissen: präsentiere KEINE Lösung. Deine einzige "
@@ -519,9 +521,17 @@ def _build_session(tier: str) -> AgentSession:
         # unterbricht den Agenten selbst — das zerschoss das vollständige Vorlesen des Vorschlags
         # und führte am Anfang zu abgehacktem „Zickzack". Mit eigener VAD haben WIR die Kontrolle.
         rt_kwargs["turn_detection"] = None
+        # GEDULD beim Zuhören: Die Default-VAD endet schon nach 0,55 s Stille → der Agent grätscht
+        # in normale Sprechpausen rein (Test 2026-06-06). Wir verlangen eine längere Pause, bis die
+        # Äußerung als beendet gilt, plus eine Endpointing-Mindestverzögerung. Per ENV justierbar.
+        vad_silence = float(os.environ.get("VOICE_VAD_SILENCE", "1.2"))
+        min_endpoint = float(os.environ.get("VOICE_MIN_ENDPOINT", "0.8"))
+        max_endpoint = float(os.environ.get("VOICE_MAX_ENDPOINT", "6.0"))
         return AgentSession(
             llm=openai.realtime.RealtimeModel(**rt_kwargs),
-            vad=silero.VAD.load(),
+            vad=silero.VAD.load(min_silence_duration=vad_silence),
+            min_endpointing_delay=min_endpoint,
+            max_endpointing_delay=max_endpoint,
         )
 
     logger.info("EU-Pfad: Mistral-Pipeline (Voxtral-STT → Mistral-LLM → Voxtral-TTS)")

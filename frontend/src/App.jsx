@@ -130,7 +130,9 @@ function Sovereignty({ value, onChange, onContinue, onBack }) {
 // Schlägt der Call fehl, erscheint ein Fehlerzustand mit „Nochmal versuchen".
 function MorphView({ answers, match, details, matchError, onDone, onRetry, onBack }) {
   const tension = (() => { const s = (answers.situation || '').toLowerCase(); return answers._tension || /frust|still|schweig|konflikt|spannung|streit|nicht weiter/.test(s); })();
-  const seq = QUESTIONS.filter((q) => !q.adaptive || tension);
+  // Adaptive Knoten (psychologische Sicherheit) auch zeigen, wenn sie erhoben wurden — im
+  // Sprach-Modus ist das immer der Fall (sonst zeigte die Ergebnis-/Morph-Spinne nur 6 statt 7).
+  const seq = QUESTIONS.filter((q) => !q.adaptive || tension || answers[q.id] != null);
   const [stage, setStage] = useState(0);
   // „thinking" = Backend verdichtet noch. Solange poppt das Arcade-Spiel als Overlay auf
   // (mit Wartemusik) und blendet sanft aus, sobald das Ergebnis da ist.
