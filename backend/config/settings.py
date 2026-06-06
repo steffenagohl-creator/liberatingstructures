@@ -127,8 +127,10 @@ VOICE_DEFAULT_TIER = os.environ.get("VOICE_DEFAULT_TIER", "eu")
 VOICE_SELFHOSTED_ENABLED = os.environ.get("VOICE_SELFHOSTED_ENABLED", "false").lower() == "true"
 # Erzwingt offline nutzbare Stub-Bausteine (Dev/Tests ohne Netz/Schlüssel).
 VOICE_FORCE_STUB = os.environ.get("VOICE_FORCE_STUB", "false").lower() == "true"
-# LiveKit-Transport (leer bis Phase 2 – dann eigene LS-Instanz).
+# LiveKit-Transport. LIVEKIT_URL = interne URL (für den Agent-Worker, z. B. ws://127.0.0.1:7980).
+# LIVEKIT_PUBLIC_URL = die wss-URL, die Browsern zurückgegeben wird (z. B. wss://…/livekit/).
 LIVEKIT_URL = os.environ.get("LIVEKIT_URL", "")
+LIVEKIT_PUBLIC_URL = os.environ.get("LIVEKIT_PUBLIC_URL", "")
 LIVEKIT_API_KEY = os.environ.get("LIVEKIT_API_KEY", "")
 LIVEKIT_API_SECRET = os.environ.get("LIVEKIT_API_SECRET", "")
 # 🇺🇸 us-Pfad (OpenAI Realtime) – Schlüssel wird erst in Phase 5 wirklich genutzt.

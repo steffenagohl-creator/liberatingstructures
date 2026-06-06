@@ -174,8 +174,10 @@ def issue_token(*, room: str, identity: str, tier: str) -> TokenResult:
     token = signer.create_token(
         room=room, identity=identity, metadata=json.dumps({"tier": tier}),
     )
+    # Browsern die öffentliche wss-URL geben; intern (Agent) zählt LIVEKIT_URL.
+    client_url = getattr(settings, "LIVEKIT_PUBLIC_URL", "") or getattr(settings, "LIVEKIT_URL", "")
     return TokenResult(
         token=token,
         is_stub=signer.is_stub,
-        livekit_url=getattr(settings, "LIVEKIT_URL", ""),
+        livekit_url=client_url,
     )

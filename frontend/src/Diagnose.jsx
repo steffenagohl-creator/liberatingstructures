@@ -9,9 +9,10 @@
      dem freien Gespräch ab und füllt das „Spinnennetz" (Constellation) live.
    Die Modus-Struktur (mode 'voice'/'type', voiceAllowed) ist hier bereits angelegt.
    =================================================================== */
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { QUESTIONS, THEME, StatusBar } from './shared.jsx'
 import { Chip } from './ui.jsx'
+import { startVoiceSession } from './api/voice.js'
 
 export const LSC = { CW: 390, CH: 376, cx: 195, cy: 178, rx: 128, ry: 122 };
 
@@ -171,7 +172,7 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
         )}
 
         {mode === 'voice' && voiceAllowed ? (
-          <VoicePanel current={current} listening={listening} setListening={setListening} onPick={answer} />
+          <VoicePanel current={current} listening={listening} setListening={setListening} onPick={answer} sovereignty={sovereignty} />
         ) : (
           <div style={{ marginTop: 14 }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -207,7 +208,44 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
 
 // ---- Sprach-Panel (Mikrofon-Ästhetik; Chips bleiben echte Eingabe)
 // (In Stufe 1D/4 wird hieraus das echte Gespräch — Chips entfallen dann im Sprach-Modus.)
-function VoicePanel({ current, listening, setListening, onPick }) {
+function VoicePanel({ current, listening, setListening, onPick, sovereignty }) {
+  const sessionRef = useRef(null);
+  const [status, setStatus] = useState('idle'); // idle|connecting|live|closed|error
+  const [diagCount, setDiagCount] = useState(0);
+
+  // Mikro an/aus → echte LiveKit-Sitzung starten/stoppen (additiv; Chips bleiben Fallback).
+  useEffect(() => {
+    let cancelled = false;
+    if (listening && !sessionRef.current) {
+      startVoiceSession({
+        sovereignty,
+        onStatus: (s) => { if (!cancelled) setStatus(s); },
+        onDiagnose: (d) => { if (!cancelled) setDiagCount(Object.keys(d?.diagnose || {}).length); },
+        onResult: () => { /* Stufe 4: Ergebnis-Übergabe an den Result-Screen */ },
+      }).then((h) => {
+        if (cancelled) { h.stop(); return; }
+        sessionRef.current = h;
+      }).catch(() => { if (!cancelled) setStatus('error'); });
+    }
+    if (!listening && sessionRef.current) {
+      sessionRef.current.stop();
+      sessionRef.current = null;
+      setStatus('idle');
+    }
+    return () => { cancelled = true; };
+  }, [listening, sovereignty]);
+
+  // Aufräumen, wenn das Panel verschwindet.
+  useEffect(() => () => { if (sessionRef.current) { sessionRef.current.stop(); sessionRef.current = null; } }, []);
+
+  const statusText = {
+    idle: 'Tippe aufs Mikro und erzähl — oder wähle unten.',
+    connecting: 'Verbinde …',
+    live: diagCount ? `Ich höre zu … (${diagCount} erkannt)` : 'Ich höre zu … sprich frei.',
+    closed: 'Verbindung beendet.',
+    error: 'Sprachverbindung nicht möglich — nutze unten die Antworten.',
+  }[status] || 'Tippe aufs Mikro und erzähl — oder wähle unten.';
+
   return (
     <div style={{ marginTop: 14 }}>
       <div style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
@@ -222,8 +260,8 @@ function VoicePanel({ current, listening, setListening, onPick }) {
               transformOrigin: 'center', animation: listening ? `lsWave ${0.7 + (i % 4) * 0.12}s ${i * 0.05}s infinite` : 'none' }} />
           ))}
         </div>
-        <p style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--muted)' }}>
-          {listening ? 'Ich höre zu … sprich frei.' : 'Tippe aufs Mikro und erzähl — oder wähle unten.'}</p>
+        <p style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--muted)' }} aria-live="polite">
+          {statusText}</p>
       </div>
       <p style={{ fontSize: 11.5, color: 'var(--faint)', margin: '12px 0 8px', textAlign: 'center', letterSpacing: '.04em' }}>SCHNELLE ANTWORTEN</p>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
