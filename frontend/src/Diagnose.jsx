@@ -11,6 +11,7 @@
    =================================================================== */
 import { useState, useMemo } from 'react'
 import { QUESTIONS, THEME, StatusBar } from './shared.jsx'
+import { Chip } from './ui.jsx'
 
 export const LSC = { CW: 390, CH: 376, cx: 195, cy: 178, rx: 128, ry: 122 };
 
@@ -129,9 +130,10 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
 
       {/* Topbar */}
       <div style={{ flex: '0 0 auto', display: 'flex', alignItems: 'center', gap: 10, padding: '2px 16px 10px' }}>
-        <button onClick={onBack} style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: 22,
+        <button onClick={onBack} aria-label="Zurück zur Datenschutz-Auswahl" style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: 22,
           color: 'var(--muted)', padding: 0, width: 18, flex: '0 0 auto' }}>‹</button>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1 }} role="progressbar" aria-label="Fortschritt der Diagnose"
+          aria-valuenow={filled} aria-valuemin={0} aria-valuemax={seq.length}>
           <div style={{ height: 5, background: 'var(--line)', borderRadius: 5, overflow: 'hidden' }}>
             <div style={{ height: '100%', width: `${(filled / seq.length) * 100}%`, background: 'var(--sage)',
               borderRadius: 5, transition: 'width .5s' }} />
@@ -158,7 +160,9 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
         {voiceAllowed && (
           <div style={{ display: 'flex', gap: 6, margin: '14px 0 4px' }}>
             {[['voice', '🎤 Sprechen'], ['type', '⌨️ Tippen']].map(([m, lbl]) => (
-              <button key={m} onClick={() => { setMode(m); setListening(false); }} style={{ flex: 1, padding: '8px',
+              <button key={m} onClick={() => { setMode(m); setListening(false); }}
+                aria-pressed={mode === m} aria-label={m === 'voice' ? 'Eingabe per Sprache' : 'Eingabe per Tastatur'}
+                style={{ flex: 1, padding: '8px',
                 borderRadius: 10, cursor: 'pointer', fontFamily: THEME.sans, fontSize: 13, fontWeight: 600,
                 border: `1px solid ${mode === m ? 'var(--sage)' : 'var(--line)'}`,
                 background: mode === m ? '#EAF1ED' : 'var(--surface)', color: mode === m ? 'var(--sage)' : 'var(--muted)' }}>{lbl}</button>
@@ -173,13 +177,13 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {current.kind === 'text'
                 ? current.presets.map((p) => (
-                    <button key={p.v} onClick={() => answer(p.v, { _tension: !!p.tension })} style={{ ...chipLSC, width: '100%', textAlign: 'left' }}>{p.v}</button>
+                    <Chip key={p.v} onClick={() => answer(p.v, { _tension: !!p.tension })} style={{ width: '100%', textAlign: 'left' }}>{p.v}</Chip>
                   ))
                 : current.options.map((opt) => (
-                    <button key={opt} onClick={() => answer(opt)} style={chipLSC}>
+                    <Chip key={opt} onClick={() => answer(opt)}>
                       {opt}
                       {current.sub && current.sub[opt] && <span style={{ display: 'block', fontSize: 11.5, color: 'var(--muted)', fontWeight: 400, marginTop: 1 }}>{current.sub[opt]}</span>}
-                    </button>
+                    </Chip>
                   ))}
             </div>
             {current.kind === 'text' && (
@@ -187,9 +191,10 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack }) {
                 <input value={draft} onChange={(e) => setDraft(e.target.value)}
                   onKeyDown={(e) => { if (e.key === 'Enter' && draft.trim()) answer(draft.trim()); }}
                   placeholder="… oder frei beschreiben"
+                  aria-label={`Freie Antwort zu: ${current.q}`}
                   style={{ flex: 1, border: '1px solid var(--line)', borderRadius: 12, padding: '12px 14px',
                     fontFamily: THEME.sans, fontSize: 14.5, background: 'var(--surface)', color: 'var(--ink)', outline: 'none' }} />
-                <button onClick={() => draft.trim() && answer(draft.trim())}
+                <button onClick={() => draft.trim() && answer(draft.trim())} aria-label="Antwort senden"
                   style={{ width: 46, borderRadius: 12, border: 'none', background: 'var(--sage)', color: '#fff', fontSize: 18, cursor: 'pointer', flex: '0 0 auto' }}>↑</button>
               </div>
             )}
@@ -206,11 +211,12 @@ function VoicePanel({ current, listening, setListening, onPick }) {
   return (
     <div style={{ marginTop: 14 }}>
       <div style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 16, padding: '16px', textAlign: 'center' }}>
-        <button onClick={() => setListening((v) => !v)} aria-label="Mikrofon"
+        <button onClick={() => setListening((v) => !v)} aria-pressed={listening}
+          aria-label={listening ? 'Sprachaufnahme stoppen' : 'Sprachaufnahme starten'}
           style={{ width: 60, height: 60, borderRadius: 32, border: 'none', cursor: 'pointer', fontSize: 24,
             background: listening ? 'var(--terra)' : 'var(--sage)', color: '#fff',
             boxShadow: `0 0 0 ${listening ? 8 : 5}px ${listening ? 'rgba(184,88,39,.15)' : '#EAF1ED'}`, transition: 'box-shadow .3s, background .3s' }}>🎤</button>
-        <div style={{ display: 'flex', gap: 3, alignItems: 'center', justifyContent: 'center', height: 22, marginTop: 12 }}>
+        <div aria-hidden="true" style={{ display: 'flex', gap: 3, alignItems: 'center', justifyContent: 'center', height: 22, marginTop: 12 }}>
           {[10, 18, 26, 16, 22, 12, 24, 14, 8].map((h, i) => (
             <span key={i} style={{ width: 3.5, height: h, borderRadius: 2, background: listening ? 'var(--sage)' : 'var(--line)',
               transformOrigin: 'center', animation: listening ? `lsWave ${0.7 + (i % 4) * 0.12}s ${i * 0.05}s infinite` : 'none' }} />
@@ -223,15 +229,10 @@ function VoicePanel({ current, listening, setListening, onPick }) {
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         {(current.kind === 'text' ? current.presets.map((p) => p.v) : current.options).map((opt, i) => {
           const tension = current.kind === 'text' ? current.presets[i].tension : false;
-          return <button key={opt} onClick={() => onPick(opt, { _tension: !!tension })} style={{ ...chipLSC, ...(current.kind === 'text' ? { width: '100%', textAlign: 'left' } : {}) }}>{opt}</button>;
+          return <Chip key={opt} onClick={() => onPick(opt, { _tension: !!tension })} style={current.kind === 'text' ? { width: '100%', textAlign: 'left' } : undefined}>{opt}</Chip>;
         })}
       </div>
     </div>
   );
 }
 
-const chipLSC = {
-  border: '1px solid var(--line)', background: 'var(--surface)', color: 'var(--ink)',
-  borderRadius: 13, padding: '11px 15px', cursor: 'pointer', fontFamily: THEME.sans,
-  fontSize: 14.5, fontWeight: 500, lineHeight: 1.3, transition: 'border-color .15s, background .15s',
-};

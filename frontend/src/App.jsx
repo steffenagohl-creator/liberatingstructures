@@ -8,6 +8,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { THEME, StatusBar, Glyph, QUESTIONS, METHODS, buildRecommendation } from './shared.jsx'
 import { Constellation, DiagnoseCanvas, LSC } from './Diagnose.jsx'
 import { ResultString } from './Result.jsx'
+import { Button } from './ui.jsx'
 
 // ---- PhoneStage: skaliertes Gerät auf warmem Hintergrund ----------
 function PhoneStage({ children }) {
@@ -37,8 +38,8 @@ function Onboarding({ onStart }) {
     <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
       <StatusBar />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '8px 30px 30px' }}>
-        {/* Hero-Konstellation (dekorativ) */}
-        <div style={{ position: 'relative', height: 250, margin: '6px 0 8px' }}>
+        {/* Hero-Konstellation (rein dekorativ → für Screenreader ausgeblendet) */}
+        <div style={{ position: 'relative', height: 250, margin: '6px 0 8px' }} aria-hidden="true">
           <svg viewBox="0 0 300 250" width="100%" height="100%" style={{ position: 'absolute', inset: 0 }}>
             <path d="M150,125 Q90,70 70,52" fill="none" stroke="var(--line)" strokeWidth="1.4" strokeLinecap="round" />
             <path d="M150,125 Q220,80 244,66" fill="none" stroke="var(--sage)" strokeWidth="1.6" strokeLinecap="round" />
@@ -65,9 +66,9 @@ function Onboarding({ onStart }) {
           <p style={{ margin: '0 0 24px', fontSize: 15.5, lineHeight: 1.55, color: 'var(--muted)' }}>
             Ein paar ruhige Fragen — und Schritt für Schritt entsteht ein Bild eurer Situation. Am Ende
             schlägt euch der Berater eine passende Abfolge bewährter Methoden vor.</p>
-          <button onClick={onStart} style={{ width: '100%', border: 'none', borderRadius: 15, padding: '17px',
-            background: 'var(--terra)', color: '#fff', fontSize: 16.5, fontWeight: 600, cursor: 'pointer',
-            fontFamily: THEME.sans }}>Beginnen</button>
+          {/* Trägerwörter: beginnen, starten, los, anfangen, loslegen. */}
+          <Button variant="primary" ariaLabel="Diagnose beginnen" onClick={onStart}
+            style={{ width: '100%', borderRadius: 15, padding: '17px', fontSize: 16.5 }}>Beginnen</Button>
           <p style={{ textAlign: 'center', margin: '14px 0 0', fontSize: 12.5, color: 'var(--faint)' }}>Für Moderator:innen, Teams & Coaches</p>
         </div>
       </div>
@@ -86,7 +87,7 @@ function Sovereignty({ value, onChange, onContinue, onBack }) {
     <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
       <StatusBar />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflowY: 'auto', padding: '6px 26px 22px' }}>
-        <button onClick={onBack} style={{ alignSelf: 'flex-start', border: 'none', background: 'none', cursor: 'pointer', fontSize: 22, color: 'var(--muted)', padding: 0, marginBottom: 6 }}>‹</button>
+        <button onClick={onBack} aria-label="Zurück zum Start" style={{ alignSelf: 'flex-start', border: 'none', background: 'none', cursor: 'pointer', fontSize: 22, color: 'var(--muted)', padding: 0, marginBottom: 6 }}>‹</button>
         <h2 className="ls-serif" style={{ margin: '4px 0 6px', fontSize: 27, lineHeight: 1.12, fontWeight: 500, letterSpacing: '-.015em' }}>Wohin dürfen eure Daten?</h2>
         <p style={{ margin: '0 0 8px', fontSize: 14.5, lineHeight: 1.5, color: 'var(--muted)' }}>
           Ihr entscheidet, wie weit eure Gesprächsinhalte reisen. Das gilt für die ganze Gruppe.</p>
@@ -97,7 +98,8 @@ function Sovereignty({ value, onChange, onContinue, onBack }) {
           {cards.map((c) => {
             const on = value === c.id;
             return (
-              <button key={c.id} onClick={() => onChange(c.id)} style={{ textAlign: 'left', cursor: 'pointer',
+              <button key={c.id} onClick={() => onChange(c.id)} aria-pressed={on}
+                aria-label={`Datenschutz-Stufe ${c.t} — ${c.where}. ${c.ex}`} style={{ textAlign: 'left', cursor: 'pointer',
                 border: `1.5px solid ${on ? 'var(--terra)' : 'var(--line)'}`, background: on ? 'var(--sand)' : 'var(--surface)',
                 borderRadius: 16, padding: '14px 16px', display: 'flex', gap: 13, alignItems: 'flex-start', transition: 'border-color .15s, background .15s' }}>
                 <span style={{ fontSize: 22, flex: '0 0 auto', lineHeight: 1.2 }}>{c.ico}</span>
@@ -115,9 +117,9 @@ function Sovereignty({ value, onChange, onContinue, onBack }) {
           })}
         </div>
 
-        <button onClick={onContinue} style={{ marginTop: 22, width: '100%', border: 'none', borderRadius: 15, padding: '16px',
-          background: 'var(--terra)', color: '#fff', fontFamily: THEME.sans, fontSize: 16, fontWeight: 600, cursor: 'pointer' }}>
-          Weiter →</button>
+        {/* Trägerwörter: weiter, fortfahren, nächster Schritt, bestätigen. */}
+        <Button variant="primary" ariaLabel="Weiter zur Diagnose" onClick={onContinue}
+          style={{ marginTop: 22, width: '100%', borderRadius: 15, padding: '16px', fontSize: 16 }}>Weiter →</Button>
       </div>
     </div>
   );
