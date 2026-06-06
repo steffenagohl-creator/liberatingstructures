@@ -35,7 +35,7 @@ function curve(x, y, bend) {
 export function Constellation({ seq, answers, filled, busyStep = -1, collapse = false }) {
   const { CW, CH, cx, cy } = LSC;
   return (
-    <div style={{ position: 'relative', width: CW, height: CH, flex: '0 0 auto',
+    <div style={{ position: 'relative', width: CW, height: CH, flex: '0 0 auto', alignSelf: 'center',
       background: 'radial-gradient(circle at 50% 47%, #FFFDF8 0%, var(--bg) 70%)', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, opacity: .5,
         backgroundImage: 'radial-gradient(var(--line) 1px, transparent 1px)', backgroundSize: '22px 22px' }} />

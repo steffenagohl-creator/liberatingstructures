@@ -18,7 +18,7 @@ import os
 from dotenv import load_dotenv
 from livekit import agents
 from livekit.agents import Agent, AgentSession
-from livekit.plugins import mistralai, silero
+from livekit.plugins import mistralai, openai, silero
 
 from brain import LSInterviewBrain
 
@@ -100,8 +100,15 @@ async def entrypoint(ctx: agents.JobContext) -> None:
 
     session = AgentSession(
         stt=mistralai.STT(model=STT_MODEL),
-        llm=mistralai.LLM(model=LLM_MODEL),
-        tts=mistralai.TTS(voice=TTS_VOICE),
+        # LLM über Mistrals OpenAI-kompatiblen Endpunkt (zuverlässige Standard-Chat-API).
+        # Der native mistralai-LLM nutzt die „conversations"-Beta-API und schlug fehl
+        # (HTTPValidationError: inputs is required) — verifiziert 2026-06-06.
+        llm=openai.LLM(
+            model=LLM_MODEL,
+            base_url="https://api.mistral.ai/v1",
+            api_key=os.environ.get("MISTRAL_API_KEY", ""),
+        ),
+        tts=mistralai.TTS(),     # Default-Stimme (eigener Voice-Name war ungültig)
         vad=silero.VAD.load(),   # offenes Mikro / automatische Sprechpausen-Erkennung
     )
     await session.start(room=ctx.room, agent=LSCoach(ctx.room, brain))
