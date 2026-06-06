@@ -95,7 +95,12 @@ function zeitLabel(min) {
 export function diagnoseToAnswers(d = {}) {
   const a = {};
   if (d.ziel_text) a.ziel = d.ziel_text;
-  if (Array.isArray(d.zweck) && d.zweck.length && ZWECK_REV[d.zweck[0]]) a.zweck = ZWECK_REV[d.zweck[0]];
+  // Das Backend kann MEHRERE Zweck-Tags halten (z. B. „offenlegen" UND „planen"). Alle
+  // anzeigen, damit kein gewünschter Schwerpunkt unter den Tisch fällt (Wunsch 2026-06-06).
+  if (Array.isArray(d.zweck) && d.zweck.length) {
+    const labels = d.zweck.map((z) => ZWECK_REV[z]).filter(Boolean);
+    if (labels.length) a.zweck = labels.join(' + ');
+  }
   if (d.psychologische_sicherheit && SICHERHEIT_REV[d.psychologische_sicherheit]) a.sicherheit = SICHERHEIT_REV[d.psychologische_sicherheit];
   const g = groesseLabel(d.gruppengroesse); if (g) a.groesse = g;
   const z = zeitLabel(d.zeitbudget); if (z) a.zeit = z;

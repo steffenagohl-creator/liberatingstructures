@@ -77,8 +77,9 @@ COACH_INSTRUCTIONS = PHASE_ERHEBUNG
 # des Strings steuert UNSER Code (Erkennung der Bestätigung), nicht das Modell.
 PHASE_BESTAETIGUNG = COACH_PERSONA + (
     "Du hast jetzt zu allen wichtigen Punkten etwas gehört. BEVOR irgendein Vorschlag erstellt "
-    "wird, vergewissere dich sorgfältig. Gehe dafür die FÜNF Punkte EINZELN durch: Zweck/Anlass, "
-    "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+    "wird, vergewissere dich sorgfältig. Gehe dafür die SIEBEN Punkte EINZELN durch: Anlass/"
+    "Situation, das Ziel (was am Ende erreicht sein soll), den Zweck/Schwerpunkt, Gruppengröße, "
+    "verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
     "Prüfe bei JEDEM für dich innerlich: Wurde dieser Punkt im Gespräch wirklich AUSDRÜCKLICH "
     "genannt, oder nehme ich ihn nur an? Sage der Person zu jedem Punkt kurz, was du verstanden "
     "hast. Ist ein Punkt unklar, vage oder wurde er NICHT ausdrücklich genannt, frage GEZIELT "
@@ -120,13 +121,14 @@ PHASE_ABSCHLUSS = COACH_PERSONA + (
 # denn das Backend lässt ``psychologische_sicherheit`` dort auch dann stehen, wenn sie längst
 # erkannt ist (dadurch würde der Match nie starten). ``ziel_text``/``scrum_kontext`` sind
 # bewusst NICHT Pflicht (oft diffus) — sie füllen die Spinne, blockieren sie aber nicht.
-SPINNE_KEYS = ("zweck", "gruppengroesse", "zeitbudget", "setting", "psychologische_sicherheit")
+SPINNE_KEYS = ("ziel_text", "zweck", "gruppengroesse", "zeitbudget", "setting", "psychologische_sicherheit")
 # KERN-Dimensionen = die zuverlässig erkannten. ``psychologische_sicherheit`` wird vom Backend
 # chronisch NICHT sauber erkannt (Test 2026-06-06: über eine ganze Sitzung nie gefüllt, ready
 # blieb False). Daher darf sie den Match NICHT blockieren: sind die Kern-4 da, fragt der Coach
 # noch kurz nach Sicherheit und löst dann auch ohne sie aus (s. Trigger in process_user_text).
 CORE_KEYS = ("zweck", "gruppengroesse", "zeitbudget", "setting")
 SPINNE_LABELS = {
+    "ziel_text": "das Ziel — was am Ende konkret anders oder erreicht sein soll",
     "zweck": "den Schwerpunkt/Zweck des Treffens (z. B. offenlegen, analysieren, entscheiden, planen)",
     "gruppengroesse": "die Gruppengröße (wie viele Personen dabei sind)",
     "zeitbudget": "die verfügbare Zeit (ungefähr in Minuten)",
@@ -183,6 +185,7 @@ class LSCoach(Agent):
         self._core_turns = 0        # Äußerungen, seit die Kern-4 vollständig sind (Diagnose)
         self._phase = "ERHEBUNG"    # aktuelle Verhaltensphase (verhindert doppelte Instruktions-Updates)
         self._awaiting_confirmation = False  # True = zusammengefasst, wartet auf das ausdrückliche „Go"
+        self._suppress_turn_hook = False  # im US/Realtime-Pfad True (Transkript kommt übers Event)
 
     async def on_enter(self) -> None:  # noqa: D401
         """Wird vom Framework aufgerufen, sobald der Agent in der Sitzung AKTIV ist — der richtige
@@ -196,8 +199,18 @@ class LSCoach(Agent):
         )
 
     async def on_user_turn_completed(self, turn_ctx, new_message) -> None:  # noqa: D401
-        """Pipeline-Pfad (eu/sov): nach jeder fertigen Nutzer-Äußerung das Gehirn füttern."""
-        user_text = getattr(new_message, "text_content", None) or str(new_message)
+        """Pipeline-Pfad (eu/sov): nach jeder fertigen Nutzer-Äußerung das Gehirn füttern.
+
+        Im US/Realtime-Pfad ist dieser Hook ABGESCHALTET (``_suppress_turn_hook``) — dort kommt
+        die Transkription über das ``user_input_transcribed``-Event. Sonst würde dieser Hook
+        zusätzlich feuern und, weil ``text_content`` im Realtime oft leer ist, früher auf
+        ``str(new_message)`` zurückfallen — das schrieb die Objekt-Repr (``id='item_…'``) als
+        „Situation" ins Gehirn (Bug 2026-06-06)."""
+        if self._suppress_turn_hook:
+            return
+        user_text = getattr(new_message, "text_content", None)
+        if not user_text:  # NIE auf str(new_message) zurückfallen (das ist die Objekt-Repr).
+            return
         await self.process_user_text(user_text)
 
     async def process_user_text(self, user_text: str) -> None:
@@ -233,8 +246,9 @@ class LSCoach(Agent):
         if core_voll:
             self._core_turns += 1
         logger.info(
-            "Brain: seen=%s spinne_voll=%s ready=%s awaiting_confirmation=%s",
+            "Brain: seen=%s spinne_voll=%s ready=%s awaiting_confirmation=%s | situation=%r ziel=%r",
             sorted(self._seen), spinne_voll, state.ready, self._awaiting_confirmation,
+            self._brain.opening[:50], (diagnose.get("ziel_text") or "")[:50],
         )
 
         # ── Bestätigungs-Schleife: wir haben zusammengefasst und warten auf das ausdrückliche „Go".
@@ -274,11 +288,12 @@ class LSCoach(Agent):
         # Das Modell JETZT zusammenfassen + nachfragen lassen — es hat den Gesprächskontext, fasst
         # also natürlicher zusammen, als wir es aus (teils kodierten) Diagnose-Feldern könnten.
         await self._request_reply(
-            "Gehe jetzt ruhig die fünf Punkte EINZELN durch und sage zu jedem kurz, was du "
-            "verstanden hast: Zweck/Anlass, Gruppengröße, verfügbare Zeit, Setting "
-            "(Präsenz/Online/Hybrid) und psychologische Sicherheit. Wurde ein Punkt nicht "
-            "ausdrücklich genannt oder ist er unklar, frage gezielt danach, statt zu raten. "
-            "Erst wenn alle fünf klar sind, stelle GENAU EINE einzige, klare Ja/Nein-Frage, ob du "
+            "Gehe jetzt ruhig die sieben Punkte EINZELN durch und sage zu jedem kurz, was du "
+            "verstanden hast: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, Gruppengröße, "
+            "verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+            "Wurde ein Punkt nicht ausdrücklich genannt oder ist er unklar, frage gezielt danach, "
+            "statt zu raten. "
+            "Erst wenn alle sieben klar sind, stelle GENAU EINE einzige, klare Ja/Nein-Frage, ob du "
             "auf dieser Grundlage einen Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
         )
 
@@ -551,6 +566,9 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     # sondern über das Session-Event „user_input_transcribed" — daran hängen wir das Gehirn,
     # damit sich die Spinne füllt und am Ende der echte Match kommt.
     if tier == "us":
+        # Im US-Pfad liefert das „user_input_transcribed"-Event die Transkription — daher den
+        # zusätzlichen on_user_turn_completed-Hook abschalten (sonst doppelt + Objekt-Repr-Müll).
+        coach._suppress_turn_hook = True
         def _on_user_transcript(ev) -> None:
             transcript = getattr(ev, "transcript", "") or ""
             is_final = getattr(ev, "is_final", False)
