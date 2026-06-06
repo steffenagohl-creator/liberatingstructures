@@ -16,4 +16,6 @@ urlpatterns = [
     path("api/", include("catalog.urls")),
     # Fachliche Endpunkte (AP3): /api/interview/, /api/match/
     path("api/", include("matchmaker.urls")),
+    # Sprachkanäle (Stufe 1D): /api/voice/config/, /api/voice/session/
+    path("api/", include("voice.urls")),
 ]

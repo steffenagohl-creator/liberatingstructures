@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "catalog",
     "matchmaker",
+    "voice",
 ]
 
 MIDDLEWARE = [
@@ -114,3 +115,21 @@ LLM_TIMEOUT = float(os.environ.get("LLM_TIMEOUT", "60"))
 MATCHMAKER_MAX_ITERATIONS = int(os.environ.get("MATCHMAKER_MAX_ITERATIONS", "3"))
 # Zwei-Agenten-Konsolidierung (Agent A & B + prüfender Konsolidierer). Zum Sparen abschaltbar.
 MATCHMAKER_CONSOLIDATE = os.environ.get("MATCHMAKER_CONSOLIDATE", "true").lower() == "true"
+
+# --------------------------------------------------------------------------- #
+# Sprachkanäle (Stufe 1D) – provider-agnostisch, ausschließlich über ENV.
+# Fundament (Phase 1): keine Infrastruktur nötig. LiveKit-Transport + echte Provider
+# kommen in Phase 2+ (eigene LS-LiveKit-Instanz, Ports 7980/7981, UDP 40000–49999).
+# --------------------------------------------------------------------------- #
+# Vorausgewählte Souveränitätsstufe (sov | eu | us). Default: EU (empfohlen).
+VOICE_DEFAULT_TIER = os.environ.get("VOICE_DEFAULT_TIER", "eu")
+# 🔒 sov erst nutzbar, wenn der lokale Sprach-Stack (Voxtral/Piper/LLM) aktiviert ist (Phase 4).
+VOICE_SELFHOSTED_ENABLED = os.environ.get("VOICE_SELFHOSTED_ENABLED", "false").lower() == "true"
+# Erzwingt offline nutzbare Stub-Bausteine (Dev/Tests ohne Netz/Schlüssel).
+VOICE_FORCE_STUB = os.environ.get("VOICE_FORCE_STUB", "false").lower() == "true"
+# LiveKit-Transport (leer bis Phase 2 – dann eigene LS-Instanz).
+LIVEKIT_URL = os.environ.get("LIVEKIT_URL", "")
+LIVEKIT_API_KEY = os.environ.get("LIVEKIT_API_KEY", "")
+LIVEKIT_API_SECRET = os.environ.get("LIVEKIT_API_SECRET", "")
+# 🇺🇸 us-Pfad (OpenAI Realtime) – Schlüssel wird erst in Phase 5 wirklich genutzt.
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
