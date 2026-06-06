@@ -134,6 +134,21 @@ node_modules/
 npm-debug.log*
 
 # ----------------------------------------------------------
+# Frontend: Vite + React (ab 2026-06-05, ersetzt Flutter)
+# ----------------------------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.vite/
+*.local
+
+# Capacitor (Android-Build-Wrapper, später)
+android/app/build/
+android/build/
+android/.gradle/
+.capacitor/
+
+# ----------------------------------------------------------
 # Docker
 # ----------------------------------------------------------
 docker-compose.override.yml

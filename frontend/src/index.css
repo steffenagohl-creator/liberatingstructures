@@ -1,0 +1,4 @@
+/* Minimaler Rahmen — exakt aus dem Prototyp (LS-Matchmaker App.html).
+   Die gesamte weitere Gestaltung kommt aus injectTheme() + Inline-Styles der Komponenten. */
+html, body { margin: 0; height: 100%; background: #E2D6C0; overflow: hidden; }
+#root { height: 100vh; }
