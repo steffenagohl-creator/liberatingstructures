@@ -4,11 +4,13 @@
    PhoneStage (skaliert 390×844) · Onboarding · Souveränität · MorphView.
    Render passiert in main.jsx (hier nur die Komponenten + default export).
    =================================================================== */
-import { useState, useEffect, useMemo } from 'react'
-import { THEME, StatusBar, Glyph, QUESTIONS, METHODS, buildRecommendation } from './shared.jsx'
+import { useState, useEffect } from 'react'
+import { THEME, StatusBar, Glyph, QUESTIONS } from './shared.jsx'
 import { Constellation, DiagnoseCanvas, LSC } from './Diagnose.jsx'
 import { ResultString } from './Result.jsx'
 import { Button } from './ui.jsx'
+import { fetchMatch, fetchStructure } from './api/client.js'
+import { answersToDiagnose } from './api/mapping.js'
 
 // ---- PhoneStage: skaliertes Gerät auf warmem Hintergrund ----------
 function PhoneStage({ children }) {
@@ -125,51 +127,80 @@ function Sovereignty({ value, onChange, onContinue, onBack }) {
   );
 }
 
-// ---- Morph: Konstellation → 3er-String ----------------------------
-function MorphView({ answers, onDone }) {
+// ---- Morph: Konstellation → echter String (mit Lade-/Fehlerzustand) ----
+// Die Morph-Animation IST der ehrliche Ladezustand: Solange das Backend rechnet
+// (Mistral braucht Sekunden), läuft „Ich verdichte euer Lagebild …". Kommt der
+// echte Match, kollabiert die Konstellation in die Spine mit den echten Methoden.
+// Schlägt der Call fehl, erscheint ein Fehlerzustand mit „Nochmal versuchen".
+function MorphView({ answers, match, details, matchError, onDone, onRetry, onBack }) {
   const tension = (() => { const s = (answers.situation || '').toLowerCase(); return answers._tension || /frust|still|schweig|konflikt|spannung|streit|nicht weiter/.test(s); })();
   const seq = QUESTIONS.filter((q) => !q.adaptive || tension);
-  const rec = useMemo(() => buildRecommendation(answers), [answers]);
   const [stage, setStage] = useState(0);
 
+  // Sobald der echte Match da ist: kollabieren, kurz die Spine zeigen, dann weiter.
   useEffect(() => {
-    const t1 = setTimeout(() => setStage(1), 850);
-    const t2 = setTimeout(() => onDone(), 3000);
+    if (matchError || !match) return;
+    const t1 = setTimeout(() => setStage(1), 400);
+    const t2 = setTimeout(() => onDone(), 2400);
     return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, []);
+  }, [match, matchError]);
 
   const { CW, CH, cx } = LSC;
-  const spineY = [CH * 0.2, CH * 0.5, CH * 0.8];
-  const spineX = [cx - 6, cx + 14, cx - 4];
+  const steps = match?.string || [];
+  const n = steps.length || 3;
+  const spineY = steps.map((_, i) => CH * (0.2 + 0.6 * (n > 1 ? i / (n - 1) : 0.5)));
+  const spineX = steps.map((_, i) => cx + (i % 2 ? 14 : -6));
+  const spinePath = spineX.map((x, i) => i === 0
+    ? `M${x},${spineY[i]}`
+    : `Q${spineX[i - 1] + (i % 2 ? 26 : -26)},${(spineY[i - 1] + spineY[i]) / 2} ${x},${spineY[i]}`).join(' ');
+
+  // --- Fehlerzustand (ehrliches Produkt: das LLM kann fehlschlagen) ---
+  if (matchError) {
+    return (
+      <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
+        <StatusBar />
+        <div role="alert" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 32px', textAlign: 'center' }}>
+          <div style={{ fontSize: 34, marginBottom: 12 }} aria-hidden="true">🛠️</div>
+          <h2 className="ls-serif" style={{ margin: '0 0 8px', fontSize: 22, fontWeight: 500, color: 'var(--ink)' }}>Der Vorschlag konnte nicht erstellt werden</h2>
+          <p style={{ margin: '0 0 22px', fontSize: 14, lineHeight: 1.5, color: 'var(--muted)' }}>
+            {matchError.status === 0 ? 'Keine Verbindung zum Server.' : 'Beim Erstellen ist etwas schiefgelaufen.'} Bitte versuche es noch einmal.</p>
+          <Button variant="primary" ariaLabel="Vorschlag nochmal versuchen" onClick={onRetry} style={{ width: '100%', maxWidth: 260, borderRadius: 15, padding: '15px' }}>Nochmal versuchen</Button>
+          <Button variant="ghost" ariaLabel="Zurück zur Diagnose" onClick={onBack} style={{ width: '100%', maxWidth: 260, marginTop: 9, borderRadius: 15, padding: '15px' }}>Zurück</Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
       <StatusBar />
       <div style={{ position: 'relative', flex: '0 0 auto' }}>
         <Constellation seq={seq} answers={answers} filled={seq.length} collapse={stage >= 1} />
-        {/* String-Spine erscheint */}
+        {/* String-Spine erscheint mit den ECHTEN Methoden aus dem Match */}
         <div style={{ position: 'absolute', inset: 0, opacity: stage >= 1 ? 1 : 0, transition: 'opacity .6s .2s', pointerEvents: 'none' }}>
-          <svg width={CW} height={CH} style={{ position: 'absolute', inset: 0 }}>
-            <path d={`M${spineX[0]},${spineY[0]} Q${spineX[0] + 26},${(spineY[0] + spineY[1]) / 2} ${spineX[1]},${spineY[1]} Q${spineX[1] - 26},${(spineY[1] + spineY[2]) / 2} ${spineX[2]},${spineY[2]}`}
-              fill="none" stroke="var(--amber)" strokeWidth="2" strokeLinecap="round" />
+          <svg width={CW} height={CH} style={{ position: 'absolute', inset: 0 }} aria-hidden="true">
+            <path d={spinePath} fill="none" stroke="var(--amber)" strokeWidth="2" strokeLinecap="round" />
           </svg>
-          {rec.string.map((name, i) => (
-            <div key={name} style={{ position: 'absolute', left: spineX[i], top: spineY[i], transform: `translate(-50%,-50%) scale(${stage >= 1 ? 1 : .6})`,
-              transition: `transform .5s ${0.25 + i * 0.13}s cubic-bezier(.5,1.5,.4,1)`, display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ background: 'var(--surface)', border: '1.5px solid var(--amber)', borderRadius: 14, padding: 5, boxShadow: '0 4px 14px rgba(184,88,39,.18)' }}>
-                <Glyph name={name} size={38} tile={false} />
-              </span>
-              <span style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 9, padding: '4px 9px', whiteSpace: 'nowrap' }}>
-                <span style={{ fontSize: 9.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.05em', color: 'var(--terra)', display: 'block' }}>{METHODS[name].role}</span>
-                <span className="ls-serif" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{name}</span>
-              </span>
-            </div>
-          ))}
+          {steps.map((step, i) => {
+            const struct = details?.[step.slug];
+            return (
+              <div key={step.slug + i} style={{ position: 'absolute', left: spineX[i], top: spineY[i], transform: `translate(-50%,-50%) scale(${stage >= 1 ? 1 : .6})`,
+                transition: `transform .5s ${0.25 + i * 0.13}s cubic-bezier(.5,1.5,.4,1)`, display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ background: 'var(--surface)', border: '1.5px solid var(--amber)', borderRadius: 14, padding: 5, boxShadow: '0 4px 14px rgba(184,88,39,.18)' }}>
+                  <Glyph iconFile={struct?.icon} size={38} tile={false} />
+                </span>
+                <span style={{ background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 9, padding: '4px 9px', whiteSpace: 'nowrap' }}>
+                  <span style={{ fontSize: 9.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.05em', color: 'var(--terra)', display: 'block' }}>{step.role}</span>
+                  <span className="ls-serif" style={{ fontSize: 14, fontWeight: 500, color: 'var(--ink)' }}>{struct?.name || step.slug}</span>
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 30px', textAlign: 'center' }}>
-        <div style={{ display: 'flex', gap: 5, marginBottom: 14 }}>
+      <div aria-live="polite" style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 30px', textAlign: 'center' }}>
+        <div style={{ display: 'flex', gap: 5, marginBottom: 14 }} aria-hidden="true">
           {[0, 1, 2].map((i) => <span key={i} style={{ width: 7, height: 7, borderRadius: 5, background: 'var(--terra)', animation: `lsPulse 1s ${i * 0.18}s infinite` }} />)}
         </div>
         <h2 className="ls-serif" style={{ margin: 0, fontSize: 22, fontWeight: 500, color: 'var(--ink)', lineHeight: 1.2 }}>
@@ -190,20 +221,61 @@ function initialPhase() {
   return 'onboarding';
 }
 
+// Demo-Antworten für den Dev-Deep-Link (?phase=morph|result) — lädt einen echten Match,
+// damit der Ergebnis-Screen ohne manuellen Durchlauf geprüft werden kann (nur im Dev-Modus).
+const DEMO_ANSWERS = {
+  situation: 'Frust nach dem Sprint, in der Retro sagt keiner etwas', ziel: 'Alle reden ehrlich',
+  zweck: 'Offenlegen', sicherheit: 'Angespannt / heikel', groesse: '5–9', zeit: '60 Min',
+  setting: 'Präsenz', _tension: true,
+};
+
 export default function App() {
   const [phase, setPhase] = useState(initialPhase);
   const [sov, setSov] = useState('eu');
   const [answers, setAnswers] = useState({});
+  const [match, setMatch] = useState(null);
+  const [details, setDetails] = useState({});
+  const [matchError, setMatchError] = useState(null);
+  const [running, setRunning] = useState(false);
+
+  // Diagnose abgeschlossen → echten Match laden (läuft, während die Morph-Animation spielt).
+  // Danach für jeden Slug die vollen Struktur-Details (Name, Badges, Anleitung, Icon).
+  async function runMatch(a) {
+    setAnswers(a); setMatch(null); setDetails({}); setMatchError(null); setRunning(true); setPhase('morph');
+    try {
+      const m = await fetchMatch(answersToDiagnose(a));
+      const slugs = [...new Set((m.string || []).map((s) => s.slug))];
+      const structs = await Promise.all(slugs.map((s) => fetchStructure(s, 'de').catch(() => null)));
+      const byslug = {};
+      structs.forEach((s) => { if (s) byslug[s.slug] = s; });
+      setDetails(byslug); setMatch(m);
+    } catch (e) {
+      setMatchError(e);
+    } finally {
+      setRunning(false);
+    }
+  }
+
+  // Dev-Komfort: Deep-Link direkt auf morph/result lädt automatisch eine Demo.
+  useEffect(() => {
+    if (import.meta.env.DEV && (phase === 'morph' || phase === 'result') && !match && !matchError && !running) {
+      runMatch(DEMO_ANSWERS);
+      setPhase('morph');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   let screen;
   if (phase === 'onboarding') screen = <Onboarding onStart={() => setPhase('sov')} />;
   else if (phase === 'sov') screen = <Sovereignty value={sov} onChange={setSov} onBack={() => setPhase('onboarding')} onContinue={() => setPhase('diagnose')} />;
-  else if (phase === 'diagnose') screen = <DiagnoseCanvas sovereignty={sov} onBack={() => setPhase('sov')} onComplete={(a) => { setAnswers(a); setPhase('morph'); }} />;
-  else if (phase === 'morph') screen = <MorphView answers={answers} onDone={() => setPhase('result')} />;
+  else if (phase === 'diagnose') screen = <DiagnoseCanvas sovereignty={sov} onBack={() => setPhase('sov')} onComplete={runMatch} />;
+  else if (phase === 'morph') screen = <MorphView answers={answers} match={match} details={details} matchError={matchError}
+    onDone={() => setPhase('result')} onRetry={() => runMatch(answers)} onBack={() => setPhase('diagnose')} />;
   else screen = (
     <div className="ls-app" style={{ height: '100%', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
       <StatusBar />
-      <ResultString answers={answers} accent="var(--sage)" onRestart={() => { setAnswers({}); setPhase('onboarding'); }} />
+      <ResultString match={match} details={details}
+        onRestart={() => { setAnswers({}); setMatch(null); setDetails({}); setMatchError(null); setPhase('onboarding'); }} />
     </div>
   );
 

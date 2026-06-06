@@ -193,66 +193,10 @@ export const METHODS = {
   },
 };
 
-// Mappt LS-Methode -> Anleitungssektionen (Ebene 2). Voll nur für 1-2-4-All.
-export const GUIDES = {
-  '1-2-4-All': [
-    { h: 'Was wird möglich', b: 'Sofort und gleichzeitig alle einbeziehen, unabhängig von der Gruppengröße. Stille Stimmen werden hörbar, ohne dass Lautstärke oder Hierarchie das Ergebnis bestimmen.' },
-    { h: 'Einladung', b: '„Welche Herausforderung siehst du — und welche Möglichkeit erkennst du darin?"' },
-    { h: 'Ablauf & Timing', steps: [
-      ['1 · Allein', '1 Min', 'Still für sich die Frage notieren.'],
-      ['2 · Zu zweit', '2 Min', 'Ideen mit einer Partnerin austauschen.'],
-      ['4 · Zu viert', '4 Min', 'In Vierergruppen Gemeinsames und Unterschiede sammeln.'],
-      ['All · Plenum', '5 Min', '„Was war für eure Gruppe wichtig?" — Highlights teilen.'],
-    ]},
-    { h: 'Tipps & Fallstricke', list: ['Zeiten knapp halten — der Rhythmus erzeugt Energie.', 'Immer mit Einzelarbeit beginnen, nie direkt im Plenum.', 'Eine präzise Frage entscheidet über die Qualität.'] },
-    { h: 'Online durchführen', b: 'Hauptraum für die Einzelphase, dann Breakout-Räume für die 2er- und 4er-Phase. Gemeinsames Whiteboard für die Highlights.' },
-  ],
-};
-
-// ---- 5. EMPFEHLUNGS-LOGIK (MOCK) ---------------------------------
-// Baut aus den Antworten einen 3-teiligen "String": öffnen→vertiefen→schließen.
-// HINWEIS: Schein-Logik aus dem Prototyp. Wird in Stufe 3 durch das echte
-// Backend (/api/match/) ersetzt — vorerst bleibt sie für die Mock-Ansicht.
-export function buildRecommendation(a) {
-  const safety = a.sicherheit;
-  const zweck = a.zweck;
-  const ziel = a.ziel;
-
-  // Öffner — abhängig von Sicherheit & Zweck
-  let opener = '1-2-4-All';
-  if (safety === 'Angespannt / heikel') opener = 'Conversation Café';
-  else if (zweck === 'Verbinden') opener = 'Impromptu Networking';
-
-  // Vertiefung — abhängig vom Schwerpunkt
-  let middle = '9 Whys';
-  if (zweck === 'Entscheiden') middle = 'Min Specs';
-  else if (zweck === 'Verbinden') middle = 'What I Need From You';
-
-  // Abschluss — Handlungsfähigkeit
-  let closer = '15% Solutions';
-  if (zweck === 'Entscheiden' && a.groesse === '20+') closer = '25/10 Crowd Sourcing';
-
-  const string = [opener, middle, closer];
-
-  // Begründungen pro Schritt, mit den echten Antworten verwoben
-  const rzn = {
-    [opener]: safety === 'Angespannt / heikel'
-      ? 'Öffnet besonders behutsam — bei angespannter Stimmung schützt die Struktur und gibt jeder Stimme sicheren Raum.'
-      : 'Öffnet sicher und holt alle Stimmen ab, bevor es um Heikles geht — ideal bei vorsichtiger Stimmung.',
-    [middle]: zweck === 'Verbinden'
-      ? 'Vertieft die Beziehungen — macht gegenseitige Erwartungen explizit, statt sie im Unausgesprochenen zu lassen.'
-      : zweck === 'Entscheiden'
-        ? 'Vertieft Richtung Klarheit — trennt das wirklich Nötige vom nur scheinbar Nötigen.'
-        : 'Vertieft — bringt die Frustration auf die wahre Ursache, statt an der Oberfläche zu bleiben.',
-    [closer]: 'Schließt — verwandelt Einsicht in konkrete nächste Schritte und ein Gefühl der Handlungsfähigkeit.',
-  };
-
-  const arc = safety === 'Angespannt / heikel'
-    ? `Weil die Stimmung angespannt ist, öffnet der Vorschlag besonders geschützt, vertieft erst dann die Ursachen und schließt mit kleinen, machbaren Schritten — ein Bogen, der Sicherheit vor Tempo stellt.`
-    : `Der Vorschlag öffnet zuerst sicher in kleinen Einheiten, vertieft dann behutsam die Ursachen und schließt mit konkreten nächsten Schritten — ein vollständiger Spannungsbogen, der zu „${ziel || 'eurem Ziel'}" passt.`;
-
-  return { string, rzn, arc };
-}
+// ---- 5. (entfällt) EMPFEHLUNGS-LOGIK ------------------------------
+// Die Prototyp-Schein-Logik (buildRecommendation) + Mock-GUIDES wurden in Stufe 3
+// durch das echte Backend ersetzt: /api/match/ liefert den begründeten String,
+// /api/structures/<slug>/ die volle Anleitung. Siehe api/client.js + Result.jsx.
 
 // ---- 6. GETEILTE UI-BAUSTEINE ------------------------------------
 // Schlanke „App"-Statusleiste (kein klobiger Bezel — die UI zählt).
