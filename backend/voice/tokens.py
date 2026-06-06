@@ -94,13 +94,75 @@ class StubTokenSigner(TokenSigner):
         return f"stub.{payload}"
 
 
+class LiveKitTokenSigner(TokenSigner):
+    """Echtes LiveKit-Zugangstoken (Phase 2).
+
+    Ein LiveKit-Token ist ein **signiertes JWT** (HS256) mit „video"-Grants. Wir nutzen
+    direkt ``PyJWT`` (statt einer schweren LiveKit-Lib) – das hält das Backend schlank.
+    ``canPublishData`` ist bewusst erlaubt: darüber schickt der Agent später die Diagnose-
+    Updates ans Frontend (das „Spinnennetz"); ``canPublish`` deckt Audio **und Video** ab.
+    """
+
+    name = "livekit"
+    is_stub = False
+
+    def __init__(self, api_key: str, api_secret: str, ttl_seconds: int = 3600):
+        if not api_key or not api_secret:
+            raise VoiceError("LiveKit-Token braucht LIVEKIT_API_KEY und LIVEKIT_API_SECRET.")
+        self.api_key = api_key
+        self.api_secret = api_secret
+        self.ttl_seconds = ttl_seconds
+
+    def create_token(
+        self,
+        *,
+        room: str,
+        identity: str,
+        name: str | None = None,
+        metadata: str | None = None,
+        can_publish: bool = True,
+        can_subscribe: bool = True,
+    ) -> str:
+        import time
+
+        import jwt  # PyJWT
+
+        now = int(time.time())
+        claims: dict = {
+            "iss": self.api_key,
+            "sub": identity,
+            "nbf": now,
+            "exp": now + self.ttl_seconds,
+            "video": {
+                "room": room,
+                "roomJoin": True,
+                "canPublish": can_publish,
+                "canSubscribe": can_subscribe,
+                "canPublishData": True,
+            },
+        }
+        if name:
+            claims["name"] = name
+        if metadata:
+            claims["metadata"] = metadata
+        return jwt.encode(claims, self.api_secret, algorithm="HS256")
+
+
 def get_token_signer() -> TokenSigner:
     """Wählt den Signer rein über die Konfiguration.
 
-    Phase 1: immer der Stub. Phase 2 ergänzt hier den echten Signer, sobald
-    ``LIVEKIT_API_KEY``/``LIVEKIT_API_SECRET`` gesetzt sind und die Lib vorhanden ist.
+    Echter LiveKit-Signer, sobald ``LIVEKIT_API_KEY``/``LIVEKIT_API_SECRET`` gesetzt sind
+    **und** ``PyJWT`` vorhanden ist; sonst der netzfreie Stub (Dev/Tests ohne Infra).
     """
-    # TODO(Phase 2): echten LiveKitTokenSigner zurückgeben, wenn Schlüssel + Lib vorhanden.
+    api_key = getattr(settings, "LIVEKIT_API_KEY", "")
+    api_secret = getattr(settings, "LIVEKIT_API_SECRET", "")
+    if api_key and api_secret:
+        try:
+            import jwt  # noqa: F401  (nur Verfügbarkeit prüfen)
+        except ImportError:
+            return StubTokenSigner()
+        ttl = int(getattr(settings, "LIVEKIT_TOKEN_TTL", 3600))
+        return LiveKitTokenSigner(api_key, api_secret, ttl_seconds=ttl)
     return StubTokenSigner()
 
 

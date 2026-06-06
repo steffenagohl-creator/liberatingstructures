@@ -1,0 +1,28 @@
+# LS-LiveKit-Modul — in sich geschlossen (Master-Plan: container-modular).
+#
+# START NUR NACH FREIGABE durch Steffen (öffentliche Ports + Firewall, root nötig):
+#   docker compose -f infra/livekit/docker-compose.yml up -d
+#
+# Secrets/Server-spezifische Werte kommen aus ../../.env (siehe .env.example) — hier wird
+# NICHTS hartkodiert. Egress (Video-AUFZEICHNUNG) ist bewusst NICHT enthalten; Live-Video
+# läuft ohne Egress über denselben Transport.
+
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    container_name: lsm_livekit
+    restart: unless-stopped
+    # WebRTC braucht den UDP-Medienbereich direkt am Host (kein Docker-NAT davor).
+    network_mode: host
+    env_file:
+      - ../../.env
+    environment:
+      # API-Schlüssel als "KEY: SECRET" (LiveKit-Format). Werte aus der .env.
+      - "LIVEKIT_KEYS=${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}"
+    volumes:
+      - ./livekit-config.yaml:/etc/livekit.yaml:ro
+      # Für TURN später: echte Zertifikate read-only mounten (Pfad aus der .env), NICHT im Repo:
+      # - ${LIVEKIT_CERT_DIR:-/pfad/zu/certs}:/etc/livekit/certs:ro
+    command: >
+      --config /etc/livekit.yaml
+      --node-ip ${LIVEKIT_NODE_IP:-127.0.0.1}

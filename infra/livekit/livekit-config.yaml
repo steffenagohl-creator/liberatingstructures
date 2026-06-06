@@ -1,0 +1,32 @@
+# LS-LiveKit — eigener WebRTC-Transport für die Sprachkanäle (Stufe 1D, Phase 2).
+#
+# In sich geschlossenes Modul (Master-Plan: container-modular). GENERISCH & ohne Secrets:
+# die API-Schlüssel kommen über LIVEKIT_KEYS (ENV) in der compose, NICHT in diese Datei.
+#
+# Eigener Port-Block, kollisionsfrei zu einer evtl. zweiten LiveKit-Instanz auf demselben
+# Host (siehe Unterplan 1D / Port-Recherche). Deckt Audio UND späteres Video ab.
+
+port: 7980                    # Signaling/HTTP (LS-Block; Standard wäre 7880)
+bind_addresses:
+  - "0.0.0.0"
+
+rtc:
+  tcp_port: 7981              # RTC über TCP-Fallback
+  port_range_start: 40000     # UDP-Medienbereich (Audio + Video)
+  port_range_end: 49999
+  use_external_ip: true
+
+# TURN hilft bei restriktiven NATs. Domain + Zertifikat sind DEPLOYMENT-spezifisch und
+# gehören NICHT ins öffentliche Repo. Daher hier standardmäßig AUS — erst einschalten,
+# sobald eine eigene Subdomain + ein Zertifikat existieren (siehe README, Schritt „TURN").
+turn:
+  enabled: false
+  # domain: voice.<deine-domain>      # TODO: eigene Subdomain (mit Steffen festlegen)
+  # udp_port: 3479
+  # tls_port: 5350
+  # cert_file: /etc/livekit/certs/fullchain.pem   # read-only gemountet, NICHT im Repo
+  # key_file: /etc/livekit/certs/privkey.pem
+
+# Sinnvolle Defaults für eine Geschenk-App; bei Bedarf später feinjustieren.
+logging:
+  level: info
