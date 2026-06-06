@@ -184,6 +184,7 @@ class LSCoach(Agent):
         self._last_guidance = None  # zuletzt gesetzte Coach-Guidance (vermeidet unnötige Updates)
         self._ready_turns = 0       # wie oft das Backend „ready" meldete (Anti-Hänger)
         self._seen: set[str] = set()  # je erkannte Dimensionen — KLEBRIG (gegen Backend-Flackern)
+        self._diag: dict = {}         # gemergte Diagnose-WERTE (klebrig; neue Werte überschreiben)
         self._core_turns = 0        # Äußerungen, seit die Kern-4 vollständig sind (Diagnose)
         self._phase = "ERHEBUNG"    # aktuelle Verhaltensphase (verhindert doppelte Instruktions-Updates)
         self._awaiting_confirmation = False  # True = zusammengefasst, wartet auf das ausdrückliche „Go"
@@ -233,14 +234,18 @@ class LSCoach(Agent):
         except Exception as exc:
             logger.error("Interview-Backend nicht erreichbar: %s", exc)
             return
+        # KLEBRIG + KORREKTUR-FEST mergen: einmal erkannte Werte bleiben (das Backend lässt Felder
+        # zwischendurch wegfallen → sonst flackert die Spinne, v. a. die psychologische Sicherheit).
+        # NEUE, nicht-leere Werte ÜBERSCHREIBEN den alten — so gewinnen echte Korrekturen weiterhin.
+        for k, v in (state.diagnose or {}).items():
+            if v not in (None, "", [], {}):
+                self._diag[k] = v
+        diagnose = self._diag
+        # Anzeige (Spinne) UND Gehirn-Gate aus dem gemergten Stand speisen (keine Flacker-Verluste).
+        # state ist brain.state → so nutzt auch der spätere Match denselben gemergten Stand.
+        state.diagnose = dict(self._diag)
         await _publish_diagnose(self._room, state, self._brain.opening)
-
-        # KLEBRIG aufsammeln: einmal erkannt bleibt erkannt (das Backend lässt Felder — v. a.
-        # ``zweck`` — zwischendurch wieder wegfallen; ohne dies würde die Spinne nie voll). Das
-        # betrifft NUR das Timing (ist genug da?), NIE die Werte — die kommen stets aus dem
-        # aktuellen Backend-Stand, Korrekturen gewinnen also immer.
-        diagnose = state.diagnose or {}
-        self._seen.update(k for k in SPINNE_KEYS if diagnose.get(k))
+        self._seen = set(k for k in SPINNE_KEYS if self._diag.get(k))
         core_voll = all(k in self._seen for k in CORE_KEYS)
         spinne_voll = all(k in self._seen for k in SPINNE_KEYS)
         if state.ready:
