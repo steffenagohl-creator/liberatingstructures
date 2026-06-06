@@ -320,6 +320,14 @@ export default function App() {
       const h = await startVoiceSession({
         sovereignty: sov,
         onStatus: setVoiceStatus,
+        // Der Agent meldet „ich rechne jetzt den Vorschlag" → SOFORT in die Morph-Ansicht mit
+        // laufendem Wartespiel wechseln (überbrückt die 1–2 Min Verdichtung). Ohne dieses Signal
+        // erschien das Spiel nur kurz beim Eintreffen des Ergebnisses.
+        onThinking: () => {
+          if (resultHandledRef.current) return;
+          setAnswers(voiceAnswersRef.current);
+          setMatch(null); setDetails({}); setMatchError(null); setRunning(true); setPhase('morph');
+        },
         onDiagnose: (d) => {
           const a = diagnoseToAnswers(d?.diagnose || {});
           if (!a.situation && d?.situation) a.situation = d.situation;  // Mittelpunkt beschriften

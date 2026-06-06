@@ -316,6 +316,15 @@ class LSCoach(Agent):
         self._done = True
         # PHASE 2 — Verdichtung: Verhalten umschalten (keine Fragen mehr), dann ~60 s überbrücken.
         await self._set_phase("VERDICHTUNG", PHASE_VERDICHTUNG)
+        # Frontend-Signal „ich rechne jetzt" → dort startet das Wartespiel und überbrückt die
+        # 1–2 Min Verdichtung (ohne dieses Signal blitzte es nur beim Ergebnis kurz auf).
+        try:
+            await self._room.local_participant.publish_data(
+                json.dumps({"type": "status", "status": "matching"}).encode("utf-8"),
+                reliable=True, topic="status",
+            )
+        except Exception as exc:  # pragma: no cover - reine Robustheit
+            logger.warning("Status matching konnte nicht gesendet werden: %s", exc)
         await self._speak(
             "Wunderbar, danke dir — einen kleinen Moment, "
             "ich stelle euch jetzt einen passenden Vorschlag zusammen."

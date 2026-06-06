@@ -19,9 +19,10 @@ const API_BASE = import.meta.env.VITE_API_BASE || '/api';
  * @param {(d:object)=>void} [opts.onDiagnose]  Diagnose-Update vom Agenten
  * @param {(r:object)=>void} [opts.onResult]    fertiger Match-String vom Agenten
  * @param {(s:string)=>void} [opts.onStatus]    Status: 'connecting'|'live'|'closed'|'error'
+ * @param {(m:object)=>void} [opts.onThinking]  Agent rechnet den Vorschlag (Wartespiel anzeigen)
  * @returns {Promise<{room: Room, stop: ()=>Promise<void>, session: object}>}
  */
-export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onStatus } = {}) {
+export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onStatus, onThinking } = {}) {
   const setStatus = (s) => { try { onStatus && onStatus(s); } catch { /* ignore */ } };
   setStatus('connecting');
 
@@ -56,6 +57,7 @@ export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onS
     let msg;
     try { msg = JSON.parse(new TextDecoder().decode(payload)); } catch { return; }
     if (topic === 'diagnose' || msg?.type === 'diagnose') onDiagnose && onDiagnose(msg);
+    else if (topic === 'status' || msg?.type === 'status') onThinking && onThinking(msg);
     else if (topic === 'result' || msg?.type === 'result') onResult && onResult(msg.result || msg);
   });
   room.on(RoomEvent.Disconnected, () => { cleanupAudio(); setStatus('closed'); });
