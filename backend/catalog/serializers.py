@@ -72,6 +72,10 @@ class StructureSerializer(serializers.Serializer):
     attribution = serializers.SerializerMethodField(
         help_text="Namensnennung + Lizenz in der gewählten Sprache.",
     )
+    icon = serializers.CharField(
+        help_text="Dateiname des offiziellen LS-Icons (in 'LS ICONS SVG/'), semantisch zugeordnet. "
+                  "Sprachneutral. Zuordnung siehe data/icon_map.json.",
+    )
     icon_alt = serializers.SerializerMethodField(
         help_text="Alt-Text fürs LS-Icon (Barrierefreiheit) in der gewählten Sprache.",
     )

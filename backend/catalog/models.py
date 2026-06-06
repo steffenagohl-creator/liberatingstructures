@@ -101,6 +101,12 @@ class Structure(models.Model):
         help_text="Namensnennung + Lizenz, zweisprachig {\"de\": …, \"en\": …}.",
     )
 
+    icon = models.CharField(
+        max_length=80, blank=True, default="",
+        help_text="Dateiname des offiziellen LS-Icons (in 'LS ICONS SVG/'), semantisch je Struktur "
+                  "zugeordnet. WICHTIG: Die Dateinummer entspricht NICHT der structure_id — die "
+                  "eindeutige Zuordnung steht in data/icon_map.json und wird hier importiert.",
+    )
     icon_alt = models.JSONField(
         default=dict, blank=True,
         help_text="Alt-Text für das LS-Icon, zweisprachig {\"de\": …, \"en\": …} "

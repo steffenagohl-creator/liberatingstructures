@@ -29,6 +29,13 @@ class Command(BaseCommand):
         if objektiv_pfad.exists():
             objectives = json.loads(objektiv_pfad.read_text(encoding="utf-8")).get("objectives", {})
 
+        # Icon-Zuordnung (slug -> SVG-Dateiname) aus data/icon_map.json.
+        # WICHTIG: Die Dateinummern entsprechen NICHT der structure_id — daher diese Tabelle.
+        icon_pfad = settings.DATA_DIR / "icon_map.json"
+        icon_map = {}
+        if icon_pfad.exists():
+            icon_map = json.loads(icon_pfad.read_text(encoding="utf-8")).get("icons", {})
+
         neu = aktualisiert = 0
         for s in strukturen:
             self._pruefe(s)
@@ -61,6 +68,7 @@ class Command(BaseCommand):
                     "design_elements": s["design_elements"],
                     "description_origin": s.get("description_origin", "uebernommen"),
                     "attribution": s.get("attribution") or {},
+                    "icon": icon_map.get(s["slug"], ""),
                     "icon_alt": s.get("icon_alt") or {},
                     "embodied_principles": s.get("embodied_principles", []),
                     "guide": s.get("guide", {}),
