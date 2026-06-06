@@ -200,18 +200,10 @@ export const METHODS = {
 
 // ---- 6. GETEILTE UI-BAUSTEINE ------------------------------------
 // Schlanke „App"-Statusleiste (kein klobiger Bezel — die UI zählt).
-export function StatusBar({ tone = 'var(--ink)' }) {
-  return (
-    <div style={{ height: 44, flex: '0 0 auto', display: 'flex', alignItems: 'center',
-      justifyContent: 'space-between', padding: '0 22px', fontFamily: THEME.sans,
-      fontSize: 13, fontWeight: 600, color: tone, letterSpacing: .2 }}>
-      <span style={{ fontVariantNumeric: 'tabular-nums' }}>9:41</span>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-        <svg width="17" height="11" viewBox="0 0 17 11" fill={tone}><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="4.5" width="3" height="6.5" rx="1"/><rect x="9" y="2" width="3" height="9" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1" opacity=".4"/></svg>
-        <svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x=".5" y=".5" width="18" height="10" rx="2.5" stroke={tone} opacity=".5"/><rect x="2" y="2" width="14" height="7" rx="1.2" fill={tone}/><rect x="20" y="3.5" width="1.5" height="4" rx="1" fill={tone} opacity=".5"/></svg>
-      </div>
-    </div>
-  );
+// Früher eine Fake-iOS-Statusleiste (Uhr „9:41" + Akku) — für die Web-App falsch und entfernt
+// (Steffen 2026-06-06). Bleibt als schlanker Kopf-Abstand, damit die Screens ihr Spacing behalten.
+export function StatusBar() {
+  return <div style={{ height: 14, flex: '0 0 auto' }} aria-hidden="true" />;
 }
 
 // Echtes LS-Icon in getöntem Tile.

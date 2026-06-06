@@ -12,23 +12,17 @@ import { Button } from './ui.jsx'
 import { fetchMatch, fetchStructure } from './api/client.js'
 import { answersToDiagnose } from './api/mapping.js'
 
-// ---- PhoneStage: skaliertes Gerät auf warmem Hintergrund ----------
+// ---- Stage: responsiver, raumfüllender Container (kein Fake-Handy mehr) ----
+// Web nutzt die volle Höhe; der Inhalt liegt in einer angenehm breiten Spalte auf
+// warmem Hintergrund (auf dem Handy randlos, am Desktop zentrierte App-Spalte).
+// Der frühere 390×844-Geräterahmen + die Fake-Statusleiste sind entfernt (Steffen 2026-06-06).
 function PhoneStage({ children }) {
-  const [scale, setScale] = useState(1);
-  useEffect(() => {
-    const f = () => setScale(Math.min(window.innerWidth / 408, window.innerHeight / 868, 1));
-    f(); window.addEventListener('resize', f); return () => window.removeEventListener('resize', f);
-  }, []);
   return (
     <div style={{ position: 'fixed', inset: 0, display: 'grid', placeItems: 'center', overflow: 'hidden',
       background: 'radial-gradient(120% 90% at 50% 0%, #F3E7D4 0%, #EAE0CE 55%, #E2D6C0 100%)' }}>
-      <div style={{ width: 390, height: 844, transform: `scale(${scale})`, position: 'relative',
-        borderRadius: 48, background: '#000', padding: 5, boxShadow: '0 40px 90px rgba(70,45,20,.32), 0 6px 20px rgba(70,45,20,.2)' }}>
-        <div style={{ width: '100%', height: '100%', borderRadius: 43, overflow: 'hidden', position: 'relative', background: 'var(--bg)' }}>
-          {children}
-          <div style={{ position: 'absolute', bottom: 7, left: '50%', transform: 'translateX(-50%)', width: 130, height: 5,
-            borderRadius: 3, background: 'rgba(38,34,28,.28)', zIndex: 50, pointerEvents: 'none' }} />
-        </div>
+      <div style={{ width: '100%', maxWidth: 720, height: '100dvh', position: 'relative',
+        background: 'var(--bg)', overflow: 'hidden', boxShadow: '0 24px 70px rgba(70,45,20,.16)' }}>
+        {children}
       </div>
     </div>
   );
