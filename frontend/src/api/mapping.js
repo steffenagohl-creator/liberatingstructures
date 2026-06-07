@@ -18,16 +18,16 @@
    - setting       →  setting
    =================================================================== */
 
-// Prototyp-„Schwerpunkt" (5 Werte) → Backend purpose_tags (7 Werte).
-// Brücke: 'Entscheiden' hat kein eigenes Tag → 'strategie' (Strategie/Richtung
-// entwickeln) ist am nächsten; 'Verbinden' → 'helfen' (gegenseitig helfen /
-// Beziehung stärken). Bewusst grob — der Prototyp kennt diese Feinheit nicht.
+// „Schwerpunkt" → Backend purpose_tags. Seit 2026-06-07 zeigen die Chips die echten 6
+// offiziellen Kategorien (gleiche Wörter wie das Ergebnis), daher ist die Brücke jetzt
+// eine direkte 1:1-Zuordnung Label→Slug (7. Tag 'solo' ist app-intern, keine eigene Chip-Wahl).
 const ZWECK = {
   'Offenlegen': 'offenlegen',
+  'Teilen': 'teilen',
   'Analysieren': 'analysieren',
-  'Entscheiden': 'strategie',
+  'Strategie': 'strategie',
+  'Helfen': 'helfen',
   'Planen': 'planen',
-  'Verbinden': 'helfen',
 };
 
 // Prototyp-Sicherheit → psychologische_sicherheit. 'Weiß ich nicht' → weglassen

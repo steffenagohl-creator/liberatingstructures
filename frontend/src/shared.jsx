@@ -24,6 +24,29 @@ export const THEME = {
   sans:    "'Hanken Grotesk Variable', system-ui, -apple-system, sans-serif",
 };
 
+// Offizielle LS-Kategorie-Farben (Zweck/Schwerpunkt/purpose) — die EINE Quelle der Wahrheit
+// liegt im Backend (catalog/constants.py → PURPOSE_COLORS); dies ist der gespiegelte
+// Frontend-Wert, von ERGEBNIS und Schwerpunkt-CHIPS gemeinsam genutzt (keine Doppelung).
+// Herkunft: liberatingstructures.de/matchmaker/. Doku: Wissen/farbpalette.md. Helle Pastelltöne
+// als Fläche + dunkle Schrift (var(--ink)) = lesbarer Kontrast (Barrierefrei-Leitprinzip).
+export const PURPOSE_COLORS = {
+  offenlegen: '#cddff0', teilen: '#eeb6b6', analysieren: '#d8e5d4',
+  strategie: '#cfb8d1', helfen: '#fff4d1', planen: '#fdd497', solo: '#e7e2d6',
+};
+
+// Die 6 Schwerpunkt-Labels → offizielle Kategorie-Farbe. Labels sind 1:1 die offiziellen
+// Kategorien (gleiche Wörter wie das Ergebnis-Badge). So sieht der Nutzer beim AUSWÄHLEN
+// dieselbe Farbe wie später am Struktur-Badge im Ergebnis → er prägt sich „Farbe = Kategorie"
+// ein und erkennt sofort, falls am Ende etwas nicht passt.
+export const ZWECK_LABEL_COLOR = {
+  'Offenlegen': PURPOSE_COLORS.offenlegen,
+  'Teilen': PURPOSE_COLORS.teilen,
+  'Analysieren': PURPOSE_COLORS.analysieren,
+  'Strategie': PURPOSE_COLORS.strategie,
+  'Helfen': PURPOSE_COLORS.helfen,
+  'Planen': PURPOSE_COLORS.planen,
+};
+
 // Einmaliges Einspielen von CSS-Variablen + Keyframes.
 // (Die Fonts werden in main.jsx lokal importiert — daher KEIN Google-Fonts-<link> mehr.)
 export function injectTheme() {
@@ -88,13 +111,18 @@ export const QUESTIONS = [
     q: 'Worauf liegt der Schwerpunkt?',
     hint: 'Ein Schritt führt zum nächsten — wir wählen den Einstieg.',
     kind: 'single',
-    options: ['Offenlegen', 'Analysieren', 'Entscheiden', 'Planen', 'Verbinden'],
+    // Die echten 6 offiziellen Zweck-Kategorien (gleiche Wörter & Farben wie das Ergebnis-Badge,
+    // s. PURPOSE_COLORS). Früher hatte der Prototyp nur 5 und nutzte Ersatzwörter
+    // ('Entscheiden'→Strategie, 'Verbinden'→Helfen) und ohne 'Teilen' — dadurch fehlte das gelbe
+    // „Helfen". Jetzt 1:1 deckungsgleich, damit „Farbe = Kategorie" durchgängig stimmt.
+    options: ['Offenlegen', 'Teilen', 'Analysieren', 'Strategie', 'Helfen', 'Planen'],
     sub: {
       'Offenlegen': 'Stimmen sichtbar machen, Schweigen lösen',
+      'Teilen': 'Wissen und Erfahrungen sichtbar weitergeben',
       'Analysieren': 'Vom Symptom zur eigentlichen Ursache',
-      'Entscheiden': 'Aus Optionen gemeinsam wählen',
+      'Strategie': 'Aus Optionen Richtung und Varianten wählen',
+      'Helfen': 'Sich gegenseitig unterstützen, Vertrauen stärken',
       'Planen': 'Einsicht in konkrete Schritte übersetzen',
-      'Verbinden': 'Vertrauen und Beziehung stärken',
     },
   },
   {

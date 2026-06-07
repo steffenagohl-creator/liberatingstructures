@@ -10,7 +10,7 @@
    Die Modus-Struktur (mode 'voice'/'type', voiceAllowed) ist hier bereits angelegt.
    =================================================================== */
 import { useState, useMemo } from 'react'
-import { QUESTIONS, THEME, StatusBar } from './shared.jsx'
+import { QUESTIONS, THEME, StatusBar, ZWECK_LABEL_COLOR } from './shared.jsx'
 import { Chip } from './ui.jsx'
 
 export const LSC = { CW: 390, CH: 376, cx: 195, cy: 178, rx: 128, ry: 122 };
@@ -206,12 +206,18 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack,
                 ? current.presets.map((p) => (
                     <Chip key={p.v} onClick={() => answer(p.v, { _tension: !!p.tension })} style={{ width: '100%', textAlign: 'left' }}>{p.v}</Chip>
                   ))
-                : current.options.map((opt) => (
-                    <Chip key={opt} onClick={() => answer(opt)}>
-                      {opt}
-                      {current.sub && current.sub[opt] && <span style={{ display: 'block', fontSize: 11.5, color: 'var(--muted)', fontWeight: 400, marginTop: 1 }}>{current.sub[opt]}</span>}
-                    </Chip>
-                  ))}
+                : current.options.map((opt) => {
+                    // Schwerpunkt-Chips in der offiziellen Kategorie-Farbe (volle Fläche +
+                    // Umrandung, wie das Ergebnis-Badge) → „Farbe = Kategorie" prägt sich ein.
+                    const tint = current.id === 'zweck' ? ZWECK_LABEL_COLOR[opt] : null;
+                    return (
+                      <Chip key={opt} onClick={() => answer(opt)}
+                        style={tint ? { background: tint, borderColor: 'rgba(60,40,30,.22)' } : undefined}>
+                        {opt}
+                        {current.sub && current.sub[opt] && <span style={{ display: 'block', fontSize: 11.5, color: 'var(--muted)', fontWeight: 400, marginTop: 1 }}>{current.sub[opt]}</span>}
+                      </Chip>
+                    );
+                  })}
             </div>
             {current.kind === 'text' && (
               <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>

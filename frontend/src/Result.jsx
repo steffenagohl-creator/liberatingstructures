@@ -10,7 +10,7 @@
    aria-expanded; Icon mit icon_alt für Screenreader.
    =================================================================== */
 import { useState } from 'react'
-import { THEME, Glyph } from './shared.jsx'
+import { THEME, Glyph, PURPOSE_COLORS } from './shared.jsx'
 import { Button, Badge, Card, Eyebrow } from './ui.jsx'
 
 // Lesbare Labels für die purpose_tags (Backend-Keys → deutsche Kurzform).
@@ -19,14 +19,8 @@ const PURPOSE_LABEL = {
   strategie: 'Strategie', helfen: 'Helfen', planen: 'Planen', solo: 'Solo',
 };
 
-// Offizielle LS-Kategorie-Farben — GESPIEGELT aus backend/catalog/constants.py (PURPOSE_COLORS),
-// dort steht die eine Quelle der Wahrheit. Herkunft: liberatingstructures.de/matchmaker/.
-// Doku: Wissen/farbpalette.md. Pastell-Hintergrund + dunkle Schrift = lesbarer Kontrast
-// (Barrierefrei-Leitprinzip). 'solo' = neutraler Warmgrau-Ton (kein offizieller LS-Zweck).
-const PURPOSE_COLOR = {
-  offenlegen: '#cddff0', teilen: '#eeb6b6', analysieren: '#d8e5d4',
-  strategie: '#cfb8d1', helfen: '#fff4d1', planen: '#fdd497', solo: '#e7e2d6',
-};
+// Kategorie-Farben kommen aus shared.jsx (PURPOSE_COLORS), das wiederum den Backend-Wert
+// catalog/constants.py spiegelt — so nutzen Ergebnis & Schwerpunkt-Chips dieselbe Quelle.
 
 const sizeLabel = (s) => `${s.group_size_min ?? '?'}–${s.group_size_max ?? '∞'} Pers.`;
 const timeLabel = (s) => (s.duration_max && s.duration_max !== s.duration_min)
