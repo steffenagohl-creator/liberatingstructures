@@ -71,8 +71,21 @@ PHASE_ERHEBUNG = COACH_PERSONA + (
     "System — nicht du. Bis dahin fragst du einfach ruhig und freundlich weiter."
 )
 
-# Startinstruktion = Erhebung (Alias, hält bestehende Verweise gültig).
+# Startinstruktion = Erhebung (Alias, hält bestehende Verweise gültig). PHASE_ERHEBUNG = der
+# eingefrorene 🇺🇸 US-Stand.
 COACH_INSTRUCTIONS = PHASE_ERHEBUNG
+
+# 🇪🇺 EU/Mistral — eigene Erhebung: ALLE sieben Aspekte ausdrücklich erfragen, BEVOR die
+# Zusammenfassung kommt (Steffen 2026-06-07: Mistral fasste zu früh zusammen, obwohl noch nicht
+# alle Aspekte wirklich erfragt waren). Nichts annehmen, nur weil es sich ableiten ließe.
+PHASE_ERHEBUNG_EU = PHASE_ERHEBUNG + (
+    "\n\nGANZ WICHTIG für die Vollständigkeit: Du brauchst zu ALLEN SIEBEN Aspekten eine klare, "
+    "ausdrücklich von der Person genannte Antwort: Anlass/Situation, Ziel, Zweck/Schwerpunkt, "
+    "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+    "Nimm einen Aspekt NICHT als gegeben an, nur weil er sich vielleicht aus der Schilderung "
+    "ableiten ließe — frage im Zweifel kurz nach. Frage die noch offenen Aspekte gezielt ab, EINEN "
+    "nach dem anderen. Fasse NICHTS zusammen, solange noch ein Aspekt offen ist."
+)
 
 # PHASE 1b — BESTÄTIGUNG: alle Punkte gehört → ZUSAMMENFASSEN und auf das ausdrückliche „Go"
 # warten. Wie ein echter Berater: erst rückversichern, dann erst rechnen. Der eigentliche Start
@@ -225,10 +238,13 @@ class LSCoach(Agent):
     """Die Coachin: natürliche Gesprächsführung + Anbindung ans LS-Gehirn."""
 
     def __init__(self, room, brain: LSInterviewBrain, tier: str = "eu"):
-        super().__init__(instructions=COACH_INSTRUCTIONS)
+        # Erhebungs-Instruktion pfad-getrennt: US eingefroren, EU erfragt alle 7 ausdrücklich.
+        erhebung_instr = PHASE_ERHEBUNG if tier == "us" else PHASE_ERHEBUNG_EU
+        super().__init__(instructions=erhebung_instr)
         self._room = room
         self._brain = brain
         self._tier = tier
+        self._erhebung_instr = erhebung_instr
         self._done = False
         self._last_guidance = None  # zuletzt gesetzte Coach-Guidance (vermeidet unnötige Updates)
         self._ready_turns = 0       # wie oft das Backend „ready" meldete (Anti-Hänger)
@@ -336,7 +352,15 @@ class LSCoach(Agent):
 
         # ── Genug erhoben? Dann NICHT automatisch matchen, sondern Zusammenfassung + GO einholen.
         # Expliziter Startpunkt (Steffen-Wunsch): erst nach Rückversicherung im Dialog rechnen.
-        if spinne_voll or (state.ready and self._ready_turns >= 2):
+        # 🇺🇸 US (eingefroren): volle Spinne ODER Backend-„ready"-Fallback.
+        # 🇪🇺 EU: STRENGER — erst zusammenfassen, wenn wirklich alle sieben Aspekte da sind
+        # (Anlass/Situation + die sechs Dimensionen); KEIN ready-Fallback (bei Mistral unzuverlässig
+        # → führte zu verfrühten Zusammenfassungen, obwohl noch nicht alles erfragt war).
+        if self._tier == "us":
+            bereit = spinne_voll or (state.ready and self._ready_turns >= 2)
+        else:
+            bereit = spinne_voll and bool(self._brain.opening)
+        if bereit:
             await self._enter_confirmation()
             return
 
@@ -390,7 +414,7 @@ class LSCoach(Agent):
             # Nicht im Wartemodus einfrieren: zurück in die Erhebung, damit das Gespräch weitergeht.
             self._done = False
             self._awaiting_confirmation = False
-            await self._set_phase("ERHEBUNG", PHASE_ERHEBUNG)
+            await self._set_phase("ERHEBUNG", self._erhebung_instr)
             await self._speak(
                 "Entschuldige, beim Zusammenstellen ist gerade etwas schiefgegangen. "
                 "Lass uns kurz weitermachen — magst du mir noch etwas zur Situation erzählen?"
@@ -539,7 +563,7 @@ class LSCoach(Agent):
         self._last_guidance = key
         try:
             await self.update_instructions(
-                COACH_INSTRUCTIONS
+                self._erhebung_instr
                 + "\n\nDem System fehlen für die Empfehlung noch diese Angaben. Frage natürlich, "
                 "freundlich und nacheinander gezielt danach — immer nur EINE Frage zur Zeit: "
                 + "; ".join(fehlend)
