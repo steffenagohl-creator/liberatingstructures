@@ -77,7 +77,16 @@ COACH_INSTRUCTIONS = PHASE_ERHEBUNG
 # PHASE 1b — BESTÄTIGUNG: alle Punkte gehört → ZUSAMMENFASSEN und auf das ausdrückliche „Go"
 # warten. Wie ein echter Berater: erst rückversichern, dann erst rechnen. Der eigentliche Start
 # des Strings steuert UNSER Code (Erkennung der Bestätigung), nicht das Modell.
-PHASE_BESTAETIGUNG = COACH_PERSONA + (
+#
+# AB 2026-06-07 PFAD-GETRENNT (Steffen): Der 🇺🇸-US-Stand ist „vorzeigbar" (Tag
+# `voice-vorzeigbar-2026-06-07`) und wird EINGEFROREN — Mistral/EU bekommt eigenes Feintuning.
+# Verschiedene Modelle = verschiedene Instruktionstreue (GPT-Realtime folgt dem US-Prompt brav;
+# mistral-small fragte „stimmt das so" nach JEDEM Punkt → verfrühter Start). Gelerntes übertragen
+# wir gezielt, aber eine EU-Änderung darf US NIE berühren. Auswahl je Stufe in LSCoach.__init__.
+
+# 🇺🇸 US — EINGEFROREN (exakt wie im Tag voice-vorzeigbar-2026-06-07). NICHT ohne ausdrückliche
+# Freigabe ändern.
+PHASE_BESTAETIGUNG_US = COACH_PERSONA + (
     "Du hast jetzt zu allen wichtigen Punkten etwas gehört. BEVOR irgendein Vorschlag erstellt "
     "wird, vergewissere dich sorgfältig. Gehe dafür die SIEBEN Punkte EINZELN durch: Anlass/"
     "Situation, das Ziel (was am Ende erreicht sein soll), den Zweck/Schwerpunkt, Gruppengröße, "
@@ -93,6 +102,45 @@ PHASE_BESTAETIGUNG = COACH_PERSONA + (
     "Schlage selbst KEINE Methode vor und nenne KEINE Liberating Structures. Wenn die Person "
     "etwas korrigiert oder ergänzt, nimm es dankbar auf und vergewissere dich danach erneut. "
     "Erst wenn die Person ausdrücklich zustimmt, geht es weiter."
+)
+
+# 🇪🇺 EU/Mistral — eigenes Feintuning: EIN zusammenhängender Rückblick aller sieben, KEINE Frage
+# pro Punkt, GENAU EINE Schlussfrage (mistral-small fragte sonst nach jedem Punkt → verfrühter Start).
+PHASE_BESTAETIGUNG_EU = COACH_PERSONA + (
+    "Du hast jetzt zu allen wichtigen Punkten etwas gehört. Gib der Person nun in EINEM einzigen, "
+    "zusammenhängenden, ruhigen Rückblick wieder, was du verstanden hast — ALLE sieben Punkte "
+    "nacheinander in wenigen Sätzen: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, "
+    "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+    "GANZ WICHTIG: Stelle WÄHREND dieser Aufzählung KEINE Zwischenfragen. Frage NICHT nach jedem "
+    "einzelnen Punkt „stimmt das so“ — das verwirrt. Zähle erst ALLE sieben Punkte am Stück auf. "
+    "ERST WENN du alle sieben genannt hast, stellst du GENAU EINE einzige Ja/Nein-Frage, ob du auf "
+    "dieser Grundlage den Vorschlag erstellen sollst (z. B. „Habe ich das alles richtig "
+    "zusammengefasst — soll ich dir jetzt den Vorschlag erstellen?“). Diese eine Schlussfrage ist "
+    "die EINZIGE Frage in deiner Antwort. "
+    "Schlage selbst KEINE Methode vor und nenne KEINE Liberating Structures. Wenn die Person "
+    "danach etwas korrigiert oder ergänzt, nimm es dankbar auf und gib anschließend wieder den "
+    "ganzen Rückblick aller sieben Punkte mit einer einzigen Schlussfrage. Erst wenn die Person "
+    "auf diese Schlussfrage ausdrücklich zustimmt, geht es weiter."
+)
+
+# Zusammenfassungs-Auftrag (für das aktive Vorlesen in _enter_confirmation) — ebenfalls pfad-getrennt.
+SUMMARY_INSTR_US = (
+    "Gehe jetzt ruhig die sieben Punkte EINZELN durch und sage zu jedem kurz, was du "
+    "verstanden hast: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, Gruppengröße, "
+    "verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
+    "Wurde ein Punkt nicht ausdrücklich genannt oder ist er unklar, frage gezielt danach, "
+    "statt zu raten. "
+    "Erst wenn alle sieben klar sind, stelle GENAU EINE einzige, klare Ja/Nein-Frage, ob du "
+    "auf dieser Grundlage einen Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
+)
+SUMMARY_INSTR_EU = (
+    "Gib jetzt in EINEM zusammenhängenden, ruhigen Rückblick wieder, was du verstanden "
+    "hast — ALLE sieben Punkte nacheinander in wenigen Sätzen: Anlass/Situation, das Ziel, "
+    "den Zweck/Schwerpunkt, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) "
+    "und psychologische Sicherheit. Stelle WÄHREND der Aufzählung KEINE Zwischenfragen und "
+    "frage NICHT nach jedem einzelnen Punkt „stimmt das so“. Erst NACHDEM du alle sieben "
+    "genannt hast, stelle GENAU EINE einzige Ja/Nein-Frage, ob du auf dieser Grundlage den "
+    "Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
 )
 
 # PHASE 2 — VERDICHTUNG: genug erhoben, das System rechnet. Keine Fragen mehr, ruhig warten.
@@ -176,10 +224,11 @@ async def _publish_diagnose(room, state, situation: str = "") -> None:
 class LSCoach(Agent):
     """Die Coachin: natürliche Gesprächsführung + Anbindung ans LS-Gehirn."""
 
-    def __init__(self, room, brain: LSInterviewBrain):
+    def __init__(self, room, brain: LSInterviewBrain, tier: str = "eu"):
         super().__init__(instructions=COACH_INSTRUCTIONS)
         self._room = room
         self._brain = brain
+        self._tier = tier
         self._done = False
         self._last_guidance = None  # zuletzt gesetzte Coach-Guidance (vermeidet unnötige Updates)
         self._ready_turns = 0       # wie oft das Backend „ready" meldete (Anti-Hänger)
@@ -189,6 +238,13 @@ class LSCoach(Agent):
         self._phase = "ERHEBUNG"    # aktuelle Verhaltensphase (verhindert doppelte Instruktions-Updates)
         self._awaiting_confirmation = False  # True = zusammengefasst, wartet auf das ausdrückliche „Go"
         self._suppress_turn_hook = False  # im US/Realtime-Pfad True (Transkript kommt übers Event)
+        # PFAD-GETRENNTE Bestätigungs-Prompts (ab 2026-06-07): US eingefroren, EU eigenes Feintuning.
+        if tier == "us":
+            self._bestaetigung_instr = PHASE_BESTAETIGUNG_US
+            self._summary_instr = SUMMARY_INSTR_US
+        else:  # eu / sov
+            self._bestaetigung_instr = PHASE_BESTAETIGUNG_EU
+            self._summary_instr = SUMMARY_INSTR_EU
 
     async def on_enter(self) -> None:  # noqa: D401
         """Wird vom Framework aufgerufen, sobald der Agent in der Sitzung AKTIV ist — der richtige
@@ -291,18 +347,11 @@ class LSCoach(Agent):
         """Wechselt in die BESTÄTIGUNG: fasst das Verstandene zusammen und bittet um das
         ausdrückliche „Go", bevor gerechnet wird. Kein automatischer Match mehr."""
         self._awaiting_confirmation = True
-        await self._set_phase("BESTÄTIGUNG", PHASE_BESTAETIGUNG)
+        # Pfad-getrennt: US nutzt den eingefrorenen Prompt, EU/sov das eigene Feintuning.
+        await self._set_phase("BESTÄTIGUNG", self._bestaetigung_instr)
         # Das Modell JETZT zusammenfassen + nachfragen lassen — es hat den Gesprächskontext, fasst
         # also natürlicher zusammen, als wir es aus (teils kodierten) Diagnose-Feldern könnten.
-        await self._request_reply(
-            "Gehe jetzt ruhig die sieben Punkte EINZELN durch und sage zu jedem kurz, was du "
-            "verstanden hast: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, Gruppengröße, "
-            "verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
-            "Wurde ein Punkt nicht ausdrücklich genannt oder ist er unklar, frage gezielt danach, "
-            "statt zu raten. "
-            "Erst wenn alle sieben klar sind, stelle GENAU EINE einzige, klare Ja/Nein-Frage, ob du "
-            "auf dieser Grundlage einen Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
-        )
+        await self._request_reply(self._summary_instr)
 
     async def _ask_confirm_again(self) -> None:
         """Bei unklarer/verstümmelter Antwort kurz um ein klares Ja oder Nein bitten — OHNE die
@@ -584,7 +633,7 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     logger.info("Sprach-Sitzung: Stufe %s", tier)
 
     session = _build_session(tier)
-    coach = LSCoach(ctx.room, brain)
+    coach = LSCoach(ctx.room, brain, tier=tier)
 
     # Realtime (us) liefert die Nutzer-Transkription NICHT über on_user_turn_completed,
     # sondern über das Session-Event „user_input_transcribed" — daran hängen wir das Gehirn,
