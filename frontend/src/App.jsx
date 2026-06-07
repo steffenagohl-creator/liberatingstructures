@@ -151,21 +151,28 @@ function MorphView({ answers, match, details, matchError, onDone, onRetry, onBac
   // sobald das Ergebnis da ist — wieder aus (kein abrupter Schnitt). Datei liegt optional
   // unter public/wait-music.mp3; fehlt sie oder blockt Autoplay, passiert einfach nichts.
   const musicRef = useRef(null);
+  const musicStartRef = useRef(null);  // Timer für den verzögerten Musikstart (s. u.)
   useEffect(() => {
     const el = musicRef.current;
     if (!el) return;
     el.volume = 0;
     let t;
-    el.play().then(() => {
-      const fadeIn = () => { el.volume = Math.min(0.45, el.volume + 0.02); if (el.volume < 0.45) t = setTimeout(fadeIn, 90); };
-      fadeIn();
-    }).catch(() => { /* Autoplay/keine Datei → still ignorieren */ });
-    return () => { clearTimeout(t); el.pause(); };
+    // Musik bewusst erst nach ~10 s starten: So kann die KI ihren letzten Satz ("…einen kleinen
+    // Moment, ich stelle euch einen Vorschlag zusammen") noch ungestört zu Ende sprechen, bevor die
+    // Wartemusik einsetzt (Steffen-Wunsch). Kommt das Ergebnis vorher, wird der Start abgebrochen.
+    musicStartRef.current = setTimeout(() => {
+      el.play().then(() => {
+        const fadeIn = () => { el.volume = Math.min(0.45, el.volume + 0.02); if (el.volume < 0.45) t = setTimeout(fadeIn, 90); };
+        fadeIn();
+      }).catch(() => { /* Autoplay/keine Datei → still ignorieren */ });
+    }, 10000);
+    return () => { clearTimeout(musicStartRef.current); clearTimeout(t); el.pause(); };
   }, []);
   useEffect(() => {
     if (!match) return;
     const el = musicRef.current;
     if (!el) return;
+    clearTimeout(musicStartRef.current);  // Ergebnis < 10 s da → verspäteten Musikstart verhindern
     let t;
     const fadeOut = () => {
       el.volume = Math.max(0, el.volume - 0.03);

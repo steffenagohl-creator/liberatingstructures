@@ -56,11 +56,11 @@ COACH_PERSONA = (
 # PHASE 1 — ERHEBUNG: nur zuhören & gezielt fragen, nie selbst vorschlagen.
 PHASE_ERHEBUNG = COACH_PERSONA + (
     "Ihr seid am ANFANG des Gesprächs. Du führst ein lockeres Gespräch, um die Gruppensituation "
-    "zu verstehen: Anlass/Zweck, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid), "
-    "psychologische Sicherheit und das Ziel. Lass die Person AUSREDEN und unterbrich NICHT — warte, "
+    "zu verstehen: Anlass/Situation, , Ziel, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid), "
+    "psychologische Sicherheit, Schwerpunkt. Lass die Person AUSREDEN und unterbrich NICHT — warte, "
     "bis sie wirklich fertig ist. Reagiere dann ZUERST kurz und warm auf das gerade Gesagte (ein "
     "Satz, der zeigt: du hast zugehört), und stelle ERST DANN deine nächste Frage — immer nur EINE "
-    "kurze, natürliche Frage zur Zeit. "
+    "kurze, natürliche Frage zur Zeit und leite Damit über auf den nächsten Aspekt, den du erfragen möchtest. "
     "GANZ WICHTIG — halte dich strikt daran: Du schlägst in dieser Phase NIEMALS selbst eine "
     "Methode, Übung oder Lösung vor, du nennst KEINE Liberating Structures und du moderierst "
     "NICHTS. Auch wenn du glaubst, schon genug zu wissen: präsentiere KEINE Lösung. Deine einzige "
@@ -80,11 +80,15 @@ COACH_INSTRUCTIONS = PHASE_ERHEBUNG
 # alle Aspekte wirklich erfragt waren). Nichts annehmen, nur weil es sich ableiten ließe.
 PHASE_ERHEBUNG_EU = PHASE_ERHEBUNG + (
     "\n\nGANZ WICHTIG für die Vollständigkeit: Du brauchst zu ALLEN SIEBEN Aspekten eine klare, "
-    "ausdrücklich von der Person genannte Antwort: Anlass/Situation, Ziel, Zweck/Schwerpunkt, "
+    "ausdrücklich von der Person genannte Antwort: Anlass/Situation, Ziel, Methode/Schwerpunkt, "
     "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
     "Nimm einen Aspekt NICHT als gegeben an, nur weil er sich vielleicht aus der Schilderung "
     "ableiten ließe — frage im Zweifel kurz nach. Frage die noch offenen Aspekte gezielt ab, EINEN "
-    "nach dem anderen. Fasse NICHTS zusammen, solange noch ein Aspekt offen ist."
+    "nach dem anderen. Fasse ERST ZUSAMMEN, wenn ALLE SIEBEN Aspekte ausdrücklich erfragt und "
+    "beantwortet sind — solange auch nur EINER offen ist, fasse NICHTS zusammen. "
+    "BESONDERS der Zweck/Schwerpunkt ist eine EIGENE, ausdrückliche Frage: Verwechsle ihn NICHT mit "
+    "dem Ziel und setze ihn NICHT als bekannt voraus, nur weil ein Ziel genannt wurde. Frage den "
+    "Schwerpunkt immer eigens (offenlegen / analysieren / entscheiden / planen), bevor du zusammenfasst."
 )
 
 # PHASE 1b — BESTÄTIGUNG: alle Punkte gehört → ZUSAMMENFASSEN und auf das ausdrückliche „Go"
@@ -104,32 +108,33 @@ PHASE_BESTAETIGUNG_US = COACH_PERSONA + (
     "wird, vergewissere dich sorgfältig. Gehe dafür die SIEBEN Punkte EINZELN durch: Anlass/"
     "Situation, das Ziel (was am Ende erreicht sein soll), den Zweck/Schwerpunkt, Gruppengröße, "
     "verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
-    "Prüfe bei JEDEM für dich innerlich: Wurde dieser Punkt im Gespräch wirklich AUSDRÜCKLICH "
-    "genannt, oder nehme ich ihn nur an? Sage der Person zu jedem Punkt kurz, was du verstanden "
+    "Sage der Person zu jedem Punkt kurz, was du verstanden "
     "hast. Ist ein Punkt unklar, vage oder wurde er NICHT ausdrücklich genannt, frage GEZIELT "
     "danach, statt zu raten — lieber einmal mehr nachfragen. "
     "Erst wenn alle fünf Punkte klar und ausdrücklich sind, stelle GENAU EINE einzige, klare "
     "Ja/Nein-Frage, ob du auf dieser Grundlage den Vorschlag erstellen sollst (z. B. „Passt das "
-    "so für dich — soll ich dir jetzt einen Vorschlag zusammenstellen?“). Stelle nicht zwei Fragen "
-    "auf einmal. "
+    "so für dich und soll ich dir jetzt einen Vorschlag zusammenstellen?“).  "
     "Schlage selbst KEINE Methode vor und nenne KEINE Liberating Structures. Wenn die Person "
-    "etwas korrigiert oder ergänzt, nimm es dankbar auf und vergewissere dich danach erneut. "
+    "etwas korrigiert oder ergänzt, nimm es dankbar auf und spiegel ihm was du verstanden hast. "
     "Erst wenn die Person ausdrücklich zustimmt, geht es weiter."
 )
 
 # 🇪🇺 EU/Mistral — eigenes Feintuning: EIN zusammenhängender Rückblick aller sieben, KEINE Frage
 # pro Punkt, GENAU EINE Schlussfrage (mistral-small fragte sonst nach jedem Punkt → verfrühter Start).
 PHASE_BESTAETIGUNG_EU = COACH_PERSONA + (
-    "Du hast jetzt zu allen wichtigen Punkten etwas gehört. Gib der Person nun in EINEM einzigen, "
-    "zusammenhängenden, ruhigen Rückblick wieder, was du verstanden hast — ALLE sieben Punkte "
-    "nacheinander in wenigen Sätzen: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, "
+    "Du hast jetzt zu allen wichtigen Punkten etwas gehört. Leite mit einem klaren SIGNALSATZ ein, "
+    "dass du JETZT zusammenfasst (z. B. „Gut, dann fasse ich einmal zusammen, was ich verstanden "
+    "habe:“) — damit die Person merkt, dass die Abschluss-Zusammenfassung beginnt. Gib ihr dann in "
+    "EINEM einzigen, zusammenhängenden, ruhigen Rückblick wieder, was du verstanden hast — ALLE "
+    "sieben Punkte nacheinander in wenigen Sätzen: Anlass/Situation, das Ziel, den Zweck/Schwerpunkt, "
     "Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und psychologische Sicherheit. "
     "GANZ WICHTIG: Stelle WÄHREND dieser Aufzählung KEINE Zwischenfragen. Frage NICHT nach jedem "
     "einzelnen Punkt „stimmt das so“ — das verwirrt. Zähle erst ALLE sieben Punkte am Stück auf. "
-    "ERST WENN du alle sieben genannt hast, stellst du GENAU EINE einzige Ja/Nein-Frage, ob du auf "
-    "dieser Grundlage den Vorschlag erstellen sollst (z. B. „Habe ich das alles richtig "
-    "zusammengefasst — soll ich dir jetzt den Vorschlag erstellen?“). Diese eine Schlussfrage ist "
-    "die EINZIGE Frage in deiner Antwort. "
+    "ERST WENN du alle sieben genannt hast, stellst du GENAU EINE einzige Ja/Nein-Frage, die die "
+    "FOLGE klar benennt — dass ein „Ja“ JETZT den Vorschlag startet (z. B. „Wenn das so passt, "
+    "stelle ich dir jetzt auf dieser Grundlage den Vorschlag zusammen. Soll ich? Sag Ja zum Starten "
+    "— oder sag mir, was noch fehlt oder anders ist.“). Diese eine Schlussfrage ist die EINZIGE Frage "
+    "in deiner Antwort. "
     "Schlage selbst KEINE Methode vor und nenne KEINE Liberating Structures. Wenn die Person "
     "danach etwas korrigiert oder ergänzt, nimm es dankbar auf und gib anschließend wieder den "
     "ganzen Rückblick aller sieben Punkte mit einer einzigen Schlussfrage. Erst wenn die Person "
@@ -147,13 +152,16 @@ SUMMARY_INSTR_US = (
     "auf dieser Grundlage einen Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
 )
 SUMMARY_INSTR_EU = (
-    "Gib jetzt in EINEM zusammenhängenden, ruhigen Rückblick wieder, was du verstanden "
-    "hast — ALLE sieben Punkte nacheinander in wenigen Sätzen: Anlass/Situation, das Ziel, "
-    "den Zweck/Schwerpunkt, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) "
-    "und psychologische Sicherheit. Stelle WÄHREND der Aufzählung KEINE Zwischenfragen und "
-    "frage NICHT nach jedem einzelnen Punkt „stimmt das so“. Erst NACHDEM du alle sieben "
-    "genannt hast, stelle GENAU EINE einzige Ja/Nein-Frage, ob du auf dieser Grundlage den "
-    "Vorschlag erstellen sollst. Schlage selbst noch nichts vor."
+    "Leite jetzt DEUTLICH ein, dass du zusammenfasst — beginne mit einem klaren Signalsatz wie "
+    "„Gut, dann fasse ich einmal zusammen, was ich verstanden habe:“, damit die Person merkt, dass "
+    "jetzt die ABSCHLUSS-Zusammenfassung kommt. Gib dann in EINEM zusammenhängenden, ruhigen "
+    "Rückblick ALLE sieben Punkte nacheinander in wenigen Sätzen wieder: Anlass/Situation, das Ziel, "
+    "den Zweck/Schwerpunkt, Gruppengröße, verfügbare Zeit, Setting (Präsenz/Online/Hybrid) und "
+    "psychologische Sicherheit. Stelle WÄHREND der Aufzählung KEINE Zwischenfragen. "
+    "Schließe mit GENAU EINER unmissverständlichen Ja/Nein-Frage, die die FOLGE klar benennt: dass "
+    "du bei „Ja“ JETZT den Vorschlag erstellst — z. B. „Wenn das so passt, stelle ich dir auf dieser "
+    "Grundlage jetzt den Vorschlag zusammen. Soll ich? Sag Ja zum Starten — oder sag mir, was noch "
+    "fehlt oder anders ist.“ Schlage selbst noch nichts vor."
 )
 
 # PHASE 2 — VERDICHTUNG: genug erhoben, das System rechnet. Keine Fragen mehr, ruhig warten.
@@ -190,6 +198,11 @@ SPINNE_KEYS = ("ziel_text", "zweck", "gruppengroesse", "zeitbudget", "setting", 
 # blieb False). Daher darf sie den Match NICHT blockieren: sind die Kern-4 da, fragt der Coach
 # noch kurz nach Sicherheit und löst dann auch ohne sie aus (s. Trigger in process_user_text).
 CORE_KEYS = ("zweck", "gruppengroesse", "zeitbudget", "setting")
+# 🇪🇺 EU — „weiche" Dimensionen: Schwerpunkt und psychologische Sicherheit leitet das Backend gern
+# aus dem Kontext ab, statt sie zu erfragen. Wurde so eine Dimension nur INTERPRETIERT (nie aktiv
+# erfragt), lässt der Coach sie vor der Zusammenfassung einzeln rückversichern (Steffen 2026-06-07:
+# „habe ich richtig verstanden, dass …?"). Die „harten" Fakten (Größe/Zeit/Setting) bleiben unberührt.
+EU_SOFT_DIMS = ("zweck", "psychologische_sicherheit")
 SPINNE_LABELS = {
     "ziel_text": "das Ziel — was am Ende konkret anders oder erreicht sein soll",
     "zweck": "den Schwerpunkt/Zweck des Treffens (z. B. offenlegen, analysieren, entscheiden, planen)",
@@ -253,6 +266,7 @@ class LSCoach(Agent):
         self._core_turns = 0        # Äußerungen, seit die Kern-4 vollständig sind (Diagnose)
         self._phase = "ERHEBUNG"    # aktuelle Verhaltensphase (verhindert doppelte Instruktions-Updates)
         self._awaiting_confirmation = False  # True = zusammengefasst, wartet auf das ausdrückliche „Go"
+        self._erfragt: set[str] = set()  # 🇪🇺 EU: Dimensionen, die der Coach AKTIV erfragt hat (vs. nur interpretiert)
         self._suppress_turn_hook = False  # im US/Realtime-Pfad True (Transkript kommt übers Event)
         # PFAD-GETRENNTE Bestätigungs-Prompts (ab 2026-06-07): US eingefroren, EU eigenes Feintuning.
         if tier == "us":
@@ -306,17 +320,27 @@ class LSCoach(Agent):
         except Exception as exc:
             logger.error("Interview-Backend nicht erreichbar: %s", exc)
             return
+        # DIAGNOSE-PROTOKOLL (temporär): exakt zeigen, WAS gesagt wurde und WAS das Backend daraus
+        # extrahiert hat — so sehen wir, an welcher Dimension die Identifikation hakt (z. B. fehlende
+        # Gruppengröße), statt zu raten.
+        logger.info("EU-Input: text=%r → backend_diagnose=%s ready=%s",
+                    user_text[:160], state.diagnose, state.ready)
         # KLEBRIG + KORREKTUR-FEST mergen: einmal erkannte Werte bleiben (das Backend lässt Felder
         # zwischendurch wegfallen → sonst flackert die Spinne, v. a. die psychologische Sicherheit).
         # NEUE, nicht-leere Werte ÜBERSCHREIBEN den alten — so gewinnen echte Korrekturen weiterhin.
+        prev_diag = dict(self._diag)
         for k, v in (state.diagnose or {}).items():
             if v not in (None, "", [], {}):
                 self._diag[k] = v
+        diag_changed = self._diag != prev_diag  # kam durch diese Äußerung ein neuer/geänderter Wert?
         diagnose = self._diag
         # Anzeige (Spinne) UND Gehirn-Gate aus dem gemergten Stand speisen (keine Flacker-Verluste).
         # state ist brain.state → so nutzt auch der spätere Match denselben gemergten Stand.
         state.diagnose = dict(self._diag)
-        await _publish_diagnose(self._room, state, self._brain.opening)
+        # Mittelpunkt-Beschriftung: bevorzugt die SEMANTISCHE Anlass-Benennung des Backends
+        # (EU-Prompt liefert ``anlass``); fehlt sie (z. B. US-Pfad oder noch früh), erster Satz.
+        anlass_label = self._diag.get("anlass") or self._brain.opening
+        await _publish_diagnose(self._room, state, anlass_label)
         self._seen = set(k for k in SPINNE_KEYS if self._diag.get(k))
         core_voll = all(k in self._seen for k in CORE_KEYS)
         spinne_voll = all(k in self._seen for k in SPINNE_KEYS)
@@ -336,18 +360,36 @@ class LSCoach(Agent):
         # DENN sie sieht nach einer KORREKTUR aus (Verneinung, ein Dimensions-Wert wie „online",
         # oder eine Zahl). So zählt jedes „irgendwie ja", echte Korrekturen aber nicht.
         if self._awaiting_confirmation:
-            if self._is_correction(user_text):
-                logger.info("Korrektur erkannt (%r) → erneut zusammenfassen", user_text[:60])
-                await self._enter_confirmation()
-            elif self._is_affirmation(user_text):
+            if self._tier == "us":
+                # 🇺🇸 US — EINGEFROREN: unveränderte Bestätigungs-Logik (nicht anfassen).
+                if self._is_correction(user_text):
+                    logger.info("Korrektur erkannt (%r) → erneut zusammenfassen", user_text[:60])
+                    await self._enter_confirmation()
+                elif self._is_affirmation(user_text):
+                    logger.info("Go erkannt (%r) → Match wird gestartet", user_text[:60])
+                    self._awaiting_confirmation = False
+                    await self._run_match()
+                else:
+                    # Unklare/verstümmelte Antwort (die Spracherkennung macht aus „okay" schon mal
+                    # „добре"): NIEMALS einfach starten. Lieber um ein klares Ja/Nein bitten.
+                    logger.info("Unklar (%r) → klares Ja/Nein erbitten", user_text[:60])
+                    await self._ask_confirm_again()
+                return
+            # 🇪🇺 EU — Endlosschleife vermeiden: Bei „Nein"/unklar OHNE neuen Wert NICHT stur dieselbe
+            # Zusammenfassung wiederholen, sondern offen nach der gewünschten Änderung fragen.
+            if self._is_affirmation(user_text):
                 logger.info("Go erkannt (%r) → Match wird gestartet", user_text[:60])
                 self._awaiting_confirmation = False
                 await self._run_match()
+            elif self._is_correction(user_text) and diag_changed:
+                # Echte Korrektur MIT neuem/geändertem Wert → aktualisierte Zusammenfassung.
+                logger.info("Korrektur mit neuem Wert (%r) → erneut zusammenfassen", user_text[:60])
+                await self._enter_confirmation()
             else:
-                # Unklare/verstümmelte Antwort (die Spracherkennung macht aus „okay" schon mal
-                # „добре"): NIEMALS einfach starten. Lieber freundlich um ein klares Ja/Nein bitten.
-                logger.info("Unklar (%r) → klares Ja/Nein erbitten", user_text[:60])
-                await self._ask_confirm_again()
+                # Verneinung/unklar OHNE neuen Wert (oder reine Meta-Aussage wie „du hast X nicht
+                # gefragt"): offen fragen, WAS geändert/ergänzt werden soll (statt zu wiederholen).
+                logger.info("Kein Go, kein neuer Wert (%r) → offen nach Änderung fragen", user_text[:60])
+                await self._ask_what_to_change()
             return
 
         # ── Genug erhoben? Dann NICHT automatisch matchen, sondern Zusammenfassung + GO einholen.
@@ -357,12 +399,25 @@ class LSCoach(Agent):
         # (Anlass/Situation + die sechs Dimensionen); KEIN ready-Fallback (bei Mistral unzuverlässig
         # → führte zu verfrühten Zusammenfassungen, obwohl noch nicht alles erfragt war).
         if self._tier == "us":
-            bereit = spinne_voll or (state.ready and self._ready_turns >= 2)
+            # 🇺🇸 US (eingefroren): volle Spinne ODER ready-Fallback → zusammenfassen.
+            if spinne_voll or (state.ready and self._ready_turns >= 2):
+                await self._enter_confirmation()
+                return
         else:
-            bereit = spinne_voll and bool(self._brain.opening)
-        if bereit:
-            await self._enter_confirmation()
-            return
+            # 🇪🇺 EU: alle sechs Dimensionen + Anlass da. BEVOR zusammengefasst wird, jede „weiche"
+            # Dimension (Schwerpunkt, psychologische Sicherheit), die das Backend nur INTERPRETIERT
+            # hat (= nie aktiv erfragt → nicht in ``self._erfragt``), einzeln rückversichern
+            # („Habe ich richtig verstanden, dass …?"). So wird nichts still unterstellt (Steffen).
+            if spinne_voll and bool(self._brain.opening):
+                interpretiert = [k for k in EU_SOFT_DIMS
+                                 if k in self._seen and k not in self._erfragt]
+                if interpretiert:
+                    key = interpretiert[0]
+                    self._erfragt.add(key)  # gilt nach der Rückversicherung als geklärt
+                    await self._bestaetige_dimension(key)
+                    return
+                await self._enter_confirmation()
+                return
 
         # ── Sonst ruhig weiter erheben (gezielt nach dem Fehlenden fragen).
         await self._guide_coach()
@@ -386,6 +441,37 @@ class LSCoach(Agent):
             "nach, ob du auf der eben besprochenen Grundlage einen Vorschlag erstellen sollst, "
             "und bitte um ein klares Ja oder Nein. Fasse NICHT erneut alles zusammen — stelle nur "
             "diese eine kurze Frage."
+        )
+
+    async def _bestaetige_dimension(self, key: str) -> None:
+        """🇪🇺 EU: Versichert sich EINZELN bei einer „weichen" Dimension, die das Backend nur aus dem
+        Kontext ABGELEITET hat (statt sie zu erfragen) — als freundliche Rückfrage „Habe ich richtig
+        verstanden, dass …?" (Steffen 2026-06-07: Interpretiertes nicht still unterstellen, sondern
+        je einzeln bestätigen lassen). Genau EINE Frage; bleibt in der Erhebung (kein Auto-Start).
+        Korrigiert die Person, fließt der neue Wert über ``observe`` zurück in die Diagnose."""
+        label = SPINNE_LABELS.get(key, key)
+        wert = self._diag.get(key)
+        await self._request_reply(
+            f"Du hast {label} bisher nur aus der Schilderung ABGELEITET, aber nicht ausdrücklich "
+            "erfragt. Vergewissere dich jetzt mit GENAU EINER kurzen, freundlichen Rückfrage, ob du "
+            "es richtig verstanden hast — formuliere sie als Rückfrage „Habe ich richtig verstanden, dass …?“ "
+            f"und gib dein bisheriges Verständnis in eigenen, natürlichen Worten wieder (intern: {wert!r}). "
+            "Schlage KEINE Methode vor und fasse NICHT alles zusammen — stelle nur diese eine Rückfrage."
+        )
+
+    async def _ask_what_to_change(self) -> None:
+        """🇪🇺 EU: Die Person hat in der Bestätigung NICHT klar zugestimmt (Verneinung, unklare
+        Antwort oder reine Meta-Aussage wie „du hast X nicht gefragt") und es kam KEIN neuer
+        Diagnose-Wert. Statt stur dieselbe Zusammenfassung zu wiederholen (das war die Endlos-
+        schleife) fragen wir offen, was geändert/ergänzt werden soll. Bleibt in der Bestätigungs-
+        phase (kein Auto-Start); die nächste inhaltliche Antwort aktualisiert dann die Diagnose."""
+        await self._request_reply(
+            "Die Person hat NICHT klar zugestimmt — sie ist nicht einverstanden oder möchte etwas "
+            "ergänzen oder ändern. Wiederhole NICHT die ganze Zusammenfassung und erstelle KEINEN "
+            "Vorschlag. Frage stattdessen freundlich und konkret nach, WAS sie ändern oder ergänzen "
+            "möchte. Hat sie einen bestimmten Punkt genannt (z. B. die psychologische Sicherheit "
+            "oder den Schwerpunkt), frage gezielt zu genau diesem Punkt nach. Stelle GENAU EINE "
+            "kurze, klare Frage."
         )
 
     async def _run_match(self) -> None:
@@ -548,26 +634,53 @@ class LSCoach(Agent):
         except Exception as exc:  # pragma: no cover - reine Robustheit
             logger.warning("Sprachausgabe nicht möglich: %s", exc)
 
+    # Reihenfolge + lesbare Namen der 7 Stränge fürs „gemeinsame Bild" (Anlass = Mittelpunkt zuerst).
+    _STATUS_ORDER = (
+        ("anlass", "Anlass/Thema"), ("ziel_text", "Ziel"), ("zweck", "Schwerpunkt"),
+        ("gruppengroesse", "Gruppengröße"), ("zeitbudget", "Zeit (Minuten)"),
+        ("setting", "Setting"), ("psychologische_sicherheit", "Sicherheit"),
+    )
+
+    def _spinne_status_text(self) -> str:
+        """🇪🇺 EU: Das VOLLSTÄNDIGE gemeinsame Bild der Spinne (alle 7 Stränge mit aktuellem Wert
+        bzw. „noch offen"). Kern des Coachings: Coachin und Person teilen jederzeit DENSELBEN Stand.
+        Das Backend extrahiert nur „dumm"; die Intelligenz/Führung liegt bei der Coachin."""
+        zeilen = []
+        for key, label in self._STATUS_ORDER:
+            wert = self._diag.get(key)
+            if isinstance(wert, list):
+                wert = ", ".join(str(x) for x in wert) if wert else None
+            zeilen.append(f"- {label}: {wert}" if wert not in (None, "", []) else f"- {label}: — noch offen")
+        return (
+            "GEMEINSAMES BILD — so steht die Spinne gerade (du und die Person müsst dasselbe "
+            "Verständnis davon haben, worüber ihr sprecht):\n" + "\n".join(zeilen) + "\n\n"
+            "Deine Aufgabe: Fülle gemeinsam mit der Person ALLE noch offenen Stränge — EINEN nach "
+            "dem anderen, je eine ruhige, klare Frage. Die Spinne muss am Ende VOLLSTÄNDIG und "
+            "STIMMIG sein. Solange noch ein Strang offen ist, fasse NICHTS zusammen und stelle "
+            "KEINE Ja/Nein-Bestätigungsfrage — frage stattdessen den nächsten offenen Punkt ab."
+        )
+
     async def _guide_coach(self) -> None:
-        """Spielt dem Sprachmodell zurück, welche Spinnen-Angaben noch fehlen (gemessen am
-        KLEBRIGEN ``self._seen`` — nicht am flackernden Snapshot), damit es **gezielt + ruhig**
-        danach fragt statt blind zu raten. Aktualisiert laufend die Instruktionen."""
-        fehlend = [SPINNE_LABELS[k] for k in SPINNE_KEYS if k not in self._seen]
-        if not fehlend:
+        """Spielt dem Sprachmodell den VOLLEN Erhebungsstand zurück — das „gemeinsame Bild", also
+        genau das, was im Frontend in der Spinne steht — damit es gezielt + ruhig führt statt blind
+        zu raten (gemessen am KLEBRIGEN ``self._seen``).
+
+        BEIDE Pfade erhalten dieses Bild (Steffen 2026-06-07: US bewusst „aufgetaut", per Git-Tag
+        ``voice-vorzeigbar-2026-06-07`` reversibel). VORSICHTIG umgesetzt: der eingefrorene US-Prompt
+        (``self._erhebung_instr``) bleibt unverändert — das Live-Bild wird nur ANGEHÄNGT. Und es wird
+        NUR bei echter Änderung neu gesetzt (Cache) → schützt v. a. den US-Realtime-Stream vor „Stocken"."""
+        fehlende_keys = [k for k in SPINNE_KEYS if k not in self._seen]
+        if not fehlende_keys:
+            return  # alles erfasst → das Gate übernimmt (Zusammenfassung)
+        # 🇪🇺 EU merkt sich aktiv erfragte Stränge (für die Rückversicherung interpretierter Werte).
+        if self._tier != "us":
+            self._erfragt |= set(fehlende_keys)
+        status = self._spinne_status_text()
+        if status == self._last_guidance:  # nur bei echter Änderung neu setzen (Anti-Stocken)
             return
-        # Nur aktualisieren, wenn sich die fehlenden Felder geändert haben — sonst würde jedes
-        # Instruktions-Update den Realtime-Stream kurz unterbrechen (das „Stocken").
-        key = ",".join(k for k in SPINNE_KEYS if k not in self._seen)
-        if key == self._last_guidance:
-            return
-        self._last_guidance = key
+        self._last_guidance = status
         try:
-            await self.update_instructions(
-                self._erhebung_instr
-                + "\n\nDem System fehlen für die Empfehlung noch diese Angaben. Frage natürlich, "
-                "freundlich und nacheinander gezielt danach — immer nur EINE Frage zur Zeit: "
-                + "; ".join(fehlend)
-            )
+            await self.update_instructions(self._erhebung_instr + "\n\n" + status)
         except Exception as exc:  # pragma: no cover - reine Robustheit
             logger.warning("Coach-Guidance konnte nicht gesetzt werden: %s", exc)
 
@@ -637,6 +750,12 @@ def _build_session(tier: str) -> AgentSession:
         ),
         tts=_build_tts(),        # deutsche Stimme via Voice-Cloning (ref_audio), s. _build_tts
         vad=vad,                 # offenes Mikro / automatische Sprechpausen-Erkennung
+        # Vorab-Generierung AUS: Sonst erzeugt LiveKit die Antwort der Coachin schon, BEVOR unser
+        # ``on_user_turn_completed``-Hook die Diagnose vom Backend geholt und die nächste Frage
+        # gesetzt hat (Warnung „chat context changed after on_user_turn_completed"). Folge: die
+        # Coachin fragt die fehlenden Punkte NICHT gezielt ab und das Gespräch mäandert. Mit AUS
+        # wartet die Antwort, bis unsere Steuerung steht — etwas mehr Latenz, aber korrekt geführt.
+        preemptive_generation=False,
     )
 
 

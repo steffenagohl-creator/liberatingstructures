@@ -81,10 +81,12 @@ function groesseLabel(n) {
 }
 function zeitLabel(min) {
   if (min == null) return undefined;
-  if (min <= 15) return '15 Min';
-  if (min <= 30) return '30 Min';
-  if (min <= 60) return '60 Min';
-  return 'Halber Tag';
+  // Präzise anzeigen statt in feste Stufen bucketen (sonst sah jede Zeit > 60 Min wie „Halber
+  // Tag" aus). Bis 2 h die genaue Minutenzahl, darüber in Stunden; 240/480 Min als halber/ganzer Tag.
+  if (min === 240) return 'Halber Tag';
+  if (min === 480) return 'Ganzer Tag';
+  if (min >= 120) return `${String(Math.round((min / 60) * 10) / 10).replace('.', ',')} Std`;
+  return `${min} Min`;
 }
 
 /**
@@ -98,7 +100,10 @@ export function diagnoseToAnswers(d = {}) {
   // Das Backend kann MEHRERE Zweck-Tags halten (z. B. „offenlegen" UND „planen"). Alle
   // anzeigen, damit kein gewünschter Schwerpunkt unter den Tisch fällt (Wunsch 2026-06-06).
   if (Array.isArray(d.zweck) && d.zweck.length) {
-    const labels = d.zweck.map((z) => ZWECK_REV[z]).filter(Boolean);
+    // Auch dem Frontend UNBEKANNTE Backend-Werte (z. B. "teilen", "entscheiden") anzeigen, statt
+    // sie zu verschlucken → der Schwerpunkt-Strang bleibt nie fälschlich leer, obwohl ein Wert da ist.
+    const cap = (z) => String(z).charAt(0).toUpperCase() + String(z).slice(1);
+    const labels = d.zweck.map((z) => ZWECK_REV[z] || cap(z)).filter(Boolean);
     if (labels.length) a.zweck = labels.join(' + ');
   }
   if (d.psychologische_sicherheit && SICHERHEIT_REV[d.psychologische_sicherheit]) a.sicherheit = SICHERHEIT_REV[d.psychologische_sicherheit];

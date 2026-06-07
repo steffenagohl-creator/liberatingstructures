@@ -175,7 +175,9 @@ export function DiagnoseCanvas({ sovereignty, onComplete, onBack,
         <h2 className="ls-serif" style={{ margin: '0 0 5px', fontSize: 23, lineHeight: 1.15, fontWeight: 500,
           letterSpacing: '-.01em', color: 'var(--ink)', textWrap: 'balance' }}>{isVoice ? 'Erzähl frei — ich höre zu' : current.q}</h2>
         {isVoice
-          ? <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>Sprich einfach über eure Situation. Oben im Bild siehst du, was ich schon verstanden habe — du musst keine Fragen abarbeiten.</p>
+          ? <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>{sovereignty === 'eu'
+              ? 'Sprich einfach über eure Situation. Oben im Bild siehst du, was ich schon verstanden habe. Bitte beachte, dass zwischen den Fragen und deinen Antworten Pausen entstehen können, da die KI einen Moment braucht, um deine Antworten zu verarbeiten.'
+              : 'Sprich einfach über eure Situation. Oben im Bild siehst du, was ich schon verstanden habe — du musst keine Fragen abarbeiten.'}</p>
           : (current.adaptive && current.why
             ? <p style={{ margin: 0, fontSize: 13, lineHeight: 1.45, color: 'var(--terra)' }}><span style={{ fontWeight: 600 }}>✦ </span>{current.why}</p>
             : <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.45, color: 'var(--muted)' }}>{current.hint}</p>)}
