@@ -66,6 +66,13 @@ class InterviewRequestSerializer(serializers.Serializer):
         required=False, default=dict,
         help_text="Bereits beantwortete Diagnose-Dimensionen (Key → Wert).",
     )
+    tier = serializers.CharField(
+        required=False, default="us",
+        help_text=(
+            "Souveränitäts-/Modellpfad: 'eu'/'sov' nutzen die vorsichtige Erhebung "
+            "(errät nichts, Korrekturen gewinnen); sonst der eingefrorene US-/Default-Prompt."
+        ),
+    )
 
 
 class OpenQuestionSerializer(serializers.Serializer):

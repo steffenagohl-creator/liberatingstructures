@@ -211,8 +211,11 @@ def _compact_dimensions(schema: dict) -> list[dict]:
     return compact
 
 
-def run_interview(situation: str, answers: dict | None) -> dict:
+def run_interview(situation: str, answers: dict | None, tier: str = "us") -> dict:
     """Extrahiert über das LLM die Diagnose aus Freitext + bisherigen Antworten.
+
+    ``tier`` wählt den pfad-getrennten Erhebungs-Prompt (s. ``build_interview_messages``):
+    ``"eu"``/``"sov"`` → vorsichtig, sonst → eingefrorener US-/Default-Prompt.
 
     :returns: ``{"diagnose": {...}, "open_questions": [...], "ready": bool}``.
     """
@@ -222,6 +225,7 @@ def run_interview(situation: str, answers: dict | None) -> dict:
         answers=answers or {},
         schema_dimensions=_compact_dimensions(schema),
         required_keys=REQUIRED_DIMENSIONS,
+        tier=tier,
     )
     client = get_llm_client()
     raw = client.chat(messages, json=True)

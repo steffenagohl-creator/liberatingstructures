@@ -44,7 +44,9 @@ class InterviewView(APIView):
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
         try:
-            result = services.run_interview(data["situation"], data.get("answers"))
+            result = services.run_interview(
+                data["situation"], data.get("answers"), tier=data.get("tier", "us")
+            )
         except LLMError as exc:
             return Response({"detail": str(exc)}, status=status.HTTP_502_BAD_GATEWAY)
         return Response(result, status=status.HTTP_200_OK)

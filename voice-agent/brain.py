@@ -38,8 +38,12 @@ class LSInterviewBrain:
     :param timeout: HTTP-Timeout in Sekunden.
     """
 
-    def __init__(self, backend_url: str, timeout: float = 30.0, match_timeout: float = 180.0):
+    def __init__(self, backend_url: str, timeout: float = 30.0, match_timeout: float = 180.0,
+                 tier: str = "eu"):
         self.backend_url = backend_url.rstrip("/")
+        # Souveränitäts-/Modellpfad: wird an /api/interview/ mitgesendet, damit das Backend den
+        # pfad-getrennten Erhebungs-Prompt wählt (EU = vorsichtig, US = eingefroren).
+        self.tier = tier
         self.timeout = timeout
         # Der Match (LLM-Verdichtung) braucht real bis ~60 s; eigener, großzügiger Timeout,
         # damit der Agent nicht vorzeitig aufgibt (sonst: „Matchmaking fehlgeschlagen", kein
@@ -77,7 +81,8 @@ class LSInterviewBrain:
         text = (user_text or "").strip()
         if text:
             self._utterances.append(text)
-        payload = {"situation": self.situation_text, "answers": self.state.diagnose or {}}
+        payload = {"situation": self.situation_text, "answers": self.state.diagnose or {},
+                   "tier": self.tier}
         async with httpx.AsyncClient(timeout=self.timeout) as client:
             resp = await client.post(f"{self.backend_url}/api/interview/", json=payload)
             resp.raise_for_status()

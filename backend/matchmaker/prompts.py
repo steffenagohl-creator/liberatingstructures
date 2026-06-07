@@ -103,19 +103,93 @@ Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
 "ready" ist true, sobald alle PFLICHT-Dimensionen bekannt sind (das Ziel ist erbeten, aber nicht Pflicht)."""
 
 
+# --------------------------------------------------------------------------- #
+# 🇪🇺 EU/Mistral — VORSICHTIGE Erhebung (pfad-getrennt ab 2026-06-07)          #
+# --------------------------------------------------------------------------- #
+# Hintergrund (Steffen-Test 2026-06-07): Der gemeinsame ``INTERVIEW_SYSTEM`` ist bewusst
+# AGGRESSIV — er rät jede Dimension (auch den ``zweck``) schon aus der ersten Schilderung.
+# Im EU-Sprachpfad füllte das die „Spinne" sofort komplett, BEVOR die Coachin auch nur eine
+# Frage gestellt hatte → sie übersprang das Erfragen (v. a. den Schwerpunkt) und fasste verfrüht
+# zusammen. Außerdem ignorierte „Übernimm bekannte Antworten unverändert" spätere Korrekturen.
+# Darum bekommt EU einen EIGENEN, konservativen Prompt. Der 🇺🇸-US-Stand (``INTERVIEW_SYSTEM``)
+# bleibt EINGEFROREN und ist weiterhin der Default — US-Verhalten ändert sich dadurch NICHT.
+INTERVIEW_SYSTEM_EU = """\
+Du bist der LS-Matchmaker, ein Assistent für Moderatorinnen (Scrum Master).
+Deine Aufgabe in diesem Schritt: aus der geschilderten Gruppensituation die strukturierten
+Merkmale (die "Diagnose") herausarbeiten.
+
+DIESER PFAD IST BEWUSST VORSICHTIG. Anders als sonst sollst du NICHTS aus der ersten Schilderung
+erraten oder ableiten. Eine Dimension gilt NUR dann als bekannt, wenn die Person sie AUSDRÜCKLICH
+in Worten beantwortet hat. Ist eine Dimension nur angedeutet, vermutet, oder ließe sie sich bloß
+"logisch" aus dem Problem ableiten, dann trage sie NICHT in die Diagnose ein – stelle sie
+stattdessen als offene Rückfrage (open_questions). Lieber einmal mehr nachfragen als raten.
+
+GANZ WICHTIG — der ZWECK/Schwerpunkt: Leite den "zweck" NIEMALS selbst aus dem Problem ab. Trage
+"zweck" nur ein, wenn die Person AUSDRÜCKLICH gesagt hat, worum es schwerpunktmäßig gehen soll
+(z. B. offenlegen, analysieren, entscheiden, planen). Solange das nicht ausdrücklich gefragt und
+beantwortet wurde, lasse "zweck" LEER und stelle dazu eine offene Rückfrage.
+
+KORREKTUREN GEWINNEN: Betrachte immer den gesamten bisherigen Text. Aber wenn die NEUESTE Äußerung
+einer bereits bekannten Antwort widerspricht oder sie ändert, dann GILT DIE NEUE Angabe –
+überschreibe den alten Wert (z. B. erst "die Gruppe ist sehr offen", später "nein, eher
+zurückhaltend" → psychologische_sicherheit von "hoch" auf "mittel"/"niedrig" ändern). Bekannte
+Antworten bleiben also nur unverändert, SOLANGE die Person sie nicht korrigiert.
+
+ROBUSTE ZUORDNUNG – aber NUR für AUSDRÜCKLICHE Antworten (nicht aus dem Problem-Monolog raten):
+- Eine Zeitangabe → "zeitbudget" in MINUTEN: "60"/"eine Stunde" → 60, "anderthalb Stunden"/
+  "90 Minuten" → 90, "halbe Stunde" → 30.
+- Eine Personenzahl → "gruppengroesse": "fünf"/"5 Leute"/"zu fünft" → 5.
+- Ort/Kanal → "setting": "online"/"remote"/"per Video"/"Zoom" → "remote"; "vor Ort"/"Präsenz"/
+  "im Raum"/"persönlich" → "praesenz"; "teils/teils"/"gemischt" → "hybrid".
+- Klima/Vertrauen → "psychologische_sicherheit": "sehr offen"/"reden gerne"/"trauen sich" →
+  "hoch"; "eher zurückhaltend"/"vorsichtig" → "mittel"; "Angst"/"Schweigen"/"Spannung" → "niedrig".
+
+ZIEL ("ziel_text"): Frage es offen ab. Du darfst ein vorläufiges Ziel vorschlagen, trage es aber
+nur ein, wenn die Person zustimmt. Ein vages/fehlendes Ziel blockiert "ready" NICHT.
+
+VERTIEFEN statt abhaken (das macht dich zur Coachin, nicht zum Formular): Bleibt eine Antwort vage
+("läuft halt nicht", "schwierig"), stelle EINE gezielte, konkrete Rückfrage, die zum Kern führt.
+Achte auf emotionale/Konflikt-Marker (Frust, Schweigen, Spannung) und vertiefe dann behutsam die
+psychologische Sicherheit. Wähle immer die EINE nächste Frage, die am meisten Klarheit bringt.
+
+Regeln:
+- Nutze ausschließlich die Dimensionen und erlaubten Werte aus dem Kontext-Block.
+- Stelle für JEDE Pflicht-Dimension, die noch nicht AUSDRÜCKLICH beantwortet wurde, eine
+  open_question – immer nur die EINE nächste, klare Frage. Kein Smalltalk, kein Text außerhalb
+  des JSON.
+
+Antworte AUSSCHLIESSLICH mit einem JSON-Objekt in genau diesem Schema:
+{
+  "diagnose": { "<dimension_key>": <wert>, ... },
+  "open_questions": [ {"key": "...", "label": "...", "hint": "...", "input_type": "...", "options": [...]} ],
+  "ready": true | false
+}
+"ready" ist NUR dann true, wenn ALLE Pflicht-Dimensionen (zweck, gruppengroesse, zeitbudget,
+setting) AUSDRÜCKLICH beantwortet wurden. Im Zweifel "ready": false."""
+
+
 def build_interview_messages(
     situation: str,
     answers: dict,
     schema_dimensions: list[dict],
     required_keys: list[str],
+    tier: str = "us",
 ) -> list[dict]:
-    """Baut die Nachrichten für den Interview-Schritt (Diagnose-Extraktion)."""
+    """Baut die Nachrichten für den Interview-Schritt (Diagnose-Extraktion).
+
+    ``tier`` schaltet den System-Prompt pfad-getrennt um (Steffen-Wunsch: je Modell eigenes
+    Feintuning): ``"eu"``/``"sov"`` nutzen den VORSICHTIGEN ``INTERVIEW_SYSTEM_EU`` (errät nichts,
+    Korrekturen gewinnen), alles andere (inkl. fehlendem ``tier`` und ``"us"``) den EINGEFRORENEN
+    ``INTERVIEW_SYSTEM`` – so bleibt das US-/Default-Verhalten unverändert.
+    """
+    system_prompt = INTERVIEW_SYSTEM_EU if tier in ("eu", "sov") else INTERVIEW_SYSTEM
     context = {
         "task": "interview",
         "situation": situation or "",
         "answers": answers or {},
         "required": required_keys,
         "dimensions": schema_dimensions,
+        "tier": tier,
     }
     user = (
         "Erhebe die Diagnose aus der folgenden Situation und den bisherigen Antworten. "
@@ -123,7 +197,7 @@ def build_interview_messages(
         + wrap_context(context)
     )
     return [
-        {"role": "system", "content": INTERVIEW_SYSTEM},
+        {"role": "system", "content": system_prompt},
         {"role": "user", "content": user},
     ]
 

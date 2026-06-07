@@ -644,7 +644,6 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     """Pro Raum: Sitzung je Souveränitätsstufe. Die gewählte Stufe steht in den
     Teilnehmer-Metadaten des LiveKit-Tokens (``{"tier": "us"|"eu"|"sov"}``)."""
     await ctx.connect()
-    brain = LSInterviewBrain(BACKEND_URL)
 
     # Stufe aus den Teilnehmer-Metadaten lesen (Token trägt {"tier": ...}); Default eu.
     tier = "eu"
@@ -656,6 +655,9 @@ async def entrypoint(ctx: agents.JobContext) -> None:
         logger.warning("Stufe nicht lesbar (%r) — nutze eu.", exc)
     logger.info("Sprach-Sitzung: Stufe %s", tier)
 
+    # Brain mit dem Tier bauen, damit /api/interview/ den pfad-getrennten Erhebungs-Prompt
+    # bekommt (EU = vorsichtig, US = eingefroren). Daher erst NACH der Tier-Erkennung.
+    brain = LSInterviewBrain(BACKEND_URL, tier=tier)
     session = _build_session(tier)
     coach = LSCoach(ctx.room, brain, tier=tier)
 
