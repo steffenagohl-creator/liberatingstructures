@@ -72,6 +72,11 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
         // nicht-linear (das Gespräch nennt die Dimensionen in beliebiger Reihenfolge).
         // Im Tipp-Modus identisch zum bisherigen Verhalten (Antworten kommen der Reihe nach).
         const done = answers[q.id] != null;
+        // Schwerpunkt-Knoten in der offiziellen Kategorie-Farbe (wie Chips & Ergebnis-Badge).
+        // Bei mehreren Werten („Offenlegen + Planen") tönt der erste die Fläche. Gilt für beide
+        // Sprach-Pfade gleich, da die Spinne von US wie EU dieselbe Anzeige nutzt.
+        const zweckTint = q.id === 'zweck' && done
+          ? ZWECK_LABEL_COLOR[String(answers[q.id]).split('+')[0].trim()] : null;
         const isNew = busyStep === i;
         const tx = collapse ? cx - p.x : 0, ty = collapse ? cy - p.y : 0;
         return (
@@ -80,7 +85,8 @@ export function Constellation({ seq, answers, filled, busyStep = -1, collapse = 
             opacity: collapse ? 0 : 1, transition: 'transform .6s cubic-bezier(.5,0,.3,1), opacity .5s',
             animation: isNew && !collapse ? 'lsPop .5s both' : 'none' }}>
             {done ? (
-              <div style={{ background: 'var(--surface)', border: '1.5px solid var(--sage)', borderRadius: 12,
+              <div style={{ background: zweckTint || 'var(--surface)',
+                border: `1.5px solid ${zweckTint ? 'rgba(60,40,30,.22)' : 'var(--sage)'}`, borderRadius: 12,
                 padding: '6px 9px', boxShadow: '0 3px 10px rgba(94,138,120,.18)' }}>
                 <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: '.05em', textTransform: 'uppercase', color: 'var(--sage)' }}>{q.label}</div>
                 <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.2, marginTop: 1 }}>{shortVal(answers[q.id])}</div>

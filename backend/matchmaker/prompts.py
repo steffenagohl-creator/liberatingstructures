@@ -127,7 +127,7 @@ GANZ WICHTIG — der ZWECK/Schwerpunkt (Sonderfall, anders als die übrigen Dime
 Schwerpunkt aktiv ab, SOLANGE die Person sich noch gar nicht zum Schwerpunkt
 geäußert hat. ABER sobald die Person ihren Schwerpunkt in EIGENEN Worten
 beschrieben hat, ORDNE den "zweck" EINEM ODER MEHREREN erlaubten Werten zu und trage sie als LISTE
-ein. Erlaubte Werte: offenlegen, analysieren, entscheiden, planen. Nennt die Person MEHRERE
+ein. Erlaubte Werte: offenlegen, teilen, analysieren, strategie, helfen, planen. Nennt die Person MEHRERE
 Schwerpunkte, trage AUCH MEHRERE ein (z. B. „die Gründe offenlegen und einen Plan erstellen"
 → "zweck": ["offenlegen", "planen"]). Diese Zuordnung ist ausdrücklich ERWÜNSCHT und gilt NICHT
 als unerlaubtes Raten – sie ist der Kern deiner Aufgabe. Lasse "zweck" nie leer und frage
