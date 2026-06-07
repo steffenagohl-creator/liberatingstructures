@@ -19,6 +19,15 @@ const PURPOSE_LABEL = {
   strategie: 'Strategie', helfen: 'Helfen', planen: 'Planen', solo: 'Solo',
 };
 
+// Offizielle LS-Kategorie-Farben — GESPIEGELT aus backend/catalog/constants.py (PURPOSE_COLORS),
+// dort steht die eine Quelle der Wahrheit. Herkunft: liberatingstructures.de/matchmaker/.
+// Doku: Wissen/farbpalette.md. Pastell-Hintergrund + dunkle Schrift = lesbarer Kontrast
+// (Barrierefrei-Leitprinzip). 'solo' = neutraler Warmgrau-Ton (kein offizieller LS-Zweck).
+const PURPOSE_COLOR = {
+  offenlegen: '#cddff0', teilen: '#eeb6b6', analysieren: '#d8e5d4',
+  strategie: '#cfb8d1', helfen: '#fff4d1', planen: '#fdd497', solo: '#e7e2d6',
+};
+
 const sizeLabel = (s) => `${s.group_size_min ?? '?'}–${s.group_size_max ?? '∞'} Pers.`;
 const timeLabel = (s) => (s.duration_max && s.duration_max !== s.duration_min)
   ? `${s.duration_min}–${s.duration_max} Min` : `${s.duration_min} Min`;
@@ -84,7 +93,11 @@ export function MethodCard({ step, struct, idx, last, open, onToggle }) {
         {struct?.short_desc && <p style={{ margin: '0 0 11px', fontSize: 14.5, lineHeight: 1.5, color: 'var(--ink)' }}>{struct.short_desc}</p>}
         {struct && (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 11 }}>
-            {struct.purpose_tags?.[0] && <Badge primary>{PURPOSE_LABEL[struct.purpose_tags[0]] || struct.purpose_tags[0]}</Badge>}
+            {struct.purpose_tags?.[0] && (
+              <Badge style={{ background: PURPOSE_COLOR[struct.purpose_tags[0]] || 'var(--sand)',
+                border: '1px solid rgba(60,40,30,.18)', color: 'var(--ink)', fontWeight: 600 }}>
+                {PURPOSE_LABEL[struct.purpose_tags[0]] || struct.purpose_tags[0]}</Badge>
+            )}
             <Badge>{sizeLabel(struct)}</Badge>
             <Badge>{timeLabel(struct)}</Badge>
             {struct.online_capable && <Badge>online-fähig</Badge>}
