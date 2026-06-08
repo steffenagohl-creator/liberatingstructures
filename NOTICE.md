@@ -24,9 +24,8 @@ beruhen. Es gilt ein **mehrteiliges Lizenzmodell**.
 - **Betrifft:** alle in diesem Projekt **selbst verfassten** Texte und Beschreibungen sowie die
   kuratierten Daten-/Wissensdateien (u. a. `data/ls_principles.json`, `data/ls_foundations.json`,
   `data/ls_objectives.json`, eigene deutsche Strukturtexte) und die Dokumentation.
-- **Warum BY-SA 4.0** (statt früher BY-NC 4.0): Diese Inhalte bauen auf den Liberating-Structures-
-  Inhalten auf, die unter BY-SA 4.0 stehen; „ShareAlike“ verlangt die Weitergabe unter derselben
-  Lizenz.
+- **Warum BY-SA 4.0:** Diese Inhalte bauen auf den Liberating-Structures-Inhalten auf, die unter
+  BY-SA 4.0 stehen; „ShareAlike“ verlangt die Weitergabe unter derselben Lizenz.
 
 ---
 
@@ -41,21 +40,19 @@ den Liberating Structures.
 - **Lizenz:** Creative Commons **CC BY-SA 4.0**
   <https://creativecommons.org/licenses/by-sa/4.0/>
 - **Bedeutet:** Namensnennung erforderlich; Bearbeitungen müssen unter **derselben Lizenz**
-  (BY-SA 4.0) weitergegeben werden („ShareAlike“). BY-SA erlaubt – anders als die früher
-  angenommene BY-NC – ausdrücklich auch die **kommerzielle** Nachnutzung.
+  (BY-SA 4.0) weitergegeben werden („ShareAlike“). BY-SA erlaubt ausdrücklich auch die
+  **kommerzielle** Nachnutzung.
 
 **Empfohlene Attributionszeile (bitte beibehalten):**
 > This work includes content from Liberating Structures Fieldbook (2026) by Keith McCandless and
 > Nancy White, available at www.liberatingstructures.com. Licensed under CC BY-SA 4.0.
 
-### 3a. Übergangshinweis zu den klassischen 33 (deutsche Übersetzung)
+### 3a. Hinweis zu den deutschen Texten
 
-Die deutschen Beschreibungen der **klassischen 33** Strukturen wurden ursprünglich aus der
-**Holisticon-Übersetzung** (<https://liberatingstructures.de/>) übernommen, die unter
-**CC BY-NC 3.0** steht. Diese Texte tragen weiterhin ihre Holisticon/BY-NC-3.0-Attribution
-(Feld `attribution` je Struktur), **bis** sie auf Basis der englischen BY-SA-4.0-Originalquelle
-neu verfasst sind. Neu erfasste Strukturen (z. B. *Mad Tea | Calm Tea*) stehen bereits unter
-BY-SA 4.0.
+Alle deutschen Texte dieses Projekts (Beschreibungen, Anleitungen, Designelemente) sind **eigene
+Formulierungen**: die klassischen 33 als **eigenständige Übersetzungen aus dem englischen
+BY-SA-4.0-Original** (Feld `description_origin: uebersetzt_aus_en`), die 10 neueren Strukturen
+selbst verfasst (`description_origin: eigen`). Sie stehen damit durchgehend unter **CC BY-SA 4.0**.
 
 ### 3b. Icons / Piktogramme
 
@@ -74,8 +71,7 @@ Icons zu verwenden.
 - Diese App wird **kostenlos als Geschenk** an die Allgemeinheit bereitgestellt.
 
 **Sichtbare Attribution** (App & Repo): Keith McCandless & Nancy White (Fieldbook 2026; ursprünglich
-Henri Lipmanowicz & Keith McCandless) + Holisticon AG (klassische deutsche Übersetzung) +
-Lizenzhinweis CC BY-SA 4.0.
+Henri Lipmanowicz & Keith McCandless) + Lizenzhinweis CC BY-SA 4.0.
 
 ---
 

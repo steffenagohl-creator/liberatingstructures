@@ -73,7 +73,7 @@ Spalte **„Sprache"**: `{de,en}` = zweisprachiges Textfeld; `neutral` = sprachn
 | `icon` | neutral | Text | Datei-/Pfadkennung des offiziellen LS-Icons. |
 | `icon_alt` | `{de,en}` | Text | **Alt-Text**: beschreibt das Icon für Screenreader und Crawler. |
 | `design_elements` | gemischt | Objekt | Die 5 Designelemente (Texte je `{de,en}`, siehe unten). |
-| `description_origin` | neutral | Text | `uebernommen` (Quelltext mit Attribution) oder `eigen` (selbst verfasst). |
+| `description_origin` | neutral | Text | Herkunft der **deutschen** Texte: `eigen` (selbst verfasst – v. a. die 10 neueren Strukturen), `uebersetzt_aus_en` (eigenständige Übersetzung aus dem englischen BY-SA-Feld dieses Datensatzes – die klassischen 33) oder `uebernommen` (übernommener Quelltext mit Attribution). Alle Varianten stehen unter CC BY-SA 4.0. |
 | `attribution` | `{de,en}` | Text | Namensnennung + Lizenz (CC BY-SA 4.0). |
 | `embodied_principles` | neutral | Liste | **Internes Hilfsfeld:** IDs besonders verkörperter LS-Prinzipien (`P1`–`P10`); Details in `ls_principles.json`. |
 | `guide` | gemischt | Objekt | Ausführlicher **Detailguide** (Ebene 2); Aufbau siehe unten. |
