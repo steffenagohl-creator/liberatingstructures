@@ -99,11 +99,17 @@ export function diagnoseToAnswers(d = {}) {
   if (d.ziel_text) a.ziel = d.ziel_text;
   // Das Backend kann MEHRERE Zweck-Tags halten (z. B. „offenlegen" UND „planen"). Alle
   // anzeigen, damit kein gewünschter Schwerpunkt unter den Tisch fällt (Wunsch 2026-06-06).
-  if (Array.isArray(d.zweck) && d.zweck.length) {
+  // ACHTUNG: Je nach Pfad kommt ``zweck`` als Liste ODER als einzelner Text — der Sprach-Pfad
+  // (US-Realtime wie EU-Interview) liefert oft nur den String "analysieren", das Chat-Mapping
+  // dagegen ["analysieren"]. Vor dem Fix 2026-06-08 prüfte diese Stelle nur ``Array.isArray`` und
+  // verschluckte den String stumm → der Schwerpunkt-Knoten der Spinne blieb im Sprach-Modus leer.
+  // Darum hier beides zu einer Liste normalisieren.
+  const zweckList = Array.isArray(d.zweck) ? d.zweck : (d.zweck ? [d.zweck] : []);
+  if (zweckList.length) {
     // Auch dem Frontend UNBEKANNTE Backend-Werte (z. B. "teilen", "entscheiden") anzeigen, statt
     // sie zu verschlucken → der Schwerpunkt-Strang bleibt nie fälschlich leer, obwohl ein Wert da ist.
     const cap = (z) => String(z).charAt(0).toUpperCase() + String(z).slice(1);
-    const labels = d.zweck.map((z) => ZWECK_REV[z] || cap(z)).filter(Boolean);
+    const labels = zweckList.map((z) => ZWECK_REV[z] || cap(z)).filter(Boolean);
     if (labels.length) a.zweck = labels.join(' + ');
   }
   if (d.psychologische_sicherheit && SICHERHEIT_REV[d.psychologische_sicherheit]) a.sicherheit = SICHERHEIT_REV[d.psychologische_sicherheit];

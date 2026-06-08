@@ -365,17 +365,35 @@ export default function App() {
   // Der Agent liefert das fertige Match über den Data-Channel → zum Ergebnis gleiten und nur
   // die Struktur-Details nachladen (das Matching selbst hat der Agent bereits erledigt).
   async function handleVoiceResult(m) {
-    if (!m || !Array.isArray(m.string) || resultHandledRef.current) return;
+    // DIAGNOSE (2026-06-08): exakt zeigen, WAS der Agent über den Data-Channel liefert. So sehen
+    // wir bei der „leere-Seite"-Suche in der Browser-Konsole sofort, ob/welches Ergebnis ankommt.
+    // eslint-disable-next-line no-console
+    console.log('[LS] Sprach-Ergebnis empfangen:', m);
+    if (resultHandledRef.current) return;  // Doppel-Event: Ergebnis ist schon verarbeitet.
+    const steps = Array.isArray(m?.string) ? m.string : [];
+    // EHRLICHER Fehlerzustand statt stiller weißer Seite: kam ein Ergebnis OHNE verwertbaren String,
+    // zeigen wir die Fehleransicht (mit „Nochmal"). Bewusst NICHT als „verarbeitet" markieren, damit
+    // ein evtl. nachfolgendes, vollständiges Ergebnis noch greifen darf.
+    if (!steps.length) {
+      // eslint-disable-next-line no-console
+      console.warn('[LS] Ergebnis ohne verwertbaren String — zeige Fehleransicht:', m);
+      setMatch(null); setDetails({});
+      setMatchError({ status: 200, message: 'Das Ergebnis kam an, enthielt aber keinen Vorschlag.' });
+      setRunning(false); setPhase('morph');
+      return;
+    }
     resultHandledRef.current = true;
     setAnswers(voiceAnswersRef.current);
     setMatch(null); setDetails({}); setMatchError(null); setRunning(true); setPhase('morph');
     try {
-      const slugs = [...new Set(m.string.map((s) => s.slug))];
+      const slugs = [...new Set(steps.map((s) => s.slug))];
       const structs = await Promise.all(slugs.map((s) => fetchStructure(s, 'de').catch(() => null)));
       const byslug = {};
       structs.forEach((s) => { if (s) byslug[s.slug] = s; });
       setDetails(byslug); setMatch(m);
     } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error('[LS] Aufbau des Ergebnis-Bildschirms fehlgeschlagen:', e);
       setMatchError(e);
     } finally {
       setRunning(false);

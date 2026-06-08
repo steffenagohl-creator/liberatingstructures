@@ -88,7 +88,7 @@ export function MethodCard({ step, struct, idx, last, open, onToggle }) {
         {struct && (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 11 }}>
             {struct.purpose_tags?.[0] && (
-              <Badge style={{ background: PURPOSE_COLOR[struct.purpose_tags[0]] || 'var(--sand)',
+              <Badge style={{ background: PURPOSE_COLORS[struct.purpose_tags[0]] || 'var(--sand)',
                 border: '1px solid rgba(60,40,30,.18)', color: 'var(--ink)', fontWeight: 600 }}>
                 {PURPOSE_LABEL[struct.purpose_tags[0]] || struct.purpose_tags[0]}</Badge>
             )}
