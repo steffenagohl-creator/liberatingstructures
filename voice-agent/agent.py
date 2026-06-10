@@ -19,7 +19,7 @@ import os
 
 from dotenv import load_dotenv
 from livekit import agents
-from livekit.agents import Agent, AgentSession
+from livekit.agents import Agent, AgentSession, room_io
 from livekit.plugins import mistralai, openai, silero
 
 from brain import LSInterviewBrain
@@ -38,6 +38,31 @@ STT_MODEL = os.environ.get("VOICE_STT_MODEL", "voxtral-mini-transcribe-realtime-
 LLM_MODEL = os.environ.get("VOICE_LLM_MODEL", "mistral-small-latest")
 TTS_VOICE = os.environ.get("VOICE_TTS_VOICE", "de_female_warm")
 
+# ── Kostenschutz (Steffen 2026-06-09): Eine Sprach-Sitzung wird pro Minute Verbindung abgerechnet
+# (EU: Voxtral-STT läuft durchgehend; US: OpenAI Realtime ist ein teurer Dauer-Stream). Damit eine
+# vergessene/offen gelassene Sitzung nicht stundenlang Kosten verursacht, schaltet sich der Agent
+# selbst ab: nach dem Ergebnis (kurzes Nachfrage-Fenster), bei Inaktivität, und ein hartes Zeitlimit
+# als absolute Obergrenze. Alle Werte per ENV justierbar.
+INACTIVITY_TIMEOUT_S = float(os.environ.get("VOICE_INACTIVITY_TIMEOUT", "180"))  # Stille bis Abschaltung
+POST_RESULT_GRACE_S = float(os.environ.get("VOICE_POST_RESULT_GRACE", "60"))      # Nachfrage-Fenster nach dem Ergebnis
+MAX_SESSION_S = float(os.environ.get("VOICE_MAX_SESSION", "1200"))                # harte Obergrenze je Sitzung
+
+# Feste Abschiedssätze je Abschalt-Grund (deterministisch vorgelesen, nicht vom Modell generiert).
+GOODBYE_TEXTS = {
+    "post_result": (
+        "Ich wünsche euch viel Erfolg mit eurem Vorhaben. Ich beende unser Gespräch jetzt — "
+        "du kannst jederzeit ein neues starten. Bis bald!"
+    ),
+    "inactivity": (
+        "Ich habe eine Weile nichts mehr gehört, darum beende ich das Gespräch jetzt, um Ressourcen "
+        "zu schonen. Melde dich gern jederzeit wieder — bis bald!"
+    ),
+    "max_session": (
+        "Wir sind jetzt schon eine ganze Weile zusammen, darum beende ich das Gespräch an dieser "
+        "Stelle. Du kannst jederzeit ein neues starten. Bis bald!"
+    ),
+}
+
 # Coach-Charakter & Verhaltens-Leitplanken — PHASEN-MODELL.
 # Hintergrund (verifiziert im Test 2026-06-06): Im Realtime-Pfad (us) führt das Sprachmodell
 # das Gespräch SELBST. Ein einziger, statischer Prompt („frage immer weiter, präsentiere nie")
@@ -51,6 +76,15 @@ COACH_PERSONA = (
     "Du bist eine warmherzige, ruhige und geduldige Liberating-Structures-Coachin und sprichst "
     "Deutsch. Sprich LANGSAM, ruhig und freundlich; schaffe eine angenehme, sichere Atmosphäre "
     "und lass der Person Zeit zum Nachdenken — keine Hektik, kein Drängen. "
+    # THEMEN-LEITPLANKE (Steffen 2026-06-09): hält den Sprachkanal beim Thema (auch Kostenschutz —
+    # verhindert Missbrauch als allgemeiner Chatbot). Bewusst in der gemeinsamen Persona, damit sie
+    # in ALLEN Phasen und BEIDEN Pfaden greift (US nur additiv ergänzt, Tag voice-vorzeigbar-…).
+    "WICHTIG — bleib beim Thema: Du hilfst AUSSCHLIESSLICH bei der Gruppensituation, der Moderation "
+    "und der Auswahl passender Liberating Structures (im weitesten Sinne rund um Workshops, Teams "
+    "und Zusammenarbeit). Auf klar themenfremde Anliegen (z. B. Kochrezepte, Allgemeinwissen, "
+    "Politik, Programmierung, private Plauderei) gehst du NICHT ein: Sag freundlich und kurz, dass "
+    "du dafür nicht da bist, und lenke zurück zur Gruppensituation. Erfinde keine Inhalte außerhalb "
+    "dieses Themas. "
 )
 
 # PHASE 1 — ERHEBUNG: nur zuhören & gezielt fragen, nie selbst vorschlagen.
@@ -268,6 +302,10 @@ class LSCoach(Agent):
         self._awaiting_confirmation = False  # True = zusammengefasst, wartet auf das ausdrückliche „Go"
         self._erfragt: set[str] = set()  # 🇪🇺 EU: Dimensionen, die der Coach AKTIV erfragt hat (vs. nur interpretiert)
         self._suppress_turn_hook = False  # im US/Realtime-Pfad True (Transkript kommt übers Event)
+        # Kostenschutz-Timer (s. Konstanten oben): Inaktivitäts-/Nachfrage-Wächter + harter Backstop.
+        self._inactivity_task: asyncio.Task | None = None
+        self._maxsession_task: asyncio.Task | None = None
+        self._shutting_down = False  # idempotenter Abschalt-Guard
         # PFAD-GETRENNTE Bestätigungs-Prompts (ab 2026-06-07): US eingefroren, EU eigenes Feintuning.
         if tier == "us":
             self._bestaetigung_instr = PHASE_BESTAETIGUNG_US
@@ -282,6 +320,9 @@ class LSCoach(Agent):
         die Sitzung war noch nicht bereit, die erste Antwort wurde abgeschnitten und neu
         ausgelöst → Start-Loop. ``on_enter`` vermeidet das.)"""
         logger.info("on_enter: Begrüßung wird gesendet")
+        # Kostenschutz scharf schalten: harter Backstop (einmalig) + Inaktivitäts-Wächter.
+        self._arm_max_session()
+        self._bump_activity()
         await self._request_reply(
             "Begrüße die Nutzerin kurz und herzlich und frage offen nach der Gruppensituation. "
             "Sage genau EINE Begrüßung und EINE offene Frage — danach hörst du zu."
@@ -310,6 +351,11 @@ class LSCoach(Agent):
         ``user_input_transcribed``-Event (US-Realtime) — denn im Realtime-Modus liefert
         livekit die Nutzer-Transkription über dieses Event, nicht über den Turn-Hook.
         """
+        # Kostenschutz: JEDE Nutzer-Äußerung setzt den Inaktivitäts-/Nachfrage-Wächter zurück —
+        # bewusst VOR dem ``_done``-Check, damit auch Rückfragen im Nachfrage-Fenster (Phase
+        # ABSCHLUSS, wo ``_done`` True ist) das Fenster verlängern. Während der VERDICHTUNG ist der
+        # Wächter pausiert (``_bump_activity`` ignoriert diese Phase).
+        self._bump_activity()
         if self._done:
             return
         user_text = (user_text or "").strip()
@@ -480,6 +526,9 @@ class LSCoach(Agent):
         self._done = True
         # PHASE 2 — Verdichtung: Verhalten umschalten (keine Fragen mehr), dann ~60 s überbrücken.
         await self._set_phase("VERDICHTUNG", PHASE_VERDICHTUNG)
+        # Kostenschutz: Inaktivitäts-Wächter PAUSIEREN — während das System rechnet, schweigt der
+        # Nutzer bewusst (Wartespiel/Musik); das darf nicht fälschlich als Inaktivität auslösen.
+        self._pause_inactivity()
         # Frontend-Signal „ich rechne jetzt" → dort startet das Wartespiel und überbrückt die
         # 1–2 Min Verdichtung (ohne dieses Signal blitzte es nur beim Ergebnis kurz auf).
         try:
@@ -501,6 +550,8 @@ class LSCoach(Agent):
             self._done = False
             self._awaiting_confirmation = False
             await self._set_phase("ERHEBUNG", self._erhebung_instr)
+            # Wir sind zurück in der Erhebung → den normalen Inaktivitäts-Wächter wieder armen.
+            self._bump_activity()
             await self._speak(
                 "Entschuldige, beim Zusammenstellen ist gerade etwas schiefgegangen. "
                 "Lass uns kurz weitermachen — magst du mir noch etwas zur Situation erzählen?"
@@ -521,6 +572,10 @@ class LSCoach(Agent):
         # zerschoss ein VAD-Zucken das lange Vorlesen.
         await self._set_phase("ABSCHLUSS", PHASE_ABSCHLUSS)
         await self._speak(LSInterviewBrain.spoken_summary(result), allow_interruptions=False)
+        # Kostenschutz: Nachfrage-Fenster starten. Ab jetzt gilt die kürzere POST_RESULT_GRACE_S —
+        # kommt keine Rückfrage mehr, verabschiedet sich der Coach und die Sitzung wird beendet.
+        # (``_bump_activity`` liest Phase ABSCHLUSS und armt automatisch das kurze Fenster.)
+        self._bump_activity()
 
     @staticmethod
     def _is_affirmation(text: str) -> bool:
@@ -633,6 +688,96 @@ class LSCoach(Agent):
             )
         except Exception as exc:  # pragma: no cover - reine Robustheit
             logger.warning("Sprachausgabe nicht möglich: %s", exc)
+
+    # ── Kostenschutz: Selbst-Abschaltung (Abschied + Sitzung sauber trennen) ────────────────────
+    def _bump_activity(self) -> None:
+        """(Re)startet den Inaktivitäts-Wächter — von JEDER Nutzer-Äußerung aufgerufen. Die Frist
+        hängt von der Phase ab: in ``ABSCHLUSS`` gilt das kurze Nachfrage-Fenster
+        (``POST_RESULT_GRACE_S``), sonst die normale Inaktivitäts-Frist (``INACTIVITY_TIMEOUT_S``).
+        Während der ``VERDICHTUNG`` (das System rechnet, der Nutzer schweigt bewusst) bleibt der
+        Wächter PAUSIERT."""
+        if self._shutting_down or self._phase == "VERDICHTUNG":
+            return
+        if self._phase == "ABSCHLUSS":
+            timeout, reason = POST_RESULT_GRACE_S, "post_result"
+        else:
+            timeout, reason = INACTIVITY_TIMEOUT_S, "inactivity"
+        if self._inactivity_task is not None:
+            self._inactivity_task.cancel()
+        self._inactivity_task = asyncio.create_task(self._inactivity_countdown(timeout, reason))
+
+    def _pause_inactivity(self) -> None:
+        """Stoppt den Inaktivitäts-Wächter (z. B. solange das System rechnet)."""
+        if self._inactivity_task is not None:
+            self._inactivity_task.cancel()
+            self._inactivity_task = None
+
+    async def _inactivity_countdown(self, seconds: float, reason: str) -> None:
+        """Wartet ``seconds`` und schaltet dann ab. Ein ``cancel()`` (neue Aktivität) bricht ab."""
+        try:
+            await asyncio.sleep(seconds)
+        except asyncio.CancelledError:
+            return
+        logger.info("Wächter (%s) nach %.0fs ausgelöst → Abschaltung", reason, seconds)
+        await self._graceful_shutdown(reason)
+
+    def _arm_max_session(self) -> None:
+        """Startet den harten Maximal-Backstop EINMALIG (wird nie zurückgesetzt) — absolute Obergrenze."""
+        if self._maxsession_task is not None:
+            return
+        self._maxsession_task = asyncio.create_task(self._max_session_countdown())
+
+    async def _max_session_countdown(self) -> None:
+        try:
+            await asyncio.sleep(MAX_SESSION_S)
+        except asyncio.CancelledError:
+            return
+        logger.info("Hartes Zeitlimit (%.0fs) erreicht → Abschaltung", MAX_SESSION_S)
+        await self._graceful_shutdown("max_session")
+
+    async def _graceful_shutdown(self, reason: str) -> None:
+        """Verabschiedet sich freundlich und beendet die Sitzung SAUBER, damit keine Minuten
+        weiterlaufen (Kostenschutz). Idempotent.
+
+        Reihenfolge (gegen ``livekit-agents`` 1.5.17 verifiziert + LiveKit-Community-Thread):
+        Frontend informieren → Abschiedssatz AUSREDEN lassen → ``session.shutdown(drain=True)``.
+        ``session.shutdown`` trennt nur den Agenten; damit AUCH der Nutzer getrennt und der Raum
+        gelöscht wird (= alle Minuten stoppen), ist beim ``session.start`` ``delete_room_on_close=True``
+        gesetzt. ``drain`` lässt die letzte Sprachausgabe auslaufen, bevor wirklich getrennt wird."""
+        if self._shutting_down:
+            return
+        self._shutting_down = True
+        self._done = True
+        for task in (self._inactivity_task, self._maxsession_task):
+            if task is not None:
+                task.cancel()
+        self._inactivity_task = None
+        self._maxsession_task = None
+        logger.info("Graceful Shutdown — Grund: %s", reason)
+        # Abschiedssatz ZUERST vollständig ausreden lassen — damit ihn ein evtl. später nachgerüstetes
+        # Frontend, das auf "ended" reagiert, nicht abschneidet.
+        await self._speak(GOODBYE_TEXTS.get(reason, GOODBYE_TEXTS["post_result"]),
+                          allow_interruptions=False)
+        # Frontend für eine freundliche „Sitzung beendet"-Ansicht informieren (dann erst trennen).
+        try:
+            await self._room.local_participant.publish_data(
+                json.dumps({"type": "status", "status": "ended", "reason": reason}).encode("utf-8"),
+                reliable=True, topic="status",
+            )
+        except Exception as exc:  # pragma: no cover - reine Robustheit
+            logger.warning("Ende-Status konnte nicht gesendet werden: %s", exc)
+        try:
+            # Nicht-blockierend; drain lässt verbleibende Sprache auslaufen, bevor getrennt wird.
+            self.session.shutdown(drain=True)
+        except Exception as exc:
+            logger.warning("session.shutdown fehlgeschlagen (%s) → Fallback", exc)
+            try:
+                await self.session.aclose()
+            except Exception:
+                try:
+                    await self._room.disconnect()
+                except Exception as exc2:  # pragma: no cover - reine Robustheit
+                    logger.warning("Auch Fallback-Trennung fehlgeschlagen: %s", exc2)
 
     # Reihenfolge + lesbare Namen der 7 Stränge fürs „gemeinsame Bild" (Anlass = Mittelpunkt zuerst).
     _STATUS_ORDER = (
@@ -798,7 +943,14 @@ async def entrypoint(ctx: agents.JobContext) -> None:
         session.on("user_input_transcribed", _on_user_transcript)
 
     # Begrüßung erfolgt in ``LSCoach.on_enter`` (kein Race nach session.start mehr).
-    await session.start(room=ctx.room, agent=coach)
+    # ``delete_room_on_close=True`` (Kostenschutz): Wenn der Agent die Sitzung beendet
+    # (``_graceful_shutdown`` → ``session.shutdown``), löscht LiveKit den ganzen Raum und trennt
+    # AUCH den Nutzer — sonst bliebe dessen Verbindung offen und würde weiter Minuten verursachen.
+    await session.start(
+        room=ctx.room,
+        agent=coach,
+        room_options=room_io.RoomOptions(delete_room_on_close=True),
+    )
 
 
 if __name__ == "__main__":
