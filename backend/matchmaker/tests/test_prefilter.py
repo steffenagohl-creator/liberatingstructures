@@ -62,3 +62,50 @@ class VorfilterungTests(TestCase):
         hat_schliesser = any("schließen" in s.arc_role for s in candidates)
         self.assertTrue(hat_oeffner, "Kein Öffner trotz Bogen-Sicherung")
         self.assertTrue(hat_schliesser, "Kein Schließer trotz Bogen-Sicherung")
+
+    def test_hybrid_nur_online_taugliche(self):
+        # Hybrid: ein Teil nimmt remote teil → nur online-taugliche Strukturen.
+        candidates = vorfilterung({"gruppengroesse": 25, "zeitbudget": 300, "setting": "hybrid"})
+        for s in candidates:
+            self.assertTrue(s.online_capable, f"{s.slug} ist nicht online-tauglich")
+        self.assertNotIn("25-10-crowd-sourcing", {s.slug for s in candidates})
+
+    def test_zeitbudget_reserviert_bogen(self):
+        # Knappes Budget: Neben jeder Struktur müssen kürzester Öffner + Schließer passen.
+        budget = 30
+        candidates = vorfilterung(
+            {"gruppengroesse": 8, "zeitbudget": budget, "setting": "praesenz"}
+        )
+        opens = [s.duration_min for s in candidates if "öffnen" in s.arc_role]
+        closes = [s.duration_min for s in candidates if "schließen" in s.arc_role]
+        self.assertTrue(opens and closes, "Bogen muss im Budget möglich bleiben")
+        min_open, min_close = min(opens), min(closes)
+        for s in candidates:
+            reserve = min_open + min_close
+            if "öffnen" in s.arc_role:
+                reserve = min(reserve, min_close)
+            if "schließen" in s.arc_role:
+                reserve = min(reserve, min_open)
+            self.assertLessEqual(
+                s.duration_min + reserve, budget,
+                f"{s.slug} lässt keinen Platz mehr für den Bogen",
+            )
+
+    def test_zweck_lockerung_haelt_treffer_vorn(self):
+        # Wird gelockert, stehen Zweck-/Bogen-Treffer vor den aufgefüllten Strukturen.
+        diagnose = {"zweck": ["helfen"], "gruppengroesse": 8, "zeitbudget": 300,
+                    "setting": "praesenz"}
+        candidates = vorfilterung(diagnose)
+
+        def passt(s):
+            return ("helfen" in (s.purpose_tags or [])
+                    or {"öffnen", "schließen"} & set(s.arc_role or []))
+
+        # Alle Treffer müssen VOR dem ersten Nicht-Treffer stehen (stabile Priorität).
+        nicht_treffer_gesehen = False
+        for s in candidates:
+            if passt(s):
+                self.assertFalse(nicht_treffer_gesehen,
+                                 f"Treffer {s.slug} steht hinter aufgefüllten Strukturen")
+            else:
+                nicht_treffer_gesehen = True

@@ -178,12 +178,41 @@ def get_structures_by_slugs(slugs: list[str]) -> dict[str, Structure]:
 def get_string_templates(
     *, scrum_context: str | None = None, purpose_tags: list[str] | None = None
 ) -> list[StringTemplate]:
-    """Liefert bewährte String-Vorlagen, bevorzugt passend zum Scrum-Kontext."""
+    """Liefert bewährte String-Vorlagen, bevorzugt passend zum Scrum-Kontext.
+
+    Ohne Scrum-Kontext werden die Vorlagen über den **Zweck** eingegrenzt: Eine Vorlage
+    passt, wenn mindestens eine Struktur ihrer Sequenz einen der gesuchten
+    ``purpose_tags`` trägt (Vorlagen selbst tragen keine Tags – der Zweck wird aus den
+    enthaltenen Strukturen abgeleitet). Ohne Treffer (oder ohne Zweck): alle Vorlagen.
+    """
     if scrum_context:
         matches = list(StringTemplate.objects.filter(scrum_context=scrum_context))
         if matches:
             return matches
-    return list(StringTemplate.objects.all())
+
+    templates = list(StringTemplate.objects.all())
+    if purpose_tags:
+        wanted = set(purpose_tags)
+        slugs = {
+            step.get("slug")
+            for template in templates
+            for step in (template.sequence or [])
+        }
+        tags_by_slug = {
+            s.slug: set(s.purpose_tags or [])
+            for s in Structure.objects.filter(slug__in=[s for s in slugs if s])
+        }
+        matching = [
+            template
+            for template in templates
+            if any(
+                wanted & tags_by_slug.get(step.get("slug"), set())
+                for step in (template.sequence or [])
+            )
+        ]
+        if matching:
+            return matching
+    return templates
 
 
 def serialize_candidate(structure: Structure) -> dict:

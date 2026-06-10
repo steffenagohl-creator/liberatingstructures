@@ -69,3 +69,54 @@ class QualityGateTests(TestCase):
         ok, violations = validate_string(steps, diagnose)
         self.assertFalse(ok)
         self.assertTrue(any("online" in v.lower() for v in violations), violations)
+
+    def test_hybrid_mit_nicht_online_struktur(self):
+        # Hybrid braucht wie Remote online-taugliche Strukturen.
+        steps = [
+            step(OPENER, "öffnen", 12),
+            step(NICHT_ONLINE, "divergieren", 25),
+            step(CLOSER, "schließen", 15),
+        ]
+        diagnose = {"zeitbudget": 120, "gruppengroesse": 20, "setting": "hybrid"}
+        ok, violations = validate_string(steps, diagnose)
+        self.assertFalse(ok)
+        self.assertTrue(any("online" in v.lower() for v in violations), violations)
+
+    def test_falsche_bogen_reihenfolge_faellt_durch(self):
+        # Schließer zuerst, Öffner zuletzt: beide Rollen vorhanden, Reihenfolge falsch.
+        steps = [step(CLOSER, "schließen", 15), step(OPENER, "öffnen", 12)]
+        diagnose = {"zeitbudget": 60, "gruppengroesse": 8, "setting": "praesenz"}
+        ok, violations = validate_string(steps, diagnose)
+        self.assertFalse(ok)
+        self.assertTrue(any("beginnt nicht" in v for v in violations), violations)
+        self.assertTrue(any("endet nicht" in v for v in violations), violations)
+
+    def test_schritt_dauer_ausserhalb_der_struktur_spanne(self):
+        # 1-2-4-All ist mit 12–15 Minuten hinterlegt; 3 Minuten sind unrealistisch.
+        steps = [step(OPENER, "öffnen", 3), step(CLOSER, "schließen", 15)]
+        diagnose = {"zeitbudget": 60, "gruppengroesse": 8, "setting": "praesenz"}
+        ok, violations = validate_string(steps, diagnose)
+        self.assertFalse(ok)
+        self.assertTrue(any("Dauer" in v for v in violations), violations)
+
+    def test_struktur_ausserhalb_der_kandidatenliste(self):
+        # Real existierende Struktur, aber nicht in der Vorfilterung → Verstoß.
+        steps = [step(OPENER, "öffnen", 12), step(CLOSER, "schließen", 15)]
+        diagnose = {"zeitbudget": 60, "gruppengroesse": 8, "setting": "praesenz"}
+        ok, violations = validate_string(steps, diagnose, allowed_slugs={OPENER})
+        self.assertFalse(ok)
+        self.assertTrue(any("Kandidatenliste" in v for v in violations), violations)
+        # Mit beiden in der Kandidatenliste besteht derselbe String.
+        ok, violations = validate_string(steps, diagnose, allowed_slugs={OPENER, CLOSER})
+        self.assertTrue(ok, violations)
+
+    def test_doppelte_struktur_faellt_durch(self):
+        steps = [
+            step(OPENER, "öffnen", 12),
+            step(OPENER, "divergieren", 12),
+            step(CLOSER, "schließen", 15),
+        ]
+        diagnose = {"zeitbudget": 60, "gruppengroesse": 8, "setting": "praesenz"}
+        ok, violations = validate_string(steps, diagnose)
+        self.assertFalse(ok)
+        self.assertTrue(any("Doppelte" in v for v in violations), violations)

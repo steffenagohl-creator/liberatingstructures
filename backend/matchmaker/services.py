@@ -77,8 +77,13 @@ def vorfilterung(diagnose: dict) -> list:
     Der **Zweck** schränkt die inhaltlichen Strukturen ein – aber Öffner und Schließer
     (die Bogen-Strukturen) bleiben **immer** in der Liste. Grund: Ein Zweck wie „planen"
     hat im Katalog gar keinen passenden Öffner; ohne diese Ausnahme könnte der Bogen
-    nie geschlossen werden. Bleiben am Ende zu wenige Kandidaten, lockern wir den
-    Zweck-Filter ganz.
+    nie geschlossen werden. Bleiben am Ende zu wenige Kandidaten, wird stufenweise
+    gelockert: Die übrige Grundmenge wird HINTEN angefügt (Zweck-Treffer stehen vorn
+    und behalten so die höchste Priorität), statt den Zweck-Filter ganz zu verwerfen.
+
+    Zeitbudget-Reserve: Eine Struktur ist nur dann ein sinnvoller Kandidat, wenn neben
+    ihr auch noch der Bogen (kürzester Öffner + kürzester Schließer) ins Budget passt –
+    sonst stehen im Prompt Kandidaten, die das Quality Gate nie passieren lassen würde.
     """
     diagnose = normalize_diagnose(diagnose)
 
@@ -87,13 +92,17 @@ def vorfilterung(diagnose: dict) -> list:
         difficulties = ["leicht", "mittel"]
 
     # Schritt 1: harte Kriterien (ohne Zweck) → Grundmenge.
+    # Hybrid braucht wie Remote online-taugliche Strukturen (ein Teil nimmt remote teil).
     hard = tools.query_structures(
         purpose_tags=None,
         group_size=diagnose["gruppengroesse"],
         max_duration=diagnose["zeitbudget"],
-        online_only=diagnose["setting"] == "remote",
+        online_only=diagnose["setting"] in ("remote", "hybrid"),
         difficulties=difficulties,
     )
+
+    # Schritt 1b: Zeitbudget-Reserve – neben jeder Struktur muss der Bogen noch passen.
+    hard = _mit_bogen_reserve(hard, diagnose["zeitbudget"])
 
     zweck = set(diagnose["zweck"])
     if not zweck:
@@ -109,18 +118,53 @@ def vorfilterung(diagnose: dict) -> list:
             seen.add(structure.slug)
             candidates.append(structure)
 
-    # Zu wenige übrig? Dann lieber die ganze harte Grundmenge anbieten.
+    # Zu wenige übrig? Stufenweise lockern: restliche Grundmenge HINTEN anfügen –
+    # die Zweck-Treffer bleiben vorn (Reihenfolge signalisiert dem LLM die Priorität).
     if len(candidates) < MIN_CANDIDATES:
-        return hard
+        candidates.extend(s for s in hard if s.slug not in seen)
     return candidates
+
+
+def _mit_bogen_reserve(structures: list, budget: int | None) -> list:
+    """Filtert Strukturen heraus, neben denen der Bogen nicht mehr ins Budget passt.
+
+    Reserve = kürzester Öffner + kürzester Schließer der Grundmenge. Kann eine Struktur
+    selbst öffnen bzw. schließen, entfällt der jeweilige Anteil der Reserve.
+    """
+    if budget is None:
+        return structures
+
+    def dmin(s) -> int:
+        return s.duration_min or 0
+
+    openers = [dmin(s) for s in structures if "öffnen" in (s.arc_role or [])]
+    closers = [dmin(s) for s in structures if "schließen" in (s.arc_role or [])]
+    min_open = min(openers) if openers else 0
+    min_close = min(closers) if closers else 0
+
+    kept = []
+    for s in structures:
+        roles = set(s.arc_role or [])
+        reserve = min_open + min_close
+        if "öffnen" in roles:
+            reserve = min(reserve, min_close)  # kann selbst öffnen → nur Schließer nötig
+        if "schließen" in roles:
+            reserve = min(reserve, min_open)  # kann selbst schließen → nur Öffner nötig
+        if dmin(s) + reserve <= budget:
+            kept.append(s)
+    return kept
 
 
 # --------------------------------------------------------------------------- #
 # Quality Gate (deterministisch)                                              #
 # --------------------------------------------------------------------------- #
-def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]:
+def validate_string(
+    steps: list[dict], diagnose: dict, allowed_slugs: set[str] | None = None
+) -> tuple[bool, list[str]]:
     """Prüft einen vorgeschlagenen String nach festen Regeln.
 
+    :param allowed_slugs: optional die Slugs der Vorfilterung – nur diese sind erlaubt
+        (setzt z. B. die Schwierigkeits-Grenze für Anfänger deterministisch durch).
     :returns: ``(ok, violations)`` – ``ok`` ist ``True``, wenn keine Regel verletzt ist.
     """
     diagnose = normalize_diagnose(diagnose)
@@ -136,6 +180,19 @@ def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]
     unknown = [s for s in slugs if s not in structs]
     if unknown:
         violations.append("Unbekannte Struktur(en): " + ", ".join(map(str, unknown)) + ".")
+
+    # 1b) Nur Strukturen aus der Kandidatenliste der Vorfilterung sind erlaubt.
+    if allowed_slugs is not None:
+        outside = [s for s in slugs if s in structs and s not in allowed_slugs]
+        if outside:
+            violations.append(
+                "Nicht in der Kandidatenliste (Vorfilterung): " + ", ".join(outside) + "."
+            )
+
+    # 1c) Keine Struktur darf doppelt im String vorkommen.
+    duplicates = sorted({s for s in slugs if s and slugs.count(s) > 1})
+    if duplicates:
+        violations.append("Doppelte Struktur(en) im String: " + ", ".join(duplicates) + ".")
 
     valid = [structs[s] for s in slugs if s in structs]
 
@@ -154,6 +211,34 @@ def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]
     if "schließen" not in roles_union:
         violations.append("Kein schließendes Element – der String hat keinen Abschluss.")
 
+    # 3b) Bogen-Reihenfolge: Der String muss mit Öffnen BEGINNEN und mit Schließen ENDEN.
+    first = structs.get(slugs[0]) if slugs else None
+    last = structs.get(slugs[-1]) if slugs else None
+    if "öffnen" in roles_union and first and "öffnen" not in (first.arc_role or []):
+        violations.append(
+            f"Der String beginnt nicht mit einer öffnenden Struktur – "
+            f"„{_name(first)}“ kann nicht öffnen."
+        )
+    if "schließen" in roles_union and last and "schließen" not in (last.arc_role or []):
+        violations.append(
+            f"Der String endet nicht mit einer schließenden Struktur – "
+            f"„{_name(last)}“ kann nicht schließen."
+        )
+
+    # 3c) Schritt-Dauer muss zur Struktur passen (innerhalb von duration_min–duration_max).
+    for step in steps:
+        structure = structs.get(step.get("slug"))
+        if structure is None:
+            continue
+        duration = _as_int(step.get("duration"))
+        too_short = duration is None or duration < structure.duration_min
+        too_long = structure.duration_max is not None and (duration or 0) > structure.duration_max
+        if too_short or too_long:
+            violations.append(
+                f"Dauer {duration} Min passt nicht zu „{_name(structure)}“ "
+                f"(vorgesehen {structure.duration_min}–{structure.duration_max or '∞'} Min)."
+            )
+
     # 4) Gruppengröße muss zu jeder Struktur passen.
     group = diagnose["gruppengroesse"]
     if group is not None:
@@ -167,11 +252,14 @@ def validate_string(steps: list[dict], diagnose: dict) -> tuple[bool, list[str]]
                     f"{structure.group_size_max or '∞'})."
                 )
 
-    # 5) Bei Remote müssen alle Strukturen online-tauglich sein.
-    if diagnose["setting"] == "remote":
+    # 5) Bei Remote UND Hybrid müssen alle Strukturen online-tauglich sein.
+    if diagnose["setting"] in ("remote", "hybrid"):
         for structure in valid:
             if not structure.online_capable:
-                violations.append(f"„{_name(structure)}“ ist nicht online-tauglich (Remote).")
+                violations.append(
+                    f"„{_name(structure)}“ ist nicht online-tauglich "
+                    f"({diagnose['setting']})."
+                )
 
     return len(violations) == 0, violations
 
@@ -244,7 +332,7 @@ def run_interview(situation: str, answers: dict | None, tier: str = "us") -> dic
 # Pipeline 2: Matchmaking                                                      #
 # --------------------------------------------------------------------------- #
 def _run_with_gate(messages_builder, diagnose: dict, candidate_count: int,
-                   max_iter: int, client) -> dict:
+                   max_iter: int, client, allowed_slugs: set[str] | None = None) -> dict:
     """Führt eine LLM-Stufe mit Quality-Gate-Korrekturschleife aus und verpackt das Ergebnis.
 
     ``messages_builder(correction)`` liefert die Nachrichten für einen Versuch (``correction`` ist
@@ -261,7 +349,7 @@ def _run_with_gate(messages_builder, diagnose: dict, candidate_count: int,
             continue
 
         steps = parsed.get("string", []) or []
-        ok, violations = validate_string(steps, diagnose)
+        ok, violations = validate_string(steps, diagnose, allowed_slugs)
         total = sum(_as_int(s.get("duration")) or 0 for s in steps)
         result = {
             "objective_string": parsed.get("objective_string", []),
@@ -323,6 +411,9 @@ def match(diagnose_raw: dict) -> dict:
     budget = diagnose["zeitbudget"]
     max_iter = getattr(settings, "MATCHMAKER_MAX_ITERATIONS", 3)
     n = len(candidate_dicts)
+    # Das Quality Gate setzt die Kandidatenliste durch: Das LLM darf NUR daraus wählen
+    # (sonst könnten z. B. für Anfänger gefilterte schwere Strukturen zurückkommen).
+    allowed = {c.slug for c in candidates}
 
     def seq_builder(correction):
         return prompts.build_sequence_messages(
@@ -332,13 +423,13 @@ def match(diagnose_raw: dict) -> dict:
         )
 
     # Vorschlag von Agent A.
-    proposal_a = _run_with_gate(seq_builder, diagnose, n, max_iter, client)
+    proposal_a = _run_with_gate(seq_builder, diagnose, n, max_iter, client, allowed)
 
     if not getattr(settings, "MATCHMAKER_CONSOLIDATE", True):
         return proposal_a
 
     # Unabhängiger Vorschlag von Agent B, dann Konsolidierung durch einen prüfenden Agenten.
-    proposal_b = _run_with_gate(seq_builder, diagnose, n, max_iter, client)
+    proposal_b = _run_with_gate(seq_builder, diagnose, n, max_iter, client, allowed)
 
     def cons_builder(correction):
         return prompts.build_consolidation_messages(
@@ -347,7 +438,7 @@ def match(diagnose_raw: dict) -> dict:
             principles_framing=principles_framing, objective_menu=objective_menu,
         )
 
-    final = _run_with_gate(cons_builder, diagnose, n, max_iter, client)
+    final = _run_with_gate(cons_builder, diagnose, n, max_iter, client, allowed)
     final["drafts"] = [
         {"string": proposal_a.get("string", []), "summary": proposal_a.get("summary", "")},
         {"string": proposal_b.get("string", []), "summary": proposal_b.get("summary", "")},
