@@ -18,7 +18,7 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from livekit import agents
+from livekit import agents, api
 from livekit.agents import Agent, AgentSession, room_io
 from livekit.plugins import mistralai, openai, silero
 
@@ -284,10 +284,11 @@ async def _publish_diagnose(room, state, situation: str = "") -> None:
 class LSCoach(Agent):
     """Die Coachin: natürliche Gesprächsführung + Anbindung ans LS-Gehirn."""
 
-    def __init__(self, room, brain: LSInterviewBrain, tier: str = "eu"):
+    def __init__(self, ctx, room, brain: LSInterviewBrain, tier: str = "eu"):
         # Erhebungs-Instruktion pfad-getrennt: US eingefroren, EU erfragt alle 7 ausdrücklich.
         erhebung_instr = PHASE_ERHEBUNG if tier == "us" else PHASE_ERHEBUNG_EU
         super().__init__(instructions=erhebung_instr)
+        self._ctx = ctx   # JobContext: für die serverseitige Raum-Löschung beim Abschalten (Kostenschutz)
         self._room = room
         self._brain = brain
         self._tier = tier
@@ -739,11 +740,19 @@ class LSCoach(Agent):
         """Verabschiedet sich freundlich und beendet die Sitzung SAUBER, damit keine Minuten
         weiterlaufen (Kostenschutz). Idempotent.
 
-        Reihenfolge (gegen ``livekit-agents`` 1.5.17 verifiziert + LiveKit-Community-Thread):
-        Frontend informieren → Abschiedssatz AUSREDEN lassen → ``session.shutdown(drain=True)``.
-        ``session.shutdown`` trennt nur den Agenten; damit AUCH der Nutzer getrennt und der Raum
-        gelöscht wird (= alle Minuten stoppen), ist beim ``session.start`` ``delete_room_on_close=True``
-        gesetzt. ``drain`` lässt die letzte Sprachausgabe auslaufen, bevor wirklich getrennt wird."""
+        Reihenfolge: Abschiedssatz AUSREDEN lassen → Frontend „ended" → **Raum serverseitig löschen**
+        (Kern-Trennung, s. u.) → Session lokal schließen (``drain`` + ``aclose``).
+
+        WARUM die serverseitige Raum-Löschung der eigentliche Hebel ist (quelltext-belegt gegen
+        livekit-agents 1.5.17): ``session.shutdown``/``aclose`` durchläuft ``_aclose_impl``, das den
+        Raum erst GANZ AM ENDE über ``room_io.aclose`` (= ``delete_room_on_close``) löscht. Davor wartet
+        es — selbst bei ``drain=False`` — noch auf ``activity.drain()``, laufende ``current_speech`` und
+        ``commit_user_turn``. Redet der Gast nach dem Abschied weiter, hängt diese Kette und der Raum
+        wird NIE erreicht → Verbindung blieb minutenlang offen (Test 2026-06-11: 5–8 Min). Deshalb löschen
+        wir den Raum ZUERST direkt über die LiveKit-Server-API: das trennt alle sofort, unabhängig von der
+        Session-Schließkette. Der anschließende ``drain``/``aclose`` ist dann nur noch lokales Aufräumen
+        (läuft schnell durch, weil die Verbindung bereits weg ist); ``delete_room_on_close=True`` bleibt
+        als zusätzliches Sicherheitsnetz beim ``session.start``."""
         if self._shutting_down:
             return
         self._shutting_down = True
@@ -766,18 +775,33 @@ class LSCoach(Agent):
             )
         except Exception as exc:  # pragma: no cover - reine Robustheit
             logger.warning("Ende-Status konnte nicht gesendet werden: %s", exc)
+        # KERN-TRENNUNG (Kostenschutz): Den Raum SERVERSEITIG löschen — das wirft ALLE Teilnehmer
+        # (auch den Gast) sofort raus, unabhängig von der Session-Schließkette. Nötig, weil sich der
+        # interne ``_aclose_impl`` (selbst mit drain=False) noch an ``activity.drain()`` /
+        # ``commit_user_turn`` aufhängen kann, solange der Gast weiterredet — dann wird die
+        # eingebaute ``delete_room_on_close``-Löschung (ganz am Ende der Kette) NIE erreicht und die
+        # Verbindung bleibt minutenlang offen (Test 2026-06-11). Raum weg ⇒ Minuten stoppen.
         try:
-            # Nicht-blockierend; drain lässt verbleibende Sprache auslaufen, bevor getrennt wird.
-            self.session.shutdown(drain=True)
+            await self._ctx.api.room.delete_room(api.DeleteRoomRequest(room=self._ctx.room.name))
+            logger.info("Kostenschutz: Raum %s gelöscht — alle Teilnehmer getrennt", self._ctx.room.name)
         except Exception as exc:
-            logger.warning("session.shutdown fehlgeschlagen (%s) → Fallback", exc)
+            logger.error("Raum-Löschung fehlgeschlagen: %r — Fallback auf Session-Abschluss", exc)
+        # Session lokal schließen — jede Stufe AWAITED und geloggt (kein stilles Versagen mehr).
+        # Nach der Raum-Löschung oben ist die Verbindung bereits weg, das läuft also zügig durch.
+        try:
+            await self.session.drain()
+            logger.info("Session gedraint")
+        except Exception as exc:
+            logger.warning("drain fehlgeschlagen: %r", exc)
+        try:
+            await self.session.aclose()
+            logger.info("Session geschlossen")
+        except Exception as exc:
+            logger.warning("aclose fehlgeschlagen: %r → Fallback room.disconnect", exc)
             try:
-                await self.session.aclose()
-            except Exception:
-                try:
-                    await self._room.disconnect()
-                except Exception as exc2:  # pragma: no cover - reine Robustheit
-                    logger.warning("Auch Fallback-Trennung fehlgeschlagen: %s", exc2)
+                await self._room.disconnect()
+            except Exception as exc2:  # pragma: no cover - reine Robustheit
+                logger.error("Auch Fallback-Trennung fehlgeschlagen: %r", exc2)
 
     # Reihenfolge + lesbare Namen der 7 Stränge fürs „gemeinsame Bild" (Anlass = Mittelpunkt zuerst).
     _STATUS_ORDER = (
@@ -923,7 +947,7 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     # bekommt (EU = vorsichtig, US = eingefroren). Daher erst NACH der Tier-Erkennung.
     brain = LSInterviewBrain(BACKEND_URL, tier=tier)
     session = _build_session(tier)
-    coach = LSCoach(ctx.room, brain, tier=tier)
+    coach = LSCoach(ctx, ctx.room, brain, tier=tier)
 
     # Realtime (us) liefert die Nutzer-Transkription NICHT über on_user_turn_completed,
     # sondern über das Session-Event „user_input_transcribed" — daran hängen wir das Gehirn,
