@@ -932,6 +932,9 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     """Pro Raum: Sitzung je Souveränitätsstufe. Die gewählte Stufe steht in den
     Teilnehmer-Metadaten des LiveKit-Tokens (``{"tier": "us"|"eu"|"sov"}``)."""
     await ctx.connect()
+    # Build-Nachweis: stempelt jede Sitzung mit dem laufenden Code-Stand (s. Dockerfile BUILD_ID).
+    # So ist nie unklar, welcher Stand aktiv ist. „?" = ohne --build-arg gebaut (z. B. nur restart).
+    logger.info("voice-agent BUILD_ID=%s", os.environ.get("BUILD_ID", "?"))
 
     # Stufe aus den Teilnehmer-Metadaten lesen (Token trägt {"tier": ...}); Default eu.
     tier = "eu"
