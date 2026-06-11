@@ -46,6 +46,12 @@ TTS_VOICE = os.environ.get("VOICE_TTS_VOICE", "de_female_warm")
 INACTIVITY_TIMEOUT_S = float(os.environ.get("VOICE_INACTIVITY_TIMEOUT", "180"))  # Stille bis Abschaltung
 POST_RESULT_GRACE_S = float(os.environ.get("VOICE_POST_RESULT_GRACE", "60"))      # Nachfrage-Fenster nach dem Ergebnis
 MAX_SESSION_S = float(os.environ.get("VOICE_MAX_SESSION", "1200"))                # harte Obergrenze je Sitzung
+# Abschied + Session-Abschluss dürfen NIE unbegrenzt blockieren (sonst wird die Raum-Löschung nie
+# erreicht und die Sitzung läuft weiter — genau der Hänger im Test 2026-06-11: ``session.say`` mit
+# ``allow_interruptions=False`` wartete nach dem stillen Nutzer ewig aufs Playout-Ende). Jede Stufe
+# bekommt darum eine Obergrenze; danach geht es zwingend weiter zur serverseitigen Raum-Löschung.
+GOODBYE_TIMEOUT_S = float(os.environ.get("VOICE_GOODBYE_TIMEOUT", "20"))           # max. Zeit für den Abschiedssatz
+SHUTDOWN_STEP_TIMEOUT_S = float(os.environ.get("VOICE_SHUTDOWN_STEP_TIMEOUT", "10"))  # max. je drain/aclose
 
 # Feste Abschiedssätze je Abschalt-Grund (deterministisch vorgelesen, nicht vom Modell generiert).
 GOODBYE_TEXTS = {
@@ -763,10 +769,19 @@ class LSCoach(Agent):
         self._inactivity_task = None
         self._maxsession_task = None
         logger.info("Graceful Shutdown — Grund: %s", reason)
-        # Abschiedssatz ZUERST vollständig ausreden lassen — damit ihn ein evtl. später nachgerüstetes
-        # Frontend, das auf "ended" reagiert, nicht abschneidet.
-        await self._speak(GOODBYE_TEXTS.get(reason, GOODBYE_TEXTS["post_result"]),
-                          allow_interruptions=False)
+        # Abschiedssatz ausreden lassen — aber MIT HARTEM TIMEOUT. ``session.say`` mit
+        # ``allow_interruptions=False`` kann nach einem stillen/abgewandten Nutzer ewig aufs
+        # Playout-Ende warten (Test 2026-06-11: Sitzung hing genau hier, die Raum-Löschung
+        # darunter wurde nie erreicht). Nach ``GOODBYE_TIMEOUT_S`` geht es ZWINGEND weiter —
+        # der Kostenschutz (Raum-Löschung) darf nicht vom Gelingen der Sprachausgabe abhängen.
+        try:
+            await asyncio.wait_for(
+                self._speak(GOODBYE_TEXTS.get(reason, GOODBYE_TEXTS["post_result"]),
+                            allow_interruptions=False),
+                timeout=GOODBYE_TIMEOUT_S,
+            )
+        except (asyncio.TimeoutError, Exception) as exc:
+            logger.warning("Abschiedssatz nicht (rechtzeitig) ausgeredet (%r) — fahre mit Trennung fort", exc)
         # Frontend für eine freundliche „Sitzung beendet"-Ansicht informieren (dann erst trennen).
         try:
             await self._room.local_participant.publish_data(
@@ -786,22 +801,23 @@ class LSCoach(Agent):
             logger.info("Kostenschutz: Raum %s gelöscht — alle Teilnehmer getrennt", self._ctx.room.name)
         except Exception as exc:
             logger.error("Raum-Löschung fehlgeschlagen: %r — Fallback auf Session-Abschluss", exc)
-        # Session lokal schließen — jede Stufe AWAITED und geloggt (kein stilles Versagen mehr).
-        # Nach der Raum-Löschung oben ist die Verbindung bereits weg, das läuft also zügig durch.
+        # Session lokal schließen — jede Stufe AWAITED, mit Timeout und geloggt (kein stilles Versagen,
+        # kein Hänger mehr). Nach der Raum-Löschung oben ist die Verbindung bereits weg, das läuft also
+        # zügig durch; der Timeout ist nur das Sicherheitsnetz gegen ein erneutes Aufhängen.
         try:
-            await self.session.drain()
+            await asyncio.wait_for(self.session.drain(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
             logger.info("Session gedraint")
-        except Exception as exc:
-            logger.warning("drain fehlgeschlagen: %r", exc)
+        except (asyncio.TimeoutError, Exception) as exc:
+            logger.warning("drain fehlgeschlagen/Timeout: %r", exc)
         try:
-            await self.session.aclose()
+            await asyncio.wait_for(self.session.aclose(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
             logger.info("Session geschlossen")
-        except Exception as exc:
-            logger.warning("aclose fehlgeschlagen: %r → Fallback room.disconnect", exc)
+        except (asyncio.TimeoutError, Exception) as exc:
+            logger.warning("aclose fehlgeschlagen/Timeout: %r → Fallback room.disconnect", exc)
             try:
-                await self._room.disconnect()
-            except Exception as exc2:  # pragma: no cover - reine Robustheit
-                logger.error("Auch Fallback-Trennung fehlgeschlagen: %r", exc2)
+                await asyncio.wait_for(self._room.disconnect(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
+            except (asyncio.TimeoutError, Exception) as exc2:  # pragma: no cover - reine Robustheit
+                logger.error("Auch Fallback-Trennung fehlgeschlagen/Timeout: %r", exc2)
 
     # Reihenfolge + lesbare Namen der 7 Stränge fürs „gemeinsame Bild" (Anlass = Mittelpunkt zuerst).
     _STATUS_ORDER = (
