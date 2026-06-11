@@ -51,7 +51,6 @@ MAX_SESSION_S = float(os.environ.get("VOICE_MAX_SESSION", "1200"))              
 # ``allow_interruptions=False`` wartete nach dem stillen Nutzer ewig aufs Playout-Ende). Jede Stufe
 # bekommt darum eine Obergrenze; danach geht es zwingend weiter zur serverseitigen Raum-Löschung.
 GOODBYE_TIMEOUT_S = float(os.environ.get("VOICE_GOODBYE_TIMEOUT", "20"))           # max. Zeit für den Abschiedssatz
-SHUTDOWN_STEP_TIMEOUT_S = float(os.environ.get("VOICE_SHUTDOWN_STEP_TIMEOUT", "10"))  # max. je drain/aclose
 
 # Feste Abschiedssätze je Abschalt-Grund (deterministisch vorgelesen, nicht vom Modell generiert).
 GOODBYE_TEXTS = {
@@ -578,7 +577,13 @@ class LSCoach(Agent):
         # der Server-VAD nicht mittendrin unterbrochen („Wagen fährt"). Test 2026-06-06: ohne dies
         # zerschoss ein VAD-Zucken das lange Vorlesen.
         await self._set_phase("ABSCHLUSS", PHASE_ABSCHLUSS)
-        await self._speak(LSInterviewBrain.spoken_summary(result), allow_interruptions=False)
+        # KONTROLL-LOG (2026-06-11): exakt festhalten, WAS vorgelesen wird, und dass es aus dem
+        # BACKEND-String stammt (nicht frei erfunden). spoken_summary ist deterministisch aus
+        # ``result`` — so lässt sich der Verdacht „Coachin liest eigenen Plan vor" hart prüfen.
+        spoken = LSInterviewBrain.spoken_summary(result)
+        logger.info("Vorlesen (ABSCHLUSS): backend_slugs=%s | text=%r",
+                    [s.get("slug") for s in (result.get("string") or [])], spoken[:400])
+        await self._speak(spoken, allow_interruptions=False)
         # Kostenschutz: Nachfrage-Fenster starten. Ab jetzt gilt die kürzere POST_RESULT_GRACE_S —
         # kommt keine Rückfrage mehr, verabschiedet sich der Coach und die Sitzung wird beendet.
         # (``_bump_activity`` liest Phase ABSCHLUSS und armt automatisch das kurze Fenster.)
@@ -746,19 +751,19 @@ class LSCoach(Agent):
         """Verabschiedet sich freundlich und beendet die Sitzung SAUBER, damit keine Minuten
         weiterlaufen (Kostenschutz). Idempotent.
 
-        Reihenfolge: Abschiedssatz AUSREDEN lassen → Frontend „ended" → **Raum serverseitig löschen**
-        (Kern-Trennung, s. u.) → Session lokal schließen (``drain`` + ``aclose``).
+        Reihenfolge: Frontend „ended" → Abschiedssatz (gebundenes Zeitfenster) → **Raum serverseitig
+        löschen** (Kern-Trennung) → lokales Aufräumen (synchron, best-effort).
 
-        WARUM die serverseitige Raum-Löschung der eigentliche Hebel ist (quelltext-belegt gegen
-        livekit-agents 1.5.17): ``session.shutdown``/``aclose`` durchläuft ``_aclose_impl``, das den
-        Raum erst GANZ AM ENDE über ``room_io.aclose`` (= ``delete_room_on_close``) löscht. Davor wartet
-        es — selbst bei ``drain=False`` — noch auf ``activity.drain()``, laufende ``current_speech`` und
-        ``commit_user_turn``. Redet der Gast nach dem Abschied weiter, hängt diese Kette und der Raum
-        wird NIE erreicht → Verbindung blieb minutenlang offen (Test 2026-06-11: 5–8 Min). Deshalb löschen
-        wir den Raum ZUERST direkt über die LiveKit-Server-API: das trennt alle sofort, unabhängig von der
-        Session-Schließkette. Der anschließende ``drain``/``aclose`` ist dann nur noch lokales Aufräumen
-        (läuft schnell durch, weil die Verbindung bereits weg ist); ``delete_room_on_close=True`` bleibt
-        als zusätzliches Sicherheitsnetz beim ``session.start``."""
+        WARUM so (zweimal im Live-Test 2026-06-11 verifiziert): Die eigentliche, garantierte Trennung
+        ist die serverseitige Raum-Löschung über die LiveKit-Server-API (``delete_room``) — sie wirft
+        ALLE Teilnehmer sofort raus, unabhängig von der Session-Schließkette. Sie darf deshalb NIE
+        hinter etwas Blockierendem stehen. Der Abschiedssatz (``session.say`` mit
+        ``allow_interruptions=False``) kann nach einem stillen/abgewandten Nutzer ewig am Playout-Ende
+        hängen — UND reagiert dann nicht auf Cancellation, weshalb sogar ``asyncio.wait_for`` selbst
+        hängt (Test 2: der 20s-Timeout feuerte nie). Darum läuft der Abschied als HINTERGRUND-Task mit
+        ``asyncio.wait`` (nur ein Zeitfenster abwarten, NICHT auf den Abbruch warten); danach wird der
+        Raum ZWINGEND gelöscht. Das lokale Aufräumen (``session.shutdown``) ist synchron und blockiert
+        nie; ``delete_room_on_close=True`` beim ``session.start`` bleibt als zusätzliches Netz."""
         if self._shutting_down:
             return
         self._shutting_down = True
@@ -769,20 +774,8 @@ class LSCoach(Agent):
         self._inactivity_task = None
         self._maxsession_task = None
         logger.info("Graceful Shutdown — Grund: %s", reason)
-        # Abschiedssatz ausreden lassen — aber MIT HARTEM TIMEOUT. ``session.say`` mit
-        # ``allow_interruptions=False`` kann nach einem stillen/abgewandten Nutzer ewig aufs
-        # Playout-Ende warten (Test 2026-06-11: Sitzung hing genau hier, die Raum-Löschung
-        # darunter wurde nie erreicht). Nach ``GOODBYE_TIMEOUT_S`` geht es ZWINGEND weiter —
-        # der Kostenschutz (Raum-Löschung) darf nicht vom Gelingen der Sprachausgabe abhängen.
-        try:
-            await asyncio.wait_for(
-                self._speak(GOODBYE_TEXTS.get(reason, GOODBYE_TEXTS["post_result"]),
-                            allow_interruptions=False),
-                timeout=GOODBYE_TIMEOUT_S,
-            )
-        except (asyncio.TimeoutError, Exception) as exc:
-            logger.warning("Abschiedssatz nicht (rechtzeitig) ausgeredet (%r) — fahre mit Trennung fort", exc)
-        # Frontend für eine freundliche „Sitzung beendet"-Ansicht informieren (dann erst trennen).
+        # 1) Frontend SOFORT informieren („ended") — zeigt die „Sitzung beendet"-Ansicht und löst das
+        #    Frontend-Sicherheitsnetz (Selbst-Trennung) aus, noch BEVOR wir serverseitig trennen.
         try:
             await self._room.local_participant.publish_data(
                 json.dumps({"type": "status", "status": "ended", "reason": reason}).encode("utf-8"),
@@ -790,34 +783,35 @@ class LSCoach(Agent):
             )
         except Exception as exc:  # pragma: no cover - reine Robustheit
             logger.warning("Ende-Status konnte nicht gesendet werden: %s", exc)
-        # KERN-TRENNUNG (Kostenschutz): Den Raum SERVERSEITIG löschen — das wirft ALLE Teilnehmer
-        # (auch den Gast) sofort raus, unabhängig von der Session-Schließkette. Nötig, weil sich der
-        # interne ``_aclose_impl`` (selbst mit drain=False) noch an ``activity.drain()`` /
-        # ``commit_user_turn`` aufhängen kann, solange der Gast weiterredet — dann wird die
-        # eingebaute ``delete_room_on_close``-Löschung (ganz am Ende der Kette) NIE erreicht und die
-        # Verbindung bleibt minutenlang offen (Test 2026-06-11). Raum weg ⇒ Minuten stoppen.
+        # 2) Abschiedssatz als HINTERGRUND-Task mit gebundenem Zeitfenster. NICHT await/wait_for:
+        #    session.say(allow_interruptions=False) kann am Playout hängen und reagiert dann nicht auf
+        #    Cancellation → wait_for würde selbst hängen (Test 2026-06-11: 20s-Timeout feuerte nie).
+        #    Mit asyncio.wait warten wir nur BIS GOODBYE_TIMEOUT_S und ziehen dann ungeachtet weiter;
+        #    der Task wird best-effort gecancelt, aber NICHT geawaitet. Spricht der Satz normal (Nutzer
+        #    da), ist der Task vor Ablauf fertig und wir trennen direkt danach.
+        speak_task = asyncio.create_task(
+            self._speak(GOODBYE_TEXTS.get(reason, GOODBYE_TEXTS["post_result"]), allow_interruptions=False)
+        )
+        speak_task.add_done_callback(lambda t: t.cancelled() or t.exception())  # „never retrieved"-Warnung vermeiden
+        done, _ = await asyncio.wait({speak_task}, timeout=GOODBYE_TIMEOUT_S)
+        if speak_task not in done:
+            logger.warning("Abschiedssatz lief in %.0fs nicht aus — trenne trotzdem (Kostenschutz)", GOODBYE_TIMEOUT_S)
+            speak_task.cancel()
+        # 3) KERN (Kostenschutz): Raum serverseitig löschen — die garantierte Trennung aller Teilnehmer.
+        #    Steht jetzt NICHT mehr hinter der (potenziell hängenden) Sprachausgabe.
         try:
             await self._ctx.api.room.delete_room(api.DeleteRoomRequest(room=self._ctx.room.name))
             logger.info("Kostenschutz: Raum %s gelöscht — alle Teilnehmer getrennt", self._ctx.room.name)
         except Exception as exc:
-            logger.error("Raum-Löschung fehlgeschlagen: %r — Fallback auf Session-Abschluss", exc)
-        # Session lokal schließen — jede Stufe AWAITED, mit Timeout und geloggt (kein stilles Versagen,
-        # kein Hänger mehr). Nach der Raum-Löschung oben ist die Verbindung bereits weg, das läuft also
-        # zügig durch; der Timeout ist nur das Sicherheitsnetz gegen ein erneutes Aufhängen.
+            logger.error("Raum-Löschung fehlgeschlagen: %r — Fallback auf lokalen Abschluss", exc)
+        # 4) Lokales Aufräumen, best-effort und NICHT-blockierend: ``shutdown`` ist synchron (plant den
+        #    Abschluss nur ein). Der Raum ist bereits weg → die Session bekommt „Disconnected" und räumt
+        #    sich selbst ab. Bewusst KEIN await auf drain/aclose (die könnten dieselbe Playout-Sperre
+        #    erben); der Kostenschutz ist mit Schritt 3 bereits erfüllt.
         try:
-            await asyncio.wait_for(self.session.drain(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
-            logger.info("Session gedraint")
-        except (asyncio.TimeoutError, Exception) as exc:
-            logger.warning("drain fehlgeschlagen/Timeout: %r", exc)
-        try:
-            await asyncio.wait_for(self.session.aclose(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
-            logger.info("Session geschlossen")
-        except (asyncio.TimeoutError, Exception) as exc:
-            logger.warning("aclose fehlgeschlagen/Timeout: %r → Fallback room.disconnect", exc)
-            try:
-                await asyncio.wait_for(self._room.disconnect(), timeout=SHUTDOWN_STEP_TIMEOUT_S)
-            except (asyncio.TimeoutError, Exception) as exc2:  # pragma: no cover - reine Robustheit
-                logger.error("Auch Fallback-Trennung fehlgeschlagen/Timeout: %r", exc2)
+            self.session.shutdown(drain=False)
+        except Exception as exc:  # pragma: no cover - reine Robustheit
+            logger.warning("session.shutdown (Aufräumen) fehlgeschlagen: %r", exc)
 
     # Reihenfolge + lesbare Namen der 7 Stränge fürs „gemeinsame Bild" (Anlass = Mittelpunkt zuerst).
     _STATUS_ORDER = (
