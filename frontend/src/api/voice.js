@@ -20,9 +20,10 @@ const API_BASE = import.meta.env.VITE_API_BASE || '/api';
  * @param {(r:object)=>void} [opts.onResult]    fertiger Match-String vom Agenten
  * @param {(s:string)=>void} [opts.onStatus]    Status: 'connecting'|'live'|'closed'|'error'
  * @param {(m:object)=>void} [opts.onThinking]  Agent rechnet den Vorschlag (Wartespiel anzeigen)
+ * @param {(reason:string)=>void} [opts.onEnded] Agent hat die Sitzung selbst beendet (Kostenschutz)
  * @returns {Promise<{room: Room, stop: ()=>Promise<void>, session: object}>}
  */
-export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onStatus, onThinking } = {}) {
+export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onStatus, onThinking, onEnded } = {}) {
   const setStatus = (s) => { try { onStatus && onStatus(s); } catch { /* ignore */ } };
   setStatus('connecting');
 
@@ -57,7 +58,17 @@ export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onS
     let msg;
     try { msg = JSON.parse(new TextDecoder().decode(payload)); } catch { return; }
     if (topic === 'diagnose' || msg?.type === 'diagnose') onDiagnose && onDiagnose(msg);
-    else if (topic === 'status' || msg?.type === 'status') onThinking && onThinking(msg);
+    else if (topic === 'status' || msg?.type === 'status') {
+      onThinking && onThinking(msg);
+      // Kostenschutz-Sicherheitsnetz: Hat der Agent die Sitzung selbst beendet ('ended'), trennen
+      // wir uns nach kurzer Verzoegerung selbst — falls die serverseitige Raum-Loeschung den Client
+      // ausnahmsweise nicht erreicht, bleibt so kein offenes Mikro stehen. Die Verzoegerung laesst
+      // den Abschiedssatz ausklingen. (Normalfall: der Server loescht den Raum -> Disconnected feuert.)
+      if (msg?.status === 'ended') {
+        try { onEnded && onEnded(msg.reason); } catch { /* ignore */ }
+        setTimeout(() => { room.disconnect().catch(() => { /* ignore */ }); }, 2000);
+      }
+    }
     else if (topic === 'result' || msg?.type === 'result') onResult && onResult(msg.result || msg);
   });
   room.on(RoomEvent.Disconnected, () => { cleanupAudio(); setStatus('closed'); });

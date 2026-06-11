@@ -342,6 +342,11 @@ export default function App() {
           setVoiceAnswers(a);
         },
         onResult: (r) => handleVoiceResult(r),
+        // Der Agent hat die Sitzung selbst beendet (Kostenschutz: Inaktivität/Zeitlimit/nach dem
+        // Ergebnis). Den Handle freigeben, damit ein Tipp aufs Mikro wieder ein NEUES Gespräch
+        // starten kann — sonst blockiert das alte voiceRef den Neustart (startVoice bricht früh ab).
+        // Den Status übernimmt das 'closed'-Event (zeigt „Gespräch beendet …").
+        onEnded: () => { voiceRef.current = null; },
       });
       voiceRef.current = h;
     } catch {
