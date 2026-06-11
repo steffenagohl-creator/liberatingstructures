@@ -62,11 +62,13 @@ export async function startVoiceSession({ sovereignty, onDiagnose, onResult, onS
       onThinking && onThinking(msg);
       // Kostenschutz-Sicherheitsnetz: Hat der Agent die Sitzung selbst beendet ('ended'), trennen
       // wir uns nach kurzer Verzoegerung selbst — falls die serverseitige Raum-Loeschung den Client
-      // ausnahmsweise nicht erreicht, bleibt so kein offenes Mikro stehen. Die Verzoegerung laesst
-      // den Abschiedssatz ausklingen. (Normalfall: der Server loescht den Raum -> Disconnected feuert.)
+      // ausnahmsweise nicht erreicht, bleibt so kein offenes Mikro stehen. Die Verzoegerung (~12s)
+      // laesst den vollstaendigen Abschiedssatz ausklingen, bevor wir trennen — der harte
+      // Kostenschutz (serverseitige Loeschung am Ende des 20s-Abschiedsfensters) bleibt unberuehrt.
+      // (Normalfall: der Server loescht den Raum -> Disconnected feuert.)
       if (msg?.status === 'ended') {
         try { onEnded && onEnded(msg.reason); } catch { /* ignore */ }
-        setTimeout(() => { room.disconnect().catch(() => { /* ignore */ }); }, 2000);
+        setTimeout(() => { room.disconnect().catch(() => { /* ignore */ }); }, 12000);
       }
     }
     else if (topic === 'result' || msg?.type === 'result') onResult && onResult(msg.result || msg);

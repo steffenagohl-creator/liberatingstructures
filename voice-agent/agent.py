@@ -55,8 +55,8 @@ GOODBYE_TIMEOUT_S = float(os.environ.get("VOICE_GOODBYE_TIMEOUT", "20"))        
 # Feste Abschiedssätze je Abschalt-Grund (deterministisch vorgelesen, nicht vom Modell generiert).
 GOODBYE_TEXTS = {
     "post_result": (
-        "Ich wünsche euch viel Erfolg mit eurem Vorhaben. Ich beende unser Gespräch jetzt — "
-        "du kannst jederzeit ein neues starten. Bis bald!"
+        "Ich wünsche euch viel Erfolg mit eurem Vorhaben. Ich beende unser Gespräch jetzt und "
+        "schließe den Sprachkanal — du kannst jederzeit ein neues starten. Bis bald!"
     ),
     "inactivity": (
         "Ich habe eine Weile nichts mehr gehört, darum beende ich das Gespräch jetzt, um Ressourcen "
@@ -577,12 +577,15 @@ class LSCoach(Agent):
         # der Server-VAD nicht mittendrin unterbrochen („Wagen fährt"). Test 2026-06-06: ohne dies
         # zerschoss ein VAD-Zucken das lange Vorlesen.
         await self._set_phase("ABSCHLUSS", PHASE_ABSCHLUSS)
-        # KONTROLL-LOG (2026-06-11): exakt festhalten, WAS vorgelesen wird, und dass es aus dem
-        # BACKEND-String stammt (nicht frei erfunden). spoken_summary ist deterministisch aus
-        # ``result`` — so lässt sich der Verdacht „Coachin liest eigenen Plan vor" hart prüfen.
-        spoken = LSInterviewBrain.spoken_summary(result)
+        # VARIANTE 2 (Steffen 2026-06-11): Namen (englisch, aus dem Katalog) + wirkende Prinzipien je
+        # Element + ausführliche Gesamt-Begründung — OHNE operative Detail-Schritte. Die alte
+        # schritt-/ablaufbasierte ``spoken_summary`` bleibt im Code (spätere Weiterentwicklung).
+        names = await self._brain.structure_names()
+        spoken = LSInterviewBrain.spoken_string(result, names)
+        # KONTROLL-LOG: exakt festhalten, WAS vorgelesen wird (deterministisch aus dem Backend-String)
+        # — so sehen wir hart, ob die Stimme sich daran hält oder das Modell etwas dazudichtet.
         logger.info("Vorlesen (ABSCHLUSS): backend_slugs=%s | text=%r",
-                    [s.get("slug") for s in (result.get("string") or [])], spoken[:400])
+                    [s.get("slug") for s in (result.get("string") or [])], spoken[:600])
         await self._speak(spoken, allow_interruptions=False)
         # Kostenschutz: Nachfrage-Fenster starten. Ab jetzt gilt die kürzere POST_RESULT_GRACE_S —
         # kommt keine Rückfrage mehr, verabschiedet sich der Coach und die Sitzung wird beendet.
