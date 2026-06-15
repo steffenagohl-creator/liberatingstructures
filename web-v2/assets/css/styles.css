@@ -57,9 +57,10 @@ a { color: var(--primary); text-decoration-thickness: 1.5px; text-underline-offs
 a:hover { color: var(--primary-d); }
 
 /* ---- Sprachumschaltung (DE Standard, ohne JS sofort sichtbar) ---- */
+.i18n.de { display: inline; }
+.i18n.en { display: none; }
 html.lang-en .i18n.de { display: none; }
 html.lang-en .i18n.en { display: inline; }
-.i18n.de, .i18n.en { display: inline; }
 .block.de, .block.en { display: none; }
 html:not(.lang-en) .block.de { display: block; }
 html.lang-en .block.en { display: block; }
