@@ -138,11 +138,14 @@ nav.top a:hover::after,
 nav.top a.is-active::after { width: 100%; }
 nav.top a.is-active { color: var(--primary); font-weight: 500; }
 
-/* Sticky App-Button im Header — explizit weiß + größer (Steffen-Feedback 2026-06-16) */
+/* Sticky App-Button im Header — explizit weiß + größer (Steffen-Feedback 2026-06-16).
+   Selektor bewusst spezifischer als "nav.top a", sonst überstimmt dessen
+   dunkle Schriftfarbe das Weiß (Spezifitäts-Konflikt, behoben 2026-06-16). */
+nav.top a.app-cta-sticky,
 .app-cta-sticky {
   background: var(--primary); color: #FFFFFF;
-  font: 600 15px/1 var(--font-sans);
-  padding: 12px 22px;
+  font: 600 16px/1 var(--font-sans);
+  padding: 9px 18px;
   border-radius: 12px;
   text-decoration: none;
   display: inline-flex; align-items: center; gap: 8px;
@@ -150,6 +153,7 @@ nav.top a.is-active { color: var(--primary); font-weight: 500; }
   transition: all var(--t-base);
   white-space: nowrap;
 }
+nav.top a.app-cta-sticky:hover,
 .app-cta-sticky:hover {
   background: var(--primary-d); color: #FFFFFF;
   transform: translateY(-1px);

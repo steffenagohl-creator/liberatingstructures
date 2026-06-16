@@ -62,7 +62,7 @@
 
   // ---- 3) Reveal on scroll ----
   function bindReveal() {
-    var targets = document.querySelectorAll('.card, .mode');
+    var targets = document.querySelectorAll('.card, .mode, .flowchart-step');
     if (!('IntersectionObserver' in window)) {
       // Fallback: einfach anzeigen
       for (var i = 0; i < targets.length; i++) targets[i].classList.add('in-view');
