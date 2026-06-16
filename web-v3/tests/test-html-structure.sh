@@ -169,6 +169,44 @@ else
 fi
 
 echo ""
+echo "── 11. CSS-Sprachlogik: DE/EN-Spans korrekt umgeschaltet (KEIN Doppel-Anzeige-Bug)"
+CSS="$DIR/assets/css/styles.css"
+
+# 11a) BUG-DETEKTOR: die verbotene gemeinsame "display: inline"-Regel für beide Klassen
+#      (das war der Original-Bug — Steffen hat 2026-06-15 gemeldet)
+if grep -qE '\.i18n\.de,\s*\.i18n\.en\s*\{[^}]*display:\s*inline' "$CSS"; then
+  fail "CSS — verbotene gemeinsame '.i18n.de, .i18n.en { display: inline }' gefunden (BEIDE Sprachen sichtbar!)"
+else
+  pass "CSS — keine verbotene gemeinsame Inline-Default-Regel"
+fi
+
+# 11b) EN muss explizit als default = display: none definiert sein
+if grep -qE '\.i18n\.en\s*\{[^}]*display:\s*none' "$CSS"; then
+  pass "CSS — EN hat explizite default display: none"
+else
+  fail "CSS — EN fehlt explizite default display: none (würde DE+EN parallel anzeigen)"
+fi
+
+# 11c) DE muss explizit als default = display: inline definiert sein
+if grep -qE '\.i18n\.de\s*\{[^}]*display:\s*inline' "$CSS"; then
+  pass "CSS — DE hat explizite default display: inline"
+else
+  fail "CSS — DE fehlt explizite default display: inline"
+fi
+
+# 11d) Wenn html.lang-en gesetzt: DE versteckt, EN sichtbar
+if grep -qE 'html\.lang-en\s+\.i18n\.de\s*\{[^}]*display:\s*none' "$CSS"; then
+  pass "CSS — html.lang-en .i18n.de { display: none }"
+else
+  fail "CSS — fehlt 'html.lang-en .i18n.de { display: none }'"
+fi
+if grep -qE 'html\.lang-en\s+\.i18n\.en\s*\{[^}]*display:\s*inline' "$CSS"; then
+  pass "CSS — html.lang-en .i18n.en { display: inline }"
+else
+  fail "CSS — fehlt 'html.lang-en .i18n.en { display: inline }'"
+fi
+
+echo ""
 echo "══════════════════════════════════════"
 echo "Ergebnis: $PASS PASS, $FAIL FAIL"
 echo "══════════════════════════════════════"

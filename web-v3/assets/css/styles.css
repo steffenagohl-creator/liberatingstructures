@@ -561,9 +561,14 @@ footer.site .legal {
 footer.site .legal a { color: var(--ink-soft); }
 
 /* ---------- Sprachumschaltung ---------- */
-html.lang-en .i18n.de { display: none; }
-html.lang-en .i18n.en { display: inline; }
-.i18n.de, .i18n.en { display: inline; }
+/* WICHTIG: Default = Deutsch sichtbar, Englisch versteckt.
+   Vor v3-Fix war .i18n.de/.i18n.en beide auf `inline`, sodass beim
+   ersten Aufruf BEIDE Sprachen parallel erschienen (Steffen-Bug 2026-06-15).
+   Asymmetrische Default-Regel verhindert das ohne JS. */
+.i18n.de { display: inline; }                /* default: DE zeigen */
+.i18n.en { display: none; }                  /* default: EN versteckt */
+html.lang-en .i18n.de { display: none; }     /* wenn lang-en: DE verstecken */
+html.lang-en .i18n.en { display: inline; }   /* wenn lang-en: EN zeigen */
 .block.de, .block.en { display: none; }
 html:not(.lang-en) .block.de { display: block; }
 html.lang-en .block.en { display: block; }
