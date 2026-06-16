@@ -5,22 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cookie-Hinweis – LS-Matchmaker</title>
   <meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+
   <header class="site">
     <div class="bar">
-      <a class="brand" href="index.html"><span class="dot"></span><span class="name">LS-Matchmaker</span></a>
+      <a class="brand" href="index.html">
+        <span class="mark">L</span>
+        <span>LS-Matchmaker</span>
+      </a>
       <nav class="top">
         <a href="was-sind-liberating-structures.html"><span class="i18n de">Liberating Structures</span><span class="i18n en">Liberating Structures</span></a>
-        <a href="/app.html"><span class="i18n de">App starten</span><span class="i18n en">Open the app</span></a>
-        <button class="lang-toggle" type="button">EN</button>
+        <a href="index.html#sicherheit"><span class="i18n de">Sicherheit</span><span class="i18n en">Privacy</span></a>
+        <a href="/app.html" class="app-cta-sticky"><span class="i18n de">App öffnen</span><span class="i18n en">Open the app</span> <span class="ext" aria-hidden="true">↗</span></a>
+        <button class="lang-toggle" type="button" aria-label="Sprache umschalten">EN</button>
       </nav>
     </div>
   </header>
 
   <main class="wrap prose">
-    <!-- ============ DEUTSCH ============ -->
     <div class="block de">
       <h1>Cookie-Hinweis</h1>
       <p class="updated">Stand: Juni 2026</p>
@@ -42,7 +46,6 @@
       <p>Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     </div>
 
-    <!-- ============ ENGLISH ============ -->
     <div class="block en">
       <h1>Cookie Notice</h1>
       <p class="updated">As of: June 2026</p>
@@ -70,16 +73,21 @@
       <div class="cols">
         <div class="col">
           <h4><span class="i18n de">Produkt</span><span class="i18n en">Product</span></h4>
-          <a href="/app.html"><span class="i18n de">App starten</span><span class="i18n en">Open the app</span></a>
+          <a href="/app.html"><span class="i18n de">App öffnen</span><span class="i18n en">Open the app</span></a>
           <a href="was-sind-liberating-structures.html"><span class="i18n de">Liberating Structures</span><span class="i18n en">Liberating Structures</span></a>
+          <a href="index.html#sicherheit"><span class="i18n de">Sicherheit</span><span class="i18n en">Privacy</span></a>
           <a href="https://github.com/steffenagohl-creator/liberatingstructures" rel="noopener">GitHub</a>
         </div>
         <div class="col">
           <h4><span class="i18n de">Rechtliches</span><span class="i18n en">Legal</span></h4>
           <a href="impressum.html"><span class="i18n de">Impressum</span><span class="i18n en">Imprint</span></a>
           <a href="datenschutz.html"><span class="i18n de">Datenschutz</span><span class="i18n en">Privacy</span></a>
-          <a href="cookies.html"><span class="i18n de">Cookies</span><span class="i18n en">Cookies</span></a>
+          <a href="cookies.html" class="is-active">Cookies</a>
           <a href="nutzungsbedingungen.html"><span class="i18n de">Nutzungsbedingungen</span><span class="i18n en">Terms of use</span></a>
+        </div>
+        <div class="col">
+          <h4><span class="i18n de">Sprache</span><span class="i18n en">Language</span></h4>
+          <a href="#" class="lang-toggle-link"><span class="i18n de">English</span><span class="i18n en">Deutsch</span></a>
         </div>
       </div>
       <p class="legal">
@@ -89,6 +97,6 @@
     </div>
   </footer>
 
-  <script src="lang.js"></script>
+  <script src="assets/js/lang.js"></script>
 </body>
 </html>
