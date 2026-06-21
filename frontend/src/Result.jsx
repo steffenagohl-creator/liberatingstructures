@@ -151,15 +151,9 @@ export function ResultString({ match, details = {}, onRestart }) {
             last={i === steps.length - 1} open={open === i} onToggle={() => setOpen(open === i ? -1 : i)} />
         ))}
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 9, marginTop: 24 }}>
-          {/* Trägerwörter: speichern, merken, sichern, behalten. */}
-          <Button variant="primary" ariaLabel="Diesen String speichern" style={{ flex: 1, minWidth: 130 }}>String speichern</Button>
-          {/* Trägerwörter: anpassen, ändern, umsortieren, bearbeiten. */}
-          <Button variant="ghost" ariaLabel="Reihenfolge der Methoden anpassen" style={{ flex: 1, minWidth: 130 }}>Reihenfolge anpassen</Button>
-        </div>
         {/* Trägerwörter: neu, zurücksetzen, von vorne, neue Situation. */}
         <Button variant="ghost" ariaLabel="Neue Situation beginnen" onClick={onRestart}
-          style={{ flex: 1, minWidth: 130, width: '100%', marginTop: 9 }}>Neue Situation</Button>
+          style={{ flex: 1, minWidth: 130, width: '100%', marginTop: 24 }}>Neue Situation</Button>
       </div>
     </div>
   );
